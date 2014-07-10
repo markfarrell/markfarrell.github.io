@@ -1,0 +1,213 @@
+{{#settings}}
+	{{#glyphicons}}
+		<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
+		<script>document.getElementById('github-png').innerHTML = '<img src="public/images/github.png" style="width:22px"></img> ';
+		</script>
+	{{/glyphicons}}
+{{/settings}}
+<link rel="stylesheet" type="text/css" href="public/css/screen.css" />
+<div id="page">
+{{#bio_data}}
+	<div class="contact-details">
+		{{#email}}
+		<span class="glyphicon glyphicon-envelope"></span> {{email}}<br/>
+		{{/email}}
+		{{#phone}}
+		<span class="glyphicon glyphicon-earphone"></span> {{phone}}<br/>
+		{{/phone}}
+		{{#website}}
+		<span class="glyphicon glyphicon-globe"></span>
+		<a href="{{website}}"> {{website}}</a>
+		{{/website}}
+	</div>
+
+	<h1 class="emphnext">{{firstname}} {{familyname}}</h1><br/>
+	{{#stars}}
+	<span class="stars">
+		 {{#items}}
+		 {{name}} {{^last}}<span class="glyphicon glyphicon-star-empty"></span>{{/last}}
+		 {{/items}}
+	</span>
+	{{/stars}}
+	<br/>
+
+	{{#summary}}
+	<h2><span class="glyphicon glyphicon-compressed"></span> Qualification Summary</h2>
+	<ul>
+		{{#points}}
+		<li>{{{.}}}</li>
+		{{/points}}
+	</ul>
+	{{/summary}}
+
+	{{#skills}}
+	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
+	<ul class="languages">
+		{{#details}}
+		<li>{{type}}:
+			{{#items}}
+			<span class="label label-default">{{name}}</span>
+			{{/items}}
+		</li>
+		{{/details}}
+	</ul>
+	{{/skills}}
+
+	{{#education}}
+	<h2><span class="glyphicon glyphicon-book"></span> Education</h2>
+	<table class="table education">
+		<tr>
+			<th>Degree</th><th>Major</th><th>Institution</th><th nowrap>Graduation Year</th>{{#show_gpa}}<th>GPA</th>{{/show_gpa}}
+		</tr>
+		{{#schools}}
+		<tr>
+			<td>{{degree}}</td><td>{{major}}</td><td>{{institution}}</td><td align="center">{{graduation_year}}</td>{{#show_gpa}}<td>{{gpa}}</td>{{/show_gpa}}
+		</tr>
+		{{/schools}}
+	</table>
+	{{/education}}
+
+	{{#acad_achievements}}
+	<h2><span class="glyphicon glyphicon-tower"></span> Academic Achievements</h2>
+	<ul>
+		{{#items}}
+		<li>{{{.}}}</li>
+		{{/items}}
+	</ul>
+	{{/acad_achievements}}
+
+	{{#experience}}
+	<h2><span class="glyphicon glyphicon-briefcase"></span> Professional Experience</h2>
+	<ul>
+		{{#items}}
+		<li>{{title}} at {{{organisation}}}{{#location}}, {{{location}}}{{/location}}
+			<span class="right">({{from}} – {{to}})</span>
+			<ul>
+				{{#details}}
+				<li>{{{.}}}</li>
+				{{/details}}
+				{{#technology_used}}
+				<li>Tools:
+					{{#tools}}
+					<span class="label label-default">{{name}}</span>
+					{{/tools}}
+				</li>
+				{{/technology_used}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/experience}}
+
+	{{#research_experience}}
+	<h2><span class="glyphicon glyphicon-pencil"></span> Research Experience</h2>
+	<ul>
+		{{#items}}
+		<li>
+			{{title}} at {{{organisation}}}
+			<span class="right">({{from}} – {{to}})</span>
+			<ul>
+				{{#points}}
+				<li>{{{.}}}</li>
+				{{/points}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/research_experience}}
+
+	{{#other_projects}}
+	<h2><span id="github-png"></span> Personal Projects</h2>
+	<ul>
+		{{#items}}
+		<li>
+			{{{headline}}}
+			<ul>
+				{{#points}}
+				<li>{{{.}}}</li>
+				{{/points}}
+				{{#technology_used}}
+				<li>Technologies got to work on:
+					{{#tools}}
+					<span class="label label-default">{{name}}</span>
+					{{/tools}}
+				</li>
+				{{/technology_used}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/other_projects}}
+
+	{{#grad_courses}}
+	<h2><span class="glyphicon glyphicon-bookmark"></span> Graduate Courses Taken</h2>
+	<table class="table education">
+		{{#rows}}
+		<tr>
+			{{#columns}}
+			<td><a href="{{url}}">{{name}}</a></td>
+			{{/columns}}
+		</tr>
+		{{/rows}}
+	</table>
+	{{/grad_courses}}
+
+	{{#undergrad_courses}}
+	<h2><span class="glyphicon glyphicon-bookmark"></span> Undergraduate Courses Taken</h2>
+	<table class="table education">
+		{{#rows}}
+		<tr>
+			{{#columns}}
+			<td><a href="{{url}}">{{name}}</a></td>
+			{{/columns}}
+		</tr>
+		{{/rows}}
+	</table>
+	{{/undergrad_courses}}
+
+
+
+	{{#patents}}
+	<h2><span class="glyphicon glyphicon-file"></span> Patents</h2>
+	<ul>
+		{{#items}}
+		<li>{{patent_id}}
+			<a href="{{url}}">{{title}}</a>
+			{{#issuance_date}}, issued {{issuance_date}}{{/issuance_date}}.
+		</li>
+		{{/items}}
+	</ul>
+	{{/patents}}
+
+	{{#papers}}
+	<h2><span class="glyphicon glyphicon-edit"></span> Publications</h2>
+	<ul>
+		{{#items}}
+		<li>{{authors}}
+			<a href="{{url}}">{{title}},</a>
+			 {{{misc}}}.
+		</li>
+		{{/items}}
+	</ul>
+	{{/papers}}
+
+	{{#memberships}}
+	<h2><span class="glyphicon glyphicon-globe"></span> Memberships</h2>
+	<ul>
+		{{#committees}}
+		<li>{{{.}}}</li>
+		{{/committees}}
+	</ul>
+	{{/memberships}}
+
+	{{#extra_curricular}}
+	<h2><span class="glyphicon glyphicon-music"></span> Extra Curricular Awards</h2>
+	<ul>
+		{{#items}}
+		<li>{{{.}}}</li>
+		{{/items}}
+	</ul>
+	{{/extra_curricular}}
+
+{{/bio_data}}
+</div><!-- End Page -->
