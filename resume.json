@@ -105,18 +105,7 @@
     "skills": {
       "details": [
         {
-          "type": "Knowledge",
-          "items": [
-            "Natural Language Processing",
-            "Network Analysis",
-            "Type-level Programming",
-            "Server Architecture",
-            "Web Development",
-            "Geographical Information Systems"
-          ]
-        },
-        {
-          "type": "Programming Languages",
+          "type": "Core Programming Languages",
           "items": [
             "Scala",
             "Java",
