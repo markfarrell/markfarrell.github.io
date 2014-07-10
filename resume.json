@@ -1,0 +1,130 @@
+{
+  "settings": {
+    "glyphicons" : true
+  },
+  "firstname": "Mark",
+  "familyname": "Farrell",
+  "linkedin_id": "m4farrel",
+  "github_id": "markfarrell",
+  "bio_data": {
+    "email": "m4farrel@csclub.uwaterloo.ca",
+    "phone": "+1 (902) 222 9012",
+    "website": "http://markfarrell.github.io",
+    "stars": ["1B Computer Science Student", "Software Developer"],
+    "summary": {
+      "points":[
+        "A top-down thinker, with a notable ability to initiate, manage and collaborate on software projects."
+      ]
+    },
+    "experience": {
+      "items": [
+      {
+        "title": "Geospatial Software Developer/Research Assistant",
+        "organisation": "Defence Research & Development Canada",
+        "location": "Halifax, Nova Scotia",
+        "from": "May. 2014",
+        "to": "Aug. 2014",
+        "details": [
+          "Worked for a postdoctoral mentor doing mathematical research on resolving the identities of vessels at tracked locations in the water.",
+          "Developed components for a software system intended to put the research into practice.",
+          "Engineered a software service that provides sea-ice and ocean-floor data at requested locations and times.",
+          "Served as the systems administrator of a supercomputer workstation running ArchLinux."
+        ],
+        "technology_used": {
+          "tools": [
+            "AIS Datasets",
+            "NOAA Environmental Datasets",
+            "Scala",
+            "Scalaz",
+            "PostgreSQL",
+            "PostGIS",
+            "Geotools",
+            "Jetty",
+            "FTP4j",
+            "SLF4j/Log4j",
+            "Git",
+            "Vim"
+          ]
+        }
+      }
+      ]
+    },
+    "research_experience": {
+      "items": [
+        {
+          "title":"Software Developer|Researcher",
+          "organisation": "UC Berkeley/LBL, Center for Research and Education on Aging",
+          "from": "February 2014",
+          "to": "Present",
+          "points": [
+            "Developing software that compiles text into text-networks, to build an ontology on aging research from a stream of textbooks and journal articles.",
+            "Project Repository: https://github.com/markfarrell/text-network-compiler.",
+            "Skills Developed: Natural Language Processing, Semantic Parsing, Public Speaking"
+          ]
+        }
+      ]
+    },
+    "other_projects": {
+      "items": [
+        {
+          "headline" : "Ironbane - a FOSS MMORPG written entirely in JavaScript",
+          "points" : [
+            "Improved server architecture by partitioning the game's map into cells. Each cell owns a region of the map and is an actor that updates its AI only when players are inside of it.",
+            "Allows for a larger game world to be created.",
+            "Optimizes server performance for the intended gameplay experience.",
+            "Pull-request can be found here: https://github.com/ironbane/IronbaneServer/pull/432."
+          ]
+        },
+        {
+          "headline" : "Starfall - a 3D space MMORPG demo",
+          "points" : [
+             "Modelled 3D art assets in Blender.",
+             "Developed server software in C++.",
+             "Prototyped client software using Unity3D.",
+             "Supports logging in, cockpit-style controls and collision detection.",
+             "Released as open-source: http://github.com/markfarrell/starfall."
+          ]
+        },
+        {
+          "headline" : "Fitlings Pedometer Game - for Shad Valley Entrepreneurship Cup",
+          "points" : [
+            "Prototyped an Android game aimed at reducing obesity rates in youth.",
+            "Used the accelerometer found in Android devices to create a setting where the player has to walk in order to keep their avatar healthy.",
+            "Teammates created business plan and art assets.",
+            "Awarded 3rd place for Best Application of Scientific Principles."
+          ]
+        },
+        {
+          "headline" : "Titans-Server - server emulators for Universal Century Gundam Online",
+          "points" : [
+            "With Brian Burnett and Vince Macchia, reverse engineered the game's packet protocol.",
+            "Wrote server emulators in Java, allowing users to try the game again after the official service was cancelled in 2007."
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "details": [
+        {
+          "type": "Interests & Expertise",
+          "items": [
+            "Geographical Information Systems",
+            "Natural Language Processing",
+            "Network Analysis",
+            "Type-level Programming",
+            "Server Architecture",
+            "Modern Web Standards & Technologies"
+          ]
+        },
+        {
+          "type": "Programming Languages",
+          "items": [
+            "Scala",
+            "Java",
+            "JavaScript"
+          ]
+        }
+      ]
+    }
+  }
+}
