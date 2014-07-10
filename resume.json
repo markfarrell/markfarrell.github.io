@@ -105,14 +105,14 @@
     "skills": {
       "details": [
         {
-          "type": "Interests & Expertise",
+          "type": "Knowledge",
           "items": [
-            "Geographical Information Systems",
             "Natural Language Processing",
             "Network Analysis",
             "Type-level Programming",
             "Server Architecture",
-            "Modern Web Standards & Technologies"
+            "Web Development",
+            "Geographical Information Systems"
           ]
         },
         {

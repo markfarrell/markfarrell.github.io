@@ -40,19 +40,6 @@
 	</ul>
 	{{/summary}}
 
-	{{#skills}}
-	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
-	<ul class="languages">
-		{{#details}}
-		<li>{{type}}:
-			{{#items}}
-			<span class="label label-default">{{name}}</span>
-			{{/items}}
-		</li>
-		{{/details}}
-	</ul>
-	{{/skills}}
-
 	{{#education}}
 	<h2><span class="glyphicon glyphicon-book"></span> Education</h2>
 	<table class="table education">
@@ -138,6 +125,19 @@
 		{{/items}}
 	</ul>
 	{{/other_projects}}
+
+	{{#skills}}
+	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
+	<ul class="languages">
+		{{#details}}
+		<li>{{type}}:
+			{{#items}}
+			<span class="label label-default">{{name}}</span>
+			{{/items}}
+		</li>
+		{{/details}}
+	</ul>
+	{{/skills}}
 
 	{{#grad_courses}}
 	<h2><span class="glyphicon glyphicon-bookmark"></span> Graduate Courses Taken</h2>
