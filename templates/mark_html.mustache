@@ -3,12 +3,18 @@
 		<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
 		<script>document.getElementById('github-png').innerHTML = '<img src="public/images/github.png" style="width:22px"></img> ';
 		</script>
+		<script>document.getElementById('linked_in-png').innerHTML = '<img src="public/images/linked_in.png" style="width:13px;height:13px"></img> ';
+		</script>
 	{{/glyphicons}}
 {{/settings}}
 <link rel="stylesheet" type="text/css" href="public/css/screen.css" />
 <div id="page">
 {{#bio_data}}
 	<div class="contact-details">
+		{{#linked_in}}
+		<span id="linked_in-png"></span>
+		<a href="http://linkedin.com/in/{{linked_in}}" style="font-weight:regular"> /in/{{linked_in}}</a><br/>
+		{{/linked_in}}
 		{{#email}}
 		<span class="glyphicon glyphicon-envelope"></span> {{email}}<br/>
 		{{/email}}
@@ -39,29 +45,6 @@
 		{{/points}}
 	</ul>
 	{{/summary}}
-
-	{{#education}}
-	<h2><span class="glyphicon glyphicon-book"></span> Education</h2>
-	<table class="table education">
-		<tr>
-			<th>Degree</th><th>Major</th><th>Institution</th><th nowrap>Graduation Year</th>{{#show_gpa}}<th>GPA</th>{{/show_gpa}}
-		</tr>
-		{{#schools}}
-		<tr>
-			<td>{{degree}}</td><td>{{major}}</td><td>{{institution}}</td><td align="center">{{graduation_year}}</td>{{#show_gpa}}<td>{{gpa}}</td>{{/show_gpa}}
-		</tr>
-		{{/schools}}
-	</table>
-	{{/education}}
-
-	{{#acad_achievements}}
-	<h2><span class="glyphicon glyphicon-tower"></span> Academic Achievements</h2>
-	<ul>
-		{{#items}}
-		<li>{{{.}}}</li>
-		{{/items}}
-	</ul>
-	{{/acad_achievements}}
 
 	{{#experience}}
 	<h2><span class="glyphicon glyphicon-briefcase"></span> Professional Experience</h2>
@@ -104,7 +87,7 @@
 	{{/research_experience}}
 
 	{{#other_projects}}
-	<h2><span id="github-png"></span> Personal Projects</h2>
+	<h2><span id="github-png"></span> Notable Projects</h2>
 	<ul>
 		{{#items}}
 		<li>
@@ -139,46 +122,6 @@
 	</ul>
 	{{/skills}}
 
-	{{#grad_courses}}
-	<h2><span class="glyphicon glyphicon-bookmark"></span> Graduate Courses Taken</h2>
-	<table class="table education">
-		{{#rows}}
-		<tr>
-			{{#columns}}
-			<td><a href="{{url}}">{{name}}</a></td>
-			{{/columns}}
-		</tr>
-		{{/rows}}
-	</table>
-	{{/grad_courses}}
-
-	{{#undergrad_courses}}
-	<h2><span class="glyphicon glyphicon-bookmark"></span> Undergraduate Courses Taken</h2>
-	<table class="table education">
-		{{#rows}}
-		<tr>
-			{{#columns}}
-			<td><a href="{{url}}">{{name}}</a></td>
-			{{/columns}}
-		</tr>
-		{{/rows}}
-	</table>
-	{{/undergrad_courses}}
-
-
-
-	{{#patents}}
-	<h2><span class="glyphicon glyphicon-file"></span> Patents</h2>
-	<ul>
-		{{#items}}
-		<li>{{patent_id}}
-			<a href="{{url}}">{{title}}</a>
-			{{#issuance_date}}, issued {{issuance_date}}{{/issuance_date}}.
-		</li>
-		{{/items}}
-	</ul>
-	{{/patents}}
-
 	{{#papers}}
 	<h2><span class="glyphicon glyphicon-edit"></span> Publications</h2>
 	<ul>
@@ -199,15 +142,6 @@
 		{{/committees}}
 	</ul>
 	{{/memberships}}
-
-	{{#extra_curricular}}
-	<h2><span class="glyphicon glyphicon-music"></span> Extra Curricular Awards</h2>
-	<ul>
-		{{#items}}
-		<li>{{{.}}}</li>
-		{{/items}}
-	</ul>
-	{{/extra_curricular}}
 
 {{/bio_data}}
 </div><!-- End Page -->

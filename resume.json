@@ -9,6 +9,7 @@
   "bio_data": {
     "email": "m4farrel@uwaterloo.ca",
     "phone": "+1 (902) 222 9012",
+    "linked_in" : "m4farrel",
     "stars": ["1B Computer Science Student", "Software Developer"],
     "summary": {
       "points":[
@@ -52,8 +53,8 @@
       "items": [
         {
           "title":"Software Developer",
-          "organisation": "UC Berkeley/LBL, Center for Research and Education on Aging",
-          "from": "February 2014",
+          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\">UC Berkeley/CREA</a>",
+          "from": "Feb. 2014",
           "to": "Present",
           "points": [
             "Developing software that compiles text into text-networks, to build an ontology on aging research from a stream of textbooks and journal articles.",
@@ -77,10 +78,10 @@
         {
           "headline" : "Starfall - a 3D space MMORPG demo",
           "points" : [
+             "Supports logging in, cockpit-style controls and collision detection.",
              "Modelled 3D art assets in Blender.",
              "Developed server software in C++.",
              "Prototyped client software using Unity3D.",
-             "Supports logging in, cockpit-style controls and collision detection.",
              "Released as open-source: http://github.com/markfarrell/starfall."
           ]
         },
@@ -110,6 +111,13 @@
             "Scala",
             "Java",
             "JavaScript"
+          ]
+        },
+        {
+          "type" : "Specialties",
+          "items" : [
+            "Geospatial Programming",
+            "Web Development"
           ]
         }
       ]
