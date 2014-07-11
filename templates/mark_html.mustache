@@ -15,16 +15,16 @@
 		<span id="linked_in-png"></span>
 		<a href="http://linkedin.com/in/{{linked_in}}" style="font-weight:regular"> /in/{{linked_in}}</a><br/>
 		{{/linked_in}}
+		{{#website}}
+		<span class="glyphicon glyphicon-globe"></span>
+		<a href="{{website}}"> {{website}}</a><br/>
+		{{/website}}
 		{{#email}}
 		<span class="glyphicon glyphicon-envelope"></span> {{email}}<br/>
 		{{/email}}
 		{{#phone}}
-		<span class="glyphicon glyphicon-earphone"></span> {{phone}}<br/>
+		<span class="glyphicon glyphicon-earphone"></span> {{phone}}
 		{{/phone}}
-		{{#website}}
-		<span class="glyphicon glyphicon-globe"></span>
-		<a href="{{website}}"> {{website}}</a>
-		{{/website}}
 	</div>
 
 	<h1 class="emphnext">{{firstname}} {{familyname}}</h1><br/>

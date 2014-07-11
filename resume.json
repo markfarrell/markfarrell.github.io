@@ -10,6 +10,7 @@
     "email": "m4farrel@uwaterloo.ca",
     "phone": "+1 (902) 222 9012",
     "linked_in" : "m4farrel",
+    "website" : "http://markfarrell.ca",
     "stars": ["1B Computer Science Student", "Software Developer"],
     "summary": {
       "points":[
@@ -69,7 +70,7 @@
         {
           "headline" : "Ironbane - a FOSS MMORPG written entirely in JavaScript",
           "points" : [
-            "Improved server architecture by partitioning the game's map into cells. Each cell owns a region of the map and is an actor that updates its AI only when players are inside of it.",
+            "Improved server architecture by partitioning the game's map into cells. Each cell owns a region of the map and is a concurrent actor that updates its AI only when players are inside of it.",
             "Allows for a larger game world to be created.",
             "Optimizes server performance for the intended gameplay experience.",
             "Pull-request can be found here: https://github.com/ironbane/IronbaneServer/pull/432."
