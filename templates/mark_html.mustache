@@ -13,7 +13,7 @@
 	<div class="contact-details">
 		{{#linked_in}}
 		<span id="linked_in-png"></span>
-		<a href="http://linkedin.com/in/{{linked_in}}" style="font-weight:regular"> /in/{{linked_in}}</a><br/>
+		<a href="http://linkedin.com/in/{{linked_in}}"> /in/{{linked_in}}</a><br/>
 		{{/linked_in}}
 		{{#website}}
 		<span class="glyphicon glyphicon-globe"></span>
@@ -46,6 +46,34 @@
 	</ul>
 	{{/summary}}
 
+	{{#skills}}
+	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
+	<ul class="languages">
+		{{#details}}
+		<li>{{type}}:
+			{{#items}}
+			<span class="label label-default">{{name}}</span>
+			{{/items}}
+		</li>
+		{{/details}}
+	</ul>
+	{{/skills}}
+
+  {{#education}}
+	<h2><span class="glyphicon glyphicon-briefcase"></span> Education</h2>
+	<ul>
+		{{#schools}}
+		<li>{{{degree}}}
+			<span class="right">({{from}} – {{to}})</span>
+      <ul>
+        <li>Plan Name: {{major}}</li>
+        <li>Institution: {{institution}}</li>
+      </ul>
+		</li>
+		{{/schools}}
+	</ul>  {{/education}}
+
+
 	{{#experience}}
 	<h2><span class="glyphicon glyphicon-briefcase"></span> Professional Experience</h2>
 	<ul>
@@ -56,6 +84,13 @@
 				{{#details}}
 				<li>{{{.}}}</li>
 				{{/details}}
+        {{#skills_developed}}
+        <li>Skills Developed:
+          {{#skills}}
+          <span class="label label-default">{{{.}}}</span>
+          {{/skills}}
+        </li>
+        {{/skills_developed}}
 				{{#technology_used}}
 				<li>Tools:
 					{{#tools}}
@@ -80,6 +115,13 @@
 				{{#points}}
 				<li>{{{.}}}</li>
 				{{/points}}
+        {{#skills_developed}}
+        <li>Skills Developed:
+          {{#skills}}
+          <span class="label label-default">{{{.}}}</span>
+          {{/skills}}
+        </li>
+        {{/skills_developed}}
 			</ul>
 		</li>
 		{{/items}}
@@ -109,18 +151,7 @@
 	</ul>
 	{{/other_projects}}
 
-	{{#skills}}
-	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
-	<ul class="languages">
-		{{#details}}
-		<li>{{type}}:
-			{{#items}}
-			<span class="label label-default">{{name}}</span>
-			{{/items}}
-		</li>
-		{{/details}}
-	</ul>
-	{{/skills}}
+
 
 	{{#papers}}
 	<h2><span class="glyphicon glyphicon-edit"></span> Publications</h2>

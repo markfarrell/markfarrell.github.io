@@ -11,7 +11,7 @@
     "phone": "+1 (902) 222 9012",
     "linked_in" : "m4farrel",
     "website" : "http://markfarrell.ca",
-    "stars": ["1B Computer Science Student", "Software Developer"],
+    "stars": ["Undergraduate Student", "Software Developer"],
     "summary": {
       "points":[
         "A top-down thinker, with a notable ability to initiate, manage and collaborate on software projects."
@@ -21,16 +21,26 @@
       "items": [
       {
         "title": "Software Developer",
-        "organisation": "Defence R&D Canada",
-        "location": "Halifax, Nova Scotia",
+        "organisation": "<a href=\"http://www.drdc-rddc.gc.ca/en/\" target=\"_blank\">Defence R&D Canada</a>",
+        "location": "",
         "from": "May. 2014",
         "to": "Aug. 2014",
         "details": [
           "Worked for a postdoctoral mentor doing mathematical research on resolving the identities of vessels at tracked locations in the water.",
-          "Developed components for a software system intended to put the research into practice.",
-          "Engineered a software service that provides sea-ice and ocean-floor data at requested locations and times.",
+          "Developed components for a software system intended to put his research into practice, namely  services to eliminate vessel hypotheses given their static and dynamic attributes.",
+          "Engineered a software service that provides sea-ice and ocean-floor data at requested geographical locations and times, to eliminate hypotheses near the shoreline and in the arctic.",
           "Served as the systems administrator of a supercomputer workstation running ArchLinux."
         ],
+        "skills_developed" : {
+          "skills" : [
+            "Geospatial Programming",
+            "Mathematical Maturity",
+            "Scala",
+            "Interpersonal Communication",
+            "Personal Productivity",
+            "Goal Setting"
+          ]
+        },
         "technology_used": {
           "tools": [
             "AIS Datasets",
@@ -54,14 +64,20 @@
       "items": [
         {
           "title":"Software Developer",
-          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\">UC Berkeley/CREA</a>",
+          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\" target=\"_blank\">UC Berkeley/CREA</a>",
           "from": "Feb. 2014",
           "to": "Present",
           "points": [
             "Developing software that compiles text into text-networks, to build an ontology on aging research from a stream of textbooks and journal articles.",
-            "Project Repository: https://github.com/markfarrell/text-network-compiler.",
-            "Skills Developed: Natural Language Processing, Semantic Parsing, Public Speaking"
-          ]
+            "Notes and source code available <a href=\"https://github.com/markfarrell/text-network-compiler\" target=\"_blank\">here</a>."
+          ],
+          "skills_developed" : {
+            "skills" : [
+              "Natural Language Processing",
+              "Semantic Parsing",
+              "Public Speaking"
+            ]
+          }
         }
       ]
     },
@@ -73,7 +89,7 @@
             "Improved server architecture by partitioning the game's map into cells. Each cell owns a region of the map and is a concurrent actor that updates its AI only when players are inside of it.",
             "Allows for a larger game world to be created.",
             "Optimizes server performance for the intended gameplay experience.",
-            "Pull-request can be found here: https://github.com/ironbane/IronbaneServer/pull/432."
+            "Pull-request can be found <a href=\"https://github.com/ironbane/IronbaneServer/pull/432\" target=\"_blank\">here</a>."
           ]
         },
         {
@@ -83,7 +99,7 @@
              "Modelled 3D art assets in Blender.",
              "Developed server software in C++.",
              "Prototyped client software using Unity3D.",
-             "Released as open-source: http://github.com/markfarrell/starfall."
+             "Released as open-source <a href=\"http://github.com/markfarrell/starfall\" target=\"_blank\">here</a>."
           ]
         },
         {
@@ -104,6 +120,15 @@
         }
       ]
     },
+    "education" : {
+      "schools" : [{
+        "degree" : "<a href=\"https://ugradcalendar.uwaterloo.ca/page/MATH-Bachelor-of-Computer-Science\" target=\"_blank\">Candidate: Bachelor of Computer Science</a>",
+        "major" : "Honours Computer Science (Co-op)",
+        "institution" : "University of Waterloo",
+        "from" : "Sep. 2013",
+        "to" : "Present"
+      }]
+    },
     "skills": {
       "details": [
         {
@@ -118,7 +143,14 @@
           "type" : "Specialties",
           "items" : [
             "Geospatial Programming",
-            "Web Development"
+            "Server Architecture"
+          ]
+        },
+        {
+          "type" : "Interests",
+          "items" : [
+            "Linguistics",
+            "Digital Art & Animation"
           ]
         }
       ]
