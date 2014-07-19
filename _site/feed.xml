@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title></title>
+		<description>Thoughts on computing and co-op at the University of Waterloo</description>
+		<link>/</link>
+		<atom:link href="/" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Co-op Experiences with the Government of Canada</title>
+				<description>&lt;p&gt;I’m currently enrolled in the Bachelor of Computer Science, Honours
+Computer Science (Co-op) program at the University of Waterloo, completing my first co-op work
+term with the Government of Canada.&lt;/p&gt;
+
+&lt;p&gt;I’m starting this blog to reflect upon what I’ve learned and to offer some advice to other
+University of Waterloo students looking for internships in the software/computing industry.&lt;/p&gt;
+
+&lt;p&gt;I’ve been working on software tools for vessel identity resolution in wide-area surveillance. I’d like to talk about what I’ve
+done and what I’ve learned so far.&lt;/p&gt;
+
+&lt;p&gt;Throughout the first month of my co-op work term, I developed a software service that provides sea-ice and ocean-depth information for requested geographical locations and times. Here’s an example of how someone might use the service when it is running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Request units : (WSG84 degrees, WSG84 degrees, UNIX time)
+GET &quot;http://host:port/?latitude=-74&amp;amp;longitude=75&amp;amp;time=0&quot;
+
+# Response units : depth is measured in metres above mean sea-level. See below about sea-ice units.
+OK {
+  &quot;bathymetry&quot; : { &quot;depth&quot; : &quot;-706.0&quot; },
+  &quot;sea_ice&quot; : {
+    &quot;CA&quot; : &quot;-9&quot;,
+    &quot;CB&quot; : &quot;-9&quot;,
+    &quot;CC&quot; : &quot;-9&quot;,
+    &quot;CD&quot; : &quot;-9&quot;,
+    &quot;CF&quot; : &quot;06-9&quot;,
+    &quot;CN&quot; : &quot;95&quot;,
+    &quot;CT&quot; : &quot;91&quot;,
+    &quot;FA&quot; : &quot;06&quot;,
+    &quot;FB&quot; : &quot;-9&quot;,
+    &quot;FC&quot; : &quot;-9&quot;,
+    &quot;SA&quot; : &quot;93&quot;,
+    &quot;SB&quot; : &quot;-9&quot;,
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I’d recommend reading about the HTTP and REST protocols to gain an intuition as to how the service works. To understand what the key-value pairs mean in the sea-ice dictionary, read about the &lt;a href=&quot;https://nsidc.org/data/docs/noaa/g02171_CIS_seaice_regional/documents/CIS_SIGRID3_Implementation.pdf&quot;&gt;Canadian Ice Service, SIGRID-3 Implementation 2006&lt;/a&gt;. My software aggregates sea-ice datasets published by the National Snow &amp;amp; Ice Data Center: &lt;a href=&quot;http://nsidc.org/data/g02171&quot;&gt;Canadian Ice Service Region Sea Ice Charts in SIGRID-3 Format&lt;/a&gt;; the bathymetric (ocean-floor) data is derived from the &lt;a href=&quot;http://www.ngdc.noaa.gov/mgg/fliers/01mgg04.html&quot;&gt;ETOPO2&lt;/a&gt; dataset published by the National Oceanic and Atmospheric Administration.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.tc.gc.ca/eng/marinesafety/debs-arctic-acts-regulations-airss-291.html&quot;&gt;Arctic Ice Regime Shipping System&lt;/a&gt; is a standard that tells us whether a vessel is suited to travel under certain environmental conditions. This classification corresponds directly to a sea-ice code, allowing us to say that is more likely for certain unknown vessels to have a particular identity than others (e.g. an unknown vessel moving through the Arctic is likely to be a vessel suited for travel in the Arctic climate).&lt;/p&gt;
+
+&lt;p&gt;Currently, it takes roughly 3 seconds to compute a response for a request. I’ve created a spatial index for each table in my &lt;a href=&quot;http://postgis.net/&quot;&gt;GIS database&lt;/a&gt; to speed up / reduce the computational complexity of bounding box and point-in-polygon inclusion tests. I run the service on my &lt;a href=&quot;http://archlinux.org&quot;&gt;Linux-3.15.1-1-ARCH&lt;/a&gt; workstation, possessing 500GB of RAM for faster, in-memory, computations over my data.&lt;/p&gt;
+
+&lt;p&gt;I’ve learned a fair amount about geospatial programming and cartography while on my co-op work term. You might want to have a look at &lt;a href=&quot;http://scala-lang.org/&quot;&gt;The Scala Programming Language&lt;/a&gt; and &lt;a href=&quot;http://www.geotools.org/&quot;&gt;Geotools&lt;/a&gt;, as they’ve served as valuable tools for me while developing the software service.&lt;/p&gt;
+
+&lt;p&gt;If you’re an incoming student to the University of Waterloo’s Co-op program and are interested in software/computing internships, I might be able to offer you some tips for being successfully hired. At the end of the day, your CS1XX computing courseware should provide fairly good foundations for launching your career in computing. However, I feel as though the (CS1XX) curriculum leaves out some helpful-for-employment knowledge about type systems, parallel programming, computer networks, general information technology, web development and relational database systems:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Your MATH1XX knowledge should make learning about type systems quite accessible. Take a look at &lt;a href=&quot;http://eed3si9n.com/learning-scalaz/&quot;&gt;Learning Scalaz&lt;/a&gt; and &lt;a href=&quot;https://github.com/non/spire&quot;&gt;Spire - for Algebraic Type Classes&lt;/a&gt; to get a sense of what I’m talking about.&lt;/li&gt;
+  &lt;li&gt;If you want to learn about computer networks, knowledge that I feel is very important in the industrial setting, start at &lt;a href=&quot;http://www.cisco.com/web/learning/netacad/index.html&quot;&gt;The Cisco Networking Adademy&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;If you want to learn about relational database systems, most often using some derivation of the ANSI SQL standard, I’d recommend beginning with these notes on the &lt;a href=&quot;http://www.databasteknik.se/webbkursen/relalg-lecture/&quot;&gt;Relational Algebra&lt;/a&gt; and then proceeding to read the PostgreSQL technical manual.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/&quot;&gt;The Mozilla Developer Network&lt;/a&gt; seems to provide a fairly comprehensive list of tutorials on web development.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I would encourage you to consult the &lt;a href=&quot;https://csclub.uwaterloo.ca&quot;&gt;University of Waterloo Computer Science Club&lt;/a&gt;, where you can receive support on your coursework and learn some additional skills that will help you throughout your co-op career. Participate in an ACM Programming Contest, usually hosted in the labs along “MathSoc Hallway”; these contests will challenge you to solve relatively difficult computing problems. Attend a college hackathon, such as Waterloo’s upcoming &lt;a href=&quot;http://hackthenorth.com/&quot;&gt;Hack The North&lt;/a&gt;, to collaborate on a software project with your friends.&lt;/p&gt;
+
+</description>
+				<pubDate>Mon, 30 Jun 2014 00:00:00 -0300</pubDate>
+				<link>/general/2014/06/30/work_term.html</link>
+				<guid isPermaLink="true">/general/2014/06/30/work_term.html</guid>
+			</item>
+		
+	</channel>
+</rss>

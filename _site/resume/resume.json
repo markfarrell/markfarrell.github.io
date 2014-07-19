@@ -1,0 +1,159 @@
+{
+  "settings": {
+    "glyphicons" : true
+  },
+  "firstname": "Mark",
+  "familyname": "Farrell",
+  "linkedin_id": "m4farrel",
+  "github_id": "markfarrell",
+  "bio_data": {
+    "email": "m4farrel@uwaterloo.ca",
+    "phone": "+1 (902) 222 9012",
+    "linked_in" : "m4farrel",
+    "website" : "http://markfarrell.ca",
+    "stars": ["Undergraduate Student", "Software Developer"],
+    "summary": {
+      "points":[
+        "A top-down thinker, with a notable ability to initiate, manage and collaborate on software projects."
+      ]
+    },
+    "experience": {
+      "items": [
+      {
+        "title": "Software Developer",
+        "organisation": "<a href=\"http://www.drdc-rddc.gc.ca/en/\" target=\"_blank\">Defence R&D Canada</a>",
+        "location": "",
+        "from": "May. 2014",
+        "to": "Aug. 2014",
+        "details": [
+          "Worked for a postdoctoral mentor doing mathematical research on resolving the identities of vessels at known locations in the water.",
+          "Developed components for a software system intended to put his research into practice, namely  services to eliminate vessel hypotheses given their static and dynamic attributes.",
+          "Engineered a software service that provides sea-ice and ocean-floor data at requested geographical locations and times, to eliminate hypotheses near the shoreline and in the arctic.",
+          "Served as the systems administrator of a supercomputer workstation running ArchLinux."
+        ],
+        "skills_developed" : {
+          "skills" : [
+            "Geospatial Programming",
+            "Mathematical Maturity",
+            "Scala",
+            "Interpersonal Communication",
+            "Personal Productivity",
+            "Goal Setting"
+          ]
+        },
+        "technology_used": {
+          "tools": [
+            "AIS Datasets",
+            "NOAA Environmental Datasets",
+            "Scala",
+            "Scalaz",
+            "PostgreSQL",
+            "PostGIS",
+            "Geotools",
+            "Jetty",
+            "FTP4j",
+            "SLF4j/Log4j",
+            "Git",
+            "Vim"
+          ]
+        }
+      }
+      ]
+    },
+    "research_experience": {
+      "items": [
+        {
+          "title":"Software Developer",
+          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\" target=\"_blank\">UC Berkeley/CREA</a>",
+          "from": "Feb. 2014",
+          "to": "Present",
+          "points": [
+            "Developing software that compiles text into text-networks, to build an ontology on aging research from a stream of textbooks and journal articles.",
+            "Notes and source code available <a href=\"https://github.com/markfarrell/text-network-compiler\" target=\"_blank\">here</a>."
+          ],
+          "skills_developed" : {
+            "skills" : [
+              "Natural Language Processing",
+              "Semantic Parsing",
+              "Public Speaking"
+            ]
+          }
+        }
+      ]
+    },
+    "other_projects": {
+      "items": [
+        {
+          "headline" : "Ironbane - a FOSS MMORPG written entirely in JavaScript",
+          "points" : [
+            "Improved server architecture by partitioning the game's map into cells. Each cell owns a region of the map and is a concurrent actor that updates its AI only when players are inside of it.",
+            "Allows for a larger game world to be created.",
+            "Optimizes server performance for the intended gameplay experience.",
+            "Pull-request can be found <a href=\"https://github.com/ironbane/IronbaneServer/pull/432\" target=\"_blank\">here</a>."
+          ]
+        },
+        {
+          "headline" : "Starfall - a 3D space MMORPG demo",
+          "points" : [
+             "Supports logging in, cockpit-style controls and collision detection.",
+             "Modelled 3D art assets in Blender.",
+             "Developed server software in C++.",
+             "Prototyped client software using Unity3D.",
+             "Released as open-source <a href=\"http://github.com/markfarrell/starfall\" target=\"_blank\">here</a>."
+          ]
+        },
+        {
+          "headline" : "Fitlings Pedometer Game - for Shad Valley Entrepreneurship Cup",
+          "points" : [
+            "Prototyped an Android game aimed at reducing obesity rates in youth.",
+            "Used the accelerometer found in Android devices to create a setting where the player has to walk in order to keep their avatar healthy.",
+            "Teammates created business plan and art assets.",
+            "Awarded 3rd place for Best Application of Scientific Principles."
+          ]
+        },
+        {
+          "headline" : "Titans-Server - server emulators for Universal Century Gundam Online",
+          "points" : [
+            "With Brian Burnett and Vince Macchia, reverse engineered the game's packet protocol.",
+            "Wrote server emulators in Java, allowing users to try the game again after the official service was cancelled in 2007."
+          ]
+        }
+      ]
+    },
+    "education" : {
+      "schools" : [{
+        "degree" : "<a href=\"https://ugradcalendar.uwaterloo.ca/page/MATH-Bachelor-of-Computer-Science\" target=\"_blank\">Candidate: Bachelor of Computer Science</a>",
+        "major" : "Honours Computer Science (Co-op)",
+        "institution" : "University of Waterloo",
+        "from" : "Sep. 2013",
+        "to" : "Present"
+      }]
+    },
+    "skills": {
+      "details": [
+        {
+          "type": "Core Programming Languages",
+          "items": [
+            "Scala",
+            "Java",
+            "JavaScript"
+          ]
+        },
+        {
+          "type" : "Specialties",
+          "items" : [
+            "Geospatial Programming",
+            "Server Architecture"
+          ]
+        },
+        {
+          "type" : "Interests",
+          "items" : [
+            "Linguistics",
+            "Digital Art & Animation"
+          ]
+        }
+      ]
+    }
+  }
+}

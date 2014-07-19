@@ -1,0 +1,178 @@
+{{#settings}}
+	{{#glyphicons}}
+		<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
+		<script>document.getElementById('github-png').innerHTML = '<img src="public/images/github.png" style="width:22px"></img> ';
+		</script>
+		<script>document.getElementById('linked_in-png').innerHTML = '<img src="public/images/linked_in.png" style="width:13px;height:13px"></img> ';
+		</script>
+	{{/glyphicons}}
+{{/settings}}
+<link rel="stylesheet" type="text/css" href="public/css/screen.css" />
+<div id="page">
+{{#bio_data}}
+	<div class="contact-details">
+		{{#linked_in}}
+		<span id="linked_in-png"></span>
+		<a href="http://linkedin.com/in/{{linked_in}}"> /in/{{linked_in}}</a><br/>
+		{{/linked_in}}
+		{{#website}}
+		<span class="glyphicon glyphicon-globe"></span>
+		<a href="{{website}}"> {{website}}</a><br/>
+		{{/website}}
+		{{#email}}
+		<span class="glyphicon glyphicon-envelope"></span> {{email}}<br/>
+		{{/email}}
+		{{#phone}}
+		<span class="glyphicon glyphicon-earphone"></span> {{phone}}
+		{{/phone}}
+	</div>
+
+	<h1 class="emphnext">{{firstname}} {{familyname}}</h1><br/>
+	{{#stars}}
+	<span class="stars">
+		 {{#items}}
+		 {{name}} {{^last}}<span class="glyphicon glyphicon-star-empty"></span>{{/last}}
+		 {{/items}}
+	</span>
+	{{/stars}}
+	<br/>
+
+	{{#summary}}
+	<h2><span class="glyphicon glyphicon-compressed"></span> Qualification Summary</h2>
+	<ul>
+		{{#points}}
+		<li>{{{.}}}</li>
+		{{/points}}
+	</ul>
+	{{/summary}}
+
+	{{#skills}}
+	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
+	<ul class="languages">
+		{{#details}}
+		<li>{{type}}:
+			{{#items}}
+			<span class="label label-default">{{name}}</span>
+			{{/items}}
+		</li>
+		{{/details}}
+	</ul>
+	{{/skills}}
+
+  {{#education}}
+	<h2><span class="glyphicon glyphicon-paperclip"></span> Education</h2>
+	<ul>
+		{{#schools}}
+		<li>{{{degree}}}
+			<span class="right">({{from}} – {{to}})</span>
+      <ul>
+        <li>Plan Name: {{major}}</li>
+        <li>Institution: {{institution}}</li>
+      </ul>
+		</li>
+		{{/schools}}
+	</ul>  {{/education}}
+
+
+	{{#experience}}
+	<h2><span class="glyphicon glyphicon-briefcase"></span> Professional Experience</h2>
+	<ul>
+		{{#items}}
+		<li>{{title}} at {{{organisation}}}{{#location}}, {{{location}}}{{/location}}
+			<span class="right">({{from}} – {{to}})</span>
+			<ul>
+				{{#details}}
+				<li>{{{.}}}</li>
+				{{/details}}
+        {{#skills_developed}}
+        <li>Skills Developed:
+          {{#skills}}
+          <span class="label label-default">{{{.}}}</span>
+          {{/skills}}
+        </li>
+        {{/skills_developed}}
+				{{#technology_used}}
+				<li>Tools:
+					{{#tools}}
+					<span class="label label-default">{{name}}</span>
+					{{/tools}}
+				</li>
+				{{/technology_used}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/experience}}
+
+	{{#research_experience}}
+	<h2><span class="glyphicon glyphicon-pencil"></span> Research Experience</h2>
+	<ul>
+		{{#items}}
+		<li>
+			{{title}} at {{{organisation}}}
+			<span class="right">({{from}} – {{to}})</span>
+			<ul>
+				{{#points}}
+				<li>{{{.}}}</li>
+				{{/points}}
+        {{#skills_developed}}
+        <li>Skills Developed:
+          {{#skills}}
+          <span class="label label-default">{{{.}}}</span>
+          {{/skills}}
+        </li>
+        {{/skills_developed}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/research_experience}}
+
+	{{#other_projects}}
+	<h2><span id="github-png"></span> Notable Projects</h2>
+	<ul>
+		{{#items}}
+		<li>
+			{{{headline}}}
+			<ul>
+				{{#points}}
+				<li>{{{.}}}</li>
+				{{/points}}
+				{{#technology_used}}
+				<li>Technologies got to work on:
+					{{#tools}}
+					<span class="label label-default">{{name}}</span>
+					{{/tools}}
+				</li>
+				{{/technology_used}}
+			</ul>
+		</li>
+		{{/items}}
+	</ul>
+	{{/other_projects}}
+
+
+
+	{{#papers}}
+	<h2><span class="glyphicon glyphicon-edit"></span> Publications</h2>
+	<ul>
+		{{#items}}
+		<li>{{authors}}
+			<a href="{{url}}">{{title}},</a>
+			 {{{misc}}}.
+		</li>
+		{{/items}}
+	</ul>
+	{{/papers}}
+
+	{{#memberships}}
+	<h2><span class="glyphicon glyphicon-globe"></span> Memberships</h2>
+	<ul>
+		{{#committees}}
+		<li>{{{.}}}</li>
+		{{/committees}}
+	</ul>
+	{{/memberships}}
+
+{{/bio_data}}
+</div><!-- End Page -->

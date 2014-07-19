@@ -1,0 +1,30 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: /home/m4farrel
+
+description: Thoughts on computing and co-op at the University of Waterloo
+author:
+  name: Mark Farrell
+  email: m4farrel@csclub.uwaterloo.ca
+  github: markfarrell
+  linkedin: m4farrel
+  twitter: m4farrel
+  bio: Mark Farrell's thoughts on computing and co-op at the University of Waterloo.
+  email_md5: 2c6b1a15ebf564812abb13c76ce818a9
+
+resume_path: resume
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
