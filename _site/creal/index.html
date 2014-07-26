@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Center for Research and Education on Aging</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+
+      .main-header {
+        font-family: serif;
+        color: #FFD67D;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: #1A2C85;
+      }
+
+      .main-header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-header li {
+        float: left;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .main-header li a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      #graph-container {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: #121629;
+        z-index: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <script src="js/sigma.min.js"></script>
+    <script src="js/plugins/sigma.parsers.gexf.min.js"></script>
+    <script src="js/plugins/sigma.plugins.dragNodes.min.js"></script>
+
+    <header class="main-header">
+      <ul>
+        <li>
+          <a href="http://crea.berkeley.edu" target="_blank">
+            <img src="images/logo.png" alt="crea"/>
+          </a>
+        </li>
+        <li style="float:right; line-height: 31px">
+          <a class="fa fa-github fa-lg" href="http://github.com/markfarrell" target="_blank"></a>
+        </li>
+    </ul>
+    </header>
+
+    <div id="container">
+      <div id="graph-container"></div>
+    </div>
+    <script>
+
+      sigma.renderers.def = sigma.renderers.canvas
+
+      var callback = function(s) {
+        sigma.plugins.dragNodes(s, s.renderers[0]);
+      };
+
+      var s = sigma.parsers.gexf('data/elastin-abstracts.gexf', {
+        container: 'graph-container',
+        settings: {
+          font: "serif",
+          drawEdgeLabels: true,
+          edgeLabelSize: "fixed",
+          defaultEdgeLabelSize: 12,
+          defaultEdgeLabelColor: "#997F46",
+          edgeLabelThreshold: 1.0,
+          labelSize: "proportional",
+          labelThreshold: 2.5,
+          labelSizeRatio: 3.0,
+          defaultLabelSize: 32,
+          defaultLabelColor: "#FFD67D",
+          minNodeSize: 0.5,
+          maxNodeSize: 5.0,
+          minEdgeSize: 0.1,
+          maxEdgeSize: 0.4,
+          scalingMode: "outside",
+          hideEdgesOnMove: true
+        }},
+      callback);
+
+    </script>
+  </body>
+</html>
