@@ -13,6 +13,7 @@
         right: 0;
         position: absolute;
         width: 100%;
+        height: 31px;
         z-index: 100;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -36,6 +37,21 @@
         text-decoration: none !important;
       }
 
+      .main-footer {
+        font-family: serif;
+        color: #FFD67D;
+        background: #1A2C85;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 31px;
+      }
+
       #graph-container {
         top: 0;
         bottom: 0;
@@ -53,8 +69,9 @@
     <script src="js/sigma.min.js"></script>
     <script src="js/plugins/sigma.parsers.gexf.min.js"></script>
     <script src="js/plugins/sigma.plugins.dragNodes.min.js"></script>
+    <script src="js/plugins/sigma.plugins.neighborhoods.min.js"></script>
 
-    <header class="main-header">
+    <div class="main-header">
       <ul>
         <li>
           <a href="http://crea.berkeley.edu" target="_blank">
@@ -65,41 +82,79 @@
           <a class="fa fa-github fa-lg" href="http://github.com/markfarrell" target="_blank"></a>
         </li>
     </ul>
-    </header>
+    </div>
 
     <div id="container">
       <div id="graph-container"></div>
     </div>
+
     <script>
 
       sigma.renderers.def = sigma.renderers.canvas
 
-      var callback = function(s) {
-        sigma.plugins.dragNodes(s, s.renderers[0]);
-      };
+      var gexfPath = 'data/elastin-abstracts.gexf';
 
-      var s = sigma.parsers.gexf('data/elastin-abstracts.gexf', {
+      var sig = new sigma({
+        graph: new sigma.classes.graph(),
         container: 'graph-container',
         settings: {
-          font: "serif",
+          font: 'serif',
           drawEdgeLabels: true,
-          edgeLabelSize: "fixed",
+          edgeLabelSize: 'fixed',
           defaultEdgeLabelSize: 12,
-          defaultEdgeLabelColor: "#997F46",
+          defaultEdgeLabelColor: '#997F46',
           edgeLabelThreshold: 1.0,
-          labelSize: "proportional",
+          labelSize: 'proportional',
           labelThreshold: 2.5,
           labelSizeRatio: 3.0,
           defaultLabelSize: 32,
-          defaultLabelColor: "#FFD67D",
+          defaultLabelColor: '#FFD67D',
           minNodeSize: 0.5,
           maxNodeSize: 5.0,
           minEdgeSize: 0.1,
           maxEdgeSize: 0.4,
-          scalingMode: "outside",
-          hideEdgesOnMove: true
-        }},
-      callback);
+          scalingMode: 'outside',
+          hideEdgesOnMove: true,
+          doubleClickEnabled: false
+        }});
+
+        sigma.parsers.gexf(gexfPath, {}, function(gexfSig) {
+
+          var graph = {
+            nodes: gexfSig.graph.nodes(),
+            edges: gexfSig.graph.edges()
+          };
+
+          sig.graph.clear();
+          sig.graph.read(graph);
+          sig.refresh();
+
+          sigma.plugins.dragNodes(sig, sig.renderers[0]);
+
+          sig.bind('doubleClickNode', function(e) {
+
+            var neighborhood = gexfSig.graph.neighborhood(e.data.node.id);
+
+            if(neighborhood.edges.length > 1) {
+
+              sig.graph.clear();
+              sig.graph.read(neighborhood);
+              sig.camera.goTo({ x: 0, y: 0, angle: 0, ratio : 1 });
+              sig.refresh();
+
+            }
+
+          });
+
+          sig.bind('doubleClickStage', function(e) {
+
+            sig.graph.clear();
+            sig.graph.read(graph);
+            sig.refresh();
+
+          });
+
+        });
 
     </script>
   </body>
