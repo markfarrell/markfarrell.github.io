@@ -1,56 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Center for Research and Education on Aging</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-
-      .main-header {
-        font-family: serif;
-        color: #FFD67D;
-        top: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        width: 100%;
-        height: 31px;
-        z-index: 100;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        background: #1A2C85;
-      }
-
-      .main-header ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .main-header li {
-        float: left;
-        padding-right: 10px;
-        padding-left: 10px;
-      }
-
-      .main-header li a {
-        color: inherit !important;
-        text-decoration: none !important;
-      }
-
-      .main-footer {
-        font-family: serif;
-        color: #FFD67D;
-        background: #1A2C85;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        position: absolute;
-        z-index: 100;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 31px;
-      }
 
       #graph-container {
         top: 0;
@@ -62,100 +17,146 @@
         z-index: 0;
       }
 
+      .header {
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .main-header {
+        font-family: serif;
+        color: #FFD67D;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 41px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: #1A2C85;
+      }
+
+      .watermark {
+        font-size: 5em;
+        bottom: 0;
+        right: 0;
+        padding-right: 0.25em;
+        position: absolute;
+        z-index: 50;
+      }
+
+      .suggestions-header {
+        right: 0;
+        top: 51px;
+      }
+
+      #suggestions {
+        display: none;
+        top: 45px;
+        float: right;
+        margin-right: 0.5em;
+        background: #121629;
+        color: #CCA34A;
+        width: 217px;
+        border: 0.25em solid #1A2C85;
+        border-radius: 5px;
+      }
+
+      #suggestions li {
+        display: block;
+      }
+
+      #suggestions li:first-child {
+        padding-top: 0.5em;
+      }
+
+      #suggestions li:last-child {
+        padding-bottom: 0.5em;
+      }
+
+      li.logo {
+        float: left;
+      }
+
+      li.search {
+        width: 217px;
+        background: #121629;
+        color: #CCA34A;
+        float: right;
+        margin-right: 0.5em;
+        border-radius: 5px;
+      }
+
+      input[type="search"] {
+        color: inherit;
+        background: inherit;
+        height: 31px;
+        padding-left: 0.5em;
+        border: none;
+      }
+
+      input[type="search"]:focus,
+      input[type="search"].focus {
+        outline: none;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      body {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+
     </style>
+
   </head>
-  <body>
+  <body onmouseup="app.hideSuggestions()">
 
-    <script src="js/sigma.min.js"></script>
-    <script src="js/plugins/sigma.parsers.gexf.min.js"></script>
-    <script src="js/plugins/sigma.plugins.dragNodes.min.js"></script>
-    <script src="js/plugins/sigma.plugins.neighborhoods.min.js"></script>
-
-    <div class="main-header">
+    <div class="header main-header">
       <ul>
-        <li>
+        <li class="logo">
           <a href="http://crea.berkeley.edu" target="_blank">
             <img src="images/logo.png" alt="crea"/>
           </a>
         </li>
-        <li style="float:right; line-height: 31px">
-          <a class="fa fa-github fa-lg" href="http://github.com/markfarrell" target="_blank"></a>
+        <li class="search">
+          <span class="fa fa-search fa-lg" onclick="app.search()"></span>
+          <input id="search-input" type="search" onchange="app.search()" onclick="app.showSuggestions()" onkeyup="app.showSuggestions()"></input>
         </li>
-    </ul>
+      </ul>
     </div>
 
-    <div id="container">
-      <div id="graph-container"></div>
+    <div class="header suggestions-header">
+      <ul id="suggestions">
+      </ul>
     </div>
 
-    <script>
+    <div id="graph-container"></div>
 
-      sigma.renderers.def = sigma.renderers.canvas
+    <div class="watermark">
+      <a class="fa fa-github" href="https://github.com/markfarrell/crea-nlp" target="_blank"></a>
+    </div>
 
-      var gexfPath = 'data/elastin-abstracts.gexf';
-
-      var sig = new sigma({
-        graph: new sigma.classes.graph(),
-        container: 'graph-container',
-        settings: {
-          font: 'serif',
-          drawEdgeLabels: true,
-          edgeLabelSize: 'fixed',
-          defaultEdgeLabelSize: 12,
-          defaultEdgeLabelColor: '#997F46',
-          edgeLabelThreshold: 1.0,
-          labelSize: 'proportional',
-          labelThreshold: 2.5,
-          labelSizeRatio: 3.0,
-          defaultLabelSize: 32,
-          defaultLabelColor: '#FFD67D',
-          minNodeSize: 0.5,
-          maxNodeSize: 5.0,
-          minEdgeSize: 0.1,
-          maxEdgeSize: 0.4,
-          scalingMode: 'outside',
-          hideEdgesOnMove: true,
-          doubleClickEnabled: false
-        }});
-
-        sigma.parsers.gexf(gexfPath, {}, function(gexfSig) {
-
-          var graph = {
-            nodes: gexfSig.graph.nodes(),
-            edges: gexfSig.graph.edges()
-          };
-
-          sig.graph.clear();
-          sig.graph.read(graph);
-          sig.refresh();
-
-          sigma.plugins.dragNodes(sig, sig.renderers[0]);
-
-          sig.bind('doubleClickNode', function(e) {
-
-            var neighborhood = gexfSig.graph.neighborhood(e.data.node.id);
-
-            if(neighborhood.edges.length > 1) {
-
-              sig.graph.clear();
-              sig.graph.read(neighborhood);
-              sig.camera.goTo({ x: 0, y: 0, angle: 0, ratio : 1 });
-              sig.refresh();
-
-            }
-
-          });
-
-          sig.bind('doubleClickStage', function(e) {
-
-            sig.graph.clear();
-            sig.graph.read(graph);
-            sig.refresh();
-
-          });
-
-        });
-
+    <script type="text/javascript" src="js/crea-www-jsdeps.js"></script>
+    <script type="text/javascript" src="js/crea-www-fastopt.js"></script>
+    <script type="text/javascript">
+      var app = edu.crea.www.WebApp();
+      app.main();
     </script>
+
   </body>
 </html>
