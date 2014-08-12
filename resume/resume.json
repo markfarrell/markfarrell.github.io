@@ -26,19 +26,16 @@
         "from": "May. 2014",
         "to": "Aug. 2014",
         "details": [
-          "Worked for a postdoctoral mentor doing mathematical research on resolving the identities of vessels at known locations in the water.",
-          "Developed components for a software system intended to put his research into practice, namely  services to eliminate vessel hypotheses given their static and dynamic attributes.",
-          "Engineered a software service that provides sea-ice and ocean-floor data at requested geographical locations and times, to eliminate hypotheses near the shoreline and in the arctic.",
-          "Served as the systems administrator of a supercomputer workstation running ArchLinux."
+          "Worked for a postdoctoral mentor doing research on resolving the identities of ocean-going vessels at multiple tracked locations in the water, which involves statistical analysis and computational complexity theory.",
+          "Independently developed vessel identification software modules that help to infer some of the static attributes of tracked vessels, namely their Arctic ice classes, fuel capacities, and water displacements.",
+          "Served as the systems administrator of a supercomputer workstation running ArchLinux.",
+          "Acknowleged in the paper titled \"Joint Identification of Multiple Tracked Targets\", submitted to the Journal of Information Fusion."
         ],
         "skills_developed" : {
           "skills" : [
             "Geospatial Programming",
-            "Mathematical Maturity",
-            "Scala",
-            "Interpersonal Communication",
-            "Personal Productivity",
-            "Goal Setting"
+            "Oral Communication",
+            "Personal Productivity"
           ]
         },
         "technology_used": {
@@ -68,13 +65,13 @@
           "from": "Feb. 2014",
           "to": "Present",
           "points": [
-            "Developing software that compiles text into text-networks, to build an ontology on aging research from a stream of textbooks and journal articles.",
+            "Independently developed software that compiles text into text-networks, to automate the construction of a knowledge base on the human aging process.",
             "Notes and source code available <a href=\"https://github.com/markfarrell/text-network-compiler\" target=\"_blank\">here</a>."
           ],
           "skills_developed" : {
             "skills" : [
               "Natural Language Processing",
-              "Semantic Parsing",
+              "Logic Programming",
               "Public Speaking"
             ]
           }
