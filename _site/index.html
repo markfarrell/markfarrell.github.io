@@ -151,83 +151,6 @@
 </div>
 
 
-
-<article class="home">
-
-  <span class="post-date">
-    
-    June
-    30th,
-    
-    2014
-  </span>
-
-  <h2>
-    <a href="/general/2014/06/30/work_term.html">Co-op Experiences with the Government of Canada</a>
-  </h2>
-
-  <div>
-    
-    <p>I’m currently enrolled in the Bachelor of Computer Science, Honours
-Computer Science (Co-op) program at the University of Waterloo, completing my first co-op work
-term with the Government of Canada.</p>
-
-<p>I’m starting this blog to reflect upon what I’ve learned and to offer some advice to other
-University of Waterloo students looking for internships in the software/computing industry.</p>
-
-<p>I’ve been working on software tools for vessel identity resolution in wide-area surveillance. I’d like to talk about what I’ve
-done and what I’ve learned so far.</p>
-
-<p>Throughout the first month of my co-op work term, I developed a software service that provides sea-ice and ocean-depth information for requested geographical locations and times. Here’s an example of how someone might use the service when it is running:</p>
-
-<pre><code># Request units : (WSG84 degrees, WSG84 degrees, UNIX time)
-GET "http://host:port/?latitude=-74&amp;longitude=75&amp;time=0"
-
-# Response units : depth is measured in metres above mean sea-level. See below about sea-ice units.
-OK {
-  "bathymetry" : { "depth" : "-706.0" },
-  "sea_ice" : {
-    "CA" : "-9",
-    "CB" : "-9",
-    "CC" : "-9",
-    "CD" : "-9",
-    "CF" : "06-9",
-    "CN" : "95",
-    "CT" : "91",
-    "FA" : "06",
-    "FB" : "-9",
-    "FC" : "-9",
-    "SA" : "93",
-    "SB" : "-9",
-  }
-}
-</code></pre>
-
-<p>I’d recommend reading about the HTTP and REST protocols to gain an intuition as to how the service works. To understand what the key-value pairs mean in the sea-ice dictionary, read about the <a href="https://nsidc.org/data/docs/noaa/g02171_CIS_seaice_regional/documents/CIS_SIGRID3_Implementation.pdf">Canadian Ice Service, SIGRID-3 Implementation 2006</a>. My software aggregates sea-ice datasets published by the National Snow &amp; Ice Data Center: <a href="http://nsidc.org/data/g02171">Canadian Ice Service Region Sea Ice Charts in SIGRID-3 Format</a>; the bathymetric (ocean-floor) data is derived from the <a href="http://www.ngdc.noaa.gov/mgg/fliers/01mgg04.html">ETOPO2</a> dataset published by the National Oceanic and Atmospheric Administration.</p>
-
-<p>The <a href="https://www.tc.gc.ca/eng/marinesafety/debs-arctic-acts-regulations-airss-291.html">Arctic Ice Regime Shipping System</a> is a standard that tells us whether a vessel is suited to travel under certain environmental conditions. This classification corresponds directly to a sea-ice code, allowing us to say that is more likely for certain unknown vessels to have a particular identity than others (e.g. an unknown vessel moving through the Arctic is likely to be a vessel suited for travel in the Arctic climate).</p>
-
-<p>Currently, it takes roughly 3 seconds to compute a response for a request. I’ve created a spatial index for each table in my <a href="http://postgis.net/">GIS database</a> to speed up / reduce the computational complexity of bounding box and point-in-polygon inclusion tests. I run the service on my <a href="http://archlinux.org">Linux-3.15.1-1-ARCH</a> workstation, possessing 500GB of RAM for faster, in-memory, computations over my data.</p>
-
-<p>I’ve learned a fair amount about geospatial programming and cartography while on my co-op work term. You might want to have a look at <a href="http://scala-lang.org/">The Scala Programming Language</a> and <a href="http://www.geotools.org/">Geotools</a>, as they’ve served as valuable tools for me while developing the software service.</p>
-
-<p>If you’re an incoming student to the University of Waterloo’s Co-op program and are interested in software/computing internships, I might be able to offer you some tips for being successfully hired. At the end of the day, your CS1XX computing courseware should provide fairly good foundations for launching your career in computing. However, I feel as though the (CS1XX) curriculum leaves out some helpful-for-employment knowledge about type systems, parallel programming, computer networks, general information technology, web development and relational database systems:</p>
-
-<ul>
-  <li>Your MATH1XX knowledge should make learning about type systems quite accessible. Take a look at <a href="http://eed3si9n.com/learning-scalaz/">Learning Scalaz</a> and <a href="https://github.com/non/spire">Spire - for Algebraic Type Classes</a> to get a sense of what I’m talking about.</li>
-  <li>If you want to learn about computer networks, knowledge that I feel is very important in the industrial setting, start at <a href="http://www.cisco.com/web/learning/netacad/index.html">The Cisco Networking Adademy</a>.</li>
-  <li>If you want to learn about relational database systems, most often using some derivation of the ANSI SQL standard, I’d recommend beginning with these notes on the <a href="http://www.databasteknik.se/webbkursen/relalg-lecture/">Relational Algebra</a> and then proceeding to read the PostgreSQL technical manual.</li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/">The Mozilla Developer Network</a> seems to provide a fairly comprehensive list of tutorials on web development.</li>
-</ul>
-
-<p>I would encourage you to consult the <a href="https://csclub.uwaterloo.ca">University of Waterloo Computer Science Club</a>, where you can receive support on your coursework and learn some additional skills that will help you throughout your co-op career. Participate in an ACM Programming Contest, usually hosted in the labs along “MathSoc Hallway”; these contests will challenge you to solve relatively difficult computing problems. Attend a college hackathon, such as Waterloo’s upcoming <a href="http://hackthenorth.com/">Hack The North</a>, to collaborate on a software project with your friends.</p>
-
-
-    
-  </div>
-
-</article>
-
 <hr/>
 
 <ul class="pager"> 
@@ -239,7 +162,7 @@ OK {
   
   
   <li>
-    <span class="page_number">Page: 1 of 1</span>
+    <span class="page_number">Page:  of </span>
   </li>
 
   
