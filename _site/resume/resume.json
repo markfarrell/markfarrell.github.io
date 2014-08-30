@@ -14,7 +14,9 @@
     "stars": ["Undergraduate Student", "Software Developer"],
     "summary": {
       "points":[
-        "A top-down thinker, with a notable ability to initiate, manage and collaborate on software projects."
+        "Proven ability to learn and reason creatively.",
+        "Strong software implementation skills.",
+        "Eager to solve difficult problems in computing."
       ]
     },
     "experience": {
@@ -26,16 +28,15 @@
         "from": "May. 2014",
         "to": "Aug. 2014",
         "details": [
-          "Worked for a postdoctoral mentor doing research on resolving the identities of ocean-going vessels at multiple tracked locations in the water, which involves statistical analysis and computational complexity theory.",
-          "Independently developed vessel identification software modules that help to infer some of the static attributes of tracked vessels, namely their Arctic ice classes, fuel capacities, and water displacements.",
-          "Served as the systems administrator of a supercomputer workstation running ArchLinux.",
+          "Worked for a Defence Scientist doing research on a new method for vessel identification: one that resolves the identities of all tracked unidentified vessels at the same time.",
+          "Developed software for estimating static attributes of tracked unidentified vessels: their Arctic ice classes, fuel capacities and water displacements.",
           "Acknowleged in the paper titled \"Joint Identification of Multiple Tracked Targets\", submitted to the Journal of Information Fusion."
         ],
+        "rating": "Outstanding",
         "skills_developed" : {
           "skills" : [
             "Geospatial Programming",
-            "Oral Communication",
-            "Personal Productivity"
+            "Public Speaking"
           ]
         },
         "technology_used": {
@@ -60,19 +61,33 @@
     "research_experience": {
       "items": [
         {
-          "title":"Software Developer",
-          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\" target=\"_blank\">UC Berkeley/CREA</a>",
+          "title":"Bioinformatics Researcher",
+          "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\" target=\"_blank\">UC Berkeley / Berkeley Lab</a><br/><i>Center for Research and Education on Aging</i>",
           "from": "Feb. 2014",
           "to": "Present",
           "points": [
-            "Independently developed software that compiles text into text-networks, to automate the construction of a knowledge base on the human aging process.",
-            "Notes and source code available <a href=\"https://github.com/markfarrell/text-network-compiler\" target=\"_blank\">here</a>."
+            "Developing software to automate the construction of biomedical knowledge bases — specifically, a knowledge base on aging.",
+            "Designed and developed software that compiles text into graphs.",
+            "Extracts knowledge from text articles, retrieved from sources like PubMed.",
+            "Relates literal nouns by the actions that they perform on each other.",
+            "Worked online; flew down to California to give a presentation titled <a href=\"http://www.slideshare.net/MarkFarrell1/constructing-a-knowledge-base-on-aging-an-automated-approach\" target=\"_blank\">\"Constructing a Knowledge Base on Aging: an Automated Approach\"</a>.",
+            "Source code available <a href=\"https://github.com/markfarrell/crea-nlp\">here</a>."
           ],
           "skills_developed" : {
             "skills" : [
               "Natural Language Processing",
-              "Logic Programming",
-              "Public Speaking"
+              "Information Extraction",
+              "Data Visualization"
+            ]
+          },
+          "technology_used": {
+            "tools": [
+              "Scala",
+              "Scalaz",
+              "Scala.js",
+              "The Berkeley Parser",
+              "Gephi",
+              "Sigma.js"
             ]
           }
         }
@@ -140,7 +155,7 @@
           "type" : "Specialties",
           "items" : [
             "Geospatial Programming",
-            "Server Architecture"
+            "Information Extraction"
           ]
         },
         {

@@ -4,6 +4,34 @@
 		<script>document.getElementById('linked_in-png').innerHTML = '<img src="public/images/linked_in.png" style="width:13px;height:13px"></img> ';
 		</script>
 <link rel="stylesheet" type="text/css" href="public/css/screen.css" />
+<style>
+
+ul.nobullets {
+  padding-left: 0;
+}
+
+ul.nobullets li {
+
+  list-style-type: none;
+
+}
+
+ul.nobullets li ul {
+
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+
+}
+
+ul.nobullets li ul li {
+
+
+  list-style-type: square;
+  list-stype-position: outside;
+
+}
+
+</style>
 <div id="page">
 	<div class="contact-details">
 		<span id="linked_in-png"></span>
@@ -21,9 +49,11 @@
 	</span>
 	<br/>
 
-	<h2><span class="glyphicon glyphicon-compressed"></span> Qualification Summary</h2>
+	<h2><span class="glyphicon glyphicon-compressed"></span> Summary of Qualifications</h2>
 	<ul>
-		<li>A top-down thinker, with a notable ability to initiate, manage and collaborate on software projects.</li>
+		<li>Proven ability to learn and reason creatively.</li>
+		<li>Strong software implementation skills.</li>
+		<li>Eager to solve difficult problems in computing.</li>
 	</ul>
 
 	<h2><span class="glyphicon glyphicon-th-list"></span> Technical skills</h2>
@@ -35,7 +65,7 @@
 		</li>
 		<li>Specialties:
 			<span class="label label-default">Geospatial Programming</span>
-			<span class="label label-default">Server Architecture</span>
+			<span class="label label-default">Information Extraction</span>
 		</li>
 		<li>Interests:
 			<span class="label label-default">Linguistics</span>
@@ -44,9 +74,9 @@
 	</ul>
 
 	<h2><span class="glyphicon glyphicon-paperclip"></span> Education</h2>
-	<ul>
+	<ul class="nobullets">
 		<li><a href="https://ugradcalendar.uwaterloo.ca/page/MATH-Bachelor-of-Computer-Science" target="_blank">Candidate: Bachelor of Computer Science</a>
-			<span class="right">(Sep. 2013 – Present)</span>
+			<i class="right">Sep. 2013 – Present</i>
       <ul>
         <li>Plan Name: Honours Computer Science (Co-op)</li>
         <li>Institution: University of Waterloo</li>
@@ -56,18 +86,21 @@
 
 
 	<h2><span class="glyphicon glyphicon-briefcase"></span> Professional Experience</h2>
-	<ul>
+	<ul class="nobullets">
 		<li>Software Developer at <a href="http://www.drdc-rddc.gc.ca/en/" target="_blank">Defence R&D Canada</a>
-			<span class="right">(May. 2014 – Aug. 2014)</span>
+			<i class="right">May. 2014 – Aug. 2014</i>
 			<ul>
-				<li>Worked for a postdoctoral mentor doing research on resolving the identities of ocean-going vessels at multiple tracked locations in the water, which involves statistical analysis and computational complexity theory.</li>
-				<li>Independently developed vessel identification software modules that help to infer some of the static attributes of tracked vessels, namely their Arctic ice classes, fuel capacities, and water displacements.</li>
-				<li>Served as the systems administrator of a supercomputer workstation running ArchLinux.</li>
+				<li>Worked for a Defence Scientist doing research on a new method for vessel identification: one that resolves the identities of all tracked unidentified vessels at the same time.</li>
+				<li>Developed software for estimating static attributes of tracked unidentified vessels: their Arctic ice classes, fuel capacities and water displacements.</li>
 				<li>Acknowleged in the paper titled "Joint Identification of Multiple Tracked Targets", submitted to the Journal of Information Fusion.</li>
+      </ul>
+      <ul>
+        <li>Co-op Rating:
+          <b>Outstanding</b>
+        </li>
         <li>Skills Developed:
           <span class="label label-default">Geospatial Programming</span>
-          <span class="label label-default">Oral Communication</span>
-          <span class="label label-default">Personal Productivity</span>
+          <span class="label label-default">Public Speaking</span>
         </li>
 				<li>Tools:
 					<span class="label label-default">AIS Datasets</span>
@@ -88,24 +121,38 @@
 	</ul>
 
 	<h2><span class="glyphicon glyphicon-pencil"></span> Research Experience</h2>
-	<ul>
+	<ul class="nobullets">
 		<li>
-			Software Developer at <a href="http://crea.berkeley.edu" style="font-weight:regular" target="_blank">UC Berkeley/CREA</a>
-			<span class="right">(Feb. 2014 – Present)</span>
+			Bioinformatics Researcher at <a href="http://crea.berkeley.edu" style="font-weight:regular" target="_blank">UC Berkeley / Berkeley Lab</a><br/><i>Center for Research and Education on Aging</i>
+			<i class="right">Feb. 2014 – Present</i>
 			<ul>
-				<li>Independently developed software that compiles text into text-networks, to automate the construction of a knowledge base on the human aging process.</li>
-				<li>Notes and source code available <a href="https://github.com/markfarrell/text-network-compiler" target="_blank">here</a>.</li>
+				<li>Developing software to automate the construction of biomedical knowledge bases — specifically, a knowledge base on aging.</li>
+				<li>Designed and developed software that compiles text into graphs.</li>
+				<li>Extracts knowledge from text articles, retrieved from sources like PubMed.</li>
+				<li>Relates literal nouns by the actions that they perform on each other.</li>
+				<li>Worked online; flew down to California to give a presentation titled <a href="http://www.slideshare.net/MarkFarrell1/constructing-a-knowledge-base-on-aging-an-automated-approach" target="_blank">"Constructing a Knowledge Base on Aging: an Automated Approach"</a>.</li>
+				<li>Source code available <a href="https://github.com/markfarrell/crea-nlp">here</a>.</li>
+      </ul>
+      <ul>
         <li>Skills Developed:
           <span class="label label-default">Natural Language Processing</span>
-          <span class="label label-default">Logic Programming</span>
-          <span class="label label-default">Public Speaking</span>
+          <span class="label label-default">Information Extraction</span>
+          <span class="label label-default">Data Visualization</span>
         </li>
+				<li>Tools:
+					<span class="label label-default">Scala</span>
+					<span class="label label-default">Scalaz</span>
+					<span class="label label-default">Scala.js</span>
+					<span class="label label-default">The Berkeley Parser</span>
+					<span class="label label-default">Gephi</span>
+					<span class="label label-default">Sigma.js</span>
+				</li>
 			</ul>
 		</li>
 	</ul>
 
 	<h2><span id="github-png"></span> Notable Projects</h2>
-	<ul>
+	<ul class="nobullets">
 		<li>
 			Ironbane - a FOSS MMORPG written entirely in JavaScript
 			<ul>
@@ -142,9 +189,5 @@
 			</ul>
 		</li>
 	</ul>
-
-
-
-
 
 </div><!-- End Page -->
