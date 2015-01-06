@@ -61,19 +61,18 @@
     "research_experience": {
       "items": [
         {
-          "title":"Software Developer / Researcher",
+          "title":"Software Developer",
           "organisation": "<a href=\"http://crea.berkeley.edu\" style=\"font-weight:regular\" target=\"_blank\">UC Berkeley / Berkeley Lab</a><br/><i>Center for Research and Education on Aging</i>",
           "from": "Feb. 2014",
           "to": "Present",
           "points": [
-            "Developed software that extracts knowledge from text articles, helping biologists understand the aging process.",
-            "Presented <a href=\"http://www.slideshare.net/MarkFarrell1/constructing-a-knowledge-base-on-aging-an-automated-approach\" target=\"_blank\">\"Understanding the Aging Process with Artificial Intelligence\"</a>.",
+            "Developed relation extraction software.",
             "Source code available <a href=\"https://github.com/crea-berkeley/knowledge-extraction\">here</a>."
           ],
           "skills_developed" : {
             "skills" : [
               "Natural Language Processing",
-              "Knowledge Extraction",
+              "Relation Extraction",
               "Data Visualization"
             ]
           },
@@ -152,7 +151,7 @@
           "type" : "Specialties",
           "items" : [
             "Geospatial Programming",
-            "Knowledge Extraction"
+            "Relation Extraction"
           ]
         },
         {
