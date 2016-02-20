@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "text": "Mark Farrell",
+    "file": "http://crea.berkeley.edu/uc_berkeley_logo2.jpeg",
+    "link": "http://crea.berkeley.edu/"
+  },
+  "text": {
+    "title": "Molecular Biology of the Cell",
+    "more": "A text-network of \"Molecular Biology of the Cell, 4th Edition\". \n\nI\u0027m interested to know if this visualization is useful for students studying biology\nor for people doing research. I\u0027d also like to encode the data such that it could be\nused in machine learning projects.\n\nPlease contact me with your feedback: m4farrel@csclub.uwaterloo.ca.\n\nProduced by a text-network compiler, which I am currently working on. \n\nFind out more about the text-network compiler and contribute at:\nhttps://github.com/markfarrell/text-network-compiler",
+    "intro": "A text-network of \"Molecular Biology of the Cell, 4th Edition\". \n\nI\u0027m interested to know if this visualization is useful for students studying biology\nor for people doing research. I\u0027d also like to encode the data such that it could be\nused in machine learning projects.\n\nPlease contact me with your feedback: m4farrel@csclub.uwaterloo.ca.\n\nProduced by a text-network compiler, which I am currently working on. \n\nFind out more about the text-network compiler and contribute at:\nhttps://github.com/markfarrell/text-network-compiler"
+  },
+  "legend": {
+    "edgeLabel": "Predicates",
+    "colorLabel": "Modularity Class",
+    "nodeLabel": "Topics"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "Modularity Class",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "imageAttribute": false,
+    "groupByEdgeDirection": false
+  },
+  "sigma": {
+    "graphProperties": {
+      "minEdgeSize": 0.2,
+      "maxNodeSize": 10,
+      "maxEdgeSize": 0.5,
+      "minNodeSize": 1
+    },
+    "drawingProperties": {
+      "labelThreshold": 3,
+      "hoverFontStyle": "bold",
+      "defaultEdgeType": "curve",
+      "defaultLabelColor": "#000",
+      "defaultLabelHoverColor": "#fff",
+      "defaultLabelSize": 14,
+      "activeFontStyle": "bold",
+      "fontStyle": "bold",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd"
+    },
+    "mouseProperties": {
+      "minRatio": 0.75,
+      "maxRatio": 20
+    }
+  }
+}
