@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Mark Farrell - What Is Type Theory in Computer Science?</title>
+        <link rel="stylesheet" type="text/css" href="../css/default.css" />
+    </head>
+    <body>
+
+        <div id="content">
+            <h1><a href="../">Mark Farrell</a></h1>
+
+            <h2>What Is Type Theory in Computer Science?</h2>
+
+            <div class="info">
+    Posted on February 20, 2016
+    
+</div>
+
+<p>In response to: <a href="http://qr.ae/RUNVVM">what is type theory in computer science?</a></p>
+<p>In computer science specifically, constructive type theory makes a full appearance in the core languages of mechanized theorem provers. To be a bit more specific, constructive type theory makes a direct appearance in the core languages of proof development systems such as <a href="https://coq.inria.fr/">Coq</a>, <a href="http://wiki.portal.chalmers.se/agda/pmwiki.php">Agda</a>, <a href="https://leanprover.github.io/">Lean</a>, <a href="http://nuprl.org/">NuPRL</a>, and <a href="http://twelf.org/wiki/Main_Page">Twelf</a>. Beyond its full appearance in the core languages of mechanized theorem provers, constructive type theory has also influenced the design of concrete programming languages for writing executable programs, particularly in the ML family. For example, the formal system F-omega can be viewed as a constrained version of constructive type theory where there is an explicit distinction made between terms and types; the formal system F-omega makes an appearance in the core languages of programming languages like <a href="http://sml-family.org/">Standard ML</a>, <a href="https://www.haskell.org/">Haskell</a>, and <a href="http://www.purescript.org/">PureScript</a>. These programming languages rely on an explicit distinction between terms and types in their core languages, namely so that types can be erased during compilation, and so that it is easier to separate the design of the statics of the language from that of the dynamics of the language. To perhaps a mildly lesser extent, constructive type theory has also influenced the design of programming languages like <a href="https://www.rust-lang.org/">Rust</a>, and <a href="http://www.scala-lang.org/">Scala</a>. It is arguable that constructive type theory, at least based on how it originated historically, has had less of an influence on the design of concrete programming languages outside of the ML family.</p>
+<p>There is also one application of what is known as linear type theory that I find very interesting, which I have encountered recently. In short, linear type theory can be thought of a variant of constructive type theory where hypotheses are by default resources rather than facts, so by default they can’t be duplicated more than once when using them to prove, or in other words, achieve a particular goal. Recently I have encountered an implementation of a logical framework based on linear type theory; proofs in a logical framework are constructed based on direct logical derivations from a set of constants, initial assumptions and a set of rules - as opposed to the kind of inductive proofs that are checked for admissibility in proof development systems such as Coq or Agda. The author of said logical framework, Chris Martens, is applying linear type theory to interactive storytelling and narrative generation, which I find quite interesting. For example, it is possible to model a Shakespearian tragedy in said logical framework, and use the logical framework’s support for automated proof search to generate possible stories of how the play could end in tragedy from particular initial conditions. <a href="https://github.com/chrisamaphone/interactive-lp">Here</a> is the link to said project. I personally find it very exciting how type theory can also have applications like this in computer science.</p>
+<p>Straying slightly away from computer science, there are also some applications of type theory in computational linguistics, which I also find very exciting. For example, recently Jon Sterling and Darryl McAdams haved applied type theory to model pronoun binding and presupposition resolution in <em><a href="http://arxiv.org/abs/1410.4639">Dependent Types for Pragmatics</a></em>. Continuing this line of work is Jon’s lecture on <em><a href="https://github.com/jonsterling/oracles-and-choice-sequences-for-type-theoretic-pragmatics">Oracles and Choice Sequences for Type-Theoretic Pragmatics</a></em>, and Darryl’s project, <a href="http://www.languagengine.co/">The Language Engine</a>. There is also the <a href="http://www.grammaticalframework.org/">Grammatical Framework</a>, which has apparently been used study: the formal syntax of Ancient Greek, language-based human-computer interaction, and multilingual translation systems, to name a a few examples. Overall, I’m not too familiar with the applications of type theory to computational linguistics; however, I find it quite exciting that there is potential for type theory to be applied to computional linguistics as well.</p>
+
+
+        </div>
+    </body>
+</html>
