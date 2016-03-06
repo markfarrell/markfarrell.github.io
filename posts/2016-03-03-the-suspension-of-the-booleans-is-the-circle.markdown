@@ -48,3 +48,28 @@ However, more generally we can simply define the suspension of the booleans as:
 ```
 type S1 = (Suspension Boolean)
 ```
+
+We wish to prove that the suspension of the booleans is the circle; so we must also
+define the circle as a higher inductive data type. Pictorially, the circle as a logical
+space looks like: 
+
+<img src="/images/circle.png" width="30%"/>
+
+In code, the circle as a higher inductive data type looks like:
+
+```
+data Circle : Type where
+  Base : Circle
+  Loop : Path Circle Base Base
+```
+
+To prove that the suspension of the booleans is the circle, we must first define a continuous function
+from the suspension of the booleans to the circle; we'll then define a continous function from the circle to
+the suspension of the booleans, and show that these two functions are pointwise mutual inverses.
+
+We can define our first function by structural recursion on the suspension of the booleans:
+
+```
+f : S1 -> Circle
+f 
+```
