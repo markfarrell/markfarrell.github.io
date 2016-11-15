@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Closed Walks and Cospectral Vertices"
-date:   2016-08-19 10:58:55 -0500
+date:   2016-08-19
 categories: jekyll update
 ---
 
