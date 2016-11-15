@@ -37,6 +37,7 @@ $$= X^{-1} \sum\limits_{\lambda \in \sigma(A)} \frac{m_{\lambda} \left ( \frac{\
 $$= \frac{X^{-1} \left ( \sum\limits_{\lambda \in \sigma(A)} m_{\lambda} \left ( \frac{\phi(X^{-1})}{X^{-1} - \lambda} \right ) \right )}{\phi(X^{-1})} $$
 
 $$= \frac{X^{-1} \phi^{'}(X^{-1})}{\phi(X^{-1})}$$
+
 .
 
 *Note that here $$X^{-1}$$ denotes another formal symbol that happens to have the relation $$X^{-1}X = 1$$ with the formal symbol *$$X$$* and should not be interpreted as a “function of $$X$$” in the sense of calculus when e.g. considering the formal derivative $$\phi^{'}(X^{-1})$$ of $$\phi(X^{-1})$$ with respect to the formal symbol *$$X^{-1}$$* in context.*

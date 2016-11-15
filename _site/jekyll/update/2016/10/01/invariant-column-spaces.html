@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Invariant Column Spaces</title>
+  <meta name="description" content="In this post, my goal is to show that for any x matrix and x matrix with entries in a field , the column space of is -invariant if and only if for some x mat...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2016/10/01/invariant-column-spaces.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Invariant Column Spaces</h1>
+    <p class="post-meta"><time datetime="2016-10-01T00:00:00-04:00" itemprop="datePublished">Oct 1, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, my goal is to show that for any <script type="math/tex">n</script> x <script type="math/tex">n</script> matrix <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">n</script> x <script type="math/tex">m</script> matrix <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script> with entries in a field <script type="math/tex">\mathbb{F}</script>, the column space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant if and only if <script type="math/tex">AX = XY</script> for some <script type="math/tex">m</script> x <script type="math/tex">m</script> matrix <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script>.</p>
+
+<p>Firstly, suppose that we are given matrices <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script> where the column space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant. Then, for all <script type="math/tex">1 \leq j \leq n</script>, we can construct a vector <script type="math/tex">y_j \in \mathbb{F}^{m}</script> such that:</p>
+
+<script type="math/tex; mode=display">A (X e_j)</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{k = 1}^{m} a_{k,j} (X e_k)</script>
+
+<p><strong>[</strong> for some <script type="math/tex">a_{k, j} \in \mathbb{F}</script> for all <script type="math/tex">1 \leq k \leq n</script>, since the column space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= X \left ( \sum\limits_{k = 1}^{m} a_{k,j} e_k \right )</script>
+
+<script type="math/tex; mode=display">= X y_j</script>
+
+<p><strong>[</strong> by letting <script type="math/tex">y_j = \sum\limits_{k = 1}^{m} a_{k,j} e_k</script> <strong>]</strong></p>
+
+<p>. From there, we can construct a matrix <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script> such that:</p>
+
+<script type="math/tex; mode=display">AX</script>
+
+<script type="math/tex; mode=display">= \left [ A (X e_1) \mid \cdots \mid A (X e_m) \right ]</script>
+
+<script type="math/tex; mode=display">= \left [ X y_1 \mid \cdots \mid X y_m \right ]</script>
+
+<script type="math/tex; mode=display">= XY</script>
+
+<p><strong>[</strong> by letting <script type="math/tex">Y = \left [ y_1 \mid \cdots \mid y_m \right ]</script> <strong>]</strong>. Therefore, since our particular choices of <script type="math/tex">A</script> and <script type="math/tex">X</script> in this context are arbitrary, we have that: for any matrices <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script>, if the column space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant, then there exists a matrix <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script> such that <script type="math/tex">AX = XY</script> as desired.
+Secondly, suppose that we are given matrices <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script> where <script type="math/tex">AX = XY</script> for some <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script>. Then, for all <script type="math/tex">1 \leq j \leq m</script>, we have that:</p>
+
+<script type="math/tex; mode=display">A(X e_j)</script>
+
+<script type="math/tex; mode=display">= X (Y e_j)</script>
+
+<script type="math/tex; mode=display">= X \left( \sum\limits_{k=1}^{m} Y_{k, j} e_k \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{k=1}^{m} Y_{k, j} (X e_k)</script>
+
+<p>. This means, in particular, that <script type="math/tex">A (X e_j) \in \operatorname{Col}(X)</script> for all <script type="math/tex">1 \leq j \leq m</script>.</p>
+
+<p>Now, select any vector <script type="math/tex">u \in \operatorname{Col}(X)</script>; then we know that <script type="math/tex">u = X v = \sum\limits_{j=1}^{m} v_j (X e_j)</script> for some vector <script type="math/tex">v \in \mathbb{F}^{m}</script>. From there, we can deduce that:</p>
+
+<script type="math/tex; mode=display">A u</script>
+
+<script type="math/tex; mode=display">= A \left ( \sum\limits_{j=1}^{m} v_j (X e_j) \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{j=1}^{m} v_j (A (X e_j) )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{j=1}^{m} v_j \left ( \sum\limits_{k=1}^{m} Y_{k, j} (X e_k) \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{j=1}^{m} \sum\limits_{k=1}^{m} v_j Y_{k, j} (X e_k)</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{k=1}^{m} \left ( \sum\limits_{j=1}^{m} v_j Y_{k, j} \right ) (X e_k)</script>
+
+<p>. This means that <script type="math/tex">A u \in \operatorname{Col}(X)</script>, and hence that <script type="math/tex">\operatorname{Col}(X)</script> is <script type="math/tex">A</script>-invariant, since our choice of <script type="math/tex">u</script> in this inner context is arbitrary. Therefore, since our contextual choices of <script type="math/tex">A</script> and <script type="math/tex">X</script> are likewise arbitrary, we have that: for any matrices <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script>, if <script type="math/tex">AX = XY</script> for some <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script>, then the column of space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant as desired.
+Hence we can conclude that for any <script type="math/tex">n x n</script> matrix <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{F})</script> and <script type="math/tex">n</script> x <script type="math/tex">m</script> matrix <script type="math/tex">X \in \operatorname{Mat}_{n \times m}(\mathbb{F})</script> with entries in a field <script type="math/tex">\mathbb{F}</script>, the column space of <script type="math/tex">X</script> is <script type="math/tex">A</script>-invariant if and only if <script type="math/tex">AX = XY</script> for some <script type="math/tex">m</script> x <script type="math/tex">m</script> matrix <script type="math/tex">Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})</script>, as desired.</p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
