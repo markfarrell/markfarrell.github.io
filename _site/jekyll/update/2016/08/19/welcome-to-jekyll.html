@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Closed Walks and Cospectral Vertices</title>
+  <meta name="description" content="If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2016/08/19/welcome-to-jekyll.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Closed Walks and Cospectral Vertices</h1>
+    <p class="post-meta"><time datetime="2016-08-19T11:58:55-04:00" itemprop="datePublished">Aug 19, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then it is a necessary condition that said vertices have the property known as being cospectral. In this post, my goal is to provide some useful characterizations of cospectrality, and provide some useful sufficient conditions for a pair of distinct vertices to be cospectral on a simple graph.
+Suppose that <script type="math/tex">G</script> is a simple graph on <script type="math/tex">n</script> vertices, with adjacency matrix <script type="math/tex">A</script>.
+Then, I would like to provide some definitions in this context:</p>
+<ol>
+  <li>An inner product can be defined on <script type="math/tex">\mathbb{R}^{n}</script> as <script type="math/tex">\langle x,y \rangle := x^T y</script> for all <script type="math/tex">x,y \in \mathbb{R}^{n}</script>.</li>
+  <li>Let <script type="math/tex">\sigma(A)</script> denote the set of all distinct eigenvalues of <script type="math/tex">A</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> we have that <script type="math/tex">\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle</script> for all <script type="math/tex">\lambda \in \sigma(A)</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are said to be cospectral.</li>
+</ol>
+
+<p><em>Note that here each <script type="math/tex">E_\lambda</script> denotes an orthogonal projection onto the eigenspace for eigenvalue <script type="math/tex">\lambda</script></em> of <em><script type="math/tex">A</script>, for all <script type="math/tex">\lambda \in \sigma(A)</script>.</em></p>
+<ol>
+  <li>Suppose that <script type="math/tex">u</script> is any vertex on <script type="math/tex">G</script>. Then closed walk generating series of <script type="math/tex">u</script> is defined as: <script type="math/tex">W_u(X) := \sum\limits_{k=0}^{\infty} \langle A^n e_u, e_u \rangle X^n</script>.</li>
+</ol>
+
+<p><em>Note that <script type="math/tex">W_u(X) \in \mathbb{R} \left[ \left[ X \right] \right]</script>, i.e. it is an element of the algebra of formal power series with real coefficients.</em></p>
+<ol>
+  <li>Suppose that <script type="math/tex">G</script> has <script type="math/tex">n</script> vertices, and <script type="math/tex">u</script> is a vertex on <script type="math/tex">G</script>. Then the walk matrix <script type="math/tex">B_u</script> relative to vertex <script type="math/tex">u</script> is defined as <script type="math/tex">B_u := \left( e_u \mid A e_u \mid \cdots \mid A^{n-1} e_u \right)</script>.</li>
+  <li>If <script type="math/tex">P</script> is an <script type="math/tex">n</script> x <script type="math/tex">n</script> permutation matrix that commutes with <script type="math/tex">A</script>, i.e. <script type="math/tex">AP = PA</script>, then <script type="math/tex">P</script> is said to represent an automorphism on <script type="math/tex">G</script>.
+And, I would like to state some propositions in this context:</li>
+  <li>Any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> are cospectral if and only if their closed walk generating series are equal, i.e. <script type="math/tex">W_u(X) = W_v(X).</script></li>
+  <li>Any pair of distinct <script type="math/tex">u</script> and <script type="math/tex">v</script>on <script type="math/tex">G</script> are cospectral if and only if <script type="math/tex">(B_u)^T B_u = (B_v)^T B_v.</script></li>
+  <li>Suppose that a permutation matrix <script type="math/tex">P</script> represents an automorphism on <script type="math/tex">G</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script>, <script type="math/tex">P e_u = e_v</script> and <script type="math/tex">P e_v = e_u</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral.
+Finally, I would like to show that these propositions hold in this context:</li>
+  <li>Suppose that a pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> are cospectral, and that <script type="math/tex">A</script> has spectral decomposition <script type="math/tex">A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda</script>. Then for all non-negative integers <script type="math/tex">k \geq 0,</script> <script type="math/tex">A^k</script> has spectral decomposition <script type="math/tex">A^k = \sum\limits_{\lambda \in \sigma(A)} \lambda^k E_\lambda</script>. From properties of inner products, it follows that if for all <script type="math/tex">\lambda \in \sigma(A)</script>, <script type="math/tex">\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle</script>, then <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle</script> for all <script type="math/tex">k \geq 0</script>. Hence if <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral, then their closed walk generating series are equal.</li>
+</ol>
+
+<p>Conversely, suppose that a pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> have closed walk generating series, i.e. <script type="math/tex">W_u(X) = W_v(X)</script>. In particular, this means that for all non-negative integers <script type="math/tex">k \geq 0</script>, <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle</script>. It follows from properties of inner products that for all polynomials <script type="math/tex">f(A)</script> in <script type="math/tex">A</script>, i.e. <script type="math/tex">f(x)</script> is a polynomial with real coefficients and <script type="math/tex">f(A) \in Z(A) = \mathrm{span} \{ I, A, A^2, \cdots \}</script>, <script type="math/tex">\langle f(A) e_u, e_u \rangle = \langle f(A) e_v, e_v \rangle</script>. It is also the case that each <script type="math/tex">E_\lambda</script> is a polynomial in <script type="math/tex">A</script> for all eigenvalues <script type="math/tex">\lambda \in \sigma(A)</script>, as can be seen in the proof of the establishment of the spectral decomposition of <script type="math/tex">A</script>. Hence it ultimately follows that if <script type="math/tex">u</script> and <script type="math/tex">v</script> have equal closed walk generating series, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral.</p>
+<ol>
+  <li>Suppose that a pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script>on <script type="math/tex">G</script> are cospectral. By the previous proposition, this means that they also have equal closed walk generating series - which means that for all non-negative integers <script type="math/tex">k \geq 0</script>, <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle</script>. Observe that any entry in <script type="math/tex">(B_u)^T B_u</script> is of the form <script type="math/tex">\langle A^j e_u, e_u \rangle</script> for some non-negative integer <script type="math/tex">j</script>. Hence it follows that <script type="math/tex">(B_u)^T B_u = (B_v)^T B_v</script>.</li>
+</ol>
+
+<p>Conversely, suppose that <script type="math/tex">(B_u)^T B_u = (B_v)^T B_v</script>. Observe, by looking at the first columns of these matrices, that <script type="math/tex">\langle A^j e_u, e_u \rangle = \langle A^j e_v, e_v \rangle</script> for all <script type="math/tex">0 \leq j \leq n - 1</script>. The degree of the minimal polynomial of <script type="math/tex">A</script> must be less than or equal to <script type="math/tex">n</script>, since it wouldn’t make sense for <script type="math/tex">A</script> to have more distinct eigenvalues than it has vertices. Hence for all <script type="math/tex">k \geq n</script>, <script type="math/tex">A^k</script> can be expressed as a linear combination of <script type="math/tex">I, A, \cdots</script>, and <script type="math/tex">A^{n-1}</script>. It ultimately follows, from properties of inner products, that for all <script type="math/tex">k \geq 0</script>, <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle</script>; which means that <script type="math/tex">u</script> and <script type="math/tex">v</script> have equal closed walk generating series, and hence they are cospectral.</p>
+<ol>
+  <li>Suppose that <script type="math/tex">P</script> is a permutation matrix that represents an automorphism on <script type="math/tex">G</script> that swaps distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script>. Since <script type="math/tex">P</script> represents an automorphism on <script type="math/tex">G</script>, this means that <script type="math/tex">AP = PA</script>. It follows that for all non-negative integers <script type="math/tex">k \geq 0</script>, <script type="math/tex">A^k P = P A^k</script> as well. Furthermore, it follows that for all <script type="math/tex">k \geq 0</script> and all vertices <script type="math/tex">\alpha</script> on <script type="math/tex">G</script>,</li>
+</ol>
+
+<script type="math/tex; mode=display">\langle A^k e_\alpha, e_\alpha \rangle</script>
+
+<script type="math/tex; mode=display">= (e_\alpha)^T A^k e_\alpha</script>
+
+<script type="math/tex; mode=display">= (e_\alpha)^T (P^T A^k P) e_\alpha</script>
+
+<script type="math/tex; mode=display">= ((e_\alpha)^T P^T) A^k (P e_\alpha)</script>
+
+<script type="math/tex; mode=display">= (P e_\alpha)^T (A^k (P e_\alpha))</script>
+
+<script type="math/tex; mode=display">= \langle A^k (Pe_\alpha), (Pe_\alpha) \rangle</script>
+
+<p>.</p>
+
+<p>Hence if <script type="math/tex">P</script> sends <script type="math/tex">u</script> to <script type="math/tex">v</script> , i.e. <script type="math/tex">Pe_u = e_v</script> and <script type="math/tex">Pe_v = e_u</script>, then in particular <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k (Pe_u), (Pe_u) \rangle = \langle A^k e_v, e_v \rangle</script> for all <script type="math/tex">k \geq 0</script>; which means that the closed walk generating series of <script type="math/tex">u</script> and <script type="math/tex">v</script> are equal, and therefore they are cospectral.
+These characterizations of cospectrality, and sufficient conditions for a pair of distinct vertices on a simple graph to be cospectral, can serve as a useful toolkit for finding cospectral vertices on particular simple graphs. For example, the automorphism group of any path graph is a cyclic group of order two, which is always generated by a single permutation that swaps its ends in particular; it follows, from the work above in this blog post, that the ends of any path are always cospectral. As an another example, the same work can be applied to determine that any pair of non-central vertices of any star graph are cospectral (for star graphs <script type="math/tex">K(1,n)</script> for all <script type="math/tex">n \geq 2</script>). It is also possible to find closed forms for the closed walk generating series for non-central vertices of star graphs, and find that any pair of non-central vertices on a star graph are cospectral since they have equal closed walk generating series are hence cospectral; the same strategy can applied to again determine that the ends of any path are cospectral. However, cospectrality is only a neccessary (but not sufficient) condition for a pair of distinct vertices on a simple graph to admit the property known as perfect state transfer on a simple graph, which I was initially interested in investigating; I hope to discuss other necessary conditions, and ultimately all sufficient conditions, for perfect state transfer to occur between a pair of distinct vertices on a simple graph in future blogs, as I investigate and learn about them.</p>
+
+<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
