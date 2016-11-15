@@ -9,6 +9,7 @@ In this post, my goal is to show that strongly regular graphs are walk-regular.
 I would like to start off by stating what it means for a simple graph to be walk-regular, as well as what it means for a simple graph to be strongly regular:
 1. A simple graph is said to be **walk-regular* if all of its vertices are cospectral.
 2. A simple graph is said to be *strongly regular* if it is: regular, every pair of adjacent vertices share the same number of neighbours in common, and every pair of non-adjacent vertices share the same number of neighbours in common - with the exception of the complete graphs, as well as the empty graph.
+
 Suppose that $$G$$ is a strongly regular graph on $$n$$ vertices with adjacency matrix $$A$$.
 Firstly, I would like to assume, for the purposes of this blog post, some standard facts about $$G$$ that must hold in this context:
 1. The adjacency matrix $$A$$ of $$G$$ satisfies $$A^2 = \alpha I + \beta A + \gamma \overline{A}$$ for some non-negative integers $$\alpha,\beta,\gamma$$ (where $$\beta$$ and $$\gamma$$ are both not equal to $$0$$, and $$\alpha$$ is also non-zero).
