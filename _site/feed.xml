@@ -1,83 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-15T12:09:54-05:00</updated><id>http://localhost:4000//</id><title type="html">Mark Farrell</title><subtitle></subtitle><entry><title type="html">Perfect State Transfer and Uniform Mixing on Cartesian Products</title><link href="http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs.html" rel="alternate" type="text/html" title="Perfect State Transfer and Uniform Mixing on Cartesian Products" /><published>2016-09-18T00:00:00-04:00</published><updated>2016-09-18T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs.html">&lt;p&gt;In this post, my goals are to:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-15T12:14:22-05:00</updated><id>http://localhost:4000//</id><title type="html">Mark Farrell</title><subtitle></subtitle><entry><title type="html">Perfect State Transfer and Uniform Mixing on Cartesian Products of Graphs</title><link href="http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs.html" rel="alternate" type="text/html" title="Perfect State Transfer and Uniform Mixing on Cartesian Products of Graphs" /><published>2016-09-18T00:00:00-04:00</published><updated>2016-09-18T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs.html">&lt;p&gt;In this post, my goals are to:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.&lt;/li&gt;
   &lt;li&gt;Verify that Cartesian products of simple graphs that admit the property known as uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
-First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that $G$ is a simple graph on $n$ with adjacency matrix $A$. Then, in this context:&lt;/li&gt;
-  &lt;li&gt;The continuous-time quantum walk $U : \mathbb{R} \to \operatorname{Mat}&lt;em&gt;{n \times n}(\mathbb{C})$ of $G$ relative to its adjacency matrix is defined as $U(t) := \operatorname{exp}(itA) = \sum\limits&lt;/em&gt;{n = 0}^{\infty} \frac{ \left(itA \right)^{n}}{n!}$.&lt;/li&gt;
-  &lt;li&gt;Suppose $u$ and $v$ are a pair of distinct vertices on $G$. If $U(t) e_u = \operatorname{exp}(i\theta) e_v$ for some particular time $t \in \mathbb{R}$ and angle $\theta \in [0, 2 \pi]$, then $G$ is said to admit perfect state transfer (between $u$ and $v$, at time $t$).&lt;/li&gt;
-  &lt;li&gt;The mixing matrix $M : \mathbb{R} \to \operatorname{Mat}_{n \times n}(\mathbb{R})$ of $G$ relative to its adjacency matrix is defined as $M(t) := U(t) \circ U^{*}(t)$, i.e. the entry-wise product of $U(t)$ and its conjugate transpose.&lt;/li&gt;
-  &lt;li&gt;If $M(t) = \frac{1}{n} J$ at some particular time $t \in \mathbb{R}$, then $G$ is said to admit uniform mixing (at time $t$).&lt;/li&gt;
+First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a simple graph on &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; with adjacency matrix &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;em&gt;Note that here $J$ denotes the *$n$&lt;/em&gt; x &lt;em&gt;$n$&lt;/em&gt; matrix consisting of all ones as entries.*&lt;/p&gt;
+&lt;p&gt;Then, in this context:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The continuous-time quantum walk &lt;script type=&quot;math/tex&quot;&gt;U : \mathbb{R} \to \operatorname{Mat}_{n \times n}(\mathbb{C})&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; relative to its adjacency matrix is defined as &lt;script type=&quot;math/tex&quot;&gt;U(t) := \operatorname{exp}(itA) = \sum\limits_{n = 0}^{\infty} \frac{ \left(itA \right)^{n}}{n!}&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;Suppose &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; are a pair of distinct vertices on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;. If &lt;script type=&quot;math/tex&quot;&gt;U(t) e_u = \operatorname{exp}(i\theta) e_v&lt;/script&gt; for some particular time &lt;script type=&quot;math/tex&quot;&gt;t \in \mathbb{R}&lt;/script&gt; and angle &lt;script type=&quot;math/tex&quot;&gt;\theta \in [0, 2 \pi]&lt;/script&gt;, then &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is said to admit perfect state transfer (between &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt;, at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;).&lt;/li&gt;
+  &lt;li&gt;The mixing matrix &lt;script type=&quot;math/tex&quot;&gt;M : \mathbb{R} \to \operatorname{Mat}_{n \times n}(\mathbb{R})&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; relative to its adjacency matrix is defined as &lt;script type=&quot;math/tex&quot;&gt;M(t) := U(t) \circ U^{*}(t)&lt;/script&gt;, i.e. the entry-wise product of &lt;script type=&quot;math/tex&quot;&gt;U(t)&lt;/script&gt; and its conjugate transpose.&lt;/li&gt;
+  &lt;li&gt;If &lt;script type=&quot;math/tex&quot;&gt;M(t) = \frac{1}{n} J&lt;/script&gt; at some particular time &lt;script type=&quot;math/tex&quot;&gt;t \in \mathbb{R}&lt;/script&gt;, then &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is said to admit uniform mixing (at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;Note that here &lt;script type=&quot;math/tex&quot;&gt;J&lt;/script&gt; denotes the &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; matrix consisting of all ones as entries.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Secondly, I would like to verify that the following proposition is true:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;For all simple graphs $G$ and $H$ whose continuous-time quantum walks are given by $U_G (t)$ and $U_H (t)$, the continuous-time quantum walk of their Cartesian product $G \Box H$ is given by $U_{G \Box H} (t) = U_G (t) \bigotimes U_H (t)$.
+  &lt;li&gt;For all simple graphs &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; whose continuous-time quantum walks are given by &lt;script type=&quot;math/tex&quot;&gt;U_G (t)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;U_H (t)&lt;/script&gt;, the continuous-time quantum walk of their Cartesian product &lt;script type=&quot;math/tex&quot;&gt;G \Box H&lt;/script&gt; is given by &lt;script type=&quot;math/tex&quot;&gt;U_{G \Box H} (t) = U_G (t) \bigotimes U_H (t)&lt;/script&gt;.
 Assuming that this proposition is true, then:&lt;/li&gt;
-  &lt;li&gt;Suppose that $G$ and $H$ are arbitrary simple graphs such that $G$ admits perfect state transfer between vertices $u$ and $v$ at time $t$, and $H$ admits perfect state transfer between vertices $u’$ and $v’$ at time $t$. By properties of the Kronecker product and the assumption that my previous proposition is true, we have that:&lt;/li&gt;
+  &lt;li&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; are arbitrary simple graphs such that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; admits perfect state transfer between vertices &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v&lt;/script&gt; at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; admits perfect state transfer between vertices &lt;script type=&quot;math/tex&quot;&gt;u'&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;v'&lt;/script&gt; at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;. By properties of the Kronecker product and the assumption that my previous proposition is true, we have that:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;$U_{G \Box H} \left ( e_{u} \bigotimes e_{u’} \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{G \Box H} \left ( e_{u} \bigotimes e_{u'} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( U_G (t) \bigotimes U_H (t) \right ) \left ( e_{u} \bigotimes e_{u’} \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( U_G (t) \bigotimes U_H (t) \right ) \left ( e_{u} \bigotimes e_{u'} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( U_{G}(t) e_{u} \right ) \bigotimes  \left ( U_H (t)  e_{u’} \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( U_{G}(t) e_{u} \right ) \bigotimes  \left ( U_H (t)  e_{u'} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \operatorname{exp}(i \theta_{1}) e_{v} \right ) \bigotimes \left ( \operatorname{exp}(i \theta_{2}) e_{v’} \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \operatorname{exp}(i \theta_{1}) e_{v} \right ) \bigotimes \left ( \operatorname{exp}(i \theta_{2}) e_{v'} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp}(i( \theta_{1} + \theta_{2})) e_{v} \bigotimes e_{v’}$ for some angles $\theta_{1}, \theta_{2} \in [0, 2 \pi ]$.&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp}(i( \theta_{1} + \theta_{2})) e_{v} \bigotimes e_{v'}&lt;/script&gt;
 
-&lt;p&gt;Hence $G \Box H$ admits perfect state transfer at time $t$ as well; and therefore Cartesian products of simple graphs that admit perfect state transfer at the same time also admit perfect state transfer at the same time, since the choice of time and simple graphs in this context are arbitrary.&lt;/p&gt;
+&lt;p&gt;for some angles &lt;script type=&quot;math/tex&quot;&gt;\theta_{1}, \theta_{2} \in [0, 2 \pi ]&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hence &lt;script type=&quot;math/tex&quot;&gt;G \Box H&lt;/script&gt; admits perfect state transfer at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; as well; and therefore Cartesian products of simple graphs that admit perfect state transfer at the same time also admit perfect state transfer at the same time, since the choice of time and simple graphs in this context are arbitrary.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Similarly, suppose that $G$ and $H$ are arbitrary simple graphs on $n$ vertices that both admit uniform mixing at time $t$. By properties of the Kronecker product, its compatibility with the entry-wise product for matrices of the same dimensions, and the assumption that my previous proposition is true, we have that:&lt;/li&gt;
+  &lt;li&gt;Similarly, suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; are arbitrary simple graphs on &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; vertices that both admit uniform mixing at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;. By properties of the Kronecker product, its compatibility with the entry-wise product for matrices of the same dimensions, and the assumption that my previous proposition is true, we have that:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;$M_{G\Box H}(t)       $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;M_{G\Box H}(t)&lt;/script&gt;
 
-&lt;p&gt;$= U_{G \Box H}(t) \circ U_{G \Box H}^{*}(t)   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= U_{G \Box H}(t) \circ U_{G \Box H}^{*}(t)&lt;/script&gt;
 
-&lt;p&gt;$= \left ( U_G (t) \bigotimes U_H (t) \right ) \circ \left ( U_G (t) \bigotimes U_H (t) \right )^{*}   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( U_G (t) \bigotimes U_H (t) \right ) \circ \left ( U_G (t) \bigotimes U_H (t) \right )^{*}&lt;/script&gt;
 
-&lt;p&gt;$= \left ( U_G (t) \bigotimes U_H (t) \right ) \circ \left ( U_{G}^{&lt;em&gt;}(t) \bigotimes U_{H}^{&lt;/em&gt;}(t) \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( U_G (t) \bigotimes U_H (t) \right ) \circ \left ( U_{G}^{*}(t) \bigotimes U_{H}^{*}(t) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( U_G (t) \circ U_{G}^{&lt;em&gt;}(t) \right ) \bigotimes \left ( U_H (t) \circ U_{H}^{&lt;/em&gt;}(t) \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( U_G (t) \circ U_{G}^{*}(t) \right ) \bigotimes \left ( U_H (t) \circ U_{H}^{*}(t) \right )&lt;/script&gt;
 
-&lt;p&gt;$= M_{G}(t) \bigotimes M_{G}^{*}(t)   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= M_{G}(t) \bigotimes M_{G}^{*}(t)&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \frac{1}{n} J \right ) \bigotimes \left ( \frac{1}{n} J \right )   $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{1}{n} J \right ) \bigotimes \left ( \frac{1}{n} J \right )&lt;/script&gt;
 
-&lt;p&gt;$= \frac{1}{n^{2}} J$.&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{1}{n^{2}} J&lt;/script&gt;
 
-&lt;p&gt;Hence $G \Box H$ admits uniform mixing at time $t$ as well; and therefore Cartesian products of simple graphs on the same number of vertices that admit uniform at the same time also admit uniform mixing at the same time, since the choice of time and simple graphs on the same number of vertices in this context are arbitrary.
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hence &lt;script type=&quot;math/tex&quot;&gt;G \Box H&lt;/script&gt; admits uniform mixing at time &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; as well; and therefore Cartesian products of simple graphs on the same number of vertices that admit uniform at the same time also admit uniform mixing at the same time, since the choice of time and simple graphs on the same number of vertices in this context are arbitrary.
 I would now like to show that my previous proposition is indeed true.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Suppose that $G$ and $H$ are arbitrary simple graphs on $m$ and $n$ vertices. Then by properties of matrix exponentials, properties of the Kronecker product, and an assumed identity about the adjacency matrices of the Cartesian products of simple graphs, we have that:&lt;/li&gt;
+  &lt;li&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; are arbitrary simple graphs on &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; vertices. Then by properties of matrix exponentials, properties of the Kronecker product, and an assumed identity about the adjacency matrices of the Cartesian products of simple graphs, we have that:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;$U_{G \Box H}(t)      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;U_{G \Box H}(t)&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp}(it A_{G \Box H})      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp}(it A_{G \Box H})&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp} \left ( it \left(A_{G} \bigotimes I_n + I_m \bigotimes A_{H} \right ) \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp} \left ( it \left(A_{G} \bigotimes I_n + I_m \bigotimes A_{H} \right ) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp} \left ( (it A_{G}) \bigotimes I_n + I_m \bigotimes (it A_{H}) \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp} \left ( (it A_{G}) \bigotimes I_n + I_m \bigotimes (it A_{H}) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp} \left ( (it A_{G}) \bigotimes I_n \right ) \operatorname{exp} \left ( I_m \bigotimes (it A_{H}) \right )     $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp} \left ( (it A_{G}) \bigotimes I_n \right ) \operatorname{exp} \left ( I_m \bigotimes (it A_{H}) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( (it A_{G}) \bigotimes I_n \right )^{n}}{n!} \right ) \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( I_m \bigotimes (it A_{H}) \right )^{n}}{n!} \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( (it A_{G}) \bigotimes I_n \right )^{n}}{n!} \right ) \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( I_m \bigotimes (it A_{H}) \right )^{n}}{n!} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( it A_{G} \right )^{n}}{n!} \bigotimes I_n \right ) \left ( \sum\limits_{n = 0}^{\infty} I_m \bigotimes \frac{\left ( it A_{H} \right )^{n}}{n!} \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \sum\limits_{n = 0}^{\infty} \frac{\left ( it A_{G} \right )^{n}}{n!} \bigotimes I_n \right ) \left ( \sum\limits_{n = 0}^{\infty} I_m \bigotimes \frac{\left ( it A_{H} \right )^{n}}{n!} \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \operatorname{exp}(it A_{G}) \bigotimes I_n \right ) \left ( I_m \bigotimes \operatorname{exp}(it A_{H}) \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \operatorname{exp}(it A_{G}) \bigotimes I_n \right ) \left ( I_m \bigotimes \operatorname{exp}(it A_{H}) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \left ( \operatorname{exp}(it A_{G}) I_m \right ) \bigotimes  \left ( I_n \operatorname{exp}(it A_{H}) \right )      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \operatorname{exp}(it A_{G}) I_m \right ) \bigotimes  \left ( I_n \operatorname{exp}(it A_{H}) \right )&lt;/script&gt;
 
-&lt;p&gt;$= \operatorname{exp}(it A_{G}) \bigotimes \operatorname{exp}(it A_{H})      $&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{exp}(it A_{G}) \bigotimes \operatorname{exp}(it A_{H})&lt;/script&gt;
 
-&lt;p&gt;$= U_{G} (t) \bigotimes U_{H} (t)$ as desired.&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= U_{G} (t) \bigotimes U_{H} (t)&lt;/script&gt;
 
-&lt;p&gt;&lt;em&gt;Note that here $A_{G \Box H}$, $A_G$ and $A_H$ denote the respective adjacency matrices of $G \Box H$, $G$ and $H$; likewise $U_{G \Box H}(t)$, $U_G (t)$ and $U_H (t)$ denote their respective continuous-time quantum walks relative to their adjacency matrices.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;as desired.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that here &lt;script type=&quot;math/tex&quot;&gt;A_{G \Box H}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;A_G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;A_H&lt;/script&gt; denote the respective adjacency matrices of &lt;script type=&quot;math/tex&quot;&gt;G \Box H&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;; likewise &lt;script type=&quot;math/tex&quot;&gt;U_{G \Box H}(t)&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;U_G (t)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;U_H (t)&lt;/script&gt; denote their respective continuous-time quantum walks relative to their adjacency matrices.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;After showing that my previous proposition is true, we ultimately have that:&lt;/p&gt;
 &lt;ol&gt;
@@ -88,11 +99,7 @@ as desired.&lt;/li&gt;
 
   Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.
   Verify that Cartesian products of simple graphs that admit the property known as uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
-First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that $G$ is a simple graph on $n$ with adjacency matrix $A$. Then, in this context:
-  The continuous-time quantum walk $U : \mathbb{R} \to \operatorname{Mat}{n \times n}(\mathbb{C})$ of $G$ relative to its adjacency matrix is defined as $U(t) := \operatorname{exp}(itA) = \sum\limits{n = 0}^{\infty} \frac{ \left(itA \right)^{n}}{n!}$.
-  Suppose $u$ and $v$ are a pair of distinct vertices on $G$. If $U(t) e_u = \operatorname{exp}(i\theta) e_v$ for some particular time $t \in \mathbb{R}$ and angle $\theta \in [0, 2 \pi]$, then $G$ is said to admit perfect state transfer (between $u$ and $v$, at time $t$).
-  The mixing matrix $M : \mathbb{R} \to \operatorname{Mat}_{n \times n}(\mathbb{R})$ of $G$ relative to its adjacency matrix is defined as $M(t) := U(t) \circ U^{*}(t)$, i.e. the entry-wise product of $U(t)$ and its conjugate transpose.
-  If $M(t) = \frac{1}{n} J$ at some particular time $t \in \mathbb{R}$, then $G$ is said to admit uniform mixing (at time $t$).</summary></entry><entry><title type="html">Spectral Decompositions of Adjacency Matrices</title><link href="http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices.html" rel="alternate" type="text/html" title="Spectral Decompositions of Adjacency Matrices" /><published>2016-09-05T00:00:00-04:00</published><updated>2016-09-05T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices.html">&lt;p&gt;In this post, my goal is to establish why the adjacency matrix of a simple graph has its spectral decomposition; in my previous posts up until this point, I have relied on the fact that the adjacency matrix of a simple graph has its spectral decomposition, and related facts, without examining or justifying that these facts are true directly. Stated more precisely, my goal for this post is to justify that the adjacency matrix &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; of any simple graph has the spectral decomposition &lt;script type=&quot;math/tex&quot;&gt;A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\sigma(A)&lt;/script&gt; denotes the set of distinct eigenvalues of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;E_\lambda&lt;/script&gt; denotes an orthogonal projection onto the eigenspace of &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\lambda \in \sigma(A)&lt;/script&gt;. It turns out that the adjacency matrix of a simple graph has its spectral decomposition because it is a real symmetric matrix, and any real symmetric matrix has its spectral decomposition; so, I would like to focus somewhat more generally on establishing why any real symmetric matrix has a spectral decomposition, despite the spectral decomposition of the adjacency matrix of a simple graph being of particular relevance to the current subject matter of this blog.
+First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that  is a simple graph on  with adjacency matrix .</summary></entry><entry><title type="html">Spectral Decompositions of Adjacency Matrices</title><link href="http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices.html" rel="alternate" type="text/html" title="Spectral Decompositions of Adjacency Matrices" /><published>2016-09-05T00:00:00-04:00</published><updated>2016-09-05T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2016/09/05/spectral-decompositions-of-adjacency-matrices.html">&lt;p&gt;In this post, my goal is to establish why the adjacency matrix of a simple graph has its spectral decomposition; in my previous posts up until this point, I have relied on the fact that the adjacency matrix of a simple graph has its spectral decomposition, and related facts, without examining or justifying that these facts are true directly. Stated more precisely, my goal for this post is to justify that the adjacency matrix &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; of any simple graph has the spectral decomposition &lt;script type=&quot;math/tex&quot;&gt;A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\sigma(A)&lt;/script&gt; denotes the set of distinct eigenvalues of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;E_\lambda&lt;/script&gt; denotes an orthogonal projection onto the eigenspace of &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\lambda \in \sigma(A)&lt;/script&gt;. It turns out that the adjacency matrix of a simple graph has its spectral decomposition because it is a real symmetric matrix, and any real symmetric matrix has its spectral decomposition; so, I would like to focus somewhat more generally on establishing why any real symmetric matrix has a spectral decomposition, despite the spectral decomposition of the adjacency matrix of a simple graph being of particular relevance to the current subject matter of this blog.
 Suppose that &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is a &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt; real symmetric matrix. Then, in this context, I would propose that:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;The minimal polynomial of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; splits into linear factors; moreover, each of its linear factors are distinct.&lt;/li&gt;
