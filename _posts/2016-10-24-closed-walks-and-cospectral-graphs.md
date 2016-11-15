@@ -48,7 +48,7 @@ $$= \frac{X^{-1} \phi^{'}(X^{-1})}{\phi(X^{-1})}$$
 
 .
 
-*Note that here $$X^{-1}$$ denotes another formal symbol that happens to have the relation $$X^{-1}X = 1$$ with the formal symbol *$$X$$* and should not be interpreted as a “function of $$X$$” in the sense of calculus when e.g. considering the formal derivative $$\phi^{'}(X^{-1})$$ of $$\phi(X^{-1})$$ with respect to the formal symbol *$$X^{-1}$$* in context.*
+*Note that here $$X^{-1}$$ denotes another formal symbol that happens to have the relation $$X^{-1}X = 1$$ with the formal symbol $$X$$ and should not be interpreted as a “function of $$X$$” in the sense of calculus when e.g. considering the formal derivative $$\phi^{'}(X^{-1})$$ of $$\phi(X^{-1})$$ with respect to the formal symbol $$X^{-1}$$ in context.*
 
 I would now like to show that the previous two facts that I assumed to be true indeed hold in this context:
 
