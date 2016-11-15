@@ -69,28 +69,53 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then it is a necessary condition that said vertices have the property known as being cospectral. In this post, my goal is to provide some useful characterizations of cospectrality, and provide some useful sufficient conditions for a pair of distinct vertices to be cospectral on a simple graph.
-Suppose that <script type="math/tex">G</script> is a simple graph on <script type="math/tex">n</script> vertices, with adjacency matrix <script type="math/tex">A</script>.
-Then, I would like to provide some definitions in this context:</p>
+    <p>If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then it is a necessary condition that said vertices have the property known as being cospectral. In this post, my goal is to provide some useful characterizations of cospectrality, and provide some useful sufficient conditions for a pair of distinct vertices to be cospectral on a simple graph.</p>
+
+<p>Suppose that <script type="math/tex">G</script> is a simple graph on <script type="math/tex">n</script> vertices, with adjacency matrix <script type="math/tex">A</script>. Then, I would like to provide some definitions in this context:</p>
+
 <ol>
-  <li>An inner product can be defined on <script type="math/tex">\mathbb{R}^{n}</script> as <script type="math/tex">\langle x,y \rangle := x^T y</script> for all <script type="math/tex">x,y \in \mathbb{R}^{n}</script>.</li>
-  <li>Let <script type="math/tex">\sigma(A)</script> denote the set of all distinct eigenvalues of <script type="math/tex">A</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> we have that <script type="math/tex">\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle</script> for all <script type="math/tex">\lambda \in \sigma(A)</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are said to be cospectral.</li>
+  <li>
+    <p>An inner product can be defined on <script type="math/tex">\mathbb{R}^{n}</script> as <script type="math/tex">\langle x,y \rangle := x^T y</script> for all <script type="math/tex">x,y \in \mathbb{R}^{n}</script>.</p>
+  </li>
+  <li>
+    <p>Let <script type="math/tex">\sigma(A)</script> denote the set of all distinct eigenvalues of <script type="math/tex">A</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> we have that <script type="math/tex">\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle</script> for all <script type="math/tex">\lambda \in \sigma(A)</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are said to be cospectral.</p>
+  </li>
 </ol>
 
 <p><em>Note that here each <script type="math/tex">E_\lambda</script> denotes an orthogonal projection onto the eigenspace for eigenvalue <script type="math/tex">\lambda</script></em> of <em><script type="math/tex">A</script>, for all <script type="math/tex">\lambda \in \sigma(A)</script>.</em></p>
+
 <ol>
   <li>Suppose that <script type="math/tex">u</script> is any vertex on <script type="math/tex">G</script>. Then closed walk generating series of <script type="math/tex">u</script> is defined as: <script type="math/tex">W_u(X) := \sum\limits_{k=0}^{\infty} \langle A^n e_u, e_u \rangle X^n</script>.</li>
 </ol>
 
 <p><em>Note that <script type="math/tex">W_u(X) \in \mathbb{R} \left[ \left[ X \right] \right]</script>, i.e. it is an element of the algebra of formal power series with real coefficients.</em></p>
+
 <ol>
-  <li>Suppose that <script type="math/tex">G</script> has <script type="math/tex">n</script> vertices, and <script type="math/tex">u</script> is a vertex on <script type="math/tex">G</script>. Then the walk matrix <script type="math/tex">B_u</script> relative to vertex <script type="math/tex">u</script> is defined as <script type="math/tex">B_u := \left( e_u \mid A e_u \mid \cdots \mid A^{n-1} e_u \right)</script>.</li>
-  <li>If <script type="math/tex">P</script> is an <script type="math/tex">n</script> x <script type="math/tex">n</script> permutation matrix that commutes with <script type="math/tex">A</script>, i.e. <script type="math/tex">AP = PA</script>, then <script type="math/tex">P</script> is said to represent an automorphism on <script type="math/tex">G</script>.
-And, I would like to state some propositions in this context:</li>
-  <li>Any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> are cospectral if and only if their closed walk generating series are equal, i.e. <script type="math/tex">W_u(X) = W_v(X).</script></li>
-  <li>Any pair of distinct <script type="math/tex">u</script> and <script type="math/tex">v</script>on <script type="math/tex">G</script> are cospectral if and only if <script type="math/tex">(B_u)^T B_u = (B_v)^T B_v.</script></li>
-  <li>Suppose that a permutation matrix <script type="math/tex">P</script> represents an automorphism on <script type="math/tex">G</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script>, <script type="math/tex">P e_u = e_v</script> and <script type="math/tex">P e_v = e_u</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral.
-Finally, I would like to show that these propositions hold in this context:</li>
+  <li>
+    <p>Suppose that <script type="math/tex">G</script> has <script type="math/tex">n</script> vertices, and <script type="math/tex">u</script> is a vertex on <script type="math/tex">G</script>. Then the walk matrix <script type="math/tex">B_u</script> relative to vertex <script type="math/tex">u</script> is defined as <script type="math/tex">B_u := \left( e_u \mid A e_u \mid \cdots \mid A^{n-1} e_u \right)</script>.</p>
+  </li>
+  <li>
+    <p>If <script type="math/tex">P</script> is an <script type="math/tex">n</script> x <script type="math/tex">n</script> permutation matrix that commutes with <script type="math/tex">A</script>, i.e. <script type="math/tex">AP = PA</script>, then <script type="math/tex">P</script> is said to represent an automorphism on <script type="math/tex">G</script>.</p>
+  </li>
+</ol>
+
+<p>And, I would like to state some propositions in this context:</p>
+
+<ol>
+  <li>
+    <p>Any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> are cospectral if and only if their closed walk generating series are equal, i.e. <script type="math/tex">W_u(X) = W_v(X).</script></p>
+  </li>
+  <li>
+    <p>Any pair of distinct <script type="math/tex">u</script> and <script type="math/tex">v</script>on <script type="math/tex">G</script> are cospectral if and only if <script type="math/tex">(B_u)^T B_u = (B_v)^T B_v.</script></p>
+  </li>
+  <li>
+    <p>Suppose that a permutation matrix <script type="math/tex">P</script> represents an automorphism on <script type="math/tex">G</script>. If for any pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script>, <script type="math/tex">P e_u = e_v</script> and <script type="math/tex">P e_v = e_u</script>, then <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral.</p>
+  </li>
+</ol>
+
+<p>Finally, I would like to show that these propositions hold in this context:</p>
+
+<ol>
   <li>Suppose that a pair of distinct vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> on <script type="math/tex">G</script> are cospectral, and that <script type="math/tex">A</script> has spectral decomposition <script type="math/tex">A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda</script>. Then for all non-negative integers <script type="math/tex">k \geq 0,</script> <script type="math/tex">A^k</script> has spectral decomposition <script type="math/tex">A^k = \sum\limits_{\lambda \in \sigma(A)} \lambda^k E_\lambda</script>. From properties of inner products, it follows that if for all <script type="math/tex">\lambda \in \sigma(A)</script>, <script type="math/tex">\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle</script>, then <script type="math/tex">\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle</script> for all <script type="math/tex">k \geq 0</script>. Hence if <script type="math/tex">u</script> and <script type="math/tex">v</script> are cospectral, then their closed walk generating series are equal.</li>
 </ol>
 

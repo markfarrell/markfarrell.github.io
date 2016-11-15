@@ -6,22 +6,35 @@ categories: jekyll update
 ---
 
 If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then it is a necessary condition that said vertices have the property known as being cospectral. In this post, my goal is to provide some useful characterizations of cospectrality, and provide some useful sufficient conditions for a pair of distinct vertices to be cospectral on a simple graph.
-Suppose that $$G$$ is a simple graph on $$n$$ vertices, with adjacency matrix $$A$$.
-Then, I would like to provide some definitions in this context:
+
+
+
+Suppose that $$G$$ is a simple graph on $$n$$ vertices, with adjacency matrix $$A$$. Then, I would like to provide some definitions in this context:
+
 1. An inner product can be defined on $$\mathbb{R}^{n}$$ as $$\langle x,y \rangle := x^T y$$ for all $$x,y \in \mathbb{R}^{n}$$.
+
 2. Let $$\sigma(A)$$ denote the set of all distinct eigenvalues of $$A$$. If for any pair of distinct vertices $$u$$ and $$v$$ on $$G$$ we have that $$\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle$$ for all $$\lambda \in \sigma(A)$$, then $$u$$ and $$v$$ are said to be cospectral.
 
 *Note that here each $$E_\lambda$$ denotes an orthogonal projection onto the eigenspace for eigenvalue $$\lambda$$* of *$$A$$, for all $$\lambda \in \sigma(A)$$.*
+
 3. Suppose that $$u$$ is any vertex on $$G$$. Then closed walk generating series of $$u$$ is defined as: $$W_u(X) := \sum\limits_{k=0}^{\infty} \langle A^n e_u, e_u \rangle X^n$$.
 
 *Note that $$W_u(X) \in \mathbb{R} \left[ \left[ X \right] \right]$$, i.e. it is an element of the algebra of formal power series with real coefficients.*
+
 4. Suppose that $$G$$ has $$n$$ vertices, and $$u$$ is a vertex on $$G$$. Then the walk matrix $$B_u$$ relative to vertex $$u$$ is defined as $$B_u := \left( e_u \mid A e_u \mid \cdots \mid A^{n-1} e_u \right)$$.
+
 5. If $$P$$ is an $$n$$ x $$n$$ permutation matrix that commutes with $$A$$, i.e. $$AP = PA$$, then $$P$$ is said to represent an automorphism on $$G$$.
+
 And, I would like to state some propositions in this context:
+
 1. Any pair of distinct vertices $$u$$ and $$v$$ on $$G$$ are cospectral if and only if their closed walk generating series are equal, i.e. $$W_u(X) = W_v(X).$$
+
 2. Any pair of distinct $$u$$ and $$v $$on $$G$$ are cospectral if and only if $$(B_u)^T B_u = (B_v)^T B_v.$$
+
 3. Suppose that a permutation matrix $$P$$ represents an automorphism on $$G$$. If for any pair of distinct vertices $$u$$ and $$v$$ on $$G$$, $$P e_u = e_v$$ and $$P e_v = e_u$$, then $$u$$ and $$v$$ are cospectral.
+
 Finally, I would like to show that these propositions hold in this context:
+
 1. Suppose that a pair of distinct vertices $$u$$ and $$v$$ on $$G$$ are cospectral, and that $$A$$ has spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda$$. Then for all non-negative integers $$k \geq 0,$$ $$A^k$$ has spectral decomposition $$A^k = \sum\limits_{\lambda \in \sigma(A)} \lambda^k E_\lambda$$. From properties of inner products, it follows that if for all $$\lambda \in \sigma(A)$$, $$\langle E_\lambda e_u, e_u \rangle = \langle E_\lambda e_v, e_v \rangle$$, then $$\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle$$ for all $$k \geq 0$$. Hence if $$u$$ and $$v$$ are cospectral, then their closed walk generating series are equal.
 
 Conversely, suppose that a pair of distinct vertices $$u$$ and $$v$$ on $$G$$ have closed walk generating series, i.e. $$W_u(X) = W_v(X)$$. In particular, this means that for all non-negative integers $$k \geq 0$$, $$\langle A^k e_u, e_u \rangle = \langle A^k e_v, e_v \rangle$$. It follows from properties of inner products that for all polynomials $$f(A)$$ in $$A$$, i.e. $$f(x)$$ is a polynomial with real coefficients and $$f(A) \in Z(A) = \mathrm{span} \{ I, A, A^2, \cdots \}$$, $$\langle f(A) e_u, e_u \rangle = \langle f(A) e_v, e_v \rangle$$. It is also the case that each $$E_\lambda$$ is a polynomial in $$A$$ for all eigenvalues $$\lambda \in \sigma(A)$$, as can be seen in the proof of the establishment of the spectral decomposition of $$A$$. Hence it ultimately follows that if $$u$$ and $$v$$ have equal closed walk generating series, then $$u$$ and $$v$$ are cospectral.
