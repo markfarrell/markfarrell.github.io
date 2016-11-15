@@ -17,7 +17,9 @@ Suppose that $$G$$ is a simple graph with adjacency matrix $$A$$. Then, first an
 2. Suppose that the characteristic polynomial of the adjacency matrix of $$G$$ is given by $$\phi_{G}(x)$$. Additionally, suppose that $$H$$ is another simple graph where the characteristic polynomial of the adjacency matrix of $$H$$ is given by $$\phi_{H}(x)$$. Then $$G$$ and $$H$$ are said to be cospectral if $$\phi_{G}(x) = \phi_{H}(x)$$.
 
 Now, in order to achieve my original goal for this post of verifying that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal, I would first like to necessarily propose that the following facts hold in this context:
+
 1. Suppose that minimal polynomial of the adjacency matrix $$A$$ of $$G$$ is given by $$p(x) = \prod\limits_{k = 1}^{n} \left (x - \lambda_k \right )$$. Additionally, suppose that $$A$$ has the spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda$$, where $$\sigma(A)$$ is the set whose elements consist of all of the roots of $$p(x)$$. Then the generating series $$W_{G}(X)$$ for all closed walks on $$G$$ weighted by length admits the partial fraction decomposition $$W_{G}(X) = \sum\limits_{\lambda \in \sigma(A)} \frac{\operatorname{tr}(E_{\lambda})}{1 - \lambda X}$$.
+
 2. If the adjacency matrix $$A$$ of $$G$$ has the spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda$$, where $$\sigma(A)$$ is the set whose elements consist of the distinct eigenvalues of $$A$$, then $$\operatorname{tr}(E_\lambda) = m_{\lambda}$$ gives the multiplicity $$m_{\lambda}$$ of $$\lambda$$ as an eigenvalue of $$A$$ for all $$\lambda \in \sigma(A)$$.
 
 
