@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Complete Graphs Are Characterized by Their Spectra</title>
+  <meta name="description" content="Having cospectral adjacency matrices is a necessary condition for simple graphs to be isomorphic. In general, however, it is not true that satisfying this co...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/jekyll/update/2016/09/23/complete-graphs-are-characterized-by-their-spectra.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Complete Graphs Are Characterized by Their Spectra</h1>
+    <p class="post-meta"><time datetime="2016-09-23T00:00:00-04:00" itemprop="datePublished">Sep 23, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Having cospectral adjacency matrices is a necessary condition for simple graphs to be isomorphic. In general, however, it is not true that satisfying this condition alone is also sufficient for simple graphs to be isomorphic - but, for some families of simple graphs it is, and these families of simple graphs are particularly interesting to identify and study. In this particular post, my goal is to show that the complete graphs are an example of a family of simple graphs that are characterized by their spectra - which is to say that a simple graph <script type="math/tex">G</script> on <script type="math/tex">n</script> vertices is isomorphic to the complete graph <script type="math/tex">K_n</script> on <script type="math/tex">n</script> vertices if and only if they are cospectral relative to their adjacency matrices.
+First and foremost, I would like to show how to deduce a general expression for the spectrum of a complete graph on any number vertices; so that we also know what the spectrum of another simple graph must be in order for it and a complete graph on the same number of vertices to be cospectral relative to their adjacency matrices. The adjacency matrix <script type="math/tex">A</script> of the complete graph <script type="math/tex">K_n</script> on <script type="math/tex">n</script> vertices is given by <script type="math/tex">A = J - I</script>. From there, we can deduce that:</p>
+
+<script type="math/tex; mode=display">A^{2}</script>
+
+<script type="math/tex; mode=display">= (J - I)^{2}</script>
+
+<script type="math/tex; mode=display">= J^{2} - JI - IJ + I^{2}</script>
+
+<script type="math/tex; mode=display">= nJ - 2J + I</script>
+
+<script type="math/tex; mode=display">= (n - 2)J + I</script>
+
+<script type="math/tex; mode=display">= (n - 2)J - (n - 2)I + (n - 2)I + I</script>
+
+<script type="math/tex; mode=display">= (n - 2)(J - I) + (n - 1) I</script>
+
+<script type="math/tex; mode=display">= (n - 2)A + (n - 1)I</script>
+
+<p>.</p>
+
+<p>We can then see that the minimal polynomial of the complete graph <script type="math/tex">K_n</script> on <script type="math/tex">n</script> vertices is given by <script type="math/tex">p(x) = (x - (n - 1))(x + 1)</script>, since <script type="math/tex">A^{2} - (n - 2)A - (n - 1)I = (A - (n - 1)I)(A + I) = 0</script>. Additionally, we have that the spectral decomposition of <script type="math/tex">A</script> is given by <script type="math/tex">A = (n - 1)E_{n-1} - E_{-1}</script> where, in particular, <script type="math/tex">E_{n - 1} = \frac{1}{(n - 1) + 1} (A + I) = \frac{1}{n} J</script>; hence we can further deduce that <script type="math/tex">n - 1</script> must have a multiplicity of one as an eigenvalue of <script type="math/tex">A</script>, and consequently that <script type="math/tex">-1</script> must have a multiplicity of <script type="math/tex">n - 1</script> as an eigenvalue of <script type="math/tex">A</script>, since their multiplicities must sum to <script type="math/tex">n</script>. Therefore, we can ultimately say that characteristic polynomial of the complete graph <script type="math/tex">K_n</script> on <script type="math/tex">n</script> vertices relative to its adjacency matrix is given by <script type="math/tex">\phi(x) = (x - (n - 1))(x + 1)^{(n-1)}</script>, and hence have deduced the spectrum of an arbitrary complete graph relative to its adjacency matrix as desired.
+Now, I would like to use this general expression for the spectrum of a complete graph on any number of vertices to show that if a simple graph <script type="math/tex">G</script> and the complete graph on the same number of vertices are cospectral relative to their adjacency matrices, then they must be isomorphic. Suppose that <script type="math/tex">G</script> is an arbitrary simple graph on <script type="math/tex">n</script> vertices whose characteristic polynomial is given by <script type="math/tex">\phi(x) = (x - (n - 1))(x + 1)^{(n-1)}</script>, relative to its adjacency matrix <script type="math/tex">A</script>. Then we know that the minimal polynomial of <script type="math/tex">A</script> splits into distinct linear factors, and is given by <script type="math/tex">p(x) = (x - (n - 1))(x + 1)</script>; hence we can deduce that <script type="math/tex">A</script> has the spectral decomposition <script type="math/tex">A = (n - 1)E_{n - 1} - E_{-1}</script>. Furthermore, we know that <script type="math/tex">E_{n - 1} + E_{-1} = I</script> and hence <script type="math/tex">E_{-1} = I - E_{n-1}</script>; this tells us that <script type="math/tex">A = nE_{n-1} - I</script>. Additionally, we can see that <script type="math/tex">\operatorname{rank}(E_{n - 1}) = 1</script>, since from <script type="math/tex">\phi(x)</script> we can see that <script type="math/tex">n - 1</script> has a multiplicity of one as an eigenvalue of <script type="math/tex">A</script>. We also must have that <script type="math/tex">A_{k,k} = (nE_{n-1} - I)_{k,k} = 0</script> and hence that <script type="math/tex">(n E_{n - 1})_{k,k} = 1</script>, for all <script type="math/tex">1 \leq k \leq n</script>; together with the fact that <script type="math/tex">\operatorname{rank}(E_{n - 1}) = 1</script>, we can ultimately conclude that <script type="math/tex">nE_{n-1} = J</script> and hence that <script type="math/tex">E_{n-1} = \frac{1}{n} J</script>. Therefore, we have that <script type="math/tex">A = (n - 1)E_{n-1} - E_{-1} = (n - 1)E_{n-1} - (I - E_{n-1}) = (n - 1)(\frac{1}{n} J) - (I - \frac{1}{n} J) = J - I</script>, and hence that <script type="math/tex">G</script> must ultimately be isomorphic to the complete graph <script type="math/tex">K_n</script> on <script type="math/tex">n</script> vertices as desired.
+We know that it is always true that isomorphic simple graphs are cospectral relative to their adjacency matrices; we have shown that the converse is also true when restricted to simple graphs and complete graphs that are cospectral relative to their adjacency matrices. Hence we can ultimately conclude that a simple graph is isomorphic to a complete graph on the same number of vertices if and only if they are cospectral relative to their adjacency matrices, as desired.</p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
