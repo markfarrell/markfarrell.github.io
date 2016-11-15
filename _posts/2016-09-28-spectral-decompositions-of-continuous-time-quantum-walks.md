@@ -6,6 +6,8 @@ categories: jekyll update
 ---
 
 In my previous post, I assumed the fact that if the adjacency matrix $$A$$ of a simple graph $$G$$ has the spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_{\lambda}$$, then the continuous-time quantum walk $$U(t)$$ of $$G$$ relative to its adjacency matrix has the spectral decomposition $$U(t) = \sum\limits_{\lambda \in \sigma(A)} \operatorname{exp}(it(\lambda)) E_{\lambda}$$; here $$\sigma(A)$$ denotes the set of distinct eigenvalues of $$A$$. I would now like to verify that this fact is indeed true:
+
+
 Suppose that $$G$$ is an arbitrary simple graph whose adjacency matrix $$A$$ has the spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_{\lambda}$$. Then, like in my previous blog posts, the continuous-time quantum walk of $$G$$ relative to is adjacency matrix is given by $$U(t) = \operatorname{exp}(itA) = \sum\limits_{n = 0}^{\infty} \frac{(itA)^{n}}{n!}$$. From there, we can deduce that:
 
 
