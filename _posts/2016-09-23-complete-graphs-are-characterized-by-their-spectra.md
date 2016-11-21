@@ -2,7 +2,6 @@
 layout: post
 title:  "Complete Graphs Are Characterized by Their Spectra"
 date:   2016-09-23
-categories: jekyll update
 ---
 
 Having cospectral adjacency matrices is a necessary condition for simple graphs to be isomorphic. In general, however, it is not true that satisfying this condition alone is also sufficient for simple graphs to be isomorphic - but, for some families of simple graphs it is, and these families of simple graphs are particularly interesting to identify and study. In this particular post, my goal is to show that the complete graphs are an example of a family of simple graphs that are characterized by their spectra - which is to say that a simple graph $$G$$ on $$n$$ vertices is isomorphic to the complete graph $$K_n$$ on $$n$$ vertices if and only if they are cospectral relative to their adjacency matrices.

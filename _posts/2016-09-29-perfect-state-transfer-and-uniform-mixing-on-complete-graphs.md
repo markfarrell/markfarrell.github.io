@@ -2,7 +2,6 @@
 layout: post
 title:  "Perfect State Transfer and Uniform Mixing on Complete Graphs"
 date:   2016-09-28
-categories: jekyll update
 ---
 
 I would like to continue to talk about my investigations into what simple graphs admit the properties known as perfect state transfer and uniform mixing relative to their adjacency matrices. In this particular post, my goals are to:

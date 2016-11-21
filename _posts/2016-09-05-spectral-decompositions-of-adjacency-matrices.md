@@ -2,7 +2,6 @@
 layout: post
 title:  "Spectral Decompositions of Adjacency Matrices"
 date:   2016-09-05
-categories: jekyll update
 ---
 
 In this post, my goal is to establish why the adjacency matrix of a simple graph has its spectral decomposition; in my previous posts up until this point, I have relied on the fact that the adjacency matrix of a simple graph has its spectral decomposition, and related facts, without examining or justifying that these facts are true directly. Stated more precisely, my goal for this post is to justify that the adjacency matrix $$A$$ of any simple graph has the spectral decomposition $$A = \sum\limits_{\lambda \in \sigma(A)} \lambda E_\lambda$$, where $$\sigma(A)$$ denotes the set of distinct eigenvalues of $$A$$, and $$E_\lambda$$ denotes an orthogonal projection onto the eigenspace of $$\lambda$$ for all $$\lambda \in \sigma(A)$$. It turns out that the adjacency matrix of a simple graph has its spectral decomposition because it is a real symmetric matrix, and any real symmetric matrix has its spectral decomposition; so, I would like to focus somewhat more generally on establishing why any real symmetric matrix has a spectral decomposition, despite the spectral decomposition of the adjacency matrix of a simple graph being of particular relevance to the current subject matter of this blog.

@@ -2,7 +2,6 @@
 layout: post
 title:  "Invariant Column Spaces"
 date:   2016-10-01
-categories: jekyll update
 ---
 
 In this post, my goal is to show that for any $$n$$ x $$n$$ matrix $$A \in \operatorname{Mat}_{n \times n}(\mathbb{F})$$ and $$n$$ x $$m$$ matrix $$X \in \operatorname{Mat}_{n \times m}(\mathbb{F})$$ with entries in a field $$\mathbb{F}$$, the column space of $$X$$ is $$A$$-invariant if and only if $$AX = XY$$ for some $$m$$ x $$m$$ matrix $$Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})$$.

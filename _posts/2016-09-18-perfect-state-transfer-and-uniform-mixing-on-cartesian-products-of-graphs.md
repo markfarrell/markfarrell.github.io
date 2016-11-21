@@ -2,7 +2,6 @@
 layout: post
 title:  "Perfect State Transfer and Uniform Mixing on Cartesian Products of Graphs"
 date:   2016-09-18
-categories: jekyll update
 ---
 
 In this post, my goals are to:

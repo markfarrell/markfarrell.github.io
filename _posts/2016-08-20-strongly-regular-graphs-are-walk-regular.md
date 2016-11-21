@@ -2,7 +2,6 @@
 layout: post
 title:  "Strongly Regular Graphs Are Walk-Regular"
 date:   2016-08-20
-categories: jekyll update
 ---
 
 In this post, my goal is to show that strongly regular graphs are walk-regular.

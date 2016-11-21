@@ -2,7 +2,6 @@
 layout: post
 title:  "Closed Walks and Cospectral Graphs"
 date:   2016-10-24
-categories: jekyll update
 ---
 
 In this post, my goal is to verify that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal.

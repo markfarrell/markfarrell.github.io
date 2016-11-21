@@ -2,7 +2,6 @@
 layout: post
 title:  "Closed Walks and Cospectral Vertices"
 date:   2016-08-19
-categories: jekyll update
 ---
 
 If a pair of distinct vertices on a simple graph admit perfect state transfer with respect to the continuous-time quantum walk of its adjacency matrix, then it is a necessary condition that said vertices have the property known as being cospectral. In this post, my goal is to provide some useful characterizations of cospectrality, and provide some useful sufficient conditions for a pair of distinct vertices to be cospectral on a simple graph.
