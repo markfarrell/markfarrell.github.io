@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Perfect State Transfer and Uniform Mixing on Cartesian Products of Graphs</title>
-  <meta name="description" content="In this post, my goals are to: Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also ...">
+  <meta name="description" content="In this post, my goals are to:">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/2016/09/18/perfect-state-transfer-and-uniform-mixing-on-cartesian-products-of-graphs.html">
@@ -74,10 +74,15 @@
 
   <div class="post-content" itemprop="articleBody">
     <p>In this post, my goals are to:</p>
+
 <ol>
-  <li>Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.</li>
-  <li>Verify that Cartesian products of simple graphs that admit the property known as uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
-First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that <script type="math/tex">G</script> is a simple graph on <script type="math/tex">n</script> with adjacency matrix <script type="math/tex">A</script>.</li>
+  <li>
+    <p>Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.</p>
+  </li>
+  <li>
+    <p>Verify that Cartesian products of simple graphs that admit the property known as uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
+First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that <script type="math/tex">G</script> is a simple graph on <script type="math/tex">n</script> with adjacency matrix <script type="math/tex">A</script>.</p>
+  </li>
 </ol>
 
 <p>Then, in this context:</p>
@@ -92,10 +97,15 @@ First and foremost, I would like to define what it means for a simple graph to a
 <p><em>Note that here <script type="math/tex">J</script> denotes the <script type="math/tex">n</script> x <script type="math/tex">n</script> matrix consisting of all ones as entries.</em></p>
 
 <p>Secondly, I would like to verify that the following proposition is true:</p>
+
 <ol>
-  <li>For all simple graphs <script type="math/tex">G</script> and <script type="math/tex">H</script> whose continuous-time quantum walks are given by <script type="math/tex">U_G (t)</script> and <script type="math/tex">U_H (t)</script>, the continuous-time quantum walk of their Cartesian product <script type="math/tex">G \Box H</script> is given by <script type="math/tex">U_{G \Box H} (t) = U_G (t) \bigotimes U_H (t)</script>.
-Assuming that this proposition is true, then:</li>
-  <li>Suppose that <script type="math/tex">G</script> and <script type="math/tex">H</script> are arbitrary simple graphs such that <script type="math/tex">G</script> admits perfect state transfer between vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> at time <script type="math/tex">t</script>, and <script type="math/tex">H</script> admits perfect state transfer between vertices <script type="math/tex">u'</script> and <script type="math/tex">v'</script> at time <script type="math/tex">t</script>. By properties of the Kronecker product and the assumption that my previous proposition is true, we have that:</li>
+  <li>
+    <p>For all simple graphs <script type="math/tex">G</script> and <script type="math/tex">H</script> whose continuous-time quantum walks are given by <script type="math/tex">U_G (t)</script> and <script type="math/tex">U_H (t)</script>, the continuous-time quantum walk of their Cartesian product <script type="math/tex">G \Box H</script> is given by <script type="math/tex">U_{G \Box H} (t) = U_G (t) \bigotimes U_H (t)</script>.
+Assuming that this proposition is true, then:</p>
+  </li>
+  <li>
+    <p>Suppose that <script type="math/tex">G</script> and <script type="math/tex">H</script> are arbitrary simple graphs such that <script type="math/tex">G</script> admits perfect state transfer between vertices <script type="math/tex">u</script> and <script type="math/tex">v</script> at time <script type="math/tex">t</script>, and <script type="math/tex">H</script> admits perfect state transfer between vertices <script type="math/tex">u'</script> and <script type="math/tex">v'</script> at time <script type="math/tex">t</script>. By properties of the Kronecker product and the assumption that my previous proposition is true, we have that:</p>
+  </li>
 </ol>
 
 <script type="math/tex; mode=display">U_{G \Box H} \left ( e_{u} \bigotimes e_{u'} \right )</script>
@@ -135,6 +145,7 @@ Assuming that this proposition is true, then:</li>
 
 <p>Hence <script type="math/tex">G \Box H</script> admits uniform mixing at time <script type="math/tex">t</script> as well; and therefore Cartesian products of simple graphs on the same number of vertices that admit uniform at the same time also admit uniform mixing at the same time, since the choice of time and simple graphs on the same number of vertices in this context are arbitrary.
 I would now like to show that my previous proposition is indeed true.</p>
+
 <ol>
   <li>Suppose that <script type="math/tex">G</script> and <script type="math/tex">H</script> are arbitrary simple graphs on <script type="math/tex">m</script> and <script type="math/tex">n</script> vertices. Then by properties of matrix exponentials, properties of the Kronecker product, and an assumed identity about the adjacency matrices of the Cartesian products of simple graphs, we have that:</li>
 </ol>
@@ -166,10 +177,15 @@ I would now like to show that my previous proposition is indeed true.</p>
 <p><em>Note that here <script type="math/tex">A_{G \Box H}</script>, <script type="math/tex">A_G</script> and <script type="math/tex">A_H</script> denote the respective adjacency matrices of <script type="math/tex">G \Box H</script>, <script type="math/tex">G</script> and <script type="math/tex">H</script>; likewise <script type="math/tex">U_{G \Box H}(t)</script>, <script type="math/tex">U_G (t)</script> and <script type="math/tex">U_H (t)</script> denote their respective continuous-time quantum walks relative to their adjacency matrices.</em></p>
 
 <p>After showing that my previous proposition is true, we ultimately have that:</p>
+
 <ol>
-  <li>Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.</li>
-  <li>Cartesian products of simple graphs that admit uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
-as desired.</li>
+  <li>
+    <p>Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.</p>
+  </li>
+  <li>
+    <p>Cartesian products of simple graphs that admit uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
+as desired.</p>
+  </li>
 </ol>
 
   </div>

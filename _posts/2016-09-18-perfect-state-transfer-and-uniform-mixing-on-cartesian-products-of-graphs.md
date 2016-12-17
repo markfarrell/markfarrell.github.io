@@ -5,7 +5,11 @@ date:   2016-09-18
 ---
 
 In this post, my goals are to:
+
+
 1. Verify that Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.
+
+
 2. Verify that Cartesian products of simple graphs that admit the property known as uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
 First and foremost, I would like to define what it means for a simple graph to admit the properties known as perfect state transfer and uniform mixing. Suppose that $$G$$ is a simple graph on $$n$$ with adjacency matrix $$A$$.
 
@@ -20,8 +24,12 @@ Then, in this context:
 *Note that here $$J$$ denotes the $$n$$ x $$n$$ matrix consisting of all ones as entries.*
 
 Secondly, I would like to verify that the following proposition is true:
+
+
 1. For all simple graphs $$G$$ and $$H$$ whose continuous-time quantum walks are given by $$U_G (t)$$ and $$U_H (t)$$, the continuous-time quantum walk of their Cartesian product $$G \Box H$$ is given by $$U_{G \Box H} (t) = U_G (t) \bigotimes U_H (t)$$.
 Assuming that this proposition is true, then:
+
+
 2. Suppose that $$G$$ and $$H$$ are arbitrary simple graphs such that $$G$$ admits perfect state transfer between vertices $$u$$ and $$v$$ at time $$t$$, and $$H$$ admits perfect state transfer between vertices $$u'$$ and $$v'$$ at time $$t$$. By properties of the Kronecker product and the assumption that my previous proposition is true, we have that:
 
 
@@ -60,6 +68,8 @@ $$= \frac{1}{n^{2}} J$$
 
 Hence $$G \Box H$$ admits uniform mixing at time $$t$$ as well; and therefore Cartesian products of simple graphs on the same number of vertices that admit uniform at the same time also admit uniform mixing at the same time, since the choice of time and simple graphs on the same number of vertices in this context are arbitrary.
 I would now like to show that my previous proposition is indeed true.
+
+
 1. Suppose that $$G$$ and $$H$$ are arbitrary simple graphs on $$m$$ and $$n$$ vertices. Then by properties of matrix exponentials, properties of the Kronecker product, and an assumed identity about the adjacency matrices of the Cartesian products of simple graphs, we have that:
 
 $$U_{G \Box H}(t)      $$
@@ -89,6 +99,10 @@ as desired.
 *Note that here $$A_{G \Box H}$$, $$A_G$$ and $$A_H$$ denote the respective adjacency matrices of $$G \Box H$$, $$G$$ and $$H$$; likewise $$U_{G \Box H}(t)$$, $$U_G (t)$$ and $$U_H (t)$$ denote their respective continuous-time quantum walks relative to their adjacency matrices.*
 
 After showing that my previous proposition is true, we ultimately have that:
+
+
 1. Cartesian products of simple graphs that admit the property known as perfect state transfer at the same time also admit perfect state transfer at the same time.
+
+
 2. Cartesian products of simple graphs that admit uniform mixing at the same time also admit uniform mixing at the same time, assuming that the simple graphs in context have the same number of vertices.
 as desired.
