@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
-Mark Farrell's blog and personal notes. 
+Mark Farrell's blog and personal notes.
