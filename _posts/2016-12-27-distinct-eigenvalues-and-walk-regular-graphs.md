@@ -27,7 +27,7 @@ $$ = \operatorname{span} \{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma} \} $$
 
 $$ = \operatorname{span} \{ J, E_{\alpha}, E_{\beta}, E_{\gamma} \} $$
 
-**[** assuming the fact that a vector $$v \in \mathbb{R}^{n}$$ is an eigenvector for eigenvalue $$k$$ of a $$k$$-regular graph on $$n$$ vertices if and only if $$v_k = c$$ for all $$ 1 \leq k \leq n$$ and some constant $$c \in \mathbb{R}$$ **]**. This means, in particular, that:
+**[** assuming the fact that a vector $$v \in \mathbb{R}^{n}$$ is an eigenvector for eigenvalue $$k$$ of a $$k$$-regular graph on $$n$$ vertices if and only if $$v_j = c$$ for all $$ 1 \leq j \leq n$$ and some constant $$c \in \mathbb{R}$$, and letting $$J$$ denote the $$n \times n$$ square matrix consisting of all ones as is conventional **]**. This means, in particular, that:
 
 $$ J = a_3 A^{3} + a_2 A^{2} + a_1 A + a_0 I$$ 
 
