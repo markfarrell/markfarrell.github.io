@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Distinct Eigenvalues and Walk-Regular Graphs</title>
+  <meta name="description" content="In this post, my goals are to verify that:">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2016/12/23/distinct-eigenvalues-and-walk-regular-graphs.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Distinct Eigenvalues and Walk-Regular Graphs</h1>
+    <p class="post-meta"><time datetime="2016-12-23T00:00:00+00:00" itemprop="datePublished">Dec 23, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, my goals are to verify that:</p>
+
+<ol>
+  <li>Every regular graph with at most four distinct eigenvalues is walk-regular.</li>
+  <li>Every regular triangle-free graph with at most five distinct eigenvalues is walk-regular.</li>
+  <li>Every regular bipartite graph with at most six distinct eigenvalues is walk-regular.</li>
+</ol>
+
+<p>Firstly, suppose that <script type="math/tex">G</script> is an arbitrary <script type="math/tex">k</script>-regular graph on <script type="math/tex">n</script> vertices with adjacency matrix <script type="math/tex">A</script>, and moreover suppose that <script type="math/tex">A</script> has exactly four distinct eigenvalues. 
+Let the set of distinct eigenvalues of <script type="math/tex">A</script> be then denoted by <script type="math/tex">\sigma(A) = \{ k, \alpha, \beta, \gamma \}</script>, assuming for the purposes of this blog post the fact a <script type="math/tex">k</script>-regular graph always has <script type="math/tex">k</script> as one of its distinct eigenvalues. It is then possible to deduce that:</p>
+
+<script type="math/tex; mode=display">Z(A)</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, \cdots \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, A^{3} \}</script>
+
+<p><strong>[</strong> since <script type="math/tex">A</script> has four distinct eigenvalues, which means here that the minimal polynomial of <script type="math/tex">A</script> is a monic polynomial of degree 4 and hence <script type="math/tex">A^j</script> can be expressed as linear combination of <script type="math/tex">I, A, A^{2}</script> and <script type="math/tex">A^{3}</script> for all <script type="math/tex">j \geq 4</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma} \}</script>
+
+<p><strong>[</strong> letting <script type="math/tex">E_{k}, E_{\alpha}, E_{\beta}</script>, and <script type="math/tex">E_{\gamma}</script> denote the spectral idempotents of <script type="math/tex">A</script>, and assuming the fact that the span of the set of all powers of the adjacency matrix of a simple graph is equal to the span of its set of spectral idempotents <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ J, E_{\alpha}, E_{\beta}, E_{\gamma} \}</script>
+
+<p><strong>[</strong> assuming the fact that a vector <script type="math/tex">v \in \mathbb{R}^{n}</script> is an eigenvector for eigenvalue <script type="math/tex">k</script> of a <script type="math/tex">k</script>-regular graph on <script type="math/tex">n</script> vertices if and only if <script type="math/tex">v_k = c</script> for all <script type="math/tex">1 \leq k \leq n</script> and some constant <script type="math/tex">c \in \mathbb{R}</script> <strong>]</strong>. This means, in particular, that:</p>
+
+<script type="math/tex; mode=display">J = a_3 A^{3} + a_2 A^{2} + a_1 A + a_0 I</script>
+
+<p><strong>[</strong> for some <script type="math/tex">a_3, a_2, a_1, a_0 \in \mathbb{R}</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">\implies A^{3} = \frac{1}{a_3} \left ( J - a_2 A^{2} - a_1 A - a_0 I \right )</script>
+
+<p>.</p>
+
+<p>It ultimately follows from this that <script type="math/tex">A^{3}</script> has a constant diagonal, i.e. <script type="math/tex">(A^{3})_{k,k} = c</script>, assuming that <script type="math/tex">J, A^{2}, A</script>, and <script type="math/tex">I</script> all have constant diagonals as well; aside from the fact that <script type="math/tex">J, A</script>, and <script type="math/tex">I</script> all have constant diagonals by construction here, <script type="math/tex">A^{2}</script> has a constant diagonal because <script type="math/tex">G</script> is <script type="math/tex">k</script>-regular and so each diagonal entry of <script type="math/tex">A^{2}</script> counts the <script type="math/tex">k</script> number of closed walks between each respective vertex of <script type="math/tex">G</script>. Since <script type="math/tex">A^{j}</script> can be written as a linear combination of <script type="math/tex">A^{3}, A^{2}, A</script> and <script type="math/tex">I</script> for all <script type="math/tex">j \geq 4</script>, we have that <script type="math/tex">A^{j}</script> has a constant diagonal for all <script type="math/tex">j \geq 4</script> as well. This means here that all of the vertices of <script type="math/tex">G</script> are cospectral, since it follows from this that the relative generating series for closed walks weighted by length for each of the respective vertices of <script type="math/tex">G</script> are all equal to each other. Hence <script type="math/tex">G</script> is then walk-regular since all of its vertices are cospectral, and therefore every regular with four distinct eigenvalues is walk-regular since <script type="math/tex">G</script> in this context is arbitrary. Additionally, it follows that every regular graph with at most three distinct eigenvalues is walk-regular from the fact that <script type="math/tex">I, A,</script> and <script type="math/tex">A^2</script> all have constant diagonals for any regular graph whose adjacency matrix is denoted by <script type="math/tex">A</script>, and moreover from the fact that this ultimately means that the vertices of every regular graph with at most three distinct eigenvalues are all cospectral by similar reasoning as before. Therefore we finally have that every regular graph with at most four distinct eigenvalues is walk-regular as desired.</p>
+
+<p>Secondly, suppose that <script type="math/tex">G</script> is an arbitrary <script type="math/tex">k</script>-regular triangle-free graph with adjacency matrix <script type="math/tex">A</script>, and moreover suppose that <script type="math/tex">A</script> has exactly five distinct eigenvalues. By using the same assumptions as in the last paragraph, letting <script type="math/tex">\sigma(A) = \{ k, \alpha, \beta, \gamma, \delta \}</script> denote the set of distinct eigenvalues of <script type="math/tex">A</script>, and letting <script type="math/tex">\{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta} \}</script> denote the set of spectral idempotents of <script type="math/tex">A</script>, it is then possible to similarly deduce that:</p>
+
+<script type="math/tex; mode=display">Z(A)</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, \cdots \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, A^{3}, A^{4} \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta} \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ J, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta} \}</script>
+
+<script type="math/tex; mode=display">\implies J = a_4 A^{4} + a_3 A^{3} + a_2 A^{2} + a_1 A + a_0 I</script>
+
+<p><strong>[</strong> for some <script type="math/tex">a_4, a_3, a_2, a_1, a_0 \in \mathbb{R}</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">\implies A^{4} = \frac{1}{a_4} \left ( J - a_3 A^{3} - a_2 A^{2} - a_1 A - a_0 I \right )</script>
+
+<p>.</p>
+
+<p>This means that <script type="math/tex">A^{4}</script> here has a constant diagonal, assuming that <script type="math/tex">J, A^{3}, A^{2}, A</script> and <script type="math/tex">I</script> all have constant diagonals; in addition to the fact that <script type="math/tex">J, A^{2}, A,</script> and <script type="math/tex">I</script> all have constant diagonals for similar reasons as in the last paragraph, <script type="math/tex">A^{3}</script> has constant diagonal here because <script type="math/tex">G</script> is a triangle-free graph and hence has no closed walks of length three between any of its vertices and themselves. Since <script type="math/tex">A^{j}</script> can be written as a linear combination of <script type="math/tex">A^{4}, A^{3}, A^{2}, A</script> and <script type="math/tex">I</script> for all <script type="math/tex">j \geq 5</script>, we have that <script type="math/tex">A^{j}</script> has a constant diagonal for all <script type="math/tex">j \geq 5</script> as well. This then ultimately means that <script type="math/tex">G</script> is walk-regular, for similar reasons as in the last paragraph as well; hence every regular triangle-free graph with five distinct eigenvalues is walk-regular, since <script type="math/tex">G</script> in this context is arbitrary. Therefore every regular triangle-free graph with at most five distinct eigenvalues is walk-regular, since a regular triangle-free graph with less than five distinct eigenvalues can be interpreted as a regular graph with at most four distinct eigenvalues and from the last paragraph every regular graph with at most four distinct eigenvalues is walk-regular.</p>
+
+<p>Lastly, suppose that <script type="math/tex">G</script> is an arbitrary <script type="math/tex">k</script>-regular bipartite graph with adjacency matrix <script type="math/tex">A</script>, and moreover suppose that <script type="math/tex">A</script> has exactly six distinct eigenvalues. By using the same assumptions as the last two paragraphs, letting the set of distinct eigenvalues of <script type="math/tex">A</script> be then denoted by <script type="math/tex">\sigma(A) = \{ k, \alpha, \beta, \gamma, \delta, \epsilon \}</script> the set of distinct eigenvalues of <script type="math/tex">A</script>, and letting <script type="math/tex">\{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta}, E_{\epsilon} \}</script> denote the set of spectral idempotents of <script type="math/tex">A</script>, it is then possible to again similarly deduce that:</p>
+
+<script type="math/tex; mode=display">Z(A)</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, \cdots \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ I, A, A^{2}, A^{3}, A^{4}, A^{5} \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta}, E_{\epsilon} \}</script>
+
+<script type="math/tex; mode=display">= \operatorname{span} \{ J, E_{\alpha}, E_{\beta}, E_{\gamma}, E_{\delta}, E_{\epsilon} \}</script>
+
+<script type="math/tex; mode=display">\implies J = a_5 A^{5} + a_4 A^{4} + a_3 A^{3} + a_2 A^{2} + a_1 A + a_0 I</script>
+
+<p><strong>[</strong> for some <script type="math/tex">a_5, a_4, a_3, a_2, a_1, a_0 \in \mathbb{R}</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">\implies A^{4} = \frac{1}{a_4} \left ( J - a_5 A^{5} - a_3 A^{3} - a_2 A^{2} - a_1 A - a_0 I \right )</script>
+
+<p>.</p>
+
+<p>This means that <script type="math/tex">A^{4}</script> here has a constant diagonal, assuming that <script type="math/tex">J, A^{5}, A^{3}, A^{2}, A</script> and <script type="math/tex">I</script> all have constant diagonals; in addition to the fact that <script type="math/tex">J, A^{2}, A,</script> and <script type="math/tex">I</script> all have constant diagonals for similar reasons as in the last two paragraphs, <script type="math/tex">A^{3}</script> and <script type="math/tex">A^{5}</script> both have constant diagonals here because <script type="math/tex">G</script> is a bipartite graph and hence has no closed walks of odd length between any of its vertices and themselves. <script type="math/tex">A^{j}</script> can be written as a linear combination of <script type="math/tex">A^{5}, A^{4}, A^{3}, A^{2}, A</script> and <script type="math/tex">I</script> for all <script type="math/tex">j \geq 6</script>, we have that <script type="math/tex">A^{j}</script> has a constant diagonal for all <script type="math/tex">j \geq 6</script> as well. This then ultimately means that <script type="math/tex">G</script> is walk-regular, for similar reasons as in the last two paragraphs; hence every regular bipartite graph with six distinct eigenvalues is walk-regular, since <script type="math/tex">G</script> in this context is arbitrary. Therefore every regular bipartite graph with at most five distinct eigenvalues is walk-regular, since a regular bipartite graph with five distinct eigenvalues is just a regular triangle-free graph with five distinct eigenvalues and a regular bipartite graph with at most four distince distinct eigenvalues is just a regular graph with at most four distinct eigenvalues.</p>
+
+<p>I have verified the desired results about families of walk-regular graphs that exist due to the number of distinct eigenvalues that they have and hence have achieved my goals for this post. In particular, I think it is worth mentioning that the results presented here in this post subsume a result that I originally verified in one my <a href="/2016/08/20/strongly-regular-graphs-are-walk-regular.html">previous blog posts</a> about the fact that strongly regular graphs, and more generally regular graphs with three distinct eigenvalues, are walk-regular. More generally, I think it would be interesting to decide whether more families of walk-regular graphs exist due to the number of distinct eigenvalues that they have exist, identify what these families of walk-regular graphs might be if more do exist, and find more general results that e.g. again similarly subsume the results in the current blog post presented here. As one last closing remark, it may be worth mentioning that the first example of a cubic walk-regular graph that is neither vertex-transitive nor distance-regular that I found is a bipartite graph with six distinct eigenvalues - could it be possible to e.g. identity other families of walk-regular graphs that e.g. cubic walk-regular graphs that are neither vertex-transitive nor distance-regular must necessarily otherwise belong to based on e.g. properties of their spectra, should more examples exist?</p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
