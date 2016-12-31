@@ -27,7 +27,7 @@ $$ = \operatorname{span} \{ E_{k}, E_{\alpha}, E_{\beta}, E_{\gamma} \} $$
 
 $$ = \operatorname{span} \{ J, E_{\alpha}, E_{\beta}, E_{\gamma} \} $$
 
-**[** assuming that $$\frac{1}{n} J$$ is a spectral idempotent for eigenvalue $$k$$ of a $$k$$-regular connected graph on $$n$$ vertices where $$J$$ denotes the $$n \times n$$ matrix consisting of all ones, and assuming that the spans of any choices of sets of spectral idempotents for a graph are equal to one another **]**. This means, in particular, that:
+**[** assuming that $$\frac{1}{n} J$$ is a spectral idempotent for eigenvalue $$k$$ of a $$k$$-regular connected graph on $$n$$ vertices where $$J$$ denotes the $$n \times n$$ matrix consisting of all ones **]**. This means, in particular, that:
 
 $$ J = a_3 A^{3} + a_2 A^{2} + a_1 A + a_0 I$$ 
 
