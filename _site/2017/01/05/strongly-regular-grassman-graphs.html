@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Strongly Regular Grassman Graphs</title>
+  <meta name="description" content="In this post, my goal is to determine the parameters of the Grassman graphs that are strongly regular. To this end, my primary goal is to verify that:">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/01/05/strongly-regular-grassman-graphs.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Strongly Regular Grassman Graphs</h1>
+    <p class="post-meta"><time datetime="2017-01-05T00:00:00-05:00" itemprop="datePublished">Jan 5, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, my goal is to determine the parameters of the Grassman graphs that are strongly regular. To this end, my primary goal is to verify that:</p>
+
+<ul>
+  <li>For all natural numbers <script type="math/tex">n \geq 4</script> and prime powers <script type="math/tex">q</script>, the Grassman graph <script type="math/tex">J_q(n,2)</script> is an <script type="math/tex">\operatorname{SRG}\left ( {n \brack 2}_{q}, q^{2} {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q^{2} {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)</script>.</li>
+</ul>
+
+<p>Suppose that we are given an arbitrary natural number <script type="math/tex">n \geq 4</script> and prime power <script type="math/tex">q</script>. Let <script type="math/tex">S = \{ W : W \leq V \operatorname{and} \operatorname{dim}{W} = 2  \}</script> denote the set of all subspaces of dimension <script type="math/tex">2</script> of a vector space <script type="math/tex">V</script> of dimension <script type="math/tex">n</script> over the finite field <script type="math/tex">\mathbb{F}_{q}</script> of order <script type="math/tex">q</script>. Consider the simple graph <script type="math/tex">G = \left ( S, E \right )</script> formed with the set <script type="math/tex">S</script> as vertices and the set <script type="math/tex">E = \{ \{W, Z\} : W, Z \in S \operatorname{and} \operatorname{dim}(W \cap Z) = 1 \}</script> as edges. Then:</p>
+
+<ol>
+  <li>
+    <p>Select an arbitrary <script type="math/tex">W \in S</script>. Then there are <script type="math/tex">\mid V \setminus W \mid</script> = <script type="math/tex">\mid V\mid - \mid W \mid</script> = <script type="math/tex">q^{n} - q^{2}</script> ways to select a vector in <script type="math/tex">V</script> that is not also a vector in <script type="math/tex">W</script>, and for each <script type="math/tex">v \in \left ( V \setminus W \right )</script> there are <script type="math/tex">q-1</script> other vectors in <script type="math/tex">\left ( V \setminus W \right )</script> that are non-zero scalar multiples of <script type="math/tex">v</script>. This means that there are <script type="math/tex">{2 \brack 1}_{q} \frac{\mid V \setminus W \mid}{q-1}</script> ways to select a one-dimensional subspace <script type="math/tex">X</script> of <script type="math/tex">W</script> and then select another one-dimensional subspace <script type="math/tex">Y</script> of <script type="math/tex">V</script> where <script type="math/tex">W \cap Y = \{ 0 \}</script> in order to construct a two-dimensional subspace <script type="math/tex">X \oplus Y \in S</script> of <script type="math/tex">V</script> such that <script type="math/tex">\operatorname{dim}(W \cap (X \oplus Y)) = \operatorname{dim}(W \cap X) = 1</script>. Hence <script type="math/tex">W</script> is adjacent to <script type="math/tex">{2 \brack 1}_{q} \frac{\mid V \setminus W \mid}{q-1} = {2 \brack 1}_{q} \frac{q^{n} - q^{2}}{q-1} = {2 \brack 1}_{q} \frac{q^{2}\left(q^{n-2} - 1 \right)}{q-1} = q^{2} {2 \brack 1}_{q} {n-2 \brack 1}_{q}</script> vertices in <script type="math/tex">S</script>, which is independent of <script type="math/tex">W</script> itself; therefore we ultimately have that <script type="math/tex">G</script> is <script type="math/tex">q^{2} {2 \brack 1}_{q} {n-2 \brack 1}_{q}</script>-regular.</p>
+  </li>
+  <li>
+    <p>Select an arbitrary <script type="math/tex">\{W, X \} \in E</script>, and let <script type="math/tex">L = W \cap X</script>. Additionally, let <script type="math/tex">T = N(W) \cap N(X)</script>, where <script type="math/tex">N(W)</script> and <script type="math/tex">N(X)</script> denote the respective neighbourhoods of <script type="math/tex">W</script> and <script type="math/tex">X</script> on <script type="math/tex">G</script>. Partition <script type="math/tex">T = T_1 \sqcup T_2</script> into disjoint subsets <script type="math/tex">T_1 = \{ Z : Z \in \left ( S \setminus X \right ) \operatorname{and} W \cap Z = L \}</script>  and <script type="math/tex">T_2 = \{ \operatorname{span}\{w\} \oplus \operatorname{span}\{x\} : w \in \left ( W \setminus L \right ) \operatorname{and} x \in \left ( X \setminus L \right ) \}</script>. Now, there are <script type="math/tex">\frac{\mid V \setminus W \mid}{q - 1} = \frac{q^{n} - q^{2}}{q - 1} = q^{2} {n - 2 \brack 1}_q</script> ways to select a one-dimensional subspace <script type="math/tex">Y</script> of <script type="math/tex">V</script> where <script type="math/tex">W \cap Y = \{ 0 \}</script> in order to construct a two-dimensional subspace <script type="math/tex">Z = L \oplus Y \in S</script> of <script type="math/tex">V</script> such that <script type="math/tex">W \cap Z = L</script>; this means here that <script type="math/tex">\mid{T_1}\mid = q^{2} {n - 2 \brack 1}_q  - 1</script>, subtracting one to exclude <script type="math/tex">X</script> from this count. There are then <script type="math/tex">\left ( \frac{\mid W \setminus L \mid}{q - 1} \right ) \left ( \frac{\mid X \setminus L \mid}{q - 1} \right ) = \left ( \frac{q^{2} - q}{q - 1} \right )\left ( \frac{q^{2} - q}{q - 1} \right ) = q^{2}</script> ways to select a one-dimensional subspace of <script type="math/tex">L_1</script> of <script type="math/tex">W</script> and then select a one-dimensional <script type="math/tex">L_2</script> of <script type="math/tex">X</script> in order to construct a two-dimensional subspace <script type="math/tex">Y = L_1 \oplus L_2 \in S</script> of V such that <script type="math/tex">Y \cap L = \{ 0 \}</script>; this means here that <script type="math/tex">\mid{T_{2}}\mid = q^{2}</script>. Hence <script type="math/tex">\mid{T}\mid = \mid{T_1 \sqcup T_2}\mid = \mid{T_1}\mid + \mid{T_2}\mid = \left ( q^{2} {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}</script>. Therefore every pair of adjacent vertices on <script type="math/tex">G</script> share <script type="math/tex">\left ( q^{2} {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}</script> neighbours in common, since the choice of edge in this context is arbitrary.</p>
+  </li>
+  <li>
+    <p>Select an arbitrary pair <script type="math/tex">W</script> and <script type="math/tex">X</script> of distinct non-adjacent vertices in <script type="math/tex">S</script>. Then there <script type="math/tex">\left({2 \brack 1}_q \right)\left({2 \brack 1}_q \right) = \left({2 \brack 1}_q \right)^{2}</script> ways to select a one-dimensional subspace <script type="math/tex">L_1</script> of <script type="math/tex">W</script> and then select a one-dimensional subspace <script type="math/tex">L_2</script> of <script type="math/tex">X</script> in order to construct a two-dimensional subspace <script type="math/tex">Y = L_1 \oplus L_2 \in S</script> of <script type="math/tex">V</script> such that <script type="math/tex">Y \cap W = L_1</script> and <script type="math/tex">Y \cap X = L_2</script>; this means here that <script type="math/tex">W</script> and <script type="math/tex">X</script> share <script type="math/tex">\left({2 \brack 1}_q \right)^{2}</script> neighbours in common. Therefore every pair of distinct non-adjacent vertices on <script type="math/tex">G</script> share <script type="math/tex">\left({2 \brack 1}_q \right)^{2}</script> neighbours in common, since <script type="math/tex">W</script> and <script type="math/tex">X</script> in this context are arbitrary.</p>
+  </li>
+</ol>
+
+<p>Hence <script type="math/tex">G \cong J_q(n,2)</script> is an <script type="math/tex">\operatorname{SRG}\left ( {n \brack 2}_{q}, q^{2} {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q^{2} {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)</script>; the general result then follows, since <script type="math/tex">n</script> and <script type="math/tex">q</script> in this context are arbitrary.</p>
+
+<p>Note that <script type="math/tex">J_q(n,k) \cong J_q(n, n - k)</script>, the diameter of <script type="math/tex">J_q(n,k)</script> is <script type="math/tex">\operatorname{min}(k, n - k)</script>, and <script type="math/tex">J_q(n,k)</script> is strongly regular if and only if its diameter is 2 for all natural numbers <script type="math/tex">n,k</script> where <script type="math/tex">k \leq n</script> and prime powers <script type="math/tex">q</script>. The parameters of any strongly regular Grassman graph can then be deduced from this, together with the result that I have verified in this post.</p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
