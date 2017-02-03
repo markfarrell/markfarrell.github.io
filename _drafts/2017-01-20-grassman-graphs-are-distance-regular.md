@@ -64,23 +64,17 @@ Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \
 
 	$$ = k - 3 $$
 
-	Yet, $$M_1 \oplus Z_1$$ and $$M_2 \oplus Z_2$$ are distinct $$k-1$$ dimensional subspaces of $$Y$$, which means that it must necessarily be the case that $$\operatorname{dim}((M_1 \oplus Z_1) \cap (M_2 \oplus Z_2)) = k - 2$$.
+	Yet, $$M_1 \oplus Z_1$$ and $$M_2 \oplus Z_2$$ are distinct $$k-1$$ dimensional subspaces of $$Y$$. 
 
-	$$ \implies \operatorname{dim}(Z_1 \cap Z_2) \neq j - 1 $$
+	$$ \implies \operatorname{dim}((M_1 \oplus Z_1) \cap (M_2 \oplus Z_2)) = k - 2 \neq k - 3$$
+
+	$$ \implies \operatorname{dim}(Z_1 \cap Z_2) \neq j - 1$$
 
 	**[** i.e. the hypothesis in context is false, since a contradiction has been established **]**
 
-	$$ \implies \operatorname{dim}(Z_1 \cap Z_2) = j $$ 
+	$$\implies \operatorname{dim}(Z_1^{'} \cap Z_2^{'}) = j \text { for all } Z_1^{'}, Z_2^{'} \in S_j(Q)$$
 
-	**[** since, by the previous point, it is necessary that $$\operatorname{dim}(Z_1 \cap Z_2) \in \{ j - 1, j \}$$ nonetheless **]**
-
-	$$ \implies Z_1 = Z_2 $$
-
-	**[** since $$\left\vert Z_1 \right\vert = \lvert Z_1 \cap Z_2 \rvert = \lvert Z_2 \rvert = q^{j} $$ **]**
-
-	$$ \implies \lvert S_j(Q) \rvert = 1 $$
-
-	**[** since $$Z_1$$ and $$Z_2$$ are arbitrary, which means that the intersection of any pair of subspaces in $$S_j(Q)$$ must be equal **]**
+	$$\implies \lvert S_j(Q) \rvert = 1 $$
 
 	Lastly, partition $$T = \left ( \bigsqcup\limits_{M \in S_{k-j-1}(X \cap Y)} T_{M} \right )$$ into disjoint subsets, letting $$T_{M} = \{ (L \oplus M \oplus Z : L \in S_1(R), M \in S_{k-j-1}(X \cap Y), \operatorname{and} Z \in S_{j}(Q) \}$$ for each $$M \in S_{k-j-1}(X \cap Y)$$. Then:
 
@@ -92,7 +86,7 @@ Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \
 
 	$$ = \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left\vert T_M \right\vert $$
 
-	$$ = \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left\vert \{ (L \oplus M : L \in S_1(R), M \in S_{k-j-1}(X \cap Y) \} \right\vert $$
+	$$ = \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left\vert \{ (L \oplus M : L \in S_1(R) \operatorname{and} M \in S_{k-j-1}(X \cap Y) \} \right\vert $$
 
 	**[** since, by the previous point, $$\lvert S_j(Q) \rvert = 1$$ **]**
 
@@ -112,15 +106,81 @@ Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \
 
 	$$ = q^{2j + 1}  { k - j \brack 1 }_{q} {n - k - j \brack 1 }_{q} $$
 
+	which only depends on $$d(X,Y) = j$$.
 
-	which is independent of $$X$$ and $$Y$$.
+2. Firstly, let $$ R = \{ Z : Z \leq X \operatorname{and} \operatorname{dim}(X \cap Z) = \{0\} \} $$, $$ Q = \{ Z : Z \leq Y \operatorname{and}  \operatorname{dim}(Y \cap Z) = \{0\} \}$$, $$S_1(R) = \{ L : L \in R \operatorname{and} \operatorname{dim}(L) = 1 \}$$, $$S_{j-1}(Q) = \{ Z : Z \in Q \operatorname{and} \operatorname{dim}(Z) = j - 1 \}$$, and $$ T = \{ (X \cap Y) \oplus L \oplus Z : L \in S_1(R) \operatorname{and} Z \in S_{j-1}(Q) \}$$.
 
-2.
+	Secondly, select an arbitrary $$ W \in N_{j-1}(X) \cap N_1{Y} $$.
+
+	$$ \implies W \cap X = (X \cap Y) \oplus L $$ and $$ W \cap Y  = (X \cap Y) \oplus Z $$
+
+	**[** for some $$ L \in S_1(R) $$ and some $$ Z \in S_{j-1}(Q) $$ **]**
+
+	$$ \implies W = (W \cap X) + (W \cap Y) = (X \cap Y) \oplus L \oplus Z $$
+
+	**[** since $$((W \cap X) + (W \cap Y)) \leq W$$, and $$\operatorname{dim}((W \cap X) + (W \cap Y)) = \operatorname{dim}((X \cap Y) \oplus L \oplus Z) = (k - j) + 1 + j -1 = k = \operatorname{dim}(W) $$ **]**
+
+	$$ \implies W \in T $$
+
+	$$ \implies N_{j-1}(X) \cap N_{1}(Y) \subseteq T $$
+
+	**[** since $$W$$ is arbitrary **]**
+
+	$$ \implies N_{j-1}(X) \cap N_{1}(Y) =  T $$
+
+	**[** assuming that $$ T \subseteq N_{j-1}(X) \cap N_{1}(Y) $$ as well, which is straightforward to check **]**
+
+	Thirdly, let $$S_j(R) = \{ Z : Z \in R \operatorname{and} \operatorname{dim}(Z) = j \}$$. 
+
+	Now, assume that $$\operatorname{dim}(Z_1 \cap Z_2) < j $$ for some $$Z_1, Z_2 \in S_j(R)$$.
+
+	$$ \implies \operatorname{dim}(((X \cap Y) \oplus Z_1) \cap ((X \cap Y) \oplus Z_2)) $$
+
+	$$ = \operatorname{dim}((X \cap Y) \oplus (Z_1 \cap Z_2)) $$
+
+	$$ = \operatorname{dim}(X \cap Y) + \operatorname{dim}(Z_1 \cap Z_2) $$
+
+	$$ = (k - j) + \operatorname{dim}(Z_1 \cap Z_2) $$
+
+	$$ < k $$
+
+	Yet, $$\operatorname{dim}(((X \cap Y) \oplus Z_1) \cap ((X \cap Y) \oplus Z_2)) = \operatorname{dim}(X \cap X) = \operatorname{dim}(X) = k$$.
+
+	$$ \implies \operatorname{dim}(Z_1 \cap Z_2) \nless j $$
 
 
+	$$ \implies \operatorname{dim}(Z_1^{'} \cap Z_2^{'}) = j \text{ for all } Z_1^{'}, Z_2^{'} \in S_j(R) $$
 
+	$$ \implies \lvert S_j(R) \rvert = 1 $$
 
+	By similar reasoning, $$\lvert S_j(Q) \rvert = 1$$, letting $$S_j(Q) = \{ Z : Z \in Q \operatorname{and} \operatorname{dim}(Z) = j \}$$.
 
+	Since $$\operatorname{X \cap Y} = k - j$$, it is apparent now that $$S_1(R) = \{ L : L \leq X_0 \operatorname{and} \operatorname{dim}(L) = 1 \} $$, letting $$X_0$$ denote the only element of $$S_j(R)$$; likewise, it is apparent now that $$S_{j-1}(Q) = \{ Z : Z \leq Y_{0} \operatorname{and} \operatorname{dim}(Z) = j - 1 \}$$, letting $$Y_0$$ denote the only element of $$S_{j}(Q)$$.
 
+	$$ \implies \lvert N_{j-1}(X) \cap N_{1}(Y) \rvert $$
+
+	$$ = \lvert T \rvert $$
+
+	$$ = \left\vert \left ( \bigsqcup\limits_{L \in S_1(R)} \{ (X \cap Y) \oplus L \oplus Z : Z \in S_{j-1}(Q) \} \right ) \right\vert $$
+
+	$$ = \sum\limits_{L \in S_1(R)} \lvert \{ (X \cap Y) \oplus L \oplus Z : Z \in S_{j-1}(Q) \} \rvert $$
+
+	$$ = \sum\limits_{L \in S_1(R)} \lvert S_{j-1}(Q) \rvert $$
+
+	$$ = \sum\limits_{L \in S_1(R)} \lvert \{ Z : Z \leq Y_{0} \operatorname{and} \operatorname{dim}(Z) = j - 1 \rvert \} $$
+
+	$$ = \sum\limits_{L \in S_1(R)} \left ( { j \brack j - 1 }_q \right ) $$
+
+	$$ = \left ( \lvert  \{ L : L \leq X_0 \operatorname{and} \operatorname{dim}(L) = 1 \}  \rvert \right ) \left ( { j \brack j - 1 }_q \right ) $$
+
+	$$ = {j \brack 1}_q {j \brack j - 1}_q $$
+
+	$$ = {j \brack 1 }_q^2 $$
+
+	which depends only on $$d(X, Y) = j$$.
+
+It turns out that **1.** and **2.** are sufficient to establish that $$G$$ is distance-regular. 
+
+Therefore every Grassman graph is distance-regular, since $$G$$ is arbitrary.
 
 
