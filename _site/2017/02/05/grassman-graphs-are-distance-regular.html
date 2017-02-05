@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Grassman Graphs Are Distance-Regular</title>
+  <meta name="description" content="In this post, my goal is to verify that every Grassman graph is distance-regular.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/02/05/grassman-graphs-are-distance-regular.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Grassman Graphs Are Distance-Regular</h1>
+    <p class="post-meta"><time datetime="2017-02-05T00:00:00-05:00" itemprop="datePublished">Feb 5, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, my goal is to verify that every Grassman graph is distance-regular.</p>
+
+<p>Suppose that we are given arbitrary natural number <script type="math/tex">n</script>, a natural number <script type="math/tex">k \leq n</script>, and a prime power <script type="math/tex">q</script>. Let <script type="math/tex">S = \{ W : W \leq V \operatorname{and} \operatorname{dim}(W) = k \}</script> denote the set of <script type="math/tex">k</script>-dimensional subspaces of a vector space <script type="math/tex">V</script> over the finite field <script type="math/tex">F_{q}</script> of order <script type="math/tex">q</script>. Consider the simple graph <script type="math/tex">G=(S,E)</script> formed with the set <script type="math/tex">S</script> as vertices and the set <script type="math/tex">E=\{\{W,Z\} : W,Z \in S \operatorname{and} \operatorname{dim}(W \cap Z)= k - 1\}</script> as edges. Select an arbitrary pair of vertices <script type="math/tex">X, Y \in S</script>, and let <script type="math/tex">j</script> denote the graph distance between them. Then:</p>
+
+<ol>
+  <li>
+    <p>Firstly, let <script type="math/tex">N_{j+1}(X) = \{ Z : Z \in S \operatorname{and} d(X, Z) = j + 1 \}</script> and <script type="math/tex">N_1(Y) = \{ Z : Z \in S \operatorname{and} d(Y,Z) = 1 \}</script>.</p>
+
+    <p>Now, select an arbitrary <script type="math/tex">W \in N_{j+1}(X) \cap N_1(Y)</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(W \cap X \cap Y) \in \{ k - j - 1 , k - j \}</script>
+
+    <p><strong>[</strong> since <script type="math/tex">\operatorname{dim}(W \cap Y) = k - 1</script>, <script type="math/tex">\operatorname{dim}(X \cap Y) = k - j</script>, and <script type="math/tex">X \cap Y \leq Y</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies W \cap X \cap Y = W \cap X</script>
+
+    <p><strong>[</strong>  since <script type="math/tex">W \cap X \cap Y  \leq W \cap X</script> and <script type="math/tex">\operatorname{dim}(W \cap X) = k - j - 1</script>  <strong>]</strong></p>
+
+    <p>Secondly, let <script type="math/tex">R = \{ Z : Z \leq V \operatorname{and} \operatorname{dim}(Z \cap (X + Y)) = 0 \}</script>, <script type="math/tex">S_1(R) = \{ L : L \in R \operatorname{and} \operatorname{dim}(L) = 1 \}</script>, <script type="math/tex">S_{k-j-1}(X \cap Y) = \{ Z : Z \leq (X \cap Y) \operatorname{and} \operatorname{dim}(Z) = k-j-1 \}</script>, <script type="math/tex">Q = \{ Z : Z \leq Y \operatorname{and} \operatorname{dim}(X \cap Z) = 0 \}</script>, <script type="math/tex">S_j(Q) = \{ Z : Z \in Q \operatorname{and} \operatorname{dim}(Z) = j \}</script>, and <script type="math/tex">T = \{ L \oplus M \oplus Z : L \in S_1(R), M \in S_{k-j-1}(X \cap Y), \operatorname{and} Z \in S_{j}(Q) \}</script>.</p>
+
+    <script type="math/tex; mode=display">\implies W \cap Y = (W \cap X \cap Y) \oplus Z</script>
+
+    <p><strong>[</strong> for some <script type="math/tex">Z \in S_j(Q)</script>, since <script type="math/tex">\operatorname{dim}(W \cap Y) = k - 1 = (k - j - 1) + j</script> and <script type="math/tex">\operatorname{dim}(W \cap X \cap Y) = k - j - 1</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies W = L \oplus (W \cap Y) = L \oplus (W \cap X \cap Y) \oplus Z</script>
+
+    <p><strong>[</strong> for some <script type="math/tex">L \in S_1(R)</script>, since <script type="math/tex">\operatorname{dim}(W) = k</script>, and by similar reasoning as in the previous inference <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies W \in T</script>
+
+    <script type="math/tex; mode=display">\implies N_{j+1}(X) \cap N_1(Y) \subseteq T</script>
+
+    <p><strong>[</strong> since W is arbitrary <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies N_{j+1}(X) \cap N_1(Y) = T</script>
+
+    <p><strong>[</strong> assuming <script type="math/tex">T \subseteq N_{j+1}(X) \cap N_1(Y)</script> as well, which is straightforward to check <strong>]</strong></p>
+
+    <p>Thirdly, select arbitrary <script type="math/tex">Z_1, Z_2 \in S_{j}(Q)</script>. Then, independent of any choice of <script type="math/tex">M \in S_{k-j-1}(X \cap Y)</script>, it is possible to deduce that:</p>
+
+    <script type="math/tex; mode=display">\operatorname{dim}((M \oplus Z_1) \cap (M \oplus Z_2))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(M \oplus (Z_1 \cap Z_2))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(M) + \operatorname{dim}(Z_1 \cap Z_2)</script>
+
+    <script type="math/tex; mode=display">= (k - j - 1) + \operatorname{dim}(Z_1 \cap Z_2)</script>
+
+    <script type="math/tex; mode=display">\in \{ k - 2, k - 1 \}</script>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(Z_1 \cap Z_2) \in \{ j - 1, j \}</script>
+
+    <p>It follows that, in general, the dimension of the intersection of any pair of subspaces in <script type="math/tex">S_{j}(Q)</script> is either <script type="math/tex">j-1</script> or <script type="math/tex">j</script>.</p>
+
+    <p>Now, select arbitrary <script type="math/tex">M_1, M_2 \in S_{k-j-1}(X \cap Y)</script> such that <script type="math/tex">M_1 \neq M_2</script>, and select arbitrary <script type="math/tex">Z_1, Z_2 \in S_j(Q)</script> Assume that <script type="math/tex">\operatorname{dim}(Z_1 \cap Z_2) = j - 1</script>. Then:</p>
+
+    <script type="math/tex; mode=display">\operatorname{dim}((M_1 \oplus Z_1) \cap (M_2 \oplus Z_2))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}((M_1 \cap M_2) \oplus (Z_1 \cap Z_2))</script>
+
+    <script type="math/tex; mode=display">= (k - j - 2) + (j - 1)</script>
+
+    <script type="math/tex; mode=display">= k - 3</script>
+
+    <p>Yet, <script type="math/tex">M_1 \oplus Z_1</script> and <script type="math/tex">M_2 \oplus Z_2</script> are distinct <script type="math/tex">k-1</script> dimensional subspaces of <script type="math/tex">Y</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}((M_1 \oplus Z_1) \cap (M_2 \oplus Z_2)) = k - 2 \neq k - 3</script>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(Z_1 \cap Z_2) \neq j - 1</script>
+
+    <p><strong>[</strong> i.e. the hypothesis in context is false, since a contradiction has been established <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(Z_1^{'} \cap Z_2^{'}) = j \text { for all } Z_1^{'}, Z_2^{'} \in S_j(Q)</script>
+
+    <script type="math/tex; mode=display">\implies \lvert S_j(Q) \rvert = 1</script>
+
+    <p>Lastly, partition <script type="math/tex">T = \left ( \bigsqcup\limits_{M \in S_{k-j-1}(X \cap Y)} T_{M} \right )</script> into disjoint subsets, letting <script type="math/tex">T_{M} = \{ L \oplus M \oplus Z : L \in S_1(R), M \in S_{k-j-1}(X \cap Y), \operatorname{and} Z \in S_{j}(Q) \}</script> for each <script type="math/tex">M \in S_{k-j-1}(X \cap Y)</script>. Then:</p>
+
+    <script type="math/tex; mode=display">\left\vert N_{j+1}(X) \cap N_1(Y) \right\vert</script>
+
+    <script type="math/tex; mode=display">= \left\vert T \right\vert</script>
+
+    <script type="math/tex; mode=display">= \left\vert \left ( \bigsqcup\limits_{M \in S_{k-j-1}(X \cap Y)} T_{M} \right ) \right\vert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left\vert T_M \right\vert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left\vert \{ (L \oplus M : L \in S_1(R) \operatorname{and} M \in S_{k-j-1}(X \cap Y) \} \right\vert</script>
+
+    <p><strong>[</strong> since, by the previous point, <script type="math/tex">\lvert S_j(Q) \rvert = 1</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \sum\limits_{L_1 \in (V \setminus (X + Y)) } \left( \frac{\lvert \{ L_1 \oplus M \} \rvert }{\lvert \{ L_2 : L_2 \in (V \setminus (X + Y)) \operatorname{and} L_1 \oplus M = L_2 \oplus M \rvert} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \sum\limits_{L \in (V \setminus (X + Y)) } \left( \frac{1}{\lvert L \oplus M \rvert - \lvert M \rvert} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \sum\limits_{L \in (V \setminus (X + Y)) } \left( \frac{1}{q^{k-j} - q^{ k - j - 1}} \right)</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left ( \frac{\lvert V \setminus (X + Y) \rvert }{q^{k-j} - q^{k-j-1}} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left ( \frac{q^{n} - q^{k+j}}{q^{k-j} - q^{k-j-1}} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{M \in S_{k-j-1}(X \cap Y)} \left ( q^{2j + 1} {n - k - j \brack 1 }_{q} \right )</script>
+
+    <script type="math/tex; mode=display">= { k - j \brack 1 }_{q} \left ( q^{2j + 1} {n - k - j \brack 1 }_{q} \right )</script>
+
+    <script type="math/tex; mode=display">= q^{2j + 1}  { k - j \brack 1 }_{q} {n - k - j \brack 1 }_{q}</script>
+
+    <p>which only depends on <script type="math/tex">d(X,Y) = j</script>.</p>
+  </li>
+  <li>
+    <p>Firstly, let <script type="math/tex">R = \{ Z : Z \leq X \operatorname{and} \operatorname{dim}(X \cap Z) = 0 \}</script>, <script type="math/tex">Q = \{ Z : Z \leq Y \operatorname{and}  \operatorname{dim}(Y \cap Z) = 0 \}</script>, <script type="math/tex">S_1(R) = \{ L : L \in R \operatorname{and} \operatorname{dim}(L) = 1 \}</script>, <script type="math/tex">S_{j-1}(Q) = \{ Z : Z \in Q \operatorname{and} \operatorname{dim}(Z) = j - 1 \}</script>, and <script type="math/tex">T = \{ (X \cap Y) \oplus L \oplus Z : L \in S_1(R) \operatorname{and} Z \in S_{j-1}(Q) \}</script>.</p>
+
+    <p>Secondly, let <script type="math/tex">N_{j-1}(X) = \{ Z : Z \in S \operatorname{and} d(X, Z) = j - 1 \}</script> and <script type="math/tex">N_1(Y) = \{ Z : Z \in S \operatorname{and} d(Y,Z) = 1 \}</script>.</p>
+
+    <p>Now, select an arbitrary <script type="math/tex">W \in N_{j-1}(X) \cap N_{1}(Y)</script>.</p>
+
+    <p><script type="math/tex">\implies W \cap X = (X \cap Y) \oplus L</script> and <script type="math/tex">W \cap Y  = (X \cap Y) \oplus Z</script></p>
+
+    <p><strong>[</strong> for some <script type="math/tex">L \in S_1(R)</script> and some <script type="math/tex">Z \in S_{j-1}(Q)</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies W = (W \cap X) + (W \cap Y) = (X \cap Y) \oplus L \oplus Z</script>
+
+    <p><strong>[</strong> since <script type="math/tex">((W \cap X) + (W \cap Y)) \leq W</script>, and <script type="math/tex">\operatorname{dim}((W \cap X) + (W \cap Y)) = \operatorname{dim}((X \cap Y) \oplus L \oplus Z) = (k - j) + 1 + j -1 = k = \operatorname{dim}(W)</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies W \in T</script>
+
+    <script type="math/tex; mode=display">\implies N_{j-1}(X) \cap N_{1}(Y) \subseteq T</script>
+
+    <p><strong>[</strong> since <script type="math/tex">W</script> is arbitrary <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies N_{j-1}(X) \cap N_{1}(Y) =  T</script>
+
+    <p><strong>[</strong> assuming that <script type="math/tex">T \subseteq N_{j-1}(X) \cap N_{1}(Y)</script> as well, which is straightforward to check <strong>]</strong></p>
+
+    <p>Thirdly, let <script type="math/tex">S_j(R) = \{ Z : Z \in R \operatorname{and} \operatorname{dim}(Z) = j \}</script>.</p>
+
+    <p>Now, assume that <script type="math/tex">% <![CDATA[
+\operatorname{dim}(Z_1 \cap Z_2) < j %]]></script> for some <script type="math/tex">Z_1, Z_2 \in S_j(R)</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(((X \cap Y) \oplus Z_1) \cap ((X \cap Y) \oplus Z_2))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}((X \cap Y) \oplus (Z_1 \cap Z_2))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(X \cap Y) + \operatorname{dim}(Z_1 \cap Z_2)</script>
+
+    <script type="math/tex; mode=display">= (k - j) + \operatorname{dim}(Z_1 \cap Z_2)</script>
+
+    <script type="math/tex; mode=display">% <![CDATA[
+< k %]]></script>
+
+    <p>Yet, <script type="math/tex">\operatorname{dim}((X \cap Y) \oplus Z_1) \cap ((X \cap Y) \oplus Z_2)) = \operatorname{dim}(X \cap X) = \operatorname{dim}(X) = k</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(Z_1 \cap Z_2) \nless j</script>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(Z_1^{'} \cap Z_2^{'}) = j \text{ for all } Z_1^{'}, Z_2^{'} \in S_j(R)</script>
+
+    <script type="math/tex; mode=display">\implies \lvert S_j(R) \rvert = 1</script>
+
+    <p>By similar reasoning, <script type="math/tex">\lvert S_j(Q) \rvert = 1</script>, letting <script type="math/tex">S_j(Q) = \{ Z : Z \in Q \operatorname{and} \operatorname{dim}(Z) = j \}</script>.</p>
+
+    <p>Since <script type="math/tex">\operatorname{X \cap Y} = k - j</script>, it is apparent now that <script type="math/tex">S_1(R) = \{ L : L \leq X_0 \operatorname{and} \operatorname{dim}(L) = 1 \}</script>, letting <script type="math/tex">X_0</script> denote the only element of <script type="math/tex">S_j(R)</script>; likewise, it is apparent now that <script type="math/tex">S_{j-1}(Q) = \{ Z : Z \leq Y_{0} \operatorname{and} \operatorname{dim}(Z) = j - 1 \}</script>, letting <script type="math/tex">Y_0</script> denote the only element of <script type="math/tex">S_{j}(Q)</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \lvert N_{j-1}(X) \cap N_{1}(Y) \rvert</script>
+
+    <script type="math/tex; mode=display">= \lvert T \rvert</script>
+
+    <script type="math/tex; mode=display">= \left\vert \left ( \bigsqcup\limits_{L \in S_1(R)} \{ (X \cap Y) \oplus L \oplus Z : Z \in S_{j-1}(Q) \} \right ) \right\vert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{L \in S_1(R)} \lvert \{ (X \cap Y) \oplus L \oplus Z : Z \in S_{j-1}(Q) \} \rvert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{L \in S_1(R)} \lvert S_{j-1}(Q) \rvert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{L \in S_1(R)} \lvert \{ Z : Z \leq Y_{0} \operatorname{and} \operatorname{dim}(Z) = j - 1 \} \rvert</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{L \in S_1(R)} \left ( { j \brack j - 1 }_q \right )</script>
+
+    <script type="math/tex; mode=display">= \left ( \lvert  \{ L : L \leq X_0 \operatorname{and} \operatorname{dim}(L) = 1 \}  \rvert \right ) \left ( { j \brack j - 1 }_q \right )</script>
+
+    <script type="math/tex; mode=display">= {j \brack 1}_q {j \brack j - 1}_q</script>
+
+    <script type="math/tex; mode=display">= {j \brack 1 }_q^2</script>
+
+    <p>which depends only on <script type="math/tex">d(X, Y) = j</script>.</p>
+  </li>
+</ol>
+
+<p>It turns out that <strong>1.</strong> and <strong>2.</strong> are sufficient to establish that <script type="math/tex">G</script> is distance-regular.</p>
+
+<p>Therefore every Grassman graph is distance-regular, since <script type="math/tex">G</script> is arbitrary.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
