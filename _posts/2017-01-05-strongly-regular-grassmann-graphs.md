@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Strongly Regular Grassman Graphs"
+title:  "Strongly Regular Grassmann Graphs"
 date:   2017-01-05
 ---
 
-In this post, my goal is to determine the parameters of the Grassman graphs that are strongly regular. To this end, my primary goal is to verify that:
+In this post, my goal is to determine the parameters of the Grassmann graphs that are strongly regular. To this end, my primary goal is to verify that:
 
-* For all natural numbers $$n \geq 4$$ and prime powers $$q$$, the Grassman graph $$J_q(n,2)$$ is an $$\operatorname{SRG}\left ( {n \brack 2}_{q}, q {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)$$.
+* For all natural numbers $$n \geq 4$$ and prime powers $$q$$, the Grassmann graph $$J_q(n,2)$$ is an $$\operatorname{SRG}\left ( {n \brack 2}_{q}, q {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)$$.
 
 Suppose that we are given an arbitrary natural number $$n \geq 4$$ and prime power $$q$$. Let $$S = \{ W : W \leq V \operatorname{and} \operatorname{dim}{W} = 2  \}$$ denote the set of all subspaces of dimension $$2$$ of a vector space $$V$$ of dimension $$n$$ over the finite field $$\mathbb{F}_{q}$$ of order $$q$$. Consider the simple graph $$G = \left ( S, E \right )$$ formed with the set $$S$$ as vertices and the set $$E = \{ \{W, Z\} : W, Z \in S \operatorname{and} \operatorname{dim}(W \cap Z) = 1 \}$$ as edges. Then:
 
@@ -20,4 +20,4 @@ Suppose that we are given an arbitrary natural number $$n \geq 4$$ and prime pow
 
 Hence $$G \cong J_q(n,2)$$ is an $$\operatorname{SRG}\left ( {n \brack 2}_{q}, q {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)$$; the general result then follows, since $$n$$ and $$q$$ in this context are arbitrary.
 
-Note that $$J_q(n,k) \cong J_q(n, n - k)$$, the diameter of $$J_q(n,k)$$ is $$\operatorname{min}(k, n - k)$$, and $$J_q(n,k)$$ is strongly regular if and only if its diameter is 2 for all natural numbers $$n,k$$ where $$k \leq n$$ and prime powers $$q$$. The parameters of any strongly regular Grassman graph can then be deduced from this, together with the result that I have verified in this post.
+Note that $$J_q(n,k) \cong J_q(n, n - k)$$, the diameter of $$J_q(n,k)$$ is $$\operatorname{min}(k, n - k)$$, and $$J_q(n,k)$$ is strongly regular if and only if its diameter is 2 for all natural numbers $$n,k$$ where $$k \leq n$$ and prime powers $$q$$. The parameters of any strongly regular Grassmann graph can then be deduced from this, together with the result that I have verified in this post.
