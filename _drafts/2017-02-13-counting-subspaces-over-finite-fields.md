@@ -50,10 +50,10 @@ Suppose that $$q$$ is an arbitrary prime power, and that $$n, k$$ are arbitrary 
 
 	$$ = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q} $$
 
-	$$ \implies { n \brack k }_{q} = {n - 1 \brack k }_{q} + q^{n-k} + { n - 1 \brack k - 1 }_{q} = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}$$
+	$$ \implies { n \brack k }_{q} = {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q} = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}$$
 
 
-Now, suppose that $$\mathcal{A}$$ is an algebra over a field $$\mathbb{F}$$, $$X,Y \in \mathcal{A}$$, $$q \in \mathbb{F}$$, and $$YX = qXY$$.
+Now, suppose that $$\mathcal{A}$$ is an algebra over a field $$\mathbb{F}$$, $$X,Y \in \mathcal{A}$$, $$q \in \mathbb{F}$$, $$q \neq 1$$, and $$YX = qXY$$.
 
 Assume that $$(X + Y)^k$$ for some $$k \in \mathbb{N} $$. 
 

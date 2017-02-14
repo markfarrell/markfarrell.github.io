@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Grassmann Graphs Are Distance-Transitive</title>
+  <meta name="description" content="In this post, my goal is to verify that every Grassmann graph is distance-transitive.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/02/14/grassmann-graphs-are-distance-transitive.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Grassmann Graphs Are Distance-Transitive</h1>
+    <p class="post-meta"><time datetime="2017-02-14T00:00:00-05:00" itemprop="datePublished">Feb 14, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, my goal is to verify that every Grassmann graph is distance-transitive.</p>
+
+<p>Suppose that we are given arbitrary natural number <script type="math/tex">n</script>, a natural number <script type="math/tex">k \leq n</script>, and a prime power <script type="math/tex">q</script>. Let <script type="math/tex">S = \{ W : W \leq V \text{ and }  \operatorname{dim}(W) = k \}</script> denote the set of <script type="math/tex">k</script>-dimensional subspaces of a vector space <script type="math/tex">V</script> over the finite field <script type="math/tex">\mathbb{F}_{q}</script> of order <script type="math/tex">q</script>. Consider the simple graph <script type="math/tex">G=(S,E)</script> formed with the set <script type="math/tex">S</script> as vertices and the set <script type="math/tex">E=\{\{W,Z\} : W,Z \in S \operatorname{and} \operatorname{dim}(W \cap Z)= k - 1\}</script> as edges. Then:</p>
+
+<ol>
+  <li>
+    <p>Suppose that <script type="math/tex">L : V \to V</script> is a linear isomorphism.</p>
+
+    <p>Let <script type="math/tex">F : S \to S</script> be a function on the vertices of <script type="math/tex">G</script> where <script type="math/tex">F(U) := \operatorname{image}(L\vert_U)</script> for all <script type="math/tex">U \in S</script>.</p>
+
+    <p>Now, select an arbitrary pair of vertices <script type="math/tex">X,Y \in S</script> such that <script type="math/tex">X</script> is adjacent to <script type="math/tex">Y</script> on <script type="math/tex">G</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{dim}(F(X) \cap F(Y))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\operatorname{image}(L\vert_X) \cap \operatorname{image}(L \vert_Y))</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\{ v : v = L(x) = L(y) \text { for some } x \in X \text{ and } y  \in Y\})</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\{ v : L^{-1}(v) = x = y \text { for some } x \in X \text{ and } y  \in Y\})</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\{ v : L^{-1}(v) = z \text { for some } z \in X \cap Y \})</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\{ v : v = L(z) \text { for some } z \in X \cap Y \})</script>
+
+    <script type="math/tex; mode=display">= \operatorname{dim}(\operatorname{image}(X \cap Y))</script>
+
+    <script type="math/tex; mode=display">= k - 1</script>
+
+    <script type="math/tex; mode=display">\implies F(X) \text{ is adjacent to } F(Y)</script>
+
+    <script type="math/tex; mode=display">\implies F \in \operatorname{Aut}(G) \text{ is an automorphism on } G</script>
+
+    <p><strong>[</strong> since <script type="math/tex">X</script> and <script type="math/tex">Y</script> are arbitrary <strong>]</strong>.</p>
+  </li>
+  <li>
+    <p>Suppose that <script type="math/tex">W_1, W_2, X_1, X_2 \in S</script> such that <script type="math/tex">d(W_1,W_2)=d(X_1,X_2)</script>. Then:</p>
+
+    <p><script type="math/tex">W_1 = (W_1 \cap W_2) \oplus Y_{W_2}</script> and <script type="math/tex">W_2 = (W_1 \cap W_2) \oplus Y_{W_1}</script></p>
+
+    <p><strong>[</strong> for some <script type="math/tex">Y_{W_2} \leq W_1</script> where <script type="math/tex">Y_{W_2} \cap W_2 = \{0\}</script>, and some <script type="math/tex">Y_{W_1} \leq W_2</script> where <script type="math/tex">Y_{W_1} \cap W_1 = \{0\}</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies V = (W_1 + W_2) \oplus Z_{W_1 + W_2} = (W_1 \cap W_2) \oplus Y_{W_1} \oplus Y_{W_2} \oplus Z_{W_1 + W_2}</script>
+
+    <p><strong>[</strong> for some <script type="math/tex">Z_{W_1 + W _2} \leq V</script> where <script type="math/tex">Z_{W_1 + W_2} \cap (W_1 + W_2) = \{0\}</script> <strong>]</strong></p>
+
+    <p>Similarly, it must be the case that:</p>
+
+    <p><script type="math/tex">X_1 = (X_1 \cap X_2) \oplus Y_{X_2}</script> and <script type="math/tex">X_2 = (X_1 \cap X_2) \oplus Y_{X_1}</script></p>
+
+    <p><strong>[</strong> for some <script type="math/tex">Y_{X_2} \leq X_1</script> where <script type="math/tex">Y_{X_2} \cap X_2 = \{0\}</script>, and some <script type="math/tex">Y_{X_1} \leq X_2</script> where <script type="math/tex">Y_{X_1} \cap X_1 = \{0\}</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies V = (X_1 + X_2) \oplus Z_{X_1 + X_2} = (X_1 \cap X_2) \oplus Y_{X_1} \oplus Y_{X_2} \oplus Z_{X_1 + X_2}</script>
+
+    <p><strong>[</strong> for some <script type="math/tex">Z_{X_1 + X _2} \leq V</script> where <script type="math/tex">Z_{X_1 + X_2} \cap (X_1 + X_2) = \{0\}</script> <strong>]</strong></p>
+
+    <p>Now, note that <script type="math/tex">\operatorname{dim}(W_1 \cap W_2) = \operatorname{dim}(X_1 \cap X_2)</script>, <script type="math/tex">\operatorname{dim}(Y_{W_1}) = \operatorname{dim}(Y_{W_2}) = \operatorname{dim}(Y_{X_1}) = \operatorname{dim}(Y_{X_1})</script>, and <script type="math/tex">\operatorname{dim}(Z_{W_1 + W_2}) = \operatorname{dim}(Z_{X_1 + X_2})</script> - since <script type="math/tex">d(W_1,W_2)=d(X_1,X_2)</script> on <script type="math/tex">G</script>.</p>
+
+    <p>This means here that it is possible to construct a linear isomorphism <script type="math/tex">L : V \to V</script> such that <script type="math/tex">\operatorname{image}(L\vert_{W_1 \cap W_2}) = X_1 \cap X_2</script>,  <script type="math/tex">\operatorname{image}(L\vert_{Y_{W_1}}) = Y_{X_1}</script>, <script type="math/tex">\operatorname{image}(L\vert_{Y_{W_2}}) = X_{W_2}</script>, <script type="math/tex">\operatorname{image}(L\vert_{Z_{W_1 + W_2}}) = Z_{X_1 + X_2}</script>, and <script type="math/tex">L = L\vert_{W_1 \cap W_2} + L\vert_{Y_{W_1}} + L\vert_{Y_{W_2}} + L\vert_{Z_{W_1 + W_2}}</script>.</p>
+
+    <p>By <strong>1.</strong>, this implies that there is an automorphism <script type="math/tex">F \in \operatorname{Aut}(G)</script> such that <script type="math/tex">F(W_1) = X_1</script> and <script type="math/tex">F(W_2) = X_2</script>, where <script type="math/tex">F(U) := \operatorname{image}(L\vert_{U})</script> for all <script type="math/tex">U \in S</script>.</p>
+
+    <p>Hence <script type="math/tex">G</script> is distance-transitive, since <script type="math/tex">W_1, W_2, X_1</script> and <script type="math/tex">X_2</script> are arbitrary.</p>
+  </li>
+</ol>
+
+<p>By <strong>1.</strong> and <strong>2.</strong>, it follows that Grassmann graphs are distance-transitive in general.</p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
