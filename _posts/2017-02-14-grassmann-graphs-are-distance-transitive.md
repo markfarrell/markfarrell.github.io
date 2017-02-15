@@ -60,7 +60,7 @@ Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \
 
 	Now, note that $$\operatorname{dim}(W_1 \cap W_2) = \operatorname{dim}(X_1 \cap X_2)$$, $$\operatorname{dim}(Y_{W_1}) = \operatorname{dim}(Y_{W_2}) = \operatorname{dim}(Y_{X_1}) = \operatorname{dim}(Y_{X_1})$$, and $$\operatorname{dim}(Z_{W_1 + W_2}) = \operatorname{dim}(Z_{X_1 + X_2})$$ - since $$d(W_1,W_2)=d(X_1,X_2)$$ on $$G$$.
 
-	This means here that it is possible to construct a linear isomorphism $$L : V \to V$$ such that $$\operatorname{image}(L\vert_{W_1 \cap W_2}) = X_1 \cap X_2$$,  $$\operatorname{image}(L\vert_{Y_{W_1}}) = Y_{X_1}$$, $$\operatorname{image}(L\vert_{Y_{W_2}}) = X_{W_2}$$, $$ \operatorname{image}(L\vert_{Z_{W_1 + W_2}}) = Z_{X_1 + X_2}$$, and $$L = L\vert_{W_1 \cap W_2} + L\vert_{Y_{W_1}} + L\vert_{Y_{W_2}} + L\vert_{Z_{W_1 + W_2}}$$. 
+	This means here that it is possible to construct a linear isomorphism $$L : V \to V$$ such that $$\operatorname{image}(L\vert_{W_1 \cap W_2}) = X_1 \cap X_2$$,  $$\operatorname{image}(L\vert_{Y_{W_1}}) = Y_{X_1}$$, $$\operatorname{image}(L\vert_{Y_{W_2}}) = X_{X_2}$$, $$ \operatorname{image}(L\vert_{Z_{W_1 + W_2}}) = Z_{X_1 + X_2}$$, and $$L = L\vert_{W_1 \cap W_2} + L\vert_{Y_{W_1}} + L\vert_{Y_{W_2}} + L\vert_{Z_{W_1 + W_2}}$$. 
 
 	By **1.**, this implies that there is an automorphism $$F \in \operatorname{Aut}(G)$$ such that $$F(W_1) = X_1$$ and $$F(W_2) = X_2$$, where $$F(U) := \operatorname{image}(L\vert_{U})$$ for all $$U \in S$$.
 
