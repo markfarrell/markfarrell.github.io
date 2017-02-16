@@ -10,7 +10,7 @@ Then it is apparent that the set of polynomials $$\left \{ \frac{p}{q^{m_q}} : q
 
 $$ \implies \sum\limits_{q(x) \in S} f_q(x) \left ( \frac{p}{q^{m_q}} \right )(x) = 1 $$ for some $$f_q(x) \in \mathbb{F}[x]$$ for each $$q \in S$$
 
-**[** by the analogue of Bézout's identity for polynomials in $$\mathbb{F}[x]$$ **]**
+**[** by the analogue of Bézout's identity for polynomials in $$\mathbb{F}[x]$$ **]**.
 
 Now, let $$E_q = f_q(L) \left ( \frac{p}{q^{m_q}} \right )(L) $$ for each $$q \in S$$. Then:
 
@@ -38,7 +38,7 @@ Now, let $$E_q = f_q(L) \left ( \frac{p}{q^{m_q}} \right )(L) $$ for each $$q \i
 
 $$ \implies V = \bigoplus\limits_{q \in S}  \operatorname{image}(E_q) = \bigoplus\limits_{q \in S} \operatorname{ker}(q^{m_q}(L)) $$
 
-The direct sum decomposition $$V = \bigoplus\limits_{q \in S} \operatorname{ker}(q^{m_q}(L))$$ is said to be the **primary decomposition** of $$V$$ relative to $$L$$. *It is useful to note that it also follows from **1.**,**2.** and **3.** that for all $$q \in S$$, $$E_q$$ is a projection onto the component part $$\operatorname{ker}(q^{m_q}(L))$$ of the primary decomposition of $$V$$ relative to $$L$$*.
+The direct sum decomposition $$V = \bigoplus\limits_{q \in S} \operatorname{ker}(q^{m_q}(L))$$ is said to be the **primary decomposition** of $$V$$ relative to $$L$$. *It is useful to note that it also follows from **1.**, **2.** and **3.** that for all $$q \in S$$, $$E_q$$ is a projection onto the component part $$\operatorname{ker}(q^{m_q}(L))$$ of the primary decomposition of $$V$$ relative to $$L$$*.
 
 Since $$V$$ is arbitrary, it follows that finite-dimensional vector spaces have primary decompositions relative to linear operators acting on them in general, and moreover that projections onto component parts of primary decompositions of finite-dimensional vector spaces can also be found in general using the method discussed in this post.
 
