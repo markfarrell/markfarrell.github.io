@@ -26,6 +26,8 @@ Now, let $$E_q = f_q(L) \left ( \frac{p}{q^{m_q}} \right )(L) $$ for each $$q \i
 
 	$$ = 0 $$
 
+**[** since $$p$$ is the minimal polynomial of $$L$$ and hence $$p(L) = 0$$ by definition **]**.
+
 3. For all $$q \in S$$: 
 
 	$$\operatorname{image}(E_q) $$

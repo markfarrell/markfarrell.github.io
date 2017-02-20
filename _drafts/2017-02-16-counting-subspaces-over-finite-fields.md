@@ -28,9 +28,11 @@ Then, in this context I would propose that:
 
 2. $$  { n \brack k }_{q} =  {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}  = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}$$
 
-	for all $$ n, k \leq \mathbb{N} \text{ such that } k \leq n $$.
+	for all $$ n, k \in \mathbb{N} \text{ such that } k \leq n $$.
 
-3. $$ (X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q A^k B^{n-k}$$
+3. For all algebras $$\mathcal{A}$$ over $$\mathbb{F}$$ and $$X, Y \in \mathcal{A}$$ such that $$YX = qXY$$,
+
+	$$ (X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q A^k B^{n-k}$$
 
 	for all $$n \in \mathbb{N}$$.
 
@@ -38,7 +40,7 @@ Then, in this context I would propose that:
 
 	for all $$n, k, m \in \mathbb{N}$$ such that $$m \leq k \leq n$$.
 
-I would now like to verify that these propositions are true in this context. Select an arbitrary $$n\mathbb{N}$$. Then:
+I would now like to verify that these propositions are true in this context. Select an arbitrary $$n \in \mathbb{N}$$. Then:
 
 1. Select arbitrary natural numbers $$n$$ and $$k$$ such that $$k \leq n$$.
 
@@ -112,7 +114,7 @@ I would now like to verify that these propositions are true in this context. Sel
 
 	**[** by **2.** **]**
 
-	$$ = \sum\limits_{j=0}^{k} {k+1 \brack j}_q X^j Y^{k-(j-1)}$$
+	$$ = \sum\limits_{j=0}^{k} {k+1 \brack j}_q X^j Y^{(k+1) - j}$$
 
 	$$ \implies (A + B)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q A^j B^{n-j} \text{ for all } n \in \mathbb{N} $$
 
