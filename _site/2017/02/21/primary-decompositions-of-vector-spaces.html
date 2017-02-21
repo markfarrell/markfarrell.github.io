@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Primary Decompositions of Vector Spaces</title>
+  <meta name="description" content="Suppose that is a linear operator acting on a finite-dimensional vector space over a field . Additionally, suppose that the minimal polynomial of is given by...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/02/21/primary-decompositions-of-vector-spaces.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Mark Farrell</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Primary Decompositions of Vector Spaces</h1>
+    <p class="post-meta"><time datetime="2017-02-21T00:00:00+00:00" itemprop="datePublished">Feb 21, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Suppose that <script type="math/tex">L : V \to V</script> is a linear operator acting on a finite-dimensional vector space <script type="math/tex">V</script> over a field <script type="math/tex">\mathbb{F}</script>. Additionally, suppose that the minimal polynomial of <script type="math/tex">L</script> is given by <script type="math/tex">p(x) = \prod\limits_{q(x) \in S} q^{m_q}(x)</script>, where <script type="math/tex">S</script> denotes the set of irreducible factors of <script type="math/tex">p(x)</script>, and <script type="math/tex">m_q</script> denotes the multiplicity of <script type="math/tex">q(x)</script> as a factor of <script type="math/tex">p(x)</script> for all <script type="math/tex">q(x) \in S</script>.</p>
+
+<p>Then it is apparent that the set of polynomials <script type="math/tex">\left \{ \left ( \frac{p}{q^{m_q}} \right)(x) : q(x) \in S \right \}</script> is coprime.</p>
+
+<p><script type="math/tex">\implies \sum\limits_{q(x) \in S} f_q(x) \left ( \frac{p}{q^{m_q}} \right )(x) = 1</script> for some <script type="math/tex">f_q(x) \in \mathbb{F}[x]</script> for each <script type="math/tex">q(x) \in S</script></p>
+
+<p><strong>[</strong> by the analogue of Bézout’s identity for polynomials in <script type="math/tex">\mathbb{F}[x]</script> <strong>]</strong>.</p>
+
+<p>Now, let <script type="math/tex">E_q = f_q(L) \left ( \left ( \frac{p}{q^{m_q}} \right)(x) \right )(L)</script> for each <script type="math/tex">q(x) \in S</script>. Then:</p>
+
+<ol>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{q(x) \in S} E_q = I</script>
+  </li>
+  <li>
+    <p>For all <script type="math/tex">q_1(x), q_2(x) \in S</script> such that <script type="math/tex">q_1(x) \neq q_2(x)</script>,</p>
+
+    <script type="math/tex; mode=display">E_{q_1} E_{q_2}</script>
+
+    <script type="math/tex; mode=display">= \left ( f_{q_1}(L) \left ( \frac{p}{q_{1}^{m_{q_1}}} \right )(L) \right ) \left ( f_{q_2}(L) \left ( \frac{p}{q_{2}^{m_{q_2}}} \right )(L) \right )</script>
+
+    <script type="math/tex; mode=display">= p(L) \left ( f_{q_1}(L) f_{q_2}(L) \left ( \frac{p}{q_{1}^{m_{q_1}} q_{2}^{m_{q_2}}} \right )(L) \right )</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+  </li>
+</ol>
+
+<p><strong>[</strong> since <script type="math/tex">p(x)</script> is the minimal polynomial of <script type="math/tex">L</script> and hence <script type="math/tex">p(L) = 0</script> by definition <strong>]</strong>.</p>
+
+<ol>
+  <li>
+    <p>For all <script type="math/tex">q(x) \in S</script>:</p>
+
+    <script type="math/tex; mode=display">\operatorname{image}(E_q)</script>
+
+    <script type="math/tex; mode=display">= \{ u : u = E_q(v) \text{ for some } v \in V \}</script>
+
+    <script type="math/tex; mode=display">= \{ u : q^{m_q}(L)(u) = (q^{m_q}(L) E_q)(v) = p(L)(v) = 0 \text{ for some } v \in V \}</script>
+
+    <script type="math/tex; mode=display">= \operatorname{ker}(q^{m_q}(L))</script>
+  </li>
+</ol>
+
+<script type="math/tex; mode=display">\implies V = \bigoplus\limits_{q(x) \in S}  \operatorname{image}(E_q) = \bigoplus\limits_{q(x) \in S} \operatorname{ker}(q^{m_q}(L))</script>
+
+<p>The direct sum decomposition <script type="math/tex">V = \bigoplus\limits_{q(x) \in S} \operatorname{ker}(q^{m_q}(L))</script> is said to be the <strong>primary decomposition</strong> of <script type="math/tex">V</script> relative to <script type="math/tex">L</script>. <em>It is useful to note that it also follows from <strong>1.</strong>, <strong>2.</strong> and <strong>3.</strong> that for all <script type="math/tex">q(x) \in S</script>, <script type="math/tex">E_q</script> is a projection onto the component part <script type="math/tex">\operatorname{ker}(q^{m_q}(L))</script> of the primary decomposition of <script type="math/tex">V</script> relative to <script type="math/tex">L</script></em>.</p>
+
+<p>Since <script type="math/tex">V</script> is arbitrary, it follows that finite-dimensional vector spaces have primary decompositions relative to linear operators acting on them in general, and moreover that projections onto component parts of primary decompositions of finite-dimensional vector spaces can also be found in general using the method discussed in this post.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
