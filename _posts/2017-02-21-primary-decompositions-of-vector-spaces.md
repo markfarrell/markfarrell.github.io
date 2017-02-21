@@ -34,13 +34,13 @@ Now, let $$E_q = f_q(L) \left ( \left ( \frac{p}{q^{m_q}} \right)(x) \right )(L)
 
 	$$ = \{ u : u = E_q(v) \text{ for some } v \in V \} $$
 
-	$$ = \{ u : q^{m_q}(L)(u) = (q^{m_q}(L) E_q)(v) = p(L)(v) = 0 \text{ for some } v \in V \} $$
+	$$ = \{ u : \left ( q(L) \right )^{m_q} (u) = (\left ( q(L) \right )^{m_q}  E_q)(v) = p(L)(v) = 0 \text{ for some } v \in V \} $$
 
-	$$ = \operatorname{ker}(q^{m_q}(L))$$
+	$$ = \operatorname{ker} \left ( q(L) \right )^{m_q} $$
 
-$$ \implies V = \bigoplus\limits_{q(x) \in S}  \operatorname{image}(E_q) = \bigoplus\limits_{q(x) \in S} \operatorname{ker}(q^{m_q}(L)) $$
+$$ \implies V = \bigoplus\limits_{q(x) \in S}  \operatorname{image}(E_q) = \bigoplus\limits_{q(x) \in S} \operatorname{ker} \left ( q(L) \right )^{m_q}  $$
 
-The direct sum decomposition $$V = \bigoplus\limits_{q(x) \in S} \operatorname{ker}(q^{m_q}(L))$$ is said to be the **primary decomposition** of $$V$$ relative to $$L$$. *It is useful to note that it also follows from **1.**, **2.** and **3.** that for all $$q(x) \in S$$, $$E_q$$ is a projection onto the component part $$\operatorname{ker}(q^{m_q}(L))$$ of the primary decomposition of $$V$$ relative to $$L$$*.
+The direct sum decomposition $$V = \bigoplus\limits_{q(x) \in S} \operatorname{ker}\left ( q(L) \right )^{m_q} $$ is said to be the **primary decomposition** of $$V$$ relative to $$L$$. *It is useful to note that it also follows from **1.**, **2.** and **3.** that for all $$q(x) \in S$$, $$E_q$$ is a projection onto the component part $$\operatorname{ker} \left ( q(L) \right )^{m_q} $$ of the primary decomposition of $$V$$ relative to $$L$$*.
 
 Since $$V$$ is arbitrary, it follows that finite-dimensional vector spaces have primary decompositions relative to linear operators acting on them in general, and moreover that projections onto component parts of primary decompositions of finite-dimensional vector spaces can also be found in general using the method discussed in this post.
 
