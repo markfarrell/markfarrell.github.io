@@ -40,7 +40,7 @@ Then, in this context I would propose that:
 
 	for all $$n, k, m \in \mathbb{N}$$ such that $$m \leq k \leq n$$.
 
-I would now like to verify that these propositions are true in this context. Select an arbitrary $$n \in \mathbb{N}$$. Then:
+I would now like to verify that these propositions are true in this context. Then:
 
 1. Select arbitrary natural numbers $$n$$ and $$k$$ such that $$k \leq n$$.
 
