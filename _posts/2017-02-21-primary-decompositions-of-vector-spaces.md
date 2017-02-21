@@ -4,7 +4,7 @@ title:  "Primary Decompositions of Vector Spaces"
 date:   2017-02-21
 ---
 
-Suppose that $$L : V \to V$$ is a linear operator acting on a finite-dimensional vector space $$V$$ over a field $$\mathbb{F}$$. Additionally, suppose that the minimal polynomial of $$L$$ is given by $$p(x) = \prod\limits_{q(x) \in S} q^{m_q}(x) $$, where $$S$$ denotes the set of irreducible factors of $$p(x)$$, and $$m_q$$ denotes the multiplicity of $$q(x)$$ as a factor of $$p(x)$$ for all $$q(x) \in S$$.
+Suppose that $$L : V \to V$$ is a linear operator acting on a finite-dimensional vector space $$V$$ over a field $$\mathbb{F}$$. Additionally, suppose that the minimal polynomial of $$L$$ is given by $$p(x) = \prod\limits_{q(x) \in S} \left ( q(x) \right )^{m_q} $$, where $$S$$ denotes the set of irreducible factors of $$p(x)$$, and $$m_q$$ denotes the multiplicity of $$q(x)$$ as a factor of $$p(x)$$ for all $$q(x) \in S$$.
 
 Then it is apparent that the set of polynomials $$\left \{ \left ( \frac{p}{q^{m_q}} \right)(x) : q(x) \in S \right \}$$ is coprime.
 
