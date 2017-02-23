@@ -92,18 +92,18 @@
   <li>
     <script type="math/tex; mode=display">{ n \brack k }_{q} = \frac{ [n]_q ! }{ {[k]_q !} {[n-k]_q !}}</script>
 
-    <p>for all <script type="math/tex">% <![CDATA[
-n, k \in \mathbb{N} \text{ such that } k < n %]]></script>.</p>
+    <p>for all <script type="math/tex">n, k \in \mathbb{N} \text{ such that } k \leq n</script>.</p>
   </li>
   <li>
     <script type="math/tex; mode=display">{ n \brack k }_{q} =  {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}  = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}</script>
 
-    <p>for all <script type="math/tex">n, k \in \mathbb{N} \text{ such that } k \leq n</script>.</p>
+    <p>for all <script type="math/tex">% <![CDATA[
+n, k \in \mathbb{N} \text{ such that } k < n %]]></script>.</p>
   </li>
   <li>
     <p>For all algebras <script type="math/tex">\mathcal{A}</script> over <script type="math/tex">\mathbb{F}</script> and <script type="math/tex">X, Y \in \mathcal{A}</script> such that <script type="math/tex">YX = qXY</script>,</p>
 
-    <script type="math/tex; mode=display">(X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q A^k B^{n-k}</script>
+    <script type="math/tex; mode=display">(X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q X^k Y^{n-k}</script>
 
     <p>for all <script type="math/tex">n \in \mathbb{N}</script>.</p>
   </li>
@@ -195,9 +195,9 @@ k < n %]]></script>.</p>
 
     <script type="math/tex; mode=display">= \sum\limits_{j=0}^{k} {k+1 \brack j}_q X^j Y^{(k+1) - j}</script>
 
-    <script type="math/tex; mode=display">\implies (A + B)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q A^j B^{n-j} \text{ for all } n \in \mathbb{N}</script>
+    <script type="math/tex; mode=display">\implies (X + Y)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q X^j Y^{n-j} \text{ for all } n \in \mathbb{N}</script>
 
-    <p><strong>[</strong> since clearly <script type="math/tex">A + B = {1 \brack 0 }_q A + {1 \brack 1}_q B = \sum\limits_{j = 0}^{1} {1 \brack j}_q A^j B^{1-j}</script> as well <strong>]</strong> .</p>
+    <p><strong>[</strong> since clearly <script type="math/tex">X + Y = {1 \brack 0 }_q X + {1 \brack 1}_q Y = \sum\limits_{j = 0}^{1} {1 \brack j}_q X^j Y^{1-j}</script> as well <strong>]</strong> .</p>
   </li>
   <li>
     <p>Select arbitrary <script type="math/tex">n, k \in \mathbb{N}</script> such that <script type="math/tex">k \leq n</script>, and assume that <script type="math/tex">{n \brack k}_q = \sum\limits_{j=0}^{r} q^{(r - j)(k - j)} { r \brack j }_q  { n - r \brack k - j }_q</script> for some <script type="math/tex">% <![CDATA[
