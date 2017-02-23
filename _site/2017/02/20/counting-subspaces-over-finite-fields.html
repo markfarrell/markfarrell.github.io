@@ -65,21 +65,21 @@
   <div class="post-content" itemprop="articleBody">
     <p>In this post, my goal is to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.</p>
 
-<p>Fix a field <script type="math/tex">\mathbb{F}</script> and an element <script type="math/tex">q \in \mathbb{F} \setminus \{0,1\}</script>.</p>
+<p>Fix a prime power <script type="math/tex">q</script>.</p>
 
 <p>Define:</p>
 
 <ol>
   <li>
-    <script type="math/tex; mode=display">{ \cdot \brack \cdot}_q : \mathbb{N}_{0} \times \mathbb{N}_{0} \to \mathbb{F}</script>
+    <script type="math/tex; mode=display">{ \cdot \brack \cdot}_q : \mathbb{N}_{0} \times \mathbb{N}_{0} \to \mathbb{R}</script>
 
     <script type="math/tex; mode=display">% <![CDATA[
 {n \brack k }_q := \begin{cases} \prod\limits_{j = 1}^{k} \frac{q^{n} - q^{j - 1}}{q^{k} - q^{j - 1}} & \text{ if } 0 < k \leq n \\ 1 & \text { if } k = 0 \\ 0 & \text{ otherwise } \end{cases} %]]></script>
 
-    <p><em>Note that in the case that <script type="math/tex">\mathbb{F} = \mathbb{R}</script> and <script type="math/tex">q</script> is a prime power, then <script type="math/tex">{n \brack k }_q</script> gives the number of <script type="math/tex">k</script>-dimensional subspaces of an <script type="math/tex">n</script>-dimensional vector space over a finite field of order <script type="math/tex">q</script> for all <script type="math/tex">n,k \in \mathbb{N}</script>.</em></p>
+    <p><em>Note that <script type="math/tex">{n \brack k }_q</script> gives the number of <script type="math/tex">k</script>-dimensional subspaces of an <script type="math/tex">n</script>-dimensional vector space over a finite field of order <script type="math/tex">q</script> for all <script type="math/tex">n,k \in \mathbb{N}</script>.</em></p>
   </li>
   <li>
-    <script type="math/tex; mode=display">[\cdot]_q ! : \mathbb{N}_{0} \to \mathbb{F}</script>
+    <script type="math/tex; mode=display">[\cdot]_q ! : \mathbb{N}_{0} \to \mathbb{R}</script>
 
     <script type="math/tex; mode=display">% <![CDATA[
 [n]_q ! := \begin{cases} \prod\limits_{j = 1}^{n} {n - (j - 1) \brack 1}_q & \text{ if } n \in \mathbb{N} \\ 1 & \text{ if } n = 0 \end{cases} %]]></script>
@@ -101,7 +101,7 @@
 n, k \in \mathbb{N} \text{ such that } k < n %]]></script>.</p>
   </li>
   <li>
-    <p>For all algebras <script type="math/tex">\mathcal{A}</script> over <script type="math/tex">\mathbb{F}</script> and <script type="math/tex">X, Y \in \mathcal{A}</script> such that <script type="math/tex">YX = qXY</script>,</p>
+    <p>For all algebras <script type="math/tex">\mathcal{A}</script> over <script type="math/tex">\mathbb{R}</script> and <script type="math/tex">X, Y \in \mathcal{A}</script> such that <script type="math/tex">YX = qXY</script>,</p>
 
     <script type="math/tex; mode=display">(X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q X^k Y^{n-k}</script>
 
@@ -173,7 +173,7 @@ k < n %]]></script>.</p>
     <p>and the general result then follows.</p>
   </li>
   <li>
-    <p>Suppose that <script type="math/tex">\mathcal{A}</script> is an algebra over <script type="math/tex">\mathbb{F}</script>, <script type="math/tex">X,Y \in \mathcal{A}</script>, and <script type="math/tex">YX = qXY</script>.</p>
+    <p>Suppose that <script type="math/tex">\mathcal{A}</script> is an algebra over <script type="math/tex">\mathbb{R}</script>, <script type="math/tex">X,Y \in \mathcal{A}</script>, and <script type="math/tex">YX = qXY</script>.</p>
 
     <p>Assume that <script type="math/tex">(X + Y)^k = \sum\limits_{j = 0}^{k} {k \brack j}_q X^j Y^{k-j}</script> for some <script type="math/tex">k \in \mathbb{N}</script>.</p>
 
