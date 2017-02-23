@@ -24,15 +24,15 @@ Then, in this context I would propose that:
 
 1. $$  { n \brack k }_{q} = \frac{ [n]_q ! }{ {[k]_q !} {[n-k]_q !}} $$
 
-	for all $$ n, k \in \mathbb{N} \text{ such that } k < n $$.
+	for all $$ n, k \in \mathbb{N} \text{ such that } k \leq n $$.
 
 2. $$  { n \brack k }_{q} =  {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}  = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}$$
 
-	for all $$ n, k \in \mathbb{N} \text{ such that } k \leq n $$.
+	for all $$ n, k \in \mathbb{N} \text{ such that } k < n $$.
 
 3. For all algebras $$\mathcal{A}$$ over $$\mathbb{F}$$ and $$X, Y \in \mathcal{A}$$ such that $$YX = qXY$$,
 
-	$$ (X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q A^k B^{n-k}$$
+	$$ (X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q X^k Y^{n-k}$$
 
 	for all $$n \in \mathbb{N}$$.
 
@@ -96,7 +96,7 @@ I would now like to verify that these propositions are true in this context. The
 
 3. Suppose that $$\mathcal{A}$$ is an algebra over $$\mathbb{F}$$, $$X,Y \in \mathcal{A}$$, and $$YX = qXY$$.
 
-	Assume that $$(X + Y)^k$$ for some $$k \in \mathbb{N} $$. 
+	Assume that $$(X + Y)^k = \sum\limits_{j = 0}^{k} {k \brack j}_q X^j Y^{k-j}$$ for some $$k \in \mathbb{N} $$. 
 
 	$$ \implies (X+Y)^{k+1} $$ 
 
@@ -116,9 +116,9 @@ I would now like to verify that these propositions are true in this context. The
 
 	$$ = \sum\limits_{j=0}^{k} {k+1 \brack j}_q X^j Y^{(k+1) - j}$$
 
-	$$ \implies (A + B)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q A^j B^{n-j} \text{ for all } n \in \mathbb{N} $$
+	$$ \implies (X + Y)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q X^j Y^{n-j} \text{ for all } n \in \mathbb{N} $$
 
-	**[** since clearly $$A + B = {1 \brack 0 }_q A + {1 \brack 1}_q B = \sum\limits_{j = 0}^{1} {1 \brack j}_q A^j B^{1-j}$$ as well **]** .
+	**[** since clearly $$X + Y = {1 \brack 0 }_q X + {1 \brack 1}_q Y = \sum\limits_{j = 0}^{1} {1 \brack j}_q X^j Y^{1-j}$$ as well **]** .
 
 4. Select arbitrary $$n, k \in \mathbb{N}$$ such that $$k \leq n$$, and assume that $$ {n \brack k}_q = \sum\limits_{j=0}^{r} q^{(r - j)(k - j)} { r \brack j }_q  { n - r \brack k - j }_q $$ for some $$ r < k $$.
 
