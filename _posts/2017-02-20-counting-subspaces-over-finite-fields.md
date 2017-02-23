@@ -96,7 +96,7 @@ I would now like to verify that these propositions are true in this context. The
 
 3. Suppose that $$\mathcal{A}$$ is an algebra over $$\mathbb{F}$$, $$X,Y \in \mathcal{A}$$, and $$YX = qXY$$.
 
-	Assume that $$(X + Y)^k$$ for some $$k \in \mathbb{N} $$. 
+	Assume that $$(X + Y)^k = \sum\limits_{j = 0}^{k} {k \brack j}_q X^j Y^{k-j}$$ for some $$k \in \mathbb{N} $$. 
 
 	$$ \implies (X+Y)^{k+1} $$ 
 
