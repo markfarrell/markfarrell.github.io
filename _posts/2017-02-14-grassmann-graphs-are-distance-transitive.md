@@ -35,7 +35,7 @@ Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \
 
 	$$ \implies F \in \operatorname{Aut}(G) \text{ is an automorphism on } G$$
 
-	**[** since $$X$$ and $$Y$$ are arbitrary **]**.
+	**[** since $$X$$ and $$Y$$ are arbitrary, defining $$F^{-1} : S \to S$$ as $$F^{-1}(U) := \operatorname{image}(L^{-1}\vert_U)$$ for all $$U \in S$$**]**.
 
 
 2. Suppose that $$W_1, W_2, X_1, X_2 \in S$$ such that $$d(W_1,W_2)=d(X_1,X_2)$$. Then:
