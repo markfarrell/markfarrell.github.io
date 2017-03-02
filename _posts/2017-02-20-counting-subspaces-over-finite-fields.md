@@ -6,17 +6,17 @@ date:   2017-02-20
 
 In this post, my goal is to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.
 
-Fix a field $$\mathbb{F}$$ and an element $$q \in \mathbb{F} \setminus \{0,1\}$$. 
+Fix a prime power $$q$$.
 
 Define:
 
-1. $${ \cdot \brack \cdot}_q : \mathbb{N}_{0} \times \mathbb{N}_{0} \to \mathbb{F} $$
+1. $${ \cdot \brack \cdot}_q : \mathbb{N}_{0} \times \mathbb{N}_{0} \to \mathbb{R} $$
 
 	$$ {n \brack k }_q := \begin{cases} \prod\limits_{j = 1}^{k} \frac{q^{n} - q^{j - 1}}{q^{k} - q^{j - 1}} & \text{ if } 0 < k \leq n \\ 1 & \text { if } k = 0 \\ 0 & \text{ otherwise } \end{cases}$$
 
-	*Note that in the case that $$\mathbb{F} = \mathbb{R}$$ and $$q$$ is a prime power, then $${n \brack k }_q$$ gives the number of $$k$$-dimensional subspaces of an $$n$$-dimensional vector space over a finite field of order $$q$$ for all $$n,k \in \mathbb{N}$$.*
+	*Note that $${n \brack k }_q$$ gives the number of $$k$$-dimensional subspaces of an $$n$$-dimensional vector space over a finite field of order $$q$$ for all $$n,k \in \mathbb{N}$$.*
 
-2. $$ [\cdot]_q ! : \mathbb{N}_{0} \to \mathbb{F} $$ 
+2. $$ [\cdot]_q ! : \mathbb{N}_{0} \to \mathbb{R} $$ 
 
    $$[n]_q ! := \begin{cases} \prod\limits_{j = 1}^{n} {n - (j - 1) \brack 1}_q & \text{ if } n \in \mathbb{N} \\ 1 & \text{ if } n = 0 \end{cases} $$
 
@@ -30,7 +30,7 @@ Then, in this context I would propose that:
 
 	for all $$ n, k \in \mathbb{N} \text{ such that } k < n $$.
 
-3. For all algebras $$\mathcal{A}$$ over $$\mathbb{F}$$ and $$X, Y \in \mathcal{A}$$ such that $$YX = qXY$$,
+3. For all algebras $$\mathcal{A}$$ over $$\mathbb{R}$$ and $$X, Y \in \mathcal{A}$$ such that $$YX = qXY$$,
 
 	$$ (X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q X^k Y^{n-k}$$
 
@@ -94,7 +94,7 @@ I would now like to verify that these propositions are true in this context. The
 
 	and the general result then follows.
 
-3. Suppose that $$\mathcal{A}$$ is an algebra over $$\mathbb{F}$$, $$X,Y \in \mathcal{A}$$, and $$YX = qXY$$.
+3. Suppose that $$\mathcal{A}$$ is an algebra over $$\mathbb{R}$$, $$X,Y \in \mathcal{A}$$, and $$YX = qXY$$.
 
 	Assume that $$(X + Y)^k = \sum\limits_{j = 0}^{k} {k \brack j}_q X^j Y^{k-j}$$ for some $$k \in \mathbb{N} $$. 
 
