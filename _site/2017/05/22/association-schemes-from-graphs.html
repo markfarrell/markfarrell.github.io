@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Association Schemes from Graphs</title>
+  <meta name="description" content="In this post, I would like to establish some examples of families of commutative association schemes arising from distance-regular graphs and sets of conjuga...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/05/22/association-schemes-from-graphs.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Association Schemes from Graphs</h1>
+    <p class="post-meta"><time datetime="2017-05-22T00:00:00-04:00" itemprop="datePublished">May 22, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, I would like to establish some examples of families of commutative association schemes arising 
+from distance-regular graphs and sets of conjugacy class digraphs of finite groups.</p>
+
+<p>Firstly, suppose that <script type="math/tex">G</script> is a distance-regular graph. Let <script type="math/tex">\mathcal{V}_{G}</script> denote the vertex set of <script type="math/tex">G</script>, 
+and <script type="math/tex">\mathcal{A} := \{ A_{n} : 1 \leq n \leq \operatorname{diam}(G) \}</script> denote a set of distance matrices for <script type="math/tex">G</script>.
+Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathcal{V}_{G} \operatorname{and} (d(u, w), d(w, v)) = (i, j) \}</script> for all 
+<script type="math/tex">1 \leq i,j \leq \operatorname{diam}(G)</script> and all <script type="math/tex">u,v \in \mathcal{V}_{G}</script>. Now, select any particular <script type="math/tex">1 \leq i,j \leq \operatorname{diam}(G)</script>. Then for any <script type="math/tex">w, x \in \mathcal{V}_{G}</script>:</p>
+
+<ol>
+  <li>
+    <script type="math/tex; mode=display">\lvert S_{i,j}(w, x) \rvert = \lvert S_{j, i}(w, x) \rvert</script>
+
+    <p><strong>[</strong> since <script type="math/tex">G</script> is a simple graph <strong>]</strong>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\lvert S_{i,j}(w,x) \rvert = \lvert S_{i,j}(y,z) \rvert \text{ for all } (y, z) \in \{ (u, v) : u, v \in \mathcal{V}_{G} \operatorname{and} d(u, v) = d(w,x) \}</script>
+
+    <p><strong>[</strong> since <script type="math/tex">G</script> is distance-regular <strong>]</strong>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\left ( A_{i} A_{j} \right )_{w, x}</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{\substack{u \in \mathcal{V}_{G} \\ d(u, w) = i}} \sum\limits_{\substack{v \in \mathcal{V}_{G} \\ d(x, v) = j}} \langle e_{u}, e_{v} \rangle</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{\substack{v \in \mathcal{V}_{G} \\ d(v, w) = i \operatorname{and} d(x, v) = j}} 1</script>
+
+    <script type="math/tex; mode=display">= \lvert S_{i,j}(w,x) \rvert</script>
+
+    <p><strong>[</strong> letting <script type="math/tex">\langle \cdot , \cdot\rangle</script> denote the standard inner product on <script type="math/tex">\mathbb{R}^{\lvert \mathcal{V}_{G} \rvert}</script>,</p>
+
+    <p>and <script type="math/tex">e_{v}</script> denote the representative vector of <script type="math/tex">v</script> in <script type="math/tex">\mathbb{R}^{\lvert \mathcal{V}_{G} \rvert}</script> for all <script type="math/tex">v \in \mathcal{V}_{G}</script> <strong>]</strong>.</p>
+  </li>
+</ol>
+
+<script type="math/tex; mode=display">\implies A_{i} A_{j} = A_{j} A_{i} = \sum\limits_{k = 1}^{\operatorname{diam}(G)} p_{i,j}(k) \ A_{k}  \text{ for some } \{ p_{i,j}(k) : 1 \leq k \leq \operatorname{diam}(G) \} \subset \mathbb{N}</script>
+
+<script type="math/tex; mode=display">\implies \mathcal{A} \text{ is a commutative association scheme }</script>
+
+<p><strong>[</strong> since <script type="math/tex">i</script> and <script type="math/tex">j</script> are arbitrary, in addition to the facts that <script type="math/tex">A_{0} = I \in \mathcal{A}</script>, <script type="math/tex">\sum\limits_{k = 1}^{\operatorname{diam}(G)} A_k = J</script>, and <script type="math/tex">A_{k}^{T} = A_{k}</script> for all <script type="math/tex">1 \leq k \leq \operatorname{diam}(G)</script> by construction <strong>]</strong>.</p>
+
+<p>It then follows in general that every distance-regular graph gives rise to a commutative association scheme in this way, since <script type="math/tex">G</script> in this context is arbitrary.</p>
+
+<p>Secondly, suppose now that <script type="math/tex">G</script> is a finite group. Let <script type="math/tex">e_{G}</script> denote the identity element of <script type="math/tex">G</script>, <script type="math/tex">\operatorname{Cl}(G)</script> denote the set of conjugacy classes of <script type="math/tex">G</script>, 
+ and <script type="math/tex">\mathcal{A} := \{ A_{k} : 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert \}</script> denote the of set adjacency matrices of
+ the set of conjugacy class digraphs of <script type="math/tex">G</script> relative a certain ordering of the elements of <script type="math/tex">G</script> and <script type="math/tex">\operatorname{Cl}(G)</script>. Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in G, uw^{-1} \in \operatorname{Cl}_{i} \operatorname{and} wv^{-1} \in \operatorname{Cl}_{j} \}</script> for all <script type="math/tex">1 \leq i, j \in \lvert \operatorname{Cl}(G) \rvert</script> and all <script type="math/tex">u,v \in G</script>, letting <script type="math/tex">\operatorname{Cl}_{k}</script> denote the <script type="math/tex">k</script>-th conjugacy class of <script type="math/tex">G</script> for all <script type="math/tex">1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert</script>. Then for any particular <script type="math/tex">1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert</script> and any <script type="math/tex">g, h \in G</script>:</p>
+
+<ol>
+  <li>
+    <p>Define</p>
+
+    <script type="math/tex; mode=display">L_{g} : S_{i,j}(h,e_{G}) \to S_{i,j}(gh,g)</script>
+
+    <script type="math/tex; mode=display">L_{g}(w) := gw</script>
+
+    <p>and</p>
+
+    <script type="math/tex; mode=display">R_{g} : S_{i,j}(h,e_{G}) \to S_{i,j}(hg,g)</script>
+
+    <script type="math/tex; mode=display">R_{g}(w) := wg</script>
+
+    <p>.</p>
+
+    <p>It is apparent that <script type="math/tex">L_{g}</script> and <script type="math/tex">L_{g} \circ R_{g}</script> are bijections.</p>
+
+    <script type="math/tex; mode=display">\implies \lvert S_{i,j}(gh,g) \rvert = \lvert S_{i,j}(h,e_{G}) \rvert = \lvert S_{i,j}(ghg^{-1}, e_{G}) \rvert</script>
+  </li>
+  <li>
+    <p>Select any  <script type="math/tex">1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert</script>.</p>
+
+    <p>Observe the fact that <script type="math/tex">A_{k} = \sum\limits_{x \in \operatorname{Cl}_{k}} P_x</script> where <script type="math/tex">P_{x}</script> denotes a permutation matrix representing the left-translation of the elements of <script type="math/tex">G</script> by <script type="math/tex">x</script> for all <script type="math/tex">x \in \operatorname{Cl}_{k}</script>.</p>
+
+    <p><script type="math/tex">{\implies}</script> It follows from <strong>1.</strong> that <script type="math/tex">\lvert S_{i,j}(u,v) \rvert = \lvert S_{i,j}(w,x) \rvert</script> for all <script type="math/tex">(u,v),(w,x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}</script>.</p>
+  </li>
+</ol>
+
+<p>Now, for all <script type="math/tex">1 \leq i,j,k \leq \lvert \operatorname{Cl}(G) \rvert</script> and all <script type="math/tex">x \in G</script> define:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">T_{i,j}(k) := \{ (g, h) : g \in \operatorname{Cl}_{i}, h \in \operatorname{Cl}_{j},  \operatorname{and} gh \in g \in \operatorname{Cl}_{k} \} \text{ , }</script>
+
+    <script type="math/tex; mode=display">P_{i,j}(k) : T_{i,j}(k) \to T_{j,i}(k)</script>
+
+    <script type="math/tex; mode=display">\left ( P_{i,j}(k) \right )(g,h) := (ghg^{-1}, g)</script>
+
+    <p>and</p>
+
+    <script type="math/tex; mode=display">Q_{i,j}(x) : S_{i,j}(x, e_{G}) \to T_{i,j}(k)</script>
+
+    <script type="math/tex; mode=display">\left ( Q_{i,j}(x) \right )(g) := (xg^{-1}, g)</script>
+
+    <p>.</p>
+  </li>
+</ul>
+
+<p>Then for any particular <script type="math/tex">1 \leq i,j,k \leq \lvert \operatorname{Cl}(G) \rvert</script>:</p>
+
+<ul>
+  <li>
+    <p>Select any <script type="math/tex">g \in \operatorname{Cl}_{k}</script>.</p>
+
+    <p>It is apparent that <script type="math/tex">P_{i,j}(k)</script>, <script type="math/tex">Q_{i,j}(g)</script>, and <script type="math/tex">Q_{j,i}(g)</script> are bijections.</p>
+
+    <script type="math/tex; mode=display">\implies Q_{j,i}^{-1}(g) \circ P_{i,j}(k) \circ Q_{i,j}(g) \text { is a bijection as well}</script>
+
+    <script type="math/tex; mode=display">\implies \lvert S_{i,j}(g, e_{G}) \rvert = \lvert S_{j,i}(g, e_{G}) \rvert</script>
+
+    <p>It then similarly follows from <strong>1.</strong> and <strong>2.</strong> that</p>
+
+    <script type="math/tex; mode=display">\lvert S_{i,j}(u, v) \rvert  = \lvert S_{i,j}(w,x) \rvert = \lvert S_{j,i}(w,x) \rvert =  \lvert S_{j, i}(u,v) \rvert</script>
+
+    <p>and moreover that</p>
+
+    <script type="math/tex; mode=display">\left ( A_{i} A_{j} \right )_{u,v} = \left ( A_{i}A_{j} \right )_{w,x} = \left ( A_{j}A_{i} \right )_{w,x} = \left ( A_{j}A_{i} \right )_{u,v}</script>
+
+    <p>for all <script type="math/tex">(u,v), (w, x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}</script> .</p>
+  </li>
+</ul>
+
+<p>Next, observe that:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">I \in \mathcal{A} \text{ , }</script>
+
+    <p>since <script type="math/tex">\{e_{G}\} \in \operatorname{Cl}(G)</script>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{i = 1}^{\lvert \operatorname{Cl}(G) \rvert} A_{i} = J \text{, }</script>
+
+    <p>since every element of <script type="math/tex">G</script> belongs to exactly one conjugacy class of <script type="math/tex">G</script>.</p>
+  </li>
+  <li>
+    <p><script type="math/tex">A_{i}^{T} \in \mathcal{A}</script> for all <script type="math/tex">1 \leq i \leq \lvert \operatorname{Cl}(G) \rvert \text{ , }</script></p>
+
+    <p>since for all <script type="math/tex">1 \leq i \leq \lvert \operatorname{Cl}(G) \rvert</script></p>
+
+    <p>there is a <script type="math/tex">1 \leq j \leq \lvert \operatorname{Cl}(G) \rvert</script> such that <script type="math/tex">gh^{-1} \in C_{i}</script> if and only if <script type="math/tex">hg^{-1} \in C_{j}</script></p>
+
+    <p>for all <script type="math/tex">g,h \in G</script>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">A_{i}A_{j} = A_{j}A_{i} = \sum\limits_{k = 1}^{\lvert \operatorname{Cl}(G) \rvert} p_{i,j}(k) \ A_{k}</script>
+
+    <p>for some <script type="math/tex">\{ p_{i,j}(k) : 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert \} \subset \mathbb{N}</script> and all <script type="math/tex">1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert</script>,</p>
+
+    <p>following from the previous point.</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">\implies \mathcal{A} \text{ is a commutative assocation scheme }</script>
+
+<p>It then follows in general that the set of conjugacy classes of every finite group gives rise to a commutative association scheme in this way, since <script type="math/tex">G</script> in this context is arbitrary.</p>
+
+<p><em>In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative assocation schemes in the ways presented in this posted. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the facts that the distance matrices of a distance-regular graph are simultaneously diagonalizable, the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mosner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions on finite groups; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.</em></p>
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
