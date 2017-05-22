@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Counting Subspaces Over Finite Fields"
+title:  "Counting Subspaces over Finite Fields"
 date:   2017-02-20
 ---
 
