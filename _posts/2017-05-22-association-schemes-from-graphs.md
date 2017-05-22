@@ -54,13 +54,13 @@ Secondly, suppose now that $$G$$ is a finite group. Let $$e_{G}$$ denote the ide
  
     and
 
-    $$ R_{g} : S_{i,j}(h,e_{G}) \to S_{i,j}(hg,g) $$
+    $$ R_{g^{-1}} : S_{i,j}(h,e_{G}) \to S_{i,j}(hg^{-1},g^{-1}) $$
 
-    $$R_{g}(w) := wg$$
+    $$R_{g^{-1}}(w) := wg^{-1}$$
 
     . 
 
-    It is apparent that $$L_{g}$$ and $$ L_{g} \circ R_{g} $$ are bijections.
+    It is apparent that $$L_{g}$$ and $$ L_{g} \circ R_{g^{-1}} $$ are bijections.
 
     $$ \implies \lvert S_{i,j}(gh,g) \rvert = \lvert S_{i,j}(h,e_{G}) \rvert = \lvert S_{i,j}(ghg^{-1}, e_{G}) \rvert $$
 
