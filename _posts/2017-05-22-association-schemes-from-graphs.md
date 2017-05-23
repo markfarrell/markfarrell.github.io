@@ -44,9 +44,11 @@ It then follows in general that every distance-regular graph gives rise to a com
 
 Secondly, suppose now that $$G$$ is a finite group. Let $$e_{G}$$ denote the identity element of $$G$$, $$\operatorname{Cl}(G)$$ denote the set of conjugacy classes of $$G$$, 
  and $$ \mathcal{A} := \{ A_{k} : 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert \}$$ denote the of set adjacency matrices of
- the set of conjugacy class digraphs of $$G$$ relative a certain ordering of the elements of $$G$$ and $$\operatorname{Cl}(G)$$. Additionally, define $$S_{i,j}(u,v) := \{ w : w \in G, uw^{-1} \in \operatorname{Cl}_{i} \operatorname{and} wv^{-1} \in \operatorname{Cl}_{j} \} $$ for all $$1 \leq i, j \in \lvert \operatorname{Cl}(G) \rvert$$ and all $$u,v \in G$$, letting $$\operatorname{Cl}_{k}$$ denote the $$k$$-th conjugacy class of $$G$$ for all $$ 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert $$. Then for any particular $$ 1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert $$ and any $$g, h \in G$$:
+ the set of conjugacy class digraphs of $$G$$ relative a certain ordering of the elements of $$G$$ and $$\operatorname{Cl}(G)$$. Additionally, define $$S_{i,j}(u,v) := \{ w : w \in G, uw^{-1} \in \operatorname{Cl}_{i} \operatorname{and} wv^{-1} \in \operatorname{Cl}_{j} \} $$ for all $$1 \leq i, j \in \lvert \operatorname{Cl}(G) \rvert$$ and all $$u,v \in G$$, letting $$\operatorname{Cl}_{k}$$ denote the $$k$$-th conjugacy class of $$G$$ for all $$ 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert $$. Then for any particular $$ 1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert $$:
 
- 1. Define
+ 1. Select any $$g, h \in G$$.
+
+    Define
 
     $$ L_{g} : S_{i,j}(h,e_{G}) \to S_{i,j}(gh,g) $$
 
@@ -68,7 +70,7 @@ Secondly, suppose now that $$G$$ is a finite group. Let $$e_{G}$$ denote the ide
 
    Observe the fact that $$A_{k} = \sum\limits_{x \in \operatorname{Cl}_{k}} P_x$$ where $$P_{x}$$ denotes a permutation matrix representing the left-translation of the elements of $$G$$ by $$x$$ for all $$x \in \operatorname{Cl}_{k}$$.
 
-   $${\implies}$$ It follows from **1.** that $$\lvert S_{i,j}(u,v) \rvert = \lvert S_{i,j}(w,x) \rvert$$ for all $$(u,v),(w,x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}$$.
+   It then follows in general from **1.** that $$\lvert S_{i,j}(u,v) \rvert = \lvert S_{i,j}(w,x) \rvert$$ for all $$(u,v),(w,x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}$$.
 
 Now, for all $$1 \leq i,j,k \leq \lvert \operatorname{Cl}(G) \rvert$$ and all $$x \in G$$ define:
 

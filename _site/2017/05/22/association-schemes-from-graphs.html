@@ -114,10 +114,12 @@ Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathc
 
 <p>Secondly, suppose now that <script type="math/tex">G</script> is a finite group. Let <script type="math/tex">e_{G}</script> denote the identity element of <script type="math/tex">G</script>, <script type="math/tex">\operatorname{Cl}(G)</script> denote the set of conjugacy classes of <script type="math/tex">G</script>, 
  and <script type="math/tex">\mathcal{A} := \{ A_{k} : 1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert \}</script> denote the of set adjacency matrices of
- the set of conjugacy class digraphs of <script type="math/tex">G</script> relative a certain ordering of the elements of <script type="math/tex">G</script> and <script type="math/tex">\operatorname{Cl}(G)</script>. Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in G, uw^{-1} \in \operatorname{Cl}_{i} \operatorname{and} wv^{-1} \in \operatorname{Cl}_{j} \}</script> for all <script type="math/tex">1 \leq i, j \in \lvert \operatorname{Cl}(G) \rvert</script> and all <script type="math/tex">u,v \in G</script>, letting <script type="math/tex">\operatorname{Cl}_{k}</script> denote the <script type="math/tex">k</script>-th conjugacy class of <script type="math/tex">G</script> for all <script type="math/tex">1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert</script>. Then for any particular <script type="math/tex">1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert</script> and any <script type="math/tex">g, h \in G</script>:</p>
+ the set of conjugacy class digraphs of <script type="math/tex">G</script> relative a certain ordering of the elements of <script type="math/tex">G</script> and <script type="math/tex">\operatorname{Cl}(G)</script>. Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in G, uw^{-1} \in \operatorname{Cl}_{i} \operatorname{and} wv^{-1} \in \operatorname{Cl}_{j} \}</script> for all <script type="math/tex">1 \leq i, j \in \lvert \operatorname{Cl}(G) \rvert</script> and all <script type="math/tex">u,v \in G</script>, letting <script type="math/tex">\operatorname{Cl}_{k}</script> denote the <script type="math/tex">k</script>-th conjugacy class of <script type="math/tex">G</script> for all <script type="math/tex">1 \leq k \leq \lvert \operatorname{Cl}(G) \rvert</script>. Then for any particular <script type="math/tex">1 \leq i, j \leq \lvert \operatorname{Cl}(G) \rvert</script>:</p>
 
 <ol>
   <li>
+    <p>Select any <script type="math/tex">g, h \in G</script>.</p>
+
     <p>Define</p>
 
     <script type="math/tex; mode=display">L_{g} : S_{i,j}(h,e_{G}) \to S_{i,j}(gh,g)</script>
@@ -141,7 +143,7 @@ Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathc
 
     <p>Observe the fact that <script type="math/tex">A_{k} = \sum\limits_{x \in \operatorname{Cl}_{k}} P_x</script> where <script type="math/tex">P_{x}</script> denotes a permutation matrix representing the left-translation of the elements of <script type="math/tex">G</script> by <script type="math/tex">x</script> for all <script type="math/tex">x \in \operatorname{Cl}_{k}</script>.</p>
 
-    <p><script type="math/tex">{\implies}</script> It follows from <strong>1.</strong> that <script type="math/tex">\lvert S_{i,j}(u,v) \rvert = \lvert S_{i,j}(w,x) \rvert</script> for all <script type="math/tex">(u,v),(w,x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}</script>.</p>
+    <p>It then follows in general from <strong>1.</strong> that <script type="math/tex">\lvert S_{i,j}(u,v) \rvert = \lvert S_{i,j}(w,x) \rvert</script> for all <script type="math/tex">(u,v),(w,x) \in \{ (y, z) : y, z \in G \operatorname{and} yz^{-1} \in \operatorname{Cl}_{k} \}</script>.</p>
   </li>
 </ol>
 
