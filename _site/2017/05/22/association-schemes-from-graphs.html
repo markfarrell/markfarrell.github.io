@@ -74,9 +74,9 @@
 from distance-regular graphs and sets of conjugacy class digraphs of finite groups.</p>
 
 <p>Firstly, suppose that <script type="math/tex">G</script> is a distance-regular graph. Let <script type="math/tex">\mathcal{V}_{G}</script> denote the vertex set of <script type="math/tex">G</script>, 
-and <script type="math/tex">\mathcal{A} := \{ A_{n} : 1 \leq n \leq \operatorname{diam}(G) \}</script> denote a set of distance matrices for <script type="math/tex">G</script>.
+and <script type="math/tex">\mathcal{A} := \{ A_{n} : 0 \leq n \leq \operatorname{diam}(G) \}</script> denote a set of distance matrices for <script type="math/tex">G</script>.
 Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathcal{V}_{G} \operatorname{and} (d(u, w), d(w, v)) = (i, j) \}</script> for all 
-<script type="math/tex">1 \leq i,j \leq \operatorname{diam}(G)</script> and all <script type="math/tex">u,v \in \mathcal{V}_{G}</script>. Now, select any particular <script type="math/tex">1 \leq i,j \leq \operatorname{diam}(G)</script>. Then for any <script type="math/tex">w, x \in \mathcal{V}_{G}</script>:</p>
+<script type="math/tex">0 \leq i,j \leq \operatorname{diam}(G)</script> and all <script type="math/tex">u,v \in \mathcal{V}_{G}</script>. Now, select any particular <script type="math/tex">0 \leq i,j \leq \operatorname{diam}(G)</script>. Then for any <script type="math/tex">w, x \in \mathcal{V}_{G}</script>:</p>
 
 <ol>
   <li>
@@ -104,11 +104,11 @@ Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathc
   </li>
 </ol>
 
-<script type="math/tex; mode=display">\implies A_{i} A_{j} = A_{j} A_{i} = \sum\limits_{k = 1}^{\operatorname{diam}(G)} p_{i,j}(k) \ A_{k}  \text{ for some } \{ p_{i,j}(k) : 1 \leq k \leq \operatorname{diam}(G) \} \subset \mathbb{N}</script>
+<script type="math/tex; mode=display">\implies A_{i} A_{j} = A_{j} A_{i} = \sum\limits_{k = 0}^{\operatorname{diam}(G)} p_{i,j}(k) \ A_{k}  \text{ for some } \{ p_{i,j}(k) : 0 \leq k \leq \operatorname{diam}(G) \} \subset \mathbb{N}</script>
 
 <script type="math/tex; mode=display">\implies \mathcal{A} \text{ is a commutative association scheme }</script>
 
-<p><strong>[</strong> since <script type="math/tex">i</script> and <script type="math/tex">j</script> are arbitrary, in addition to the facts that <script type="math/tex">A_{0} = I \in \mathcal{A}</script>, <script type="math/tex">\sum\limits_{k = 1}^{\operatorname{diam}(G)} A_k = J</script>, and <script type="math/tex">A_{k}^{T} = A_{k}</script> for all <script type="math/tex">1 \leq k \leq \operatorname{diam}(G)</script> by construction <strong>]</strong>.</p>
+<p><strong>[</strong> since <script type="math/tex">i</script> and <script type="math/tex">j</script> are arbitrary, in addition to the facts that <script type="math/tex">A_{0} = I \in \mathcal{A}</script>, <script type="math/tex">\sum\limits_{k = 0}^{\operatorname{diam}(G)} A_k = J</script>, and <script type="math/tex">A_{k}^{T} = A_{k}</script> for all <script type="math/tex">0 \leq k \leq \operatorname{diam}(G)</script> by construction <strong>]</strong>.</p>
 
 <p>It then follows in general that every distance-regular graph gives rise to a commutative association scheme in this way, since <script type="math/tex">G</script> in this context is arbitrary.</p>
 
@@ -226,7 +226,7 @@ Additionally, define <script type="math/tex">S_{i,j}(u,v) := \{ w : w \in \mathc
 
 <p>It then follows in general that the set of conjugacy classes of every finite group gives rise to a commutative association scheme in this way, since <script type="math/tex">G</script> in this context is arbitrary.</p>
 
-<p><em>In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative assocation schemes in the ways presented in this posted. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the facts that the distance matrices of a distance-regular graph are simultaneously diagonalizable, the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mosner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions of finite groups on certain sets of objects; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.</em></p>
+<p><em>In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative assocation schemes in the ways presented in this posted. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the facts that the distance matrices of a distance-regular graph are simultaneously diagonalizable, the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mesner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions of finite groups on certain sets of objects; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.</em></p>
 
   </div>
 
