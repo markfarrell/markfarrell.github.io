@@ -74,7 +74,7 @@ Secondly, suppose now that $$G$$ is a finite group. Let $$e_{G}$$ denote the ide
 
 Now, for all $$1 \leq i,j,k \leq \lvert \operatorname{Cl}(G) \rvert$$ and all $$x \in G$$ define:
 
-   * $$T_{i,j}(k) := \{ (g, h) : g \in \operatorname{Cl}_{i}, h \in \operatorname{Cl}_{j},  \operatorname{and} gh \in g \in \operatorname{Cl}_{k} \} \text{ , }$$
+   * $$T_{i,j}(k) := \{ (g, h) : g \in \operatorname{Cl}_{i}, h \in \operatorname{Cl}_{j},  \operatorname{and} gh \in \operatorname{Cl}_{k} \} \text{ , }$$
 
      $$P_{i,j}(k) : T_{i,j}(k) \to T_{j,i}(k)$$
 
@@ -116,7 +116,9 @@ Next, observe that:
   * $$ \sum\limits_{i = 1}^{\lvert \operatorname{Cl}(G) \rvert} A_{i} = J \text{, }$$ 
 
     since every element of $$G$$ belongs to exactly one conjugacy class of $$G$$.
-  * $$A_{i}^{T} \in \mathcal{A}$$ for all $$ 1 \leq i \leq \lvert \operatorname{Cl}(G) \rvert \text{ , } $$
+  * $$A_{i}^{T} \in \mathcal{A}$$ 
+
+    for all $$ 1 \leq i \leq \lvert \operatorname{Cl}(G) \rvert \text{ , } $$
 
     since for all $$ 1 \leq i \leq \lvert \operatorname{Cl}(G) \rvert$$
     
@@ -133,4 +135,4 @@ Next, observe that:
 
 It then follows in general that the set of conjugacy classes of every finite group gives rise to a commutative association scheme in this way, since $$G$$ in this context is arbitrary.
 
-*In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative assocation schemes in the ways presented in this posted. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the facts that the distance matrices of a distance-regular graph are simultaneously diagonalizable, the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mesner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions of finite groups on certain sets of objects; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.*
+*In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative assocation schemes in the ways presented in this post. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the facts that the distance matrices of a distance-regular graph are simultaneously diagonalizable, the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mesner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions of finite groups on certain sets of objects; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.*
