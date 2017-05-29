@@ -19,6 +19,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 about: "Currently sampling problems related to continuous-time quantum walks, walk-regular graphs, etc."
 
+twitter_username: m4farrel
+quora_username: Mark-Farrell-6
+
 # Build settings
 markdown: kramdown
 theme: minima
