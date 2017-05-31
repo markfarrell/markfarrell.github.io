@@ -6,7 +6,7 @@ date:   2017-05-29
 
 Previously, I established that the set of conjugacy class diagraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.
 
-Suppose that $$G$$ is a finite a group. Let $$e_{G}$$ denote the identity element of $$G$$, $$\operatorname{Cl}(G)$$ denote the set of conjugacy classes of $$G$$, $$\mathbb{C}[G]$$ denote the space of all total functions from $$G$$ to $$\mathbb{C}$$, $$X(G) \subset \mathbb{C}[G]$$ denote the set of irreducible characters of $$G$$ into $$\mathbb{C}$$, $$B := \{ \delta_{g} : g \in G \} $$ denote the standard basis for $$\mathbb{C}[G]$$, $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote the space of $$\lvert G \rvert \times \lvert G \rvert$$ complex matrices whose rows and columns are indexed by the elements of $$G$$ relative to a certain ordering of them, and $$\mathcal{A} := \{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote a set of adjacency matrices for the set of conjugacy class digraphs of $$G$$. Define:
+Suppose that $$G$$ is a finite a group. Let $$e_{G}$$ denote the identity element of $$G$$, $$\operatorname{Cl}(G)$$ denote the set of conjugacy classes of $$G$$, $$\mathbb{C}[G]$$ denote the space of all total functions from $$G$$ to $$\mathbb{C}$$, $$X(G) \subset \mathbb{C}[G]$$ denote the set of irreducible characters of $$G$$ into $$\mathbb{C}$$, $$\{ \delta_{g} : g \in G \} $$ denote the standard basis for $$\mathbb{C}[G]$$, $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote the space of $$\lvert G \rvert \times \lvert G \rvert$$ complex matrices whose rows and columns are indexed by the elements of $$G$$ relative to a certain ordering of them, and $$\{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote a set of adjacency matrices for the set of conjugacy class digraphs of $$G$$. Define:
 
 * $$ \left ( M_{f} \right ) \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$
 
@@ -39,8 +39,6 @@ It is then possible to deduce that for all $$C \in \operatorname{Cl}(G)$$ and al
 there is a $$\lambda_{\chi}(C) \in \mathbb{C}$$ such that for all $$x,y \in G$$:
 
   $$ \left ( A_{C} \ M_{\chi} \right )_{x,y} $$
-
-  $$ = \sum\limits_{z \in G, \ zx^{-1} \in C} \chi(z^{-1}y) $$
   
   $$ = \sum\limits_{z \in G, \ xz^{-1} \in C} \chi(z^{-1}y) $$
   
@@ -129,10 +127,11 @@ It is now follows for all $$C \in \operatorname{Cl}(G)$$:
 
 **[** since $$A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}$$ for all $$\chi \in X(G)$$, as a consequence of previous points **]**.
 
-Lastly, observe that  for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}(G)$$: $$E_{\chi}$$ is a projection onto the eigenspace of $$\lambda_{\chi}(C)$$ and moreover that $$\operatorname{dim} \left( A_{C} - \lambda_{\chi}(C) I \right ) = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e_{G}) \right )^{2}$$.
+Lastly, observe that  for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}(G)$$: $$E_{\chi}$$ is a projection onto the eigenspace of $$\lambda_{\chi}(C)$$ and moreover that $$\operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )  = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e_{G}) \right )^{2}$$.
 
-Hence it is now possible to conclude that $$\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e_{G}) \right )^{2}} \in \mathbb{C}[x] $$ is the characteristic polynomial of $$A_{C}$$ for all $$C \in \operatorname{Cl}(G)$$ as desired.
+Hence it is now possible to conclude that $$\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e_{G}) \right )^{2}} \in \mathbb{C}[x] $$ is the characteristic polynomial of $$A_{C}$$ for all $$C \in \operatorname{Cl}(G)$$.
 
+*A general expression for the spectrum of a conjugacy class digraph of a finite group is now immediate from the results verified in this post.*
 
 
 
