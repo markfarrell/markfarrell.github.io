@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Spectra of Conjugacy Class Graphs</title>
+  <meta name="description" content="Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follow...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="http://localhost:4000/2017/05/31/spectra-of-conjugacy-class-graphs.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script src="https://use.fontawesome.com/8620140429.js"></script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Spectra of Conjugacy Class Graphs</h1>
+    <p class="post-meta"><time datetime="2017-05-31T00:00:00-04:00" itemprop="datePublished">May 31, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.</p>
+
+<p>Suppose that <script type="math/tex">G</script> is a finite a group. Let <script type="math/tex">e_{G}</script> denote the identity element of <script type="math/tex">G</script>, <script type="math/tex">\operatorname{Cl}(G)</script> denote the set of conjugacy classes of <script type="math/tex">G</script>, <script type="math/tex">\mathbb{C}[G]</script> denote the space of all total functions from <script type="math/tex">G</script> to <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">X(G) \subset \mathbb{C}[G]</script> denote the set of irreducible characters of <script type="math/tex">G</script> into <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">\{ \delta_{g} : g \in G \}</script> denote the standard basis for <script type="math/tex">\mathbb{C}[G]</script>, <script type="math/tex">\operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote the space of <script type="math/tex">\lvert G \rvert \times \lvert G \rvert</script> complex matrices whose rows and columns are indexed by the elements of <script type="math/tex">G</script> relative to a certain ordering of them, and <script type="math/tex">\{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote a set of adjacency matrices for the set of conjugacy class digraphs of <script type="math/tex">G</script>. Define:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">\left ( M_{f} \right ) \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script>
+
+    <script type="math/tex; mode=display">\left ( M_{f} \right )_{x,y} := f(x^{-1} y)</script>
+
+    <p>for all <script type="math/tex">f \in \mathbb{C}[G]</script>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\left ( \star \right ) : \mathbb{C}[G] \times \mathbb{C}[G] \to \mathbb{C}[G]</script>
+
+    <script type="math/tex; mode=display">\left ( f \star g \right )(x) := \sum\limits_{y \in G} f(y) g(y^{-1} x)</script>
+
+    <p>turning <script type="math/tex">\mathbb{C}[G]</script> into the group ring of <script type="math/tex">G</script> over <script type="math/tex">\mathbb{C}</script>.</p>
+  </li>
+</ul>
+
+<p>Next, for all <script type="math/tex">C \in \operatorname{Cl}(G)</script> and all irreducible representations <script type="math/tex">F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )</script>:</p>
+
+<ul>
+  <li>
+    <p>Interpret the group ring <script type="math/tex">\mathbb{C}[G]</script> as a module over itself, defining the scalar multiplication operation <script type="math/tex">(\ast) : \mathbb{C}[G] \times \mathbb{C}[G] \to \mathbb{C}[G]</script> as <script type="math/tex">\left ( \delta_{g} \ast f \right ) := F(g) \circ f</script> for all <script type="math/tex">g \in G</script>.</p>
+
+    <p>Assume the facts that:</p>
+
+    <ol>
+      <li>
+        <script type="math/tex; mode=display">\sum\limits_{c \in C} F(c)  \in \operatorname{End}_{\ast}( \mathbb{C}[G])</script>
+
+        <p><strong>[</strong> letting <script type="math/tex">\operatorname{End}_{\ast}( \mathbb{C}[G])</script> denote the space of module endomorphisms from <script type="math/tex">\mathbb{C}[G]</script> to itself <strong>]</strong>.</p>
+      </li>
+      <li>
+        <script type="math/tex; mode=display">\operatorname{End}_{\ast}( \mathbb{C}[G]) \subset \{ \lambda I : \lambda \in \mathbb{C} \}</script>
+
+        <p><strong>[</strong> which is to say that Schur’s lemma is true in this context <strong>]</strong>.</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p>It is then possible to deduce that for all <script type="math/tex">C \in \operatorname{Cl}(G)</script> and all irreducible characters <script type="math/tex">\chi \in X(G)</script></p>
+
+<p>there is a <script type="math/tex">\lambda_{\chi}(C) \in \mathbb{C}</script> such that for all <script type="math/tex">x,y \in G</script>:</p>
+
+<script type="math/tex; mode=display">\left ( A_{C} \ M_{\chi} \right )_{x,y}</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{z \in G, \ xz^{-1} \in C} \chi(z^{-1}y)</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \chi(x^{-1} c y)</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \chi \left ( x (x^{-1} c y )x^{-1} \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c y x^{-1} \right ) \right )</script>
+
+<p><strong>[</strong> for some irreducible representation <script type="math/tex">F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )</script>, assuming the fact that such an irreducible representation exists <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c \right ) F \left ( y x^{-1} \right ) \right )</script>
+
+<p><strong>[</strong> since <script type="math/tex">F</script> is a group homomorphism <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c \right ) F \left ( y x^{-1} \right ) \right )</script>
+
+<script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( \sum\limits_{c \in C}  F \left ( c \right ) \right ) F \left ( y x^{-1} \right ) \right )</script>
+
+<p><strong>[</strong> by linearity of trace <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( \overline { \lambda_{\chi}(C) } I \right ) \ F \left ( y x^{-1} \right ) \right )</script>
+
+<p><strong>[</strong> by previous set of assumptions <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \overline { \lambda_{\chi}(C) } \ \operatorname{tr} \left ( F \left ( y x^{-1} \right ) \right )</script>
+
+<p><strong>[</strong> again, by linearity of trace <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \overline { \lambda_{\chi}(C) } \ \chi \left ( y x^{-1} \right )</script>
+
+<script type="math/tex; mode=display">= \overline { \lambda_{\chi}(C)  \  \chi \left (  x^{-1} y \right ) }</script>
+
+<p><strong>[</strong> assuming the fact that <script type="math/tex">\chi \left ( g^{-1} \right ) = \overline { \chi \left ( g \right )}</script> for all <script type="math/tex">g \in G</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \overline{ \lambda_{\chi}(C) \  \left ( M_{\chi} \right)_{x,y} }</script>
+
+<p>This then means that for all for all <script type="math/tex">C \in \operatorname{Cl}(G)</script> and all irreducible characters <script type="math/tex">\chi \in X(G)</script>:</p>
+
+<script type="math/tex; mode=display">\overline{ \lambda_{\chi}(C) \  \left ( M_{\chi} \right)_{e_{G},e_{G}} } = \left ( \sum\limits_{c \in C} \chi(c) \right ) \left ( \frac { \left ( M_{\chi} \right)_{e_{G},e_{G}} }{ \left ( M_{\chi} \right)_{e_{G},e_{G}} } \right )</script>
+
+<script type="math/tex; mode=display">\implies \lambda_{\chi}(C) = \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c) \right ) }</script>
+
+<p><strong>[</strong> assuming the fact that  <script type="math/tex">\left ( M_{\chi} \right)_{e_{G},e_{G}} = \chi(e_{G}) \in \mathbb{R}</script> <strong>]</strong>.</p>
+
+<p>Now, observe that for all <script type="math/tex">f,g \in \mathbb{C}[G]</script>:</p>
+
+<script type="math/tex; mode=display">\left ( M_{f} \ M_{g} \right )_{x,y}</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{z \in G} f(x^{-1} z) \ g(z^{-1} y)</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{z \in G} f(x^{-1} z) \ g \left ( z^{-1} \left ( x \ x^{-1} \right ) y \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{z \in G} f(x^{-1} z) \ g \left ( \left ( x^{-1} z \right )^{-1} \left ( x^{-1} y \right ) \right )</script>
+
+<script type="math/tex; mode=display">= \sum\limits_{z \in G} f(z) \ g \left ( z^{-1} \left ( x^{-1} y \right ) \right )</script>
+
+<script type="math/tex; mode=display">= \left ( f \star g \right ) \left ( x^{-1} y \right )</script>
+
+<script type="math/tex; mode=display">= \left ( M_{f \star g} \right )_{x,y}</script>
+
+<p><strong>[</strong> by definition <strong>]</strong>.</p>
+
+<p>It follows from this that <script type="math/tex">M_{f}^{2} = M_{f \star f} = \frac{ \lvert G \rvert }{ f(e_G) } \ M_{f}</script> for all <script type="math/tex">f \in \mathbb{C}[G]</script>.</p>
+
+<p>Next, for all <script type="math/tex">f \in \mathbb{C}[G]</script>: define <script type="math/tex">E_{f} := \frac{ f(e_G) }{ \lvert G \rvert }  M_{f} \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script>.</p>
+
+<p>Now, assume the facts that:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{x \in G} \chi(x) \ \chi \left ( x^{-1} \right ) = 1</script>
+
+    <p>for all <script type="math/tex">\chi \in X(G)</script>.</p>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{\chi \in X(G)} \chi(x) \ \chi \left ( y^{-1} \right ) = 0</script>
+
+    <p>for all <script type="math/tex">x,y \in G</script> such that <script type="math/tex">y \neq x^{-1}</script>.</p>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">\implies \sum\limits_{\chi \in X(G)} E_{\chi} = I</script>
+
+<p>It is now follows for all <script type="math/tex">C \in \operatorname{Cl}(G)</script>:</p>
+
+<script type="math/tex; mode=display">A_{C} = \sum\limits_{\chi \in X(G)} \lambda_{\chi}(C) \ E_{\chi}</script>
+
+<p><strong>[</strong> since <script type="math/tex">A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}</script> for all <script type="math/tex">\chi \in X(G)</script>, as a consequence of previous points <strong>]</strong>.</p>
+
+<p>Lastly, observe that  for all <script type="math/tex">\chi \in X(G)</script> and <script type="math/tex">C \in \operatorname{Cl}(G)</script>: <script type="math/tex">E_{\chi}</script> is a projection onto the eigenspace of <script type="math/tex">\lambda_{\chi}(C)</script> and moreover that <script type="math/tex">\operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )  = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e_{G}) \right )^{2}</script>.</p>
+
+<p>Hence it is now possible to conclude that <script type="math/tex">\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e_{G}) \right )^{2}} \in \mathbb{C}[x]</script> is the characteristic polynomial of <script type="math/tex">A_{C}</script> for all <script type="math/tex">C \in \operatorname{Cl}(G)</script>.</p>
+
+<p><em>A general expression for the spectrum of a conjugacy class digraph of a finite group is now immediate from the results verified in this post.</em></p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+            
+            <li>
+              <a href="https://twitter.com/m4farrel">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://quora.com/Mark-Farrell-6">
+                <i class="fa fa-quora"></i> Quora
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  </body>
+
+</html>

@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-29T11:56:05-04:00</updated><id>http://localhost:4000/</id><title type="html">Mark Farrell</title><entry><title type="html">Association Schemes from Graphs</title><link href="http://localhost:4000/2017/05/22/association-schemes-from-graphs.html" rel="alternate" type="text/html" title="Association Schemes from Graphs" /><published>2017-05-22T00:00:00-04:00</published><updated>2017-05-22T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/22/association-schemes-from-graphs</id><content type="html" xml:base="http://localhost:4000/2017/05/22/association-schemes-from-graphs.html">&lt;p&gt;In this post, I would like to establish some examples of families of commutative association schemes arising 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-31T13:48:44-04:00</updated><id>http://localhost:4000/</id><title type="html">Mark Farrell</title><entry><title type="html">Spectra of Conjugacy Class Graphs</title><link href="http://localhost:4000/2017/05/31/spectra-of-conjugacy-class-graphs.html" rel="alternate" type="text/html" title="Spectra of Conjugacy Class Graphs" /><published>2017-05-31T00:00:00-04:00</published><updated>2017-05-31T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/31/spectra-of-conjugacy-class-graphs</id><content type="html" xml:base="http://localhost:4000/2017/05/31/spectra-of-conjugacy-class-graphs.html">&lt;p&gt;Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.&lt;/p&gt;
+
+&lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a finite a group. Let &lt;script type=&quot;math/tex&quot;&gt;e_{G}&lt;/script&gt; denote the identity element of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Cl}(G)&lt;/script&gt; denote the set of conjugacy classes of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}[G]&lt;/script&gt; denote the space of all total functions from &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;X(G) \subset \mathbb{C}[G]&lt;/script&gt; denote the set of irreducible characters of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; into &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\{ \delta_{g} : g \in G \}&lt;/script&gt; denote the standard basis for &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}[G]&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt; denote the space of &lt;script type=&quot;math/tex&quot;&gt;\lvert G \rvert \times \lvert G \rvert&lt;/script&gt; complex matrices whose rows and columns are indexed by the elements of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; relative to a certain ordering of them, and &lt;script type=&quot;math/tex&quot;&gt;\{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt; denote a set of adjacency matrices for the set of conjugacy class digraphs of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;. Define:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( M_{f} \right ) \in \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( M_{f} \right )_{x,y} := f(x^{-1} y)&lt;/script&gt;
+
+    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;f \in \mathbb{C}[G]&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( \star \right ) : \mathbb{C}[G] \times \mathbb{C}[G] \to \mathbb{C}[G]&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( f \star g \right )(x) := \sum\limits_{y \in G} f(y) g(y^{-1} x)&lt;/script&gt;
+
+    &lt;p&gt;turning &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}[G]&lt;/script&gt; into the group ring of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next, for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt; and all irreducible representations &lt;script type=&quot;math/tex&quot;&gt;F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )&lt;/script&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Interpret the group ring &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}[G]&lt;/script&gt; as a module over itself, defining the scalar multiplication operation &lt;script type=&quot;math/tex&quot;&gt;(\ast) : \mathbb{C}[G] \times \mathbb{C}[G] \to \mathbb{C}[G]&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;\left ( \delta_{g} \ast f \right ) := F(g) \circ f&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;g \in G&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Assume the facts that:&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{c \in C} F(c)  \in \operatorname{End}_{\ast}( \mathbb{C}[G])&lt;/script&gt;
+
+        &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; letting &lt;script type=&quot;math/tex&quot;&gt;\operatorname{End}_{\ast}( \mathbb{C}[G])&lt;/script&gt; denote the space of module endomorphisms from &lt;script type=&quot;math/tex&quot;&gt;\mathbb{C}[G]&lt;/script&gt; to itself &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{End}_{\ast}( \mathbb{C}[G]) \subset \{ \lambda I : \lambda \in \mathbb{C} \}&lt;/script&gt;
+
+        &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; which is to say that Schur’s lemma is true in this context &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is then possible to deduce that for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt; and all irreducible characters &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;there is a &lt;script type=&quot;math/tex&quot;&gt;\lambda_{\chi}(C) \in \mathbb{C}&lt;/script&gt; such that for all &lt;script type=&quot;math/tex&quot;&gt;x,y \in G&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( A_{C} \ M_{\chi} \right )_{x,y}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{z \in G, \ xz^{-1} \in C} \chi(z^{-1}y)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi(x^{-1} c y)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi \left ( x (x^{-1} c y )x^{-1} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; for some irreducible representation &lt;script type=&quot;math/tex&quot;&gt;F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )&lt;/script&gt;, assuming the fact that such an irreducible representation exists &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c \right ) F \left ( y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is a group homomorphism &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c \right ) F \left ( y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \left ( \sum\limits_{c \in C}  F \left ( c \right ) \right ) F \left ( y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by linearity of trace &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \left ( \overline { \lambda_{\chi}(C) } I \right ) \ F \left ( y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by previous set of assumptions &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \overline { \lambda_{\chi}(C) } \ \operatorname{tr} \left ( F \left ( y x^{-1} \right ) \right )&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; again, by linearity of trace &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \overline { \lambda_{\chi}(C) } \ \chi \left ( y x^{-1} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \overline { \lambda_{\chi}(C)  \  \chi \left (  x^{-1} y \right ) }&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; assuming the fact that &lt;script type=&quot;math/tex&quot;&gt;\chi \left ( g^{-1} \right ) = \overline { \chi \left ( g \right )}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;g \in G&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \overline{ \lambda_{\chi}(C) \  \left ( M_{\chi} \right)_{x,y} }&lt;/script&gt;
+
+&lt;p&gt;This then means that for all for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt; and all irreducible characters &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\overline{ \lambda_{\chi}(C) \  \left ( M_{\chi} \right)_{e_{G},e_{G}} } = \left ( \sum\limits_{c \in C} \chi(c) \right ) \left ( \frac { \left ( M_{\chi} \right)_{e_{G},e_{G}} }{ \left ( M_{\chi} \right)_{e_{G},e_{G}} } \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \lambda_{\chi}(C) = \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c) \right ) }&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; assuming the fact that  &lt;script type=&quot;math/tex&quot;&gt;\left ( M_{\chi} \right)_{e_{G},e_{G}} = \chi(e_{G}) \in \mathbb{R}&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, observe that for all &lt;script type=&quot;math/tex&quot;&gt;f,g \in \mathbb{C}[G]&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left ( M_{f} \ M_{g} \right )_{x,y}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{z \in G} f(x^{-1} z) \ g(z^{-1} y)&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{z \in G} f(x^{-1} z) \ g \left ( z^{-1} \left ( x \ x^{-1} \right ) y \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{z \in G} f(x^{-1} z) \ g \left ( \left ( x^{-1} z \right )^{-1} \left ( x^{-1} y \right ) \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{z \in G} f(z) \ g \left ( z^{-1} \left ( x^{-1} y \right ) \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( f \star g \right ) \left ( x^{-1} y \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( M_{f \star g} \right )_{x,y}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by definition &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It follows from this that &lt;script type=&quot;math/tex&quot;&gt;M_{f}^{2} = M_{f \star f} = \frac{ \lvert G \rvert }{ f(e_G) } \ M_{f}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;f \in \mathbb{C}[G]&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next, for all &lt;script type=&quot;math/tex&quot;&gt;f \in \mathbb{C}[G]&lt;/script&gt;: define &lt;script type=&quot;math/tex&quot;&gt;E_{f} := \frac{ f(e_G) }{ \lvert G \rvert }  M_{f} \in \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, assume the facts that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{x \in G} \chi(x) \ \chi \left ( x^{-1} \right ) = 1&lt;/script&gt;
+
+    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{\chi \in X(G)} \chi(x) \ \chi \left ( y^{-1} \right ) = 0&lt;/script&gt;
+
+    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;x,y \in G&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;y \neq x^{-1}&lt;/script&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \sum\limits_{\chi \in X(G)} E_{\chi} = I&lt;/script&gt;
+
+&lt;p&gt;It is now follows for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;A_{C} = \sum\limits_{\chi \in X(G)} \lambda_{\chi}(C) \ E_{\chi}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since &lt;script type=&quot;math/tex&quot;&gt;A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;, as a consequence of previous points &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lastly, observe that  for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt;: &lt;script type=&quot;math/tex&quot;&gt;E_{\chi}&lt;/script&gt; is a projection onto the eigenspace of &lt;script type=&quot;math/tex&quot;&gt;\lambda_{\chi}(C)&lt;/script&gt; and moreover that &lt;script type=&quot;math/tex&quot;&gt;\operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )  = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e_{G}) \right )^{2}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hence it is now possible to conclude that &lt;script type=&quot;math/tex&quot;&gt;\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e_{G})} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e_{G}) \right )^{2}} \in \mathbb{C}[x]&lt;/script&gt; is the characteristic polynomial of &lt;script type=&quot;math/tex&quot;&gt;A_{C}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;A general expression for the spectrum of a conjugacy class digraph of a finite group is now immediate from the results verified in this post.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.</summary></entry><entry><title type="html">Association Schemes from Graphs</title><link href="http://localhost:4000/2017/05/22/association-schemes-from-graphs.html" rel="alternate" type="text/html" title="Association Schemes from Graphs" /><published>2017-05-22T00:00:00-04:00</published><updated>2017-05-22T00:00:00-04:00</updated><id>http://localhost:4000/2017/05/22/association-schemes-from-graphs</id><content type="html" xml:base="http://localhost:4000/2017/05/22/association-schemes-from-graphs.html">&lt;p&gt;In this post, I would like to establish some examples of families of commutative association schemes arising 
 from distance-regular graphs and sets of conjugacy class digraphs of finite groups.&lt;/p&gt;
 
 &lt;p&gt;Firstly, suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a distance-regular graph. Let &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}_{G}&lt;/script&gt; denote the vertex set of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, 
@@ -833,58 +980,4 @@ I would next like to move onward to achieving my original goal of verifying that
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Therefore, we can ultimately conclude from this post that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal, as desired.&lt;/p&gt;</content><author><name></name></author><summary type="html">In this post, my goal is to verify that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal.</summary></entry><entry><title type="html">Invariant Column Spaces</title><link href="http://localhost:4000/2016/10/01/invariant-column-spaces.html" rel="alternate" type="text/html" title="Invariant Column Spaces" /><published>2016-10-01T00:00:00-04:00</published><updated>2016-10-01T00:00:00-04:00</updated><id>http://localhost:4000/2016/10/01/invariant-column-spaces</id><content type="html" xml:base="http://localhost:4000/2016/10/01/invariant-column-spaces.html">&lt;p&gt;In this post, my goal is to show that for any &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt; with entries in a field &lt;script type=&quot;math/tex&quot;&gt;\mathbb{F}&lt;/script&gt;, the column space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant if and only if &lt;script type=&quot;math/tex&quot;&gt;AX = XY&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Firstly, suppose that we are given matrices &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt; where the column space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant. Then, for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq n&lt;/script&gt;, we can construct a vector &lt;script type=&quot;math/tex&quot;&gt;y_j \in \mathbb{F}^{m}&lt;/script&gt; such that:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;A (X e_j)&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{k = 1}^{m} a_{k,j} (X e_k)&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; for some &lt;script type=&quot;math/tex&quot;&gt;a_{k, j} \in \mathbb{F}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq k \leq n&lt;/script&gt;, since the column space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= X \left ( \sum\limits_{k = 1}^{m} a_{k,j} e_k \right )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= X y_j&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by letting &lt;script type=&quot;math/tex&quot;&gt;y_j = \sum\limits_{k = 1}^{m} a_{k,j} e_k&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;. From there, we can construct a matrix &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt; such that:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;AX&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left [ A (X e_1) \mid \cdots \mid A (X e_m) \right ]&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left [ X y_1 \mid \cdots \mid X y_m \right ]&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= XY&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by letting &lt;script type=&quot;math/tex&quot;&gt;Y = \left [ y_1 \mid \cdots \mid y_m \right ]&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;. Therefore, since our particular choices of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; in this context are arbitrary, we have that: for any matrices &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt;, if the column space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant, then there exists a matrix &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;AX = XY&lt;/script&gt; as desired.
-Secondly, suppose that we are given matrices &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;AX = XY&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt;. Then, for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq m&lt;/script&gt;, we have that:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;A(X e_j)&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= X (Y e_j)&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= X \left( \sum\limits_{k=1}^{m} Y_{k, j} e_k \right )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{k=1}^{m} Y_{k, j} (X e_k)&lt;/script&gt;
-
-&lt;p&gt;. This means, in particular, that &lt;script type=&quot;math/tex&quot;&gt;A (X e_j) \in \operatorname{Col}(X)&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq m&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now, select any vector &lt;script type=&quot;math/tex&quot;&gt;u \in \operatorname{Col}(X)&lt;/script&gt;; then we know that &lt;script type=&quot;math/tex&quot;&gt;u = X v = \sum\limits_{j=1}^{m} v_j (X e_j)&lt;/script&gt; for some vector &lt;script type=&quot;math/tex&quot;&gt;v \in \mathbb{F}^{m}&lt;/script&gt;. From there, we can deduce that:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;A u&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= A \left ( \sum\limits_{j=1}^{m} v_j (X e_j) \right )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{m} v_j (A (X e_j) )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{m} v_j \left ( \sum\limits_{k=1}^{m} Y_{k, j} (X e_k) \right )&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{m} \sum\limits_{k=1}^{m} v_j Y_{k, j} (X e_k)&lt;/script&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{k=1}^{m} \left ( \sum\limits_{j=1}^{m} v_j Y_{k, j} \right ) (X e_k)&lt;/script&gt;
-
-&lt;p&gt;. This means that &lt;script type=&quot;math/tex&quot;&gt;A u \in \operatorname{Col}(X)&lt;/script&gt;, and hence that &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Col}(X)&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant, since our choice of &lt;script type=&quot;math/tex&quot;&gt;u&lt;/script&gt; in this inner context is arbitrary. Therefore, since our contextual choices of &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; are likewise arbitrary, we have that: for any matrices &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt;, if &lt;script type=&quot;math/tex&quot;&gt;AX = XY&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt;, then the column of space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant as desired.
-Hence we can conclude that for any &lt;script type=&quot;math/tex&quot;&gt;n x n&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{F})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;X \in \operatorname{Mat}_{n \times m}(\mathbb{F})&lt;/script&gt; with entries in a field &lt;script type=&quot;math/tex&quot;&gt;\mathbb{F}&lt;/script&gt;, the column space of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-invariant if and only if &lt;script type=&quot;math/tex&quot;&gt;AX = XY&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; x &lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; matrix &lt;script type=&quot;math/tex&quot;&gt;Y \in \operatorname{Mat}_{m \times m}(\mathbb{F})&lt;/script&gt;, as desired.&lt;/p&gt;</content><author><name></name></author><summary type="html">In this post, my goal is to show that for any x matrix and x matrix with entries in a field , the column space of is -invariant if and only if for some x matrix .</summary></entry></feed>
+&lt;p&gt;Therefore, we can ultimately conclude from this post that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal, as desired.&lt;/p&gt;</content><author><name></name></author><summary type="html">In this post, my goal is to verify that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal.</summary></entry></feed>

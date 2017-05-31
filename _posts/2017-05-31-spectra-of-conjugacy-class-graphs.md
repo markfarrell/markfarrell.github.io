@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Spectra of Conjugacy Class Graphs"
-date:   2017-05-29
+date:   2017-05-31
 ---
 
-Previously, I established that the set of conjugacy class diagraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.
+Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.
 
 Suppose that $$G$$ is a finite a group. Let $$e_{G}$$ denote the identity element of $$G$$, $$\operatorname{Cl}(G)$$ denote the set of conjugacy classes of $$G$$, $$\mathbb{C}[G]$$ denote the space of all total functions from $$G$$ to $$\mathbb{C}$$, $$X(G) \subset \mathbb{C}[G]$$ denote the set of irreducible characters of $$G$$ into $$\mathbb{C}$$, $$\{ \delta_{g} : g \in G \} $$ denote the standard basis for $$\mathbb{C}[G]$$, $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote the space of $$\lvert G \rvert \times \lvert G \rvert$$ complex matrices whose rows and columns are indexed by the elements of $$G$$ relative to a certain ordering of them, and $$\{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})$$ denote a set of adjacency matrices for the set of conjugacy class digraphs of $$G$$. Define:
 
