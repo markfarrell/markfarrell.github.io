@@ -4,7 +4,7 @@ title:  "Grassmann Graphs Are Distance-Regular"
 date:   2017-02-05
 ---
 
-I would like to verify that every Grassmann graph is distance-regular.
+I would like to verify that Grassmann graphs are distance-regular and derive general expressions for their intersection arrays.
 
 Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \leq n$$, and a prime power $$q$$. Let $$S = \{ W : W \leq V \operatorname{and} \operatorname{dim}(W) = k \}$$ denote the set of $$k$$-dimensional subspaces of a vector space $$V$$ over the finite field $$F_{q}$$ of order $$q$$. Consider the simple graph $$G=(S,E)$$ formed with the set $$S$$ as vertices and the set $$E=\{\{W,Z\} : W,Z \in S \operatorname{and} \operatorname{dim}(W \cap Z)= k - 1\} $$ as edges. Select an arbitrary pair of vertices $$X, Y \in S$$, and let $$j$$ denote the graph distance between them. Then:
 
@@ -187,4 +187,5 @@ It turns out that **1.** and **2.** are sufficient to establish that $$G$$ is di
 
 Therefore every Grassmann graph is distance-regular, since $$G$$ is arbitrary.
 
+*A general expression for the intersection array of a Grassmann graph is immediate from **1.** and **2.** as well.*
 
