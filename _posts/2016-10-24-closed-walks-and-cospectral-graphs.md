@@ -4,7 +4,7 @@ title:  "Closed Walks and Cospectral Graphs"
 date:   2016-10-24
 ---
 
-In this post, my goal is to verify that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal.
+I would like to verify that a pair of simple graphs are cospectral if and only if their respective generating series for all closed walks weighted by length are equal.
 
 
 Suppose that $$G$$ is a simple graph with adjacency matrix $$A$$. Then, first and foremost, I would like to give a couple of definitions in this context:

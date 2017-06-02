@@ -4,7 +4,7 @@ title:  "Grassmann Graphs Are Distance-Regular"
 date:   2017-02-05
 ---
 
-In this post, my goal is to verify that every Grassmann graph is distance-regular.
+I would like to verify that every Grassmann graph is distance-regular.
 
 Suppose that we are given arbitrary natural number $$n$$, a natural number $$k \leq n$$, and a prime power $$q$$. Let $$S = \{ W : W \leq V \operatorname{and} \operatorname{dim}(W) = k \}$$ denote the set of $$k$$-dimensional subspaces of a vector space $$V$$ over the finite field $$F_{q}$$ of order $$q$$. Consider the simple graph $$G=(S,E)$$ formed with the set $$S$$ as vertices and the set $$E=\{\{W,Z\} : W,Z \in S \operatorname{and} \operatorname{dim}(W \cap Z)= k - 1\} $$ as edges. Select an arbitrary pair of vertices $$X, Y \in S$$, and let $$j$$ denote the graph distance between them. Then:
 

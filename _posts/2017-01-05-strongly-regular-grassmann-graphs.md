@@ -4,7 +4,7 @@ title:  "Strongly Regular Grassmann Graphs"
 date:   2017-01-05
 ---
 
-In this post, my goal is to determine the parameters of the Grassmann graphs that are strongly regular. To this end, my primary goal is to verify that:
+I would like to determine the parameters of the Grassmann graphs that are strongly regular. To this end, my primary goal is to verify that:
 
 * For all natural numbers $$n \geq 4$$ and prime powers $$q$$, the Grassmann graph $$J_q(n,2)$$ is an $$\operatorname{SRG}\left ( {n \brack 2}_{q}, q {2 \brack 1}_{q}  {n - 2 \brack 1}_{q} , \left ( q {n - 2 \brack 1}_{q} - 1 \right ) + q^{2}, \left ( {2 \brack 1}_{q} \right )^{2} \right)$$.
 

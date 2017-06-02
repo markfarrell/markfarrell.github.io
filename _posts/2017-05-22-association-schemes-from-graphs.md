@@ -4,7 +4,7 @@ title:  "Association Schemes from Graphs"
 date:   2017-05-22
 ---
 
-In this post, I would like to establish some examples of families of commutative association schemes arising 
+I would like to establish some examples of families of (commutative) association schemes arising 
 from distance-regular graphs and sets of conjugacy class digraphs of finite groups.
 
 Firstly, suppose that $$G$$ is a distance-regular graph. Let $$\mathcal{V}_{G}$$ denote the vertex set of $$G$$, 

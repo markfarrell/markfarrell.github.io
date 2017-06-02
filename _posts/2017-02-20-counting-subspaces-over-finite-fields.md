@@ -4,7 +4,7 @@ title:  "Counting Subspaces over Finite Fields"
 date:   2017-02-20
 ---
 
-In this post, my goal is to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.
+I would like to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.
 
 Fix a prime power $$q$$.
 
