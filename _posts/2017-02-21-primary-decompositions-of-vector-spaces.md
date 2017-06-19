@@ -12,7 +12,7 @@ $$ \implies \sum\limits_{q(x) \in S} f_q(x) \left ( \frac{p}{q^{m_q}} \right )(x
 
 **[** by the analogue of Bézout's identity for polynomials in $$\mathbb{F}[x]$$ **]**.
 
-Now, let $$E_q = f_q(T) \left ( \left ( \frac{p}{q^{m_q}} \right)(x) \right )(T) $$ for each $$q(x) \in S$$. Then:
+Now, let $$E_q = f_q(T) \left ( \frac{p}{q^{m_q}} \right )(T) $$ for each $$q(x) \in S$$. Then:
 
 1. $$ \sum\limits_{q(x) \in S} E_q = I $$
 
