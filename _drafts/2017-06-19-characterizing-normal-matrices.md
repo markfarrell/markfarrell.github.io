@@ -4,10 +4,11 @@ title:  "Characterizing Normal Matrices"
 date:   2017-06-19
 ---
 
-I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit their spectral decompositions and would now like to establish this is indeed true in the process of achieving my primary goal for this post.
+I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.
 
-Suppose that $$n \in \mathbb{N}$$ and that $$A \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ is normal. Let $$ \langle \cdot, \cdot \rangle $$ denote the trace inner product on $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$. 
+Suppose that $$n \in \mathbb{N}$$ and that $$A \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$. Let $$ \langle \cdot, \cdot \rangle $$ denote the trace inner product on $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$.
 
+Assume that $$A$$ is normal.
 
 Then for all $$f(x) \in \mathbb{C}[x]$$:
 
@@ -45,15 +46,15 @@ Then for all $$f(x) \in \mathbb{C}[x]$$:
 
 	$$ \implies \left ( f(A) \right )^{k} = B = 0 $$
 
-Now, let $$p(x) \in \mathbb{C}[x]$$ denote the minimal polynomial of $$A$$.
+ Now, let $$p(x) \in \mathbb{C}[x]$$ denote the minimal polynomial of $$A$$.
 
-$$ \implies p(x) = \prod\limits_{\lambda \in S} (x - \lambda)^{m_{\lambda}} \text{ for some } S \subset \mathbb{C} \text { and some } \{ m_{\lambda} : \lambda \in S \} $$
+ $$ \implies p(x) = \prod\limits_{\lambda \in S} (x - \lambda)^{m_{\lambda}} \text{ for some } S \subset \mathbb{C} \text { and some } \{ m_{\lambda} : \lambda \in S \}$$ 
 
-**[** since $$\mathbb{C}$$ is algebraically closed **]**
+ **[** since $$\mathbb{C}$$ is algebraically closed **]**.
 
-$$ \implies \sum\limits_{\lambda in S } f_{\lambda}(A) q_{\lambda}(x) = 1 \text { for some } \{ f_{\lambda}(x) : \lambda \in S \} \subset \mathbb{C}[x] $$
+$$ \implies \sum\limits_{\lambda \in S } f_{\lambda}(A) q_{\lambda}(x) = 1 \text { for some } \{ f_{\lambda}(x) : \lambda \in S \} \subset \mathbb{C}[x] $$
 
-**[** letting $$q_{\lambda} := \frac{p(x)}{(x - \lambda)^{m_{\lambda}}}$$ for all $$\lambda \in S$$. by similar reasoning as in a previous post **]**
+**[** letting $$q_{\lambda} := \frac{p(x)}{(x - \lambda)^{m_{\lambda}}}$$ for all $$\lambda \in S$$, by similar reasoning as in a previous post **]**.
 
 Next, let $$E_{\lambda} := f_{\lambda}(A) q_{\lambda}(A)$$ for all $$ \lambda \in S $$. 
 
@@ -69,7 +70,7 @@ Then for all $$\lambda \in S$$:
 
 	$$ \implies \left ( A - \lambda I \right ) E_{\lambda} = 0 $$
 
-	**[** by previous point **]**
+	**[** ultimately following from previous point **]**
 
 	$$ \implies A E_{\lambda} = \lambda \ E_{\lambda} $$
 
@@ -77,9 +78,9 @@ Then for all $$\lambda \in S$$:
 
 	$$ = \operatorname{tr} \left ( \left ( (A - \lambda I)^{*} E_{\lambda} \right )^{*} (A - \lambda I)^{*} E_{\lambda} \right ) $$
 
-	$$ = \operatorname{tr} \left ( E_{\lambda}^{*} \left ( (A - \lambda I) E_{\lambda} \right ) (A - \lambda I)^{*} \right ) $$
+	$$ = \operatorname{tr} \left ( \left ( (A - \lambda I) E_{\lambda} \right ) \left ( (A - \lambda I) E_{\lambda} \right )^{*} \right ) $$
 
-	$$ = \operatorname{tr} \left ( E_{\lambda}^{*} \left ( 0 \right ) (A - \lambda I)^{*} \right ) $$
+	$$ = \operatorname{tr} \left ( \left ( 0 \right )  \left ( 0 \right )^{*} \right ) $$
 
 	**[** by **1.** **]**
 
@@ -96,13 +97,15 @@ Then for all $$\lambda \in S$$:
 
 Since $$ \sum\limits_{\lambda \in S} E_{\lambda} = I$$, it then follows that 
 
-$$A = \sum\limits_{\lambda \in S} \lambda \ E_{\lambda} $$ and $$A^{*} = \sum\limits_{\lambda \in S} \overline{\lambda} \ E_{\lambda}$$.
+$$A = \sum\limits_{\lambda \in S} \lambda \ E_{\lambda} \text{ and } A^{*} = \sum\limits_{\lambda \in S} \overline{\lambda} \ E_{\lambda} \text{ , } $$
 
-Now, observate that $$E_{\beta} E_{\gamma} = 0$$ for all $$\beta, \gamma \in S$$ such that $$\beta \neq \gamma$$. 
+which are said to be **spectral decompositions** for $$A$$ and $$A^{*}$$.
+
+Now, observe that $$E_{\beta} E_{\gamma} = 0$$ for all $$\beta, \gamma \in S$$ such that $$\beta \neq \gamma$$. 
 
 It is consequently possible to deduce that for all $$\alpha \in S$$:
 
-1. $$ \implies E_{\alpha}^{*} = g ( A ) \text { for some } g(x) \in \mathbb{C}[x] $$
+1. $$ E_{\alpha}^{*} = g ( A ) \text { for some } g(x) \in \mathbb{C}[x] $$
 
 	**[** since $$A^{*}$$ is a polynomial in $$A$$ and $$E_{\alpha}^{*} $$ is a polynomial in $$A^{*}$$ **]**
 
@@ -126,7 +129,36 @@ It is consequently possible to deduce that for all $$\alpha \in S$$:
 
 	$$ \implies E_{\alpha}^{*} = E_{\alpha} $$
 
+From my previous two points, it is now apparent that with respect to the standard inner product on $$\mathbb{C}^{n}$$:
+
+1. Any column of $$E_{\alpha}$$ is orthogonal to any column of $$E_{\beta}$$ for all $$\alpha, \beta \in S$$ such that $$\alpha \neq \beta$$.
+
+2. It is possible to find an orthonormal basis $$B := \bigcup\limits_{\lambda \in S} B_{\lambda}$$ for $$\mathbb{C}^{n}$$ 
+	
+	where $$B_{\lambda}$$ is an orthonormal basis for $$\operatorname{col}(E_{\lambda}) = \operatorname{null}(A - \lambda I)$$ for all $$\lambda \in \mathbb{C}$$. 
+
+	$$ \implies P^{*} A P \text{ is a diagonal matrix } $$
+
+	**[** letting $$P \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ denote a change-of-basis matrix from the standard basis for $$\mathbb{C}^{n}$$ to $$B$$, since $$A = \sum\limits_{\lambda \in S} \lambda \ E_{\lambda}$$ **]**.
+
+Hence it can be concluded that $$A$$ is unitarily diagonalizable.
+
+Assume now instead that $$A$$ is unitarily diagonalizable, breaking out of the subcontext where it was assumed that $$A$$ is normal.
+
+$$ \implies A = U D U^{*} $$ 
+
+for some $$U, D \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ such that $$U$$ is unitary and $$D$$ is a diagonal matrix.
+
+$$ \implies A^{*} = U D^{*} U^{*} $$
+
+$$ \implies A A^{*} = U (D D^{*}) U^{*} = U (D^{*} D) U^{*} = A^{*} A $$
+
+**[** observing the fact that diagonal matrices in $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$ commute **]**.
+
+It can then be concluded that $$A$$ is normal in this context.
 
 
+
+It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, since $$A$$ is arbitrary; it can also be observed that normal matrices admit spectral decompositions in general, as intended.
 
  
