@@ -48,7 +48,7 @@ Then for all $$f(x) \in \mathbb{C}[x]$$:
 
  Now, let $$p(x) \in \mathbb{C}[x]$$ denote the minimal polynomial of $$A$$.
 
- $$ \implies p(x) = \prod\limits_{\lambda \in S} (x - \lambda)^{m_{\lambda}} \text{ for some } S \subset \mathbb{C} \text { and some } \{ m_{\lambda} : \lambda \in S \}$$ 
+ $$ \implies p(x) = \prod\limits_{\lambda \in S} (x - \lambda)^{m_{\lambda}} \text{ for some } S \subset \mathbb{C} \text { and some } \{ m_{\lambda} : \lambda \in S \} \subset \mathbb{N}$$ 
 
  **[** since $$\mathbb{C}$$ is algebraically closed **]**.
 
