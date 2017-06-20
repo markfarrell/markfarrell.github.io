@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Characterizing Normal Matrices</title>
+  <meta name="description" content="I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that no...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="/2017/06/19/characterizing-normal-matrices.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script src="https://use.fontawesome.com/8620140429.js"></script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Characterizing Normal Matrices</h1>
+    <p class="post-meta"><time datetime="2017-06-19T00:00:00-04:00" itemprop="datePublished">Jun 19, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.</p>
+
+<p>Suppose that <script type="math/tex">n \in \mathbb{N}</script> and that <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script>. Let <script type="math/tex">\langle \cdot, \cdot \rangle</script> denote the trace inner product on <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
+
+<p>Assume that <script type="math/tex">A</script> is normal.</p>
+
+<p>Then for all <script type="math/tex">f(x) \in \mathbb{C}[x]</script>:</p>
+
+<ul>
+  <li>
+    <p>Assume that <script type="math/tex">\left ( f (A) \right )^{k+1} = 0</script> for some <script type="math/tex">k \in \mathbb{N}</script>.</p>
+
+    <p>Let <script type="math/tex">B := \left ( f(A) \right )^{k}</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \langle B^{*} B, B^{*} B \rangle</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( B^{*} B \right )^{*} B^{*} B \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( B^{*} \left (B^{2} \right ) B^{*} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( B^{*} \left ( \left (f(A) \right )^{2k} \right ) B^{*} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( B^{*} \left ( \left (f(A) \right )^{k-1} \right ) \left ( \left (f(A) \right )^{k + 1} \right ) B^{*} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( B^{*} \left ( \left (f(A) \right )^{k-1} \right ) \left ( 0 \right ) B^{*} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr}(0)</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <p><strong>[</strong> assuming the fact that any polynomial in <script type="math/tex">A</script> is normal as well <strong>]</strong>.</p>
+
+    <p>By positive-definiteness of inner products, it follows that:</p>
+
+    <script type="math/tex; mode=display">B^{*} B = 0</script>
+
+    <script type="math/tex; mode=display">\implies \langle B, B \rangle</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( B^{*} \ B \right )</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <script type="math/tex; mode=display">\implies \left ( f(A) \right )^{k} = B = 0</script>
+  </li>
+</ul>
+
+<p>Now, let <script type="math/tex">p(x) \in \mathbb{C}[x]</script> denote the minimal polynomial of <script type="math/tex">A</script>.</p>
+
+<script type="math/tex; mode=display">\implies p(x) = \prod\limits_{\lambda \in S} (x - \lambda)^{m_{\lambda}} \text{ for some } S \subset \mathbb{C} \text { and some } \{ m_{\lambda} : \lambda \in S \}</script>
+
+<p><strong>[</strong> since <script type="math/tex">\mathbb{C}</script> is algebraically closed <strong>]</strong>.</p>
+
+<script type="math/tex; mode=display">\implies \sum\limits_{\lambda \in S } f_{\lambda}(A) q_{\lambda}(x) = 1 \text { for some } \{ f_{\lambda}(x) : \lambda \in S \} \subset \mathbb{C}[x]</script>
+
+<p><strong>[</strong> letting <script type="math/tex">q_{\lambda} := \frac{p(x)}{(x - \lambda)^{m_{\lambda}}}</script> for all <script type="math/tex">\lambda \in S</script>, by similar reasoning as in a previous post <strong>]</strong>.</p>
+
+<p>Next, let <script type="math/tex">E_{\lambda} := f_{\lambda}(A) q_{\lambda}(A)</script> for all <script type="math/tex">\lambda \in S</script>.</p>
+
+<p>Then for all <script type="math/tex">\lambda \in S</script>:</p>
+
+<ol>
+  <li>
+    <script type="math/tex; mode=display">\left ( A - \lambda I \right )^{m_{\lambda}} E_{\lambda}</script>
+
+    <script type="math/tex; mode=display">= \left ( \left ( A - \lambda I \right ) E_{\lambda} \right )^{m_{\lambda}}</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <p><strong>[</strong> observing that <script type="math/tex">E_{\lambda}^{2} = E_{\lambda}</script> and that <script type="math/tex">E_{\lambda}</script> is a polynomial in <script type="math/tex">A</script> <strong>]</strong>.</p>
+
+    <script type="math/tex; mode=display">\implies \left ( A - \lambda I \right ) E_{\lambda} = 0</script>
+
+    <p><strong>[</strong> ultimately following from previous point <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies A E_{\lambda} = \lambda \ E_{\lambda}</script>
+  </li>
+  <li>
+    <script type="math/tex; mode=display">\langle (A - \lambda I)^{*} E_{\lambda}, (A - \lambda I)^{*} E_{\lambda} \rangle</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( (A - \lambda I)^{*} E_{\lambda} \right )^{*} (A - \lambda I)^{*} E_{\lambda} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( (A - \lambda I) E_{\lambda} \right ) \left ( (A - \lambda I) E_{\lambda} \right )^{*} \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( \left ( 0 \right )  \left ( 0 \right )^{*} \right )</script>
+
+    <p><strong>[</strong> by <strong>1.</strong> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">= \operatorname{tr}(0)</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <script type="math/tex; mode=display">\implies (A - \lambda I)^{*} E_{\lambda} = 0</script>
+
+    <p><strong>[</strong> by positive-definiteness of inner products <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies A^{*} E_{\lambda} = \overline{\lambda} \ E_{\lambda}</script>
+  </li>
+</ol>
+
+<p>Since <script type="math/tex">\sum\limits_{\lambda \in S} E_{\lambda} = I</script>, it then follows that</p>
+
+<script type="math/tex; mode=display">A = \sum\limits_{\lambda \in S} \lambda \ E_{\lambda} \text{ and } A^{*} = \sum\limits_{\lambda \in S} \overline{\lambda} \ E_{\lambda} \text{ , }</script>
+
+<p>which are said to be <strong>spectral decompositions</strong> for <script type="math/tex">A</script> and <script type="math/tex">A^{*}</script>.</p>
+
+<p>Now, observe that <script type="math/tex">E_{\beta} E_{\gamma} = 0</script> for all <script type="math/tex">\beta, \gamma \in S</script> such that <script type="math/tex">\beta \neq \gamma</script>.</p>
+
+<p>It is consequently possible to deduce that for all <script type="math/tex">\alpha \in S</script>:</p>
+
+<ol>
+  <li>
+    <script type="math/tex; mode=display">E_{\alpha}^{*} = g ( A ) \text { for some } g(x) \in \mathbb{C}[x]</script>
+
+    <p><strong>[</strong> since <script type="math/tex">A^{*}</script> is a polynomial in <script type="math/tex">A</script> and <script type="math/tex">E_{\alpha}^{*}</script> is a polynomial in <script type="math/tex">A^{*}</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies E_{\alpha}^{*} E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">= g(A) E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">= \left ( \sum\limits_{\beta \in S} g(\beta) E_{\beta} \right ) E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">= g(\alpha) E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">\implies E_{\alpha}^{*} E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">= \left ( E_{\alpha}^{*} E_{\alpha} \right )^{*}</script>
+
+    <script type="math/tex; mode=display">= \overline{g(\alpha)} E_{\alpha}^{*}</script>
+
+    <script type="math/tex; mode=display">\implies E_{\alpha}^{*} E_{\alpha} = E_{\alpha}^{*} E_{\alpha}^{2} = \overline{g(\alpha)} E_{\alpha}^{*} E_{\alpha}</script>
+
+    <script type="math/tex; mode=display">\implies g(\alpha) = \overline{g(\alpha)} = 1</script>
+
+    <script type="math/tex; mode=display">\implies E_{\alpha}^{*} = E_{\alpha}</script>
+  </li>
+</ol>
+
+<p>From my previous two points, it is now apparent that with respect to the standard inner product on <script type="math/tex">\mathbb{C}^{n}</script>:</p>
+
+<ol>
+  <li>
+    <p>Any column of <script type="math/tex">E_{\alpha}</script> is orthogonal to any column of <script type="math/tex">E_{\beta}</script> for all <script type="math/tex">\alpha, \beta \in S</script> such that <script type="math/tex">\alpha \neq \beta</script>.</p>
+  </li>
+  <li>
+    <p>It is possible to find an orthonormal basis <script type="math/tex">B := \bigcup\limits_{\lambda \in S} B_{\lambda}</script> for <script type="math/tex">\mathbb{C}^{n}</script></p>
+
+    <p>where <script type="math/tex">B_{\lambda}</script> is an orthonormal basis for <script type="math/tex">\operatorname{col}(E_{\lambda}) = \operatorname{null}(A - \lambda I)</script> for all <script type="math/tex">\lambda \in \mathbb{C}</script>.</p>
+
+    <script type="math/tex; mode=display">\implies P^{*} A P \text{ is a diagonal matrix }</script>
+
+    <p><strong>[</strong> letting <script type="math/tex">P \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> denote a change-of-basis matrix from the standard basis for <script type="math/tex">\mathbb{C}^{n}</script> to <script type="math/tex">B</script>, since <script type="math/tex">A = \sum\limits_{\lambda \in S} \lambda \ E_{\lambda}</script> <strong>]</strong>.</p>
+  </li>
+</ol>
+
+<p>Hence it can be concluded that <script type="math/tex">A</script> is unitarily diagonalizable.</p>
+
+<p>Assume now instead that <script type="math/tex">A</script> is unitarily diagonalizable, breaking out of the subcontext where it was assumed that <script type="math/tex">A</script> is normal.</p>
+
+<script type="math/tex; mode=display">\implies A = U D U^{*}</script>
+
+<p>for some <script type="math/tex">U, D \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> such that <script type="math/tex">U</script> is unitary and <script type="math/tex">D</script> is a diagonal matrix.</p>
+
+<script type="math/tex; mode=display">\implies A^{*} = U D^{*} U^{*}</script>
+
+<script type="math/tex; mode=display">\implies A A^{*} = U (D D^{*}) U^{*} = U (D^{*} D) U^{*} = A^{*} A</script>
+
+<p><strong>[</strong> observing the fact that diagonal matrices in <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script> commute <strong>]</strong>.</p>
+
+<p>It can then be concluded that <script type="math/tex">A</script> is normal in this context.</p>
+
+<p>It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, since <script type="math/tex">A</script> is arbitrary; it can also be observed that normal matrices admit spectral decompositions in general, as intended.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+            
+            <li>
+              <a href="https://twitter.com/m4farrel">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://quora.com/Mark-Farrell-6">
+                <i class="fa fa-quora"></i> Quora
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100422401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  </body>
+
+</html>
