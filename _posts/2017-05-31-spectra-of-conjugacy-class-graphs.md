@@ -161,7 +161,7 @@ Then for all $$\alpha, \beta \in X(G)$$ such that $$\alpha \neq \beta$$:
 
   $$ = \operatorname{tr}(M_{\alpha \star \beta}^{2}) $$
 
-  **[** observing that $$M_{f}$$ is Hermitian for all  $$ f \in \mathbb{C}[G]$$ **]**
+  **[** observing that $$M_{\alpha \star \beta}$$ is Hermitian **]**
 
   $$ = \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right ) $$
 
