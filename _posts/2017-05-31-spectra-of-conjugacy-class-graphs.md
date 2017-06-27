@@ -129,7 +129,69 @@ It is now follows for all $$C \in \operatorname{Cl}(G)$$:
 
 **[** since $$A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}$$ for all $$\chi \in X(G)$$, as a consequence of previous points **]**.
 
-Lastly, observe that  for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}(G)$$: $$E_{\chi}$$ is a projection onto the eigenspace of $$\lambda_{\chi}(C)$$ and moreover that $$\operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )  = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e) \right )^{2}$$.
+Next, assume additionally the fact that:
+
+*  $$\sum\limits_{x \in G} \alpha(x) \ \beta \left ( x^{-1} \right ) = 0 $$
+
+  for all $$\alpha, \beta \in X(G)$$ such that $$\alpha \neq \beta$$.
+
+Then for all $$\alpha, \beta \in X(G)$$ such that $$\alpha \neq \beta$$:
+
+* $$(M_{\alpha \star \beta})_{g,g}$$
+
+  $$ = \left ( M_{\alpha} M_{\beta} \right )_{g,g}$$ 
+
+  $$ = \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( x^{-1} g \right ) $$ 
+
+  $$ = \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( (g^{-1} x )^{-1} \right ) $$  
+
+  $$ = \sum\limits_{x \in G} \alpha(x) \ \beta \left ( (x)^{-1} \right ) $$
+
+  $$ = 0 $$
+
+  for all $$ g \in G $$.
+
+  $$ \implies \operatorname{tr}(M_{\alpha \star \beta}) = 0$$
+
+  Now, let $$\langle \cdot, \cdot \rangle$$ denote the trace inner product on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$. 
+
+  $$ \implies \langle M_{\alpha \star \beta}, M_{\alpha \star \beta} \rangle $$
+
+  $$ = \operatorname{tr}(M_{\alpha \star \beta}^{*} M_{\alpha \star \beta}) $$ 
+
+  $$ = \operatorname{tr}(M_{\alpha \star \beta}^{2}) $$
+
+  **[** observing that $$M_{f}$$ is Hermitian for all  $$ f \in \mathbb{C}[G]$$ **]**
+
+  $$ = \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right ) $$
+
+  $$ = \left (  \frac{ \lvert G \rvert }{ f(e) } \right) \ \operatorname{tr} \left ( M_{\alpha \star \beta} \right ) $$
+
+  $$ = 0 $$
+
+  $$ \implies M_{\alpha \star \beta} = M_{\alpha} M_{\beta} = 0 $$
+
+  **[** by positive-definiteness of inner products **]**
+
+  $$ \implies E_{\alpha} E_{\beta} = 0 $$
+
+Lastly, observe now that for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}(G)$$: 
+
+* $$ \sum\limits_{\psi \in S} E_{\psi} $$ 
+
+  is a projection onto $$\operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right )$$
+
+  **[** letting $$S := \{ \psi : \psi \in X(G) \operatorname{ and } \lambda_{\psi}(C) = \lambda_{\chi}(C) \}$$ **]**.
+
+  $$ \implies  \operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right ) $$
+
+  $$ = \operatorname{tr} \left (   \sum\limits_{\psi \in S} E_{\psi}  \right )$$
+
+  $$ = \sum\limits_{\psi \in S} \operatorname{tr} \left( E_{\psi} \right ) $$
+
+  $$ = \sum\limits_{\psi \in S} \left (\chi (e) \right )^{2}$$
+
+  .
 
 Hence it is now possible to conclude that $$\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e)} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e) \right )^{2}} \in \mathbb{C}[x] $$ is the characteristic polynomial of $$A_{C}$$ for all $$C \in \operatorname{Cl}(G)$$.
 
