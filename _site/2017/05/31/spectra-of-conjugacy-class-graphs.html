@@ -75,7 +75,7 @@
   <div class="post-content" itemprop="articleBody">
     <p>Previously, I established that the set of conjugacy class digraphs of a finite group gives rise to a (commutative) association scheme. It consequently follows that the adjacency matrix of a conjugacy class digraph of a finite group is normal and hence is diagonalizable. I would now like to verify how to derive a general expression for the spectrum of a conjugacy class digraph of a finite group.</p>
 
-<p>Suppose that <script type="math/tex">G</script> is a finite a group. Let <script type="math/tex">\operatorname{Cl}(G)</script> denote the set of conjugacy classes of <script type="math/tex">G</script>, <script type="math/tex">\mathbb{C}[G]</script> denote the space of all total functions from <script type="math/tex">G</script> to <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">X(G) \subset \mathbb{C}[G]</script> denote the set of irreducible characters of <script type="math/tex">G</script> into <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">\{ \delta_{g} : g \in G \}</script> denote the standard basis for <script type="math/tex">\mathbb{C}[G]</script>, <script type="math/tex">\operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote the space of <script type="math/tex">\lvert G \rvert \times \lvert G \rvert</script> complex matrices whose rows and columns are indexed by the elements of <script type="math/tex">G</script> relative to a certain ordering of them, and <script type="math/tex">\{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote a set of adjacency matrices for the set of conjugacy class digraphs of <script type="math/tex">G</script>. Define:</p>
+<p>Suppose that <script type="math/tex">G</script> is a finite a group. Let <script type="math/tex">\operatorname{Cl}(G)</script> denote the set of conjugacy classes of <script type="math/tex">G</script>, <script type="math/tex">\mathbb{C}[G]</script> denote the space of all total functions from <script type="math/tex">G</script> to <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">X(G) \subset \mathbb{C}[G]</script> denote the set of irreducible characters of <script type="math/tex">G</script> into <script type="math/tex">\mathbb{C}</script>, <script type="math/tex">\{ \delta_{g} : g \in G \}</script> denote the standard basis for <script type="math/tex">\mathbb{C}[G]</script>, <script type="math/tex">\operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote the space of <script type="math/tex">\lvert G \rvert \times \lvert G \rvert</script> complex matrices whose rows and columns are indexed by the elements of <script type="math/tex">G</script> relative to a certain ordering of them, and <script type="math/tex">\mathcal{A} := \{ A_{C} : C \in \operatorname{Cl}(G) \} \subset \operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote a set of adjacency matrices for the set of conjugacy class digraphs of <script type="math/tex">G</script>. Define:</p>
 
 <ul>
   <li>
@@ -256,7 +256,8 @@
 
     <script type="math/tex; mode=display">= \operatorname{tr}(M_{\alpha \star \beta}^{2})</script>
 
-    <p><strong>[</strong> observing that <script type="math/tex">M_{\alpha \star \beta}</script> is Hermitian <strong>]</strong></p>
+    <p><strong>[</strong> observing that <script type="math/tex">M_{\alpha \star \beta}</script> is Hermitian,
+ since <script type="math/tex">M_{\alpha}, M_{\beta} \in \operatorname{span} \mathcal{A}</script> are Hermitian (and commute) <strong>]</strong></p>
 
     <script type="math/tex; mode=display">= \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right )</script>
 
