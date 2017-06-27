@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
 
-  <link rel="canonical" href="http://localhost:4000/2017/05/31/spectra-of-conjugacy-class-graphs.html">
+  <link rel="canonical" href="/2017/05/31/spectra-of-conjugacy-class-graphs.html">
   <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
 
   <script type="text/javascript"
@@ -218,7 +218,81 @@
 
 <p><strong>[</strong> since <script type="math/tex">A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}</script> for all <script type="math/tex">\chi \in X(G)</script>, as a consequence of previous points <strong>]</strong>.</p>
 
-<p>Lastly, observe that  for all <script type="math/tex">\chi \in X(G)</script> and <script type="math/tex">C \in \operatorname{Cl}(G)</script>: <script type="math/tex">E_{\chi}</script> is a projection onto the eigenspace of <script type="math/tex">\lambda_{\chi}(C)</script> and moreover that <script type="math/tex">\operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )  = \operatorname{tr} \left ( E_{\chi} \right ) = \left (\chi (e) \right )^{2}</script>.</p>
+<p>Next, assume additionally the fact that:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{x \in G} \alpha(x) \ \beta \left ( x^{-1} \right ) = 0</script>
+  </li>
+</ul>
+
+<p>for all <script type="math/tex">\alpha, \beta \in X(G)</script> such that <script type="math/tex">\alpha \neq \beta</script>.</p>
+
+<p>Then for all <script type="math/tex">\alpha, \beta \in X(G)</script> such that <script type="math/tex">\alpha \neq \beta</script>:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">(M_{\alpha \star \beta})_{g,g}</script>
+
+    <script type="math/tex; mode=display">= \left ( M_{\alpha} M_{\beta} \right )_{g,g}</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( x^{-1} g \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( (g^{-1} x )^{-1} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{x \in G} \alpha(x) \ \beta \left ( (x)^{-1} \right )</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <p>for all <script type="math/tex">g \in G</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \operatorname{tr}(M_{\alpha \star \beta}) = 0</script>
+
+    <p>Now, let <script type="math/tex">\langle \cdot, \cdot \rangle</script> denote the trace inner product on <script type="math/tex">\operatorname{Mat}_{G \times G}(\mathbb{C})</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \langle M_{\alpha \star \beta}, M_{\alpha \star \beta} \rangle</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr}(M_{\alpha \star \beta}^{*} M_{\alpha \star \beta})</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr}(M_{\alpha \star \beta}^{2})</script>
+
+    <p><strong>[</strong> observing that <script type="math/tex">M_{f}</script> is Hermitian for all  <script type="math/tex">f \in \mathbb{C}[G]</script> <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right )</script>
+
+    <script type="math/tex; mode=display">= \left (  \frac{ \lvert G \rvert }{ f(e) } \right) \ \operatorname{tr} \left ( M_{\alpha \star \beta} \right )</script>
+
+    <script type="math/tex; mode=display">= 0</script>
+
+    <script type="math/tex; mode=display">\implies M_{\alpha \star \beta} = M_{\alpha} M_{\beta} = 0</script>
+
+    <p><strong>[</strong> by positive-definiteness of inner products <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">\implies E_{\alpha} E_{\beta} = 0</script>
+  </li>
+</ul>
+
+<p>Lastly, observe now that for all <script type="math/tex">\chi \in X(G)</script> and <script type="math/tex">C \in \operatorname{Cl}(G)</script>:</p>
+
+<ul>
+  <li>
+    <script type="math/tex; mode=display">\sum\limits_{\psi \in S} E_{\psi}</script>
+
+    <p>is a projection onto <script type="math/tex">\operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right )</script></p>
+
+    <p><strong>[</strong> letting <script type="math/tex">S := \{ \psi : \psi \in X(G) \operatorname{ and } \lambda_{\psi}(C) = \lambda_{\chi}(C) \}</script> <strong>]</strong>.</p>
+
+    <script type="math/tex; mode=display">\implies  \operatorname{dim} \left( \operatorname{null} \left ( A_{C} - \lambda_{\chi}(C) I \right ) \right )</script>
+
+    <script type="math/tex; mode=display">= \operatorname{tr} \left (   \sum\limits_{\psi \in S} E_{\psi}  \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{\psi \in S} \operatorname{tr} \left( E_{\psi} \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{\psi \in S} \left (\chi (e) \right )^{2}</script>
+
+    <p>.</p>
+  </li>
+</ul>
 
 <p>Hence it is now possible to conclude that <script type="math/tex">\phi_{C}(x) := \prod\limits_{\chi \in X(G)} \left ( x - \frac{1}{\chi(e)} \ \overline { \left ( \sum\limits_{c \in C} \chi(c)  \right ) } \right )^{\left (\chi (e) \right )^{2}} \in \mathbb{C}[x]</script> is the characteristic polynomial of <script type="math/tex">A_{C}</script> for all <script type="math/tex">C \in \operatorname{Cl}(G)</script>.</p>
 
@@ -282,6 +356,17 @@
 
 </footer>
 
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100422401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
   
   </body>
 
