@@ -189,7 +189,7 @@ Lastly, observe now that for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}
 
   $$ = \sum\limits_{\psi \in S} \operatorname{tr} \left( E_{\psi} \right ) $$
 
-  $$ = \sum\limits_{\psi \in S} \left (\chi (e) \right )^{2}$$
+  $$ = \sum\limits_{\psi \in S} \left (\psi (e) \right )^{2}$$
 
   .
 
