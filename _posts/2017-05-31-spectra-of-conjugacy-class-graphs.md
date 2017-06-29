@@ -48,8 +48,6 @@ there is a $$\lambda_{\chi}(C) \in \mathbb{C}$$ such that for all $$x,y \in G$$:
 
   $$ = \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right ) $$
 
-  $$ = \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right ) $$
-
   $$ = \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c y x^{-1} \right ) \right ) $$
 
   **[** for some irreducible representation $$F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )$$, assuming the fact that such an irreducible representation exists **]**
@@ -108,73 +106,80 @@ Now, observe that for all $$ f,g \in \mathbb{C}[G] $$:
 
   **[** by definition **]**.
 
-It follows from this that $$ M_{f}^{2} = M_{f \star f} = \frac{ \lvert G \rvert }{ f(e) } \ M_{f} $$ for all $$f \in \mathbb{C}[G]$$.
+It follows from this that for all $$\chi \in X(G)$$:
+
+* $$ M_{\chi}^{2} = M_{\chi \star \chi} = \frac{ \lvert G \rvert }{ \chi(e) } \ M_{\chi} $$
+
+  **[** assuming that $$\left ( \chi \star \chi \right ) = \frac{ \lvert G \rvert }{ \chi(e) } \chi$$ **]**.
 
 Next, for all $$f \in \mathbb{C}[G]$$: define $$E_{f} := \frac{ f(e) }{ \lvert G \rvert }  M_{f} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$.
 
-Now, assume the facts that:
+Let $$\langle \cdot, \cdot \rangle$$ denote the trace inner product on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$.
 
-  * $$\sum\limits_{x \in G} \chi(x) \ \chi \left ( x^{-1} \right ) = 1 $$
+Then:
 
-    for all $$\chi \in X(G)$$.
-  * $$\sum\limits_{\chi \in X(G)} \chi(x) \ \chi \left ( y^{-1} \right ) = 0$$
+* $$ \left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle $$
 
-    for all $$x,y \in G$$ such that $$y \neq x^{-1}$$.
+  $$ \leq \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle $$
+
+  **[** by the triangle inquality for the norm induced by $$\langle \cdot, \cdot \rangle$$ on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$**]**.
+
+  Yet,
+
+  $$ \left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle $$
+
+  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{*} \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )\right ) $$
+
+  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \right ) $$
+
+  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}} E_{\chi} E_{\psi} \right )  \right ) $$
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi} E_{\psi} \right ) $$
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{2} E_{\psi}^{2} \right ) $$
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} E_{\psi}^{*} \right ) $$
+
+  **[** observing that $$E^{\chi}$$ and $$E_{\psi}$$ are Hermitian since $$\omega(g^{-1}) = \overline{\omega(g)}$$ for all $$g \in G$$ and $$\omega \in X(G)$$ **]**
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\psi}^{*} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} \right ) \right ) $$
+
+  **[** by cyclic property of trace **]**
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( \left ( E_{\chi} E_{\psi} \right )^{*} \left ( E_{\chi} E_{\psi} \right ) \right ) $$
+
+  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle $$ 
+
+  $$ = \left ( \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle \right ) + \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}, \ \chi \neq \psi} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle \right )$$ 
+
+  By positive-definiteness of inner products it follows now that for all $$\chi, \psi \in X(G)$$ 
+  such that $$\chi \neq \psi$$:
+
+    * $$\langle E_{\chi}, E_{\psi} , E_{\chi} E_{\psi} \rangle = 0 $$
+
+      $$ \implies E_{\chi} E_{\psi} = 0 $$
+
+$$ \implies \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{2} $$
+
+$$ = \sum\limits_{\chi \in X(G)} E_{\chi}^{2} $$
+
+$$ = \sum\limits_{\chi \in X(G)} E_{\chi} $$
+
+and moreover 
+
+$$ \operatorname{rank} \left (  \sum\limits_{\chi \in X(G)} E_{\chi} \right ) $$
+
+$$ = \operatorname{tr} \left (  \sum\limits_{\chi \in X(G)} E_{\chi} \right ) $$
+
+$$ = \sum\limits_{\chi \in X(G)} \operatorname{tr} \left ( E_{\chi} \right ) $$
+
+$$ = \sum\limits_{\chi \in X(G)} \left ( \chi(e) \right )^{2} $$
+
+$$ = \lvert G \rvert $$
+
+**[** assuming that $$ \sum\limits_{\chi \in X(G)} \left ( \chi(e) \right )^{2} = \lvert G \rvert $$ **]**
 
 $$ \implies \sum\limits_{\chi \in X(G)} E_{\chi} = I$$
-
-It is now follows for all $$C \in \operatorname{Cl}(G)$$: 
-
-  $$A_{C} = \sum\limits_{\chi \in X(G)} \lambda_{\chi}(C) \ E_{\chi} $$
-
-**[** since $$A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}$$ for all $$\chi \in X(G)$$, as a consequence of previous points **]**.
-
-Next, assume additionally the fact that:
-
-*  $$\sum\limits_{x \in G} \alpha(x) \ \beta \left ( x^{-1} \right ) = 0 $$
-
-  for all $$\alpha, \beta \in X(G)$$ such that $$\alpha \neq \beta$$.
-
-Then for all $$\alpha, \beta \in X(G)$$ such that $$\alpha \neq \beta$$:
-
-* $$(M_{\alpha \star \beta})_{g,g}$$
-
-  $$ = \left ( M_{\alpha} M_{\beta} \right )_{g,g}$$ 
-
-  $$ = \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( x^{-1} g \right ) $$ 
-
-  $$ = \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( (g^{-1} x )^{-1} \right ) $$  
-
-  $$ = \sum\limits_{x \in G} \alpha(x) \ \beta \left ( (x)^{-1} \right ) $$
-
-  $$ = 0 $$
-
-  for all $$ g \in G $$.
-
-  $$ \implies \operatorname{tr}(M_{\alpha \star \beta}) = 0$$
-
-  Now, let $$\langle \cdot, \cdot \rangle$$ denote the trace inner product on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$. 
-
-  $$ \implies \langle M_{\alpha \star \beta}, M_{\alpha \star \beta} \rangle $$
-
-  $$ = \operatorname{tr}(M_{\alpha \star \beta}^{*} M_{\alpha \star \beta}) $$ 
-
-  $$ = \operatorname{tr}(M_{\alpha \star \beta}^{2}) $$
-
-  **[** observing that $$M_{\alpha \star \beta}$$ is Hermitian,
-   since $$M_{\alpha}, M_{\beta} \in \operatorname{span} \mathcal{A}$$ are Hermitian (and commute) **]**
-
-  $$ = \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right ) $$
-
-  $$ = \left (  \frac{ \lvert G \rvert }{ f(e) } \right) \ \operatorname{tr} \left ( M_{\alpha \star \beta} \right ) $$
-
-  $$ = 0 $$
-
-  $$ \implies M_{\alpha \star \beta} = M_{\alpha} M_{\beta} = 0 $$
-
-  **[** by positive-definiteness of inner products **]**
-
-  $$ \implies E_{\alpha} E_{\beta} = 0 $$
 
 Lastly, observe now that for all $$\chi \in X(G)$$ and $$C \in \operatorname{Cl}(G)$$: 
 
