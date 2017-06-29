@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-06-27T01:48:19-04:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Characterizing Normal Matrices</title><link href="/2017/06/19/characterizing-normal-matrices.html" rel="alternate" type="text/html" title="Characterizing Normal Matrices" /><published>2017-06-19T00:00:00-04:00</published><updated>2017-06-19T00:00:00-04:00</updated><id>/2017/06/19/characterizing-normal-matrices</id><content type="html" xml:base="/2017/06/19/characterizing-normal-matrices.html">&lt;p&gt;I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-06-28T22:43:18-04:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Characterizing Normal Matrices</title><link href="/2017/06/19/characterizing-normal-matrices.html" rel="alternate" type="text/html" title="Characterizing Normal Matrices" /><published>2017-06-19T00:00:00-04:00</published><updated>2017-06-19T00:00:00-04:00</updated><id>/2017/06/19/characterizing-normal-matrices</id><content type="html" xml:base="/2017/06/19/characterizing-normal-matrices.html">&lt;p&gt;I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.&lt;/p&gt;
 
 &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;n \in \mathbb{N}&lt;/script&gt; and that &lt;script type=&quot;math/tex&quot;&gt;A \in \operatorname{Mat}_{n \times n}(\mathbb{C})&lt;/script&gt;. Let &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot, \cdot \rangle&lt;/script&gt; denote the trace inner product on &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{n \times n}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
 
@@ -267,8 +267,6 @@ Additionally, suppose that the minimal polynomial of &lt;script type=&quot;math/
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )&lt;/script&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \chi \left ( c y x^{-1} \right )&lt;/script&gt;
-
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{c \in C} \operatorname{tr} \left ( F \left ( c y x^{-1} \right ) \right )&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; for some irreducible representation &lt;script type=&quot;math/tex&quot;&gt;F \in \operatorname{Hom} \left (G, \operatorname{Aut}(\mathbb{C}[G] ) \right )&lt;/script&gt;, assuming the fact that such an irreducible representation exists &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
@@ -327,87 +325,92 @@ Additionally, suppose that the minimal polynomial of &lt;script type=&quot;math/
 
 &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by definition &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;It follows from this that &lt;script type=&quot;math/tex&quot;&gt;M_{f}^{2} = M_{f \star f} = \frac{ \lvert G \rvert }{ f(e) } \ M_{f}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;f \in \mathbb{C}[G]&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;It follows from this that for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;M_{\chi}^{2} = M_{\chi \star \chi} = \frac{ \lvert G \rvert }{ \chi(e) } \ M_{\chi}&lt;/script&gt;
+
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; assuming that &lt;script type=&quot;math/tex&quot;&gt;\left ( \chi \star \chi \right ) = \frac{ \lvert G \rvert }{ \chi(e) } \chi&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Next, for all &lt;script type=&quot;math/tex&quot;&gt;f \in \mathbb{C}[G]&lt;/script&gt;: define &lt;script type=&quot;math/tex&quot;&gt;E_{f} := \frac{ f(e) }{ \lvert G \rvert }  M_{f} \in \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Now, assume the facts that:&lt;/p&gt;
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot, \cdot \rangle&lt;/script&gt; denote the trace inner product on &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{x \in G} \chi(x) \ \chi \left ( x^{-1} \right ) = 1&lt;/script&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle&lt;/script&gt;
 
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{\chi \in X(G)} \chi(x) \ \chi \left ( y^{-1} \right ) = 0&lt;/script&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\leq \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle&lt;/script&gt;
 
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;x,y \in G&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;y \neq x^{-1}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by the triangle inquality for the norm induced by &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot, \cdot \rangle&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;&lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Yet,&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{*} \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )\right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}} E_{\chi} E_{\psi} \right )  \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi} E_{\psi} \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{2} E_{\psi}^{2} \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} E_{\psi}^{*} \right )&lt;/script&gt;
+
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; observing that &lt;script type=&quot;math/tex&quot;&gt;E^{\chi}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;E_{\psi}&lt;/script&gt; are Hermitian since &lt;script type=&quot;math/tex&quot;&gt;\omega(g^{-1}) = \overline{\omega(g)}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;g \in G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\omega \in X(G)&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\psi}^{*} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} \right ) \right )&lt;/script&gt;
+
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by cyclic property of trace &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( \left ( E_{\chi} E_{\psi} \right )^{*} \left ( E_{\chi} E_{\psi} \right ) \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{(\chi, \psi) \in X(G)^{2}} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle \right ) + \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}, \ \chi \neq \psi} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle \right )&lt;/script&gt;
+
+    &lt;p&gt;By positive-definiteness of inner products it follows now that for all &lt;script type=&quot;math/tex&quot;&gt;\chi, \psi \in X(G)&lt;/script&gt; 
+such that &lt;script type=&quot;math/tex&quot;&gt;\chi \neq \psi&lt;/script&gt;:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle E_{\chi}, E_{\psi} , E_{\chi} E_{\psi} \rangle = 0&lt;/script&gt;
+
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies E_{\chi} E_{\psi} = 0&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{2}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{\chi \in X(G)} E_{\chi}^{2}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{\chi \in X(G)} E_{\chi}&lt;/script&gt;
+
+&lt;p&gt;and moreover&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{rank} \left (  \sum\limits_{\chi \in X(G)} E_{\chi} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left (  \sum\limits_{\chi \in X(G)} E_{\chi} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{\chi \in X(G)} \operatorname{tr} \left ( E_{\chi} \right )&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{\chi \in X(G)} \left ( \chi(e) \right )^{2}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \lvert G \rvert&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; assuming that &lt;script type=&quot;math/tex&quot;&gt;\sum\limits_{\chi \in X(G)} \left ( \chi(e) \right )^{2} = \lvert G \rvert&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \sum\limits_{\chi \in X(G)} E_{\chi} = I&lt;/script&gt;
-
-&lt;p&gt;It is now follows for all &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt;:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;A_{C} = \sum\limits_{\chi \in X(G)} \lambda_{\chi}(C) \ E_{\chi}&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since &lt;script type=&quot;math/tex&quot;&gt;A_{C} E_{\chi} = \lambda_{\chi}(C) E_{\chi}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt;, as a consequence of previous points &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Next, assume additionally the fact that:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\sum\limits_{x \in G} \alpha(x) \ \beta \left ( x^{-1} \right ) = 0&lt;/script&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;\alpha, \beta \in X(G)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\alpha \neq \beta&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Then for all &lt;script type=&quot;math/tex&quot;&gt;\alpha, \beta \in X(G)&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\alpha \neq \beta&lt;/script&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;(M_{\alpha \star \beta})_{g,g}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( M_{\alpha} M_{\beta} \right )_{g,g}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( x^{-1} g \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{x \in G} \alpha(g^{-1} x) \ \beta \left ( (g^{-1} x )^{-1} \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{x \in G} \alpha(x) \ \beta \left ( (x)^{-1} \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= 0&lt;/script&gt;
-
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;g \in G&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \operatorname{tr}(M_{\alpha \star \beta}) = 0&lt;/script&gt;
-
-    &lt;p&gt;Now, let &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot, \cdot \rangle&lt;/script&gt; denote the trace inner product on &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \langle M_{\alpha \star \beta}, M_{\alpha \star \beta} \rangle&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr}(M_{\alpha \star \beta}^{*} M_{\alpha \star \beta})&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr}(M_{\alpha \star \beta}^{2})&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; observing that &lt;script type=&quot;math/tex&quot;&gt;M_{\alpha \star \beta}&lt;/script&gt; is Hermitian,
- since &lt;script type=&quot;math/tex&quot;&gt;M_{\alpha}, M_{\beta} \in \operatorname{span} \mathcal{A}&lt;/script&gt; are Hermitian (and commute) &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \operatorname{tr} \left ( \frac{ \lvert G \rvert }{ f(e) } M_{\alpha \star \beta} \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left (  \frac{ \lvert G \rvert }{ f(e) } \right) \ \operatorname{tr} \left ( M_{\alpha \star \beta} \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= 0&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies M_{\alpha \star \beta} = M_{\alpha} M_{\beta} = 0&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by positive-definiteness of inner products &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies E_{\alpha} E_{\beta} = 0&lt;/script&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;Lastly, observe now that for all &lt;script type=&quot;math/tex&quot;&gt;\chi \in X(G)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C \in \operatorname{Cl}(G)&lt;/script&gt;:&lt;/p&gt;
 
