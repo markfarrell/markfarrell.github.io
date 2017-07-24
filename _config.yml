@@ -17,10 +17,11 @@ title: Mark Farrell
 email: m4farrel@uwaterloo.ca
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-about: "Notes on association schemes, walk-regular graphs, continuous-time quantum walks, etc."
+about: "Mark Farrell's personal notes."
 
 twitter_username: m4farrel
 quora_username: Mark-Farrell-6
+wikipedia_username: m4farrel
 
 # Build settings
 markdown: kramdown

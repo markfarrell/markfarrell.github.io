@@ -38,6 +38,14 @@
               </a>
             </li>
           {% endif %}
+
+          {% if site.wikipedia_username %}
+            <li>
+              <a href="https://en.wikipedia.org/wiki/User:{{ site.wikipedia_username }}">
+                <i class="fa fa-wikipedia-w"></i> Wikipedia
+              </a>
+            </li>
+          {% endif %}
         </ul>
       </div>
 
