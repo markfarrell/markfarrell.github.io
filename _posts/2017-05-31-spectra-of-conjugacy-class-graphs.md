@@ -121,7 +121,7 @@ Assume the facts that for all $$\chi \in X(G)$$:
 
 It then follows that for all $$\chi, \psi \in X(G)$$ such that $$\chi \neq \psi$$:
 
-* $$ E_{\chi} E_{\psi} = E^{\chi}^{*} E_{\psi} = 0 $$
+* $$ E_{\chi} E_{\psi} = E_{\chi}^{*} E_{\psi} = 0 $$
   .
 
 $$ \implies \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{2} $$
