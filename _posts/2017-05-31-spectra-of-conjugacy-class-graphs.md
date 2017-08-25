@@ -114,50 +114,15 @@ It follows from this that for all $$\chi \in X(G)$$:
 
 Next, for all $$f \in \mathbb{C}[G]$$: define $$E_{f} := \frac{ f(e) }{ \lvert G \rvert }  M_{f} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$.
 
-Let $$\langle \cdot, \cdot \rangle$$ denote the trace inner product on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$.
+Assume the facts that for all $$\chi \in X(G)$$:
 
-Then:
+* $$\chi \left ( g^{-1} \right ) = \overline{\chi(g)}$$.
+* $$\sum\limits_{g \in G} \chi(g) \ \psi(g) = 0 $$ for all $$\psi \in X(G)$$ such that $$\chi \neq \psi$$.
 
-* $$ \left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle $$
+It then follows that for all $$\chi, \psi \in X(G)$$ such that $$\chi \neq \psi$$:
 
-  $$ \leq \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle $$
-
-  **[** by the triangle inquality for the norm induced by $$\langle \cdot, \cdot \rangle$$ on $$\operatorname{Mat}_{G \times G}(\mathbb{C})$$**]**.
-
-  Yet,
-
-  $$ \left \langle \sum\limits_{\chi \in X(G)} E_{\chi}, \sum\limits_{\chi \in X(G)} E_{\chi} \right \rangle $$
-
-  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{*} \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )\right ) $$
-
-  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right ) \right ) $$
-
-  $$ = \operatorname{tr} \left ( \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}} E_{\chi} E_{\psi} \right )  \right ) $$
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi} E_{\psi} \right ) $$
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{2} E_{\psi}^{2} \right ) $$
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} E_{\psi}^{*} \right ) $$
-
-  **[** observing that $$E^{\chi}$$ and $$E_{\psi}$$ are Hermitian since $$\omega(g^{-1}) = \overline{\omega(g)}$$ for all $$g \in G$$ and $$\omega \in X(G)$$ **]**
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( E_{\psi}^{*} \left ( E_{\chi}^{*} E_{\chi} E_{\psi} \right ) \right ) $$
-
-  **[** by cyclic property of trace **]**
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \operatorname{tr} \left ( \left ( E_{\chi} E_{\psi} \right )^{*} \left ( E_{\chi} E_{\psi} \right ) \right ) $$
-
-  $$ = \sum\limits_{(\chi, \psi) \in X(G)^{2}} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle $$ 
-
-  $$ = \left ( \sum\limits_{\chi \in X(G)} \langle E_{\chi}, E_{\chi} \rangle \right ) + \left ( \sum\limits_{(\chi, \psi) \in X(G)^{2}, \ \chi \neq \psi} \langle E_{\chi} E_{\psi}, E_{\chi} E_{\psi} \rangle \right )$$ 
-
-  By positive-definiteness of inner products it follows now that for all $$\chi, \psi \in X(G)$$ 
-  such that $$\chi \neq \psi$$:
-
-    * $$\langle E_{\chi}, E_{\psi} , E_{\chi} E_{\psi} \rangle = 0 $$
-
-      $$ \implies E_{\chi} E_{\psi} = 0 $$
+* $$ \implies E_{\chi} E_{\psi} = 0 $$
+  .
 
 $$ \implies \left ( \sum\limits_{\chi \in X(G)} E_{\chi} \right )^{2} $$
 
