@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Association Schemes from Graphs"
+title:  "Coherent Algebras from Graphs"
 date:   2017-05-22
 ---
 
-I would like to establish some examples of families of (commutative) association schemes arising 
+I would like to establish some examples of families of (commutative) coherent algebras arising 
 from distance-regular graphs and sets of conjugacy class digraphs of finite groups.
 
 Firstly, suppose that $$G$$ is a distance-regular graph. Let $$\mathcal{V}_{G}$$ denote the vertex set of $$G$$, 
@@ -35,11 +35,11 @@ $$0 \leq i,j \leq \operatorname{diam}(G)$$ and all $$u,v \in \mathcal{V}_{G}$$. 
 
 $$ \implies A_{i} A_{j} = A_{j} A_{i} = \sum\limits_{k = 0}^{\operatorname{diam}(G)} p_{i,j}(k) \ A_{k}  \text{ for some } \{ p_{i,j}(k) : 0 \leq k \leq \operatorname{diam}(G) \} \subset \mathbb{N} $$
 
-$$ \implies \mathcal{A} \text{ is a commutative association scheme } $$
+$$ \implies \mathcal{W} := \operatorname{span} \mathcal{A} \text{ is a commutative coherent algebra } $$
 
 **[** since $$i$$ and $$j$$ are arbitrary, in addition to the facts that $$A_{0} = I \in \mathcal{A}$$, $$\sum\limits_{k = 0}^{\operatorname{diam}(G)} A_k = J$$, and $$A_{k}^{T} = A_{k}$$ for all $$0 \leq k \leq \operatorname{diam}(G)$$ by construction **]**.
 
-It then follows in general that every distance-regular graph gives rise to a commutative association scheme in this way, since $$G$$ in this context is arbitrary.
+It then follows in general that every distance-regular graph gives rise to a commutative coherent algebra in this way, since $$G$$ in this context is arbitrary.
 
 
 Secondly, suppose now that $$G$$ is a finite group. Let $$e_{G}$$ denote the identity element of $$G$$, $$\operatorname{Cl}(G)$$ denote the set of conjugacy classes of $$G$$, 
@@ -131,8 +131,8 @@ Next, observe that:
 
     following from the previous point.
 
- $$ \implies \mathcal{A} \text{ is a commutative association scheme } $$
+ $$ \implies \mathcal{W} := \operatorname{span} \mathcal{A} \text{ is a commutative coherent algebra } $$
 
-It then follows in general that the set of conjugacy classes of every finite group gives rise to a commutative association scheme in this way, since $$G$$ in this context is arbitrary.
+It then follows in general that the set of conjugacy classes of every finite group gives rise to a commutative coherent algebra in this way, since $$G$$ in this context is arbitrary.
 
-*In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to commutative association schemes in the ways presented in this post. It may be useful to note that it essentially follows that every distance-regular graph is walk-regular from the fact that the number of distinct eigenvalues of distance-regular graph is equal to one more than its diameter, in addition to the fact that distance-regular graphs give rise to commutative association schemes. Also, the fact that there are sets of projections onto the generalized eigenspaces of the adjacency matrices of the set of conjugacy class digraphs that form bases for the Bose-Mesner algebra of the conjugacy class scheme of a finite group is arguably useful for finding general expressions for the spectra of conjugacy class digraphs of finite groups; I hope to expand on this point in detail in a future post. Lastly, it may also be worth noting that there are arguably useful examples of families of association schemes arising from complex commutants of sets of permutation matrices as well as sets of orbits of certain actions of finite groups on certain sets of objects; however, these families of association schemes are not necessarily commutative and so my intent is to perhaps talk about them in a separate post in the future as well.*
+*In conclusion, it is indeed the case that distance-regular graphs and sets of conjugacy classes of finite groups give rise to (commutative) coherent algebras in the ways presented in this post. Lastly, it may also be worth noting that there are also arguably useful examples of families of coherents arising from complex commutants of groups of permutation matrices as well as the sets of orbits of actions of finite groups on finite sets; however, these families of coherent algebras are not necessarily commutative.*
