@@ -4,7 +4,7 @@ title:  "Duality in Coherent Algebras"
 date:   2017-12-11
 ---
 
-I would like to introduce the character theory of (commutative) coherent algebras, with the goal of arriving at what it means for a coherent algebra to be self-dual, starting with the prototypical example of a family of self-dual coherent algebras arising from finite abelian groups.
+I would like to introduce the character theory of (commutative) coherent algebras, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.
 
 Suppose that $$\mathcal{W}$$ is a commutative coherent algebra (of order $$n$$ and dimension $$d$$).
 
@@ -27,7 +27,7 @@ I would propose that $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathca
 
 	But, there are no Schur-primitive matrices in $$\widehat{\Gamma(\mathcal{W})}$$.
 
-	$$ \implies \widehat{\Gamma(\mathcal{W})}$$
+	$$ \implies \widehat{\Gamma(\mathcal{W})} = \{ 0 \}$$
 
 	It is then ultimately apparent that $$\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right ) $$.
 
@@ -48,11 +48,11 @@ I would propose that $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathca
 
 	Let $$\Omega(\mathcal{W})$$ denote the set of non-zero matrices in $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$ of the form 
 
-	$$\prod\limits_{A \in \Gamma(\mathcal{W})} M_{A}$$ for some $$ \{ M_{A} : A \in \Gamma(\mathcal{W}), M_{A} \in \Omega(A) \} \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$. 
+	$$\prod\limits_{A \in \Gamma(\mathcal{W})} M_{A}$$ for some $$ \{ M_{A} : A \in \Gamma(\mathcal{W}), M_{A} \in \Omega(A) \} \subseteq \operatorname{Mat}_{n \times n}(\mathbb{C})$$. 
 
 	$$ \implies \mathcal{W} = \operatorname{span} \left ( \bigcup_{A \in \Gamma(\mathcal{W})} \Omega(A) \right ) \subseteq \operatorname{span} \left ( \Omega(\mathcal{W}) \right ) $$
 
-	Lastly, recall that every normal matrix $$M \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ has a *unique* set $$\Omega(M)$$ consisting of orthogonal projections onto each of its eigenspaces, and that $$\Omega(M) \subseteq \{ f(M) : f(x) \in \mathbb{C}[x] \}$$ as well.
+	Lastly, recall that every normal matrix $$M \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ has a *unique* set $$\Omega(M)$$ consisting of orthogonal projections onto each of its eigenspaces, and that $$\Omega(M) \subseteq \{ f(M) : f(x) \in \mathbb{C}[x] \}$$ as well (i.e. they are all polynomials in $$M$$).
 
 	$$ \implies \operatorname{span} \left ( \Omega(\mathcal{W}) \right ) \subseteq \mathcal{W} $$.
 
@@ -64,9 +64,19 @@ So $$\mathcal{W}$$ is indeed spanned by its set of Schur-primitive matrices, and
 
 Now, suppose that orderings $$\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}$$ and $$\Lambda(\mathcal{W}) = \{ E_{j} : 1 \leq j \leq d \}$$ are given on the sets of Schur-primitive and primitive matrices in $$\mathcal{W}$$ respectively.
 
-Then, since $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )$$, there is a matrix $$P_{\mathcal{W}} \in \operatorname{Mat}_{d \times d}(\mathbb{C})$$ such that $$A_{i} = \sum\limits_{j = 1}^{d} P_{i,j} E_j$$ for all $$1 \leq i,j \leq d$$, known as the character table of $$\mathcal{W}$$ (relative to this ordering).
+Then, since $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )$$, there is a matrix $$P_{\mathcal{W}} \in \operatorname{Mat}_{d \times d}(\mathbb{C})$$ such that $$A_{i} = \sum\limits_{j = 1}^{d} P_{i,j} E_j$$ for all $$1 \leq i,j \leq d$$, known as the **character table** of $$\mathcal{W}$$ (relative to this ordering).
 
-$$\mathcal{W}$$ is said to be self-dual if $$P \overline{P} = n I$$.
+$$\mathcal{W}$$ is said to be **self-dual** if $$P \overline{P} = n I$$.
+
+A prototypical example of a family of self-dual coherent algebras are the coherent algebras arising from spans of regular representations of finite abelian groups as groups of permutation matrices. I will return in another post to elaborate on how the theory of self-dual coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs, as mentioned.
+
+
+
+
+
+
+
+
 
 
 
