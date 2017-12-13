@@ -4,7 +4,7 @@ title:  "Duality in Coherent Algebras"
 date:   2017-12-11
 ---
 
-I would like to introduce the character theory of (commutative) coherent algebras, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.
+I would like to introduce the character theory of (commutative) [coherent algebras](https://en.wikipedia.org/wiki/Coherent_algebra), with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.
 
 Suppose that $$\mathcal{W}$$ is a commutative coherent algebra (of order $$n$$ and dimension $$d$$).
 
@@ -52,7 +52,7 @@ I would propose that $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathca
 
 	$$ \implies \mathcal{W} = \operatorname{span} \left ( \bigcup_{A \in \Gamma(\mathcal{W})} \Omega(A) \right ) \subseteq \operatorname{span} \left ( \Omega(\mathcal{W}) \right ) $$
 
-	Lastly, recall that every normal matrix $$M \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ has a *unique* set $$\Omega(M)$$ consisting of orthogonal projections onto each of its eigenspaces, and that $$\Omega(M) \subseteq \{ f(M) : f(x) \in \mathbb{C}[x] \}$$ as well (i.e. they are all polynomials in $$M$$).
+	Lastly, [recall](/2017/06/19/characterizing-normal-matrices.html) that every normal matrix $$M \in \operatorname{Mat}_{n \times n}(\mathbb{C})$$ has a *unique* set $$\Omega(M)$$ consisting of orthogonal projections onto each of its eigenspaces, and that $$\Omega(M) \subseteq \{ f(M) : f(x) \in \mathbb{C}[x] \}$$ as well (i.e. they are all polynomials in $$M$$).
 
 	$$ \implies \operatorname{span} \left ( \Omega(\mathcal{W}) \right ) \subseteq \mathcal{W} $$.
 

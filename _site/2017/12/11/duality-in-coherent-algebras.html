@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Duality in Coherent Algebras</title>
+  <meta name="description" content="I would like to introduce the character theory of (commutative) coherent algebras, with the goal of arriving at what it means for a coherent algebra to be se...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="/2017/12/11/duality-in-coherent-algebras.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script src="https://use.fontawesome.com/8620140429.js"></script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Duality in Coherent Algebras</h1>
+    <p class="post-meta"><time datetime="2017-12-11T00:00:00+00:00" itemprop="datePublished">Dec 11, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I would like to introduce the character theory of (commutative) <a href="https://en.wikipedia.org/wiki/Coherent_algebra">coherent algebras</a>, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.</p>
+
+<p>Suppose that <script type="math/tex">\mathcal{W}</script> is a commutative coherent algebra (of order <script type="math/tex">n</script> and dimension <script type="math/tex">d</script>).</p>
+
+<p>Let <script type="math/tex">\Gamma(\mathcal{W})</script> and <script type="math/tex">\Lambda(\mathcal{W})</script> denote the set of Schur-primitive and primitive matrices in <script type="math/tex">W</script> respectively:</p>
+
+<p><em>Note that a non-zero <script type="math/tex">01</script>-matrix <script type="math/tex">M \in \mathcal{W}</script> is said to be Schur-primitive if <script type="math/tex">M \circ N \in \operatorname{span} \{ M \}</script> for all <script type="math/tex">N \in \mathcal {W}</script>, and likewise a non-zero idempotent matrix <script type="math/tex">M \in \mathcal{W}</script> is said to be primitive if <script type="math/tex">MN \in \operatorname{span} \{ M \}</script> for all <script type="math/tex">N \in \mathcal {W}</script>.</em></p>
+
+<p>I would propose that <script type="math/tex">\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )</script> .</p>
+
+<ol>
+  <li>
+    <p>Let <script type="math/tex">\widehat{\Gamma(\mathcal{W})} := \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}</script>.</p>
+
+    <p>Observe that <script type="math/tex">\widehat{\Gamma(\mathcal{W})}</script> is a Schur-closed subspace of <script type="math/tex">\mathcal{W}</script>.</p>
+
+    <p>It follows that for all <script type="math/tex">M \in \widehat{\Gamma(\mathcal{W})}</script> with a non-zero entry <script type="math/tex">c \in \mathbb{C}</script>, the matrix 
+ <script type="math/tex">N \circ N - N \in \widehat{\Gamma(\mathcal{W})}</script> where <script type="math/tex">N := \frac{1}{c} M</script> has fewer non-zero entries than <script type="math/tex">M</script>.</p>
+
+    <p>This then means that the matrix in <script type="math/tex">\widehat{\Gamma(\mathcal{W})}</script> with the least number of non-zero entries must be a <script type="math/tex">01</script>-matrix,
+ and moreover must either be Schur-primitive or the zero matrix.</p>
+
+    <p>But, there are no Schur-primitive matrices in <script type="math/tex">\widehat{\Gamma(\mathcal{W})}</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \widehat{\Gamma(\mathcal{W})} = \{ 0 \}</script>
+
+    <p>It is then ultimately apparent that <script type="math/tex">\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )</script>.</p>
+  </li>
+  <li>
+    <p>Let <script type="math/tex">\sigma(A)</script> denote the set of distinct eigenvalues of <script type="math/tex">A</script> for all <script type="math/tex">A \in \Gamma(\mathcal{W})</script>.</p>
+
+    <p>Observe that <script type="math/tex">\Gamma(\mathcal{W})</script> is a set of commuting normal matrices.</p>
+
+    <p><script type="math/tex">\implies</script> There is a unitary matrix <script type="math/tex">U \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> that simultaneously diagonalizes <script type="math/tex">\Gamma(\mathcal{W})</script>.</p>
+
+    <p>Let <script type="math/tex">S := \{ P_{j} : 1 \leq j \leq n \}</script> where <script type="math/tex">P_{j} := \left ( U e_{j} \right ) \left ( U e_{j} \right )^{T} \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> for all <script type="math/tex">1 \leq j \leq n</script>.</p>
+
+    <p>Now, observe too that the elements of <script type="math/tex">S</script> are orthogonal projections, and <script type="math/tex">PQ = 0</script> for all <script type="math/tex">P, Q \in S</script> such that <script type="math/tex">P \neq Q</script>.</p>
+
+    <p>Let <script type="math/tex">\Omega(A) := \left \{ \sum\limits_{P \in T_{\lambda}} P : \lambda \in \sigma(A) \right \}</script> where <script type="math/tex">T_{\lambda} := \{ P \in S : AP = \lambda P \}</script> for all <script type="math/tex">\lambda \in \sigma(A)</script> and all <script type="math/tex">A \in \Gamma(\mathcal{W})</script>.</p>
+
+    <p>It then follows that <script type="math/tex">\Omega(A)</script> is a set of orthogonal projections onto the eigenspaces of <script type="math/tex">A</script> for all <script type="math/tex">A \in \Gamma(\mathcal{W})</script>.</p>
+
+    <p>Let <script type="math/tex">\Omega(\mathcal{W})</script> denote the set of non-zero matrices in <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script> of the form</p>
+
+    <p><script type="math/tex">\prod\limits_{A \in \Gamma(\mathcal{W})} M_{A}</script> for some <script type="math/tex">\{ M_{A} : A \in \Gamma(\mathcal{W}), M_{A} \in \Omega(A) \} \subseteq \operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \mathcal{W} = \operatorname{span} \left ( \bigcup_{A \in \Gamma(\mathcal{W})} \Omega(A) \right ) \subseteq \operatorname{span} \left ( \Omega(\mathcal{W}) \right )</script>
+
+    <p>Lastly, <a href="/2017/06/19/characterizing-normal-matrices.html">recall</a> that every normal matrix <script type="math/tex">M \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> has a <em>unique</em> set <script type="math/tex">\Omega(M)</script> consisting of orthogonal projections onto each of its eigenspaces, and that <script type="math/tex">\Omega(M) \subseteq \{ f(M) : f(x) \in \mathbb{C}[x] \}</script> as well (i.e. they are all polynomials in <script type="math/tex">M</script>).</p>
+
+    <p><script type="math/tex">\implies \operatorname{span} \left ( \Omega(\mathcal{W}) \right ) \subseteq \mathcal{W}</script>.</p>
+
+    <p>It can then ultimately be observed that <script type="math/tex">\Omega(\mathcal{W}) = \Lambda(\mathcal{W})</script>, and hence <script type="math/tex">\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )</script>.</p>
+  </li>
+</ol>
+
+<p>So <script type="math/tex">\mathcal{W}</script> is indeed spanned by its set of Schur-primitive matrices, and dually, its set of primitive matrices as well.</p>
+
+<p>Now, suppose that orderings <script type="math/tex">\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}</script> and <script type="math/tex">\Lambda(\mathcal{W}) = \{ E_{j} : 1 \leq j \leq d \}</script> are given on the sets of Schur-primitive and primitive matrices in <script type="math/tex">\mathcal{W}</script> respectively.</p>
+
+<p>Then, since <script type="math/tex">\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )</script>, there is a matrix <script type="math/tex">P_{\mathcal{W}} \in \operatorname{Mat}_{d \times d}(\mathbb{C})</script> such that <script type="math/tex">A_{i} = \sum\limits_{j = 1}^{d} P_{i,j} E_j</script> for all <script type="math/tex">1 \leq i,j \leq d</script>, known as the <strong>character table</strong> of <script type="math/tex">\mathcal{W}</script> (relative to this ordering).</p>
+
+<p><script type="math/tex">\mathcal{W}</script> is said to be <strong>self-dual</strong> if <script type="math/tex">P \overline{P} = n I</script>.</p>
+
+<p>A prototypical example of a family of self-dual coherent algebras are the coherent algebras arising from spans of regular representations of finite abelian groups as groups of permutation matrices. I will return in another post to elaborate on how the theory of self-dual coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs, as mentioned.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+            
+            <li>
+              <a href="https://twitter.com/m4farrel">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://quora.com/Mark-Farrell-6">
+                <i class="fa fa-quora"></i> Quora
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://en.wikipedia.org/wiki/User:m4farrel">
+                <i class="fa fa-wikipedia-w"></i> Wikipedia
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100422401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  </body>
+
+</html>
