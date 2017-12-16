@@ -68,7 +68,9 @@ So $$\mathcal{W}$$ is indeed spanned by its set of Schur-primitive matrices, and
 
 Now, suppose that orderings $$\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}$$ and $$\Lambda(\mathcal{W}) = \{ E_{j} : 1 \leq j \leq d \}$$ are given on the sets of Schur-primitive and primitive matrices in $$\mathcal{W}$$ respectively.
 
-Then, since $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )$$, there is a matrix $$P \in \operatorname{Mat}_{d \times d}(\mathbb{C})$$ such that $$A_{i} = \sum\limits_{j = 1}^{d} P_{i,j} E_j$$ for all $$1 \leq i,j \leq d$$, known as the **character table** of $$\mathcal{W}$$ (relative to this ordering).
+Then, since $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )$$, there is a matrix $$P \in \operatorname{Mat}_{d \times d}(\mathbb{C})$$ such that $$A_{j} = \sum\limits_{k = 1}^{d} P_{j,k} \ E_k$$ for all $$1 \leq j \leq d$$, known as the **character table** of $$\mathcal{W}$$ (relative to this ordering).
+
+Dually, the character table $$P$$ of $$W$$ is invertible, and $$E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}$$ for all $$1 \leq j \leq d$$.
 
 $$\mathcal{W}$$ is said to be **self-dual** if $$P \overline{P} = n I$$.
 
