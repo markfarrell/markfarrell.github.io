@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-13T13:31:00+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Duality in Coherent Algebras</title><link href="/2017/12/11/duality-in-coherent-algebras.html" rel="alternate" type="text/html" title="Duality in Coherent Algebras" /><published>2017-12-11T00:00:00+00:00</published><updated>2017-12-11T00:00:00+00:00</updated><id>/2017/12/11/duality-in-coherent-algebras</id><content type="html" xml:base="/2017/12/11/duality-in-coherent-algebras.html">&lt;p&gt;I would like to introduce the character theory of (commutative) &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_algebra&quot;&gt;coherent algebras&lt;/a&gt;, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-12-16T07:00:24+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Duality in Coherent Algebras</title><link href="/2017/12/11/duality-in-coherent-algebras.html" rel="alternate" type="text/html" title="Duality in Coherent Algebras" /><published>2017-12-11T00:00:00+00:00</published><updated>2017-12-11T00:00:00+00:00</updated><id>/2017/12/11/duality-in-coherent-algebras</id><content type="html" xml:base="/2017/12/11/duality-in-coherent-algebras.html">&lt;p&gt;I would like to introduce the character theory of (commutative) &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_algebra&quot;&gt;coherent algebras&lt;/a&gt;, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
 
 &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is a commutative coherent algebra (of order &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and dimension &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;).&lt;/p&gt;
 
@@ -10,19 +10,24 @@
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\widehat{\Gamma(\mathcal{W})} := \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})^{\circ} := \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;Observe that &lt;script type=&quot;math/tex&quot;&gt;\widehat{\Gamma(\mathcal{W})}&lt;/script&gt; is a Schur-closed subspace of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;Observe that &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})^{\circ}&lt;/script&gt; is a Schur-closed subspace of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;It follows that for all &lt;script type=&quot;math/tex&quot;&gt;M \in \widehat{\Gamma(\mathcal{W})}&lt;/script&gt; with a non-zero entry &lt;script type=&quot;math/tex&quot;&gt;c \in \mathbb{C}&lt;/script&gt;, the matrix 
- &lt;script type=&quot;math/tex&quot;&gt;N \circ N - N \in \widehat{\Gamma(\mathcal{W})}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;N := \frac{1}{c} M&lt;/script&gt; has fewer non-zero entries than &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;It follows that for all &lt;script type=&quot;math/tex&quot;&gt;M \in \Gamma(\mathcal{W})^{\circ}&lt;/script&gt; with a non-zero entry &lt;script type=&quot;math/tex&quot;&gt;c \in \mathbb{C}&lt;/script&gt;, the matrix 
+ &lt;script type=&quot;math/tex&quot;&gt;N \circ N - N \in \Gamma(\mathcal{W})^{\circ}&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;N := \frac{1}{c} M&lt;/script&gt; has fewer non-zero entries than &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;This then means that the matrix in &lt;script type=&quot;math/tex&quot;&gt;\widehat{\Gamma(\mathcal{W})}&lt;/script&gt; with the least number of non-zero entries must be a &lt;script type=&quot;math/tex&quot;&gt;01&lt;/script&gt;-matrix,
+    &lt;p&gt;This then means that the matrix in &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})^{\circ}&lt;/script&gt; with the least number of non-zero entries must be a &lt;script type=&quot;math/tex&quot;&gt;01&lt;/script&gt;-matrix,
  and moreover must either be Schur-primitive or the zero matrix.&lt;/p&gt;
 
-    &lt;p&gt;But, there are no Schur-primitive matrices in &lt;script type=&quot;math/tex&quot;&gt;\widehat{\Gamma(\mathcal{W})}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;But, there are no Schur-primitive matrices in &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})^{\circ}&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \widehat{\Gamma(\mathcal{W})} = \{ 0 \}&lt;/script&gt;
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \Gamma(\mathcal{W})^{\circ} = \{ 0 \}&lt;/script&gt;
+
+    &lt;p&gt;Now, let &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot, \cdot \rangle&lt;/script&gt; denote the trace inner product on &lt;script type=&quot;math/tex&quot;&gt;\operatorname{Mat}_{n \times n}(\mathbb{C})&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Observe that &lt;script type=&quot;math/tex&quot;&gt;\langle M, N \rangle = \operatorname{sum} \left ( \overline{M} \circ N \right )&lt;/script&gt;
+ and hence &lt;script type=&quot;math/tex&quot;&gt;M \circ N = 0&lt;/script&gt; if and only if &lt;script type=&quot;math/tex&quot;&gt;\langle M, N \rangle = 0&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;M \in \mathcal{W}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )&lt;/script&gt;; this is to say that &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})^{\circ}&lt;/script&gt; is the orthogonal complement of &lt;script type=&quot;math/tex&quot;&gt;\operatorname{span} \left ( \Gamma(\mathcal{W}) \right )&lt;/script&gt; under &lt;script type=&quot;math/tex&quot;&gt;\langle \cdot , \cdot \rangle&lt;/script&gt;.&lt;/p&gt;
 
     &lt;p&gt;It is then ultimately apparent that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
