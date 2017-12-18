@@ -5,7 +5,7 @@ date:   2017-12-18
 ---
 
 I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian
-groups in a way that could useful towards e.g. the classification if distance-regular graphs, continuing from where I left
+groups in a way that could be useful towards e.g. the classification if distance-regular graphs, continuing from where I left
 off in my previous post.
 
 Suppose that $$\mathcal{W}$$ is a commutative coherent algebra (of order $$n$$ and dimension $$d$$).
