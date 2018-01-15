@@ -5,7 +5,7 @@ date:   2017-12-18
 ---
 
 I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian
-groups in a way that could be useful towards e.g. the classification if distance-regular graphs, continuing from where I left
+groups in a way that could be useful towards e.g. the classification of distance-regular graphs, continuing from where I left
 off in my previous post.
 
 Suppose that $$\mathcal{W}$$ is a commutative coherent algebra (of order $$n$$ and dimension $$d$$).
@@ -13,25 +13,25 @@ Suppose that $$\mathcal{W}$$ is a commutative coherent algebra (of order $$n$$ a
 Let $$\Gamma(\mathcal{W})$$ and $$\Lambda(\mathcal{W})$$ denote the sets of Schur-primitive and primitive matrices
 in $$\mathcal{W}$$ respectively.
 
-A **Fourier transform** on $$\mathcal{W}$$ is a linear automorphism $$T : \mathcal{W} \to \mathcal{W}$$ such that:
+A **duality mapping** on $$\mathcal{W}$$ is a linear automorphism $$T : \mathcal{W} \to \mathcal{W}$$ such that:
 
 1. $$T(MN) = T(M) \circ T(N) $$ for all $$M, N \in \mathcal{W}$$.
 
-2. $$T^{-1}(M) = \frac{1}{n} \overline{T(M)} \text{ for all } M \in \Gamma(\mathcal{W})$$.
+2. $$T(M \circ N) = \frac{1}{n} T(M) \ T(N) $$ for all  $$M, N \in \mathcal{W}$$.
 
-I would propose that $$\mathcal{W}$$ is self-dual if and only if there is a Fourier transform on $$\mathcal{W}$$.
+I would propose that $$\mathcal{W}$$ is self-dual if and only if there is a duality mapping on $$\mathcal{W}$$.
 
-1. Suppose that there is a Fourier transform $$T : \mathcal{W} \to \mathcal{W}$$ on $${W}$$.
+1. Suppose that there is a duality mapping $$T : \mathcal{W} \to \mathcal{W}$$ on $${W}$$.
 	
-	$$\implies T(E) = T \left ( E^{2} \right ) = T \left ( E \right ) \circ T \left ( E \right ) \in \Gamma(\mathcal{W})$$ for all $$E \in \Lambda(\mathcal{W})$$.
+	$$\implies T \left ( \frac{1}{n}  A \right ) =  \frac{1}{n}  T \left ( A \circ A \right ) =  T \left ( \frac{1}{n}  A \right )^{2} \in \Lambda(\mathcal{W})$$ for all $$A \in \Gamma(\mathcal{W})$$.
 
-	It follows that there are orderings $$\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}$$ and $$\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}$$ on the sets of Schur-primitive and primitive matrices in $$\mathcal{W}$$ such that $$T(E_j) = A_j$$ and $$T^{-1}(A_j) = E_j$$ for all $$1 \leq j \leq d$$.
+	It follows that there are orderings $$\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}$$ and $$\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}$$ on the sets of Schur-primitive and primitive matrices in $$\mathcal{W}$$ such that $$T(A_j) = n \overline{E_j}$$ for all $$1 \leq j \leq d$$.
 
 	Let $$P \in \operatorname{Mat}_{d \times d}(\mathbb{C})$$ denote the character table of $$W$$ relative to this ordering.
 
-	Recall from my previous post that $$E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}$$ for all $$1 \leq j \leq d$$.
+	$$ \implies T(E_j) = \sum\limits_{k = 1}^{d} \overline{ \left ( \frac{1}{n} P_{j,k} \right ) }\ T \left (A_k \right ) = \overline{ \left ( \sum\limits_{k = 1}^{d} P_{j,k} \ E_k \right ) } = \overline{A_{j}} = A_{j} \text { for all } 1 \leq j \leq d $$.
 
-	$$ \implies T^{-1}(A_j) = \frac{1}{n} \  \overline{T(A_j)} = \sum\limits_{k = 1}^{d} \left ( \frac{1}{n}  \overline{P_{j, k}} \right ) \ A_k = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k} = E_j$$ for all $$1 \leq j \leq d$$.
+	Now, recall from my previous post that $$E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}$$ for all $$1 \leq j \leq d$$.
 
 	$$ \implies P \overline{P} = n I $$ and hence $$\mathcal{W}$$ is self-dual.
 
@@ -41,11 +41,11 @@ I would propose that $$\mathcal{W}$$ is self-dual if and only if there is a Four
 	relative to this ordering.
 
 	It is then apparent that the linear automorphism $$T : \mathcal{W} \to \mathcal{W}$$ defined as $$T(E_j) := A_j$$ for all $$ 1 \leq j \leq d $$
-	is a Fourier transform on $$\mathcal{W}$$.
+	is a duality mapping on $$\mathcal{W}$$.
 
-So $$\mathcal{W}$$ is indeed self-dual if and only if there is a Fourier transform on $$\mathcal{W}$$.
+So $$\mathcal{W}$$ is indeed self-dual if and only if there is a duality mapping on $$\mathcal{W}$$.
 
-I would like to elaborate now on how the Fourier theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.
+I would like to elaborate now on how the duality theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.
 
 For every finite group $$G$$, define the coherent algebra $$\mathcal{W}_{G} := \operatorname{span} \{ P_{g} : g \in G \} \subseteq \operatorname{Mat}_{G \times G}(\mathbb{C})$$ where $$P_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$ is defined as $$ \left ( P_{g} \right )_{x,y} := \begin{cases} 1 & \text{if } xy^{-1} = g \\ 0 & \text{otherwise} \end{cases}$$ for all $$x, y \in G$$.
 
@@ -71,11 +71,11 @@ The tensor product of self-dual coherent algebras is self-dual, since $$P_{\math
 for the tensor product $$\mathcal{X} \otimes \mathcal{Y}$$ of commutative coherent algebras $$\mathcal{X}$$ and $$\mathcal{Y}$$
 with character tables $$P_{\mathcal{X}}$$ and $$P_{\mathcal{Y}}$$.
 
-So, for any finite abelian group $$G$$, $$\mathcal{W}_{G}$$ is self-dual, and a Fourier transform $$\mathcal{W}_{G}$$ can be identified with a Fourier transform on $$G$$.
+So, for any finite abelian group $$G$$, $$\mathcal{W}_{G}$$ is self-dual, and a duality mapping $$\mathcal{W}_{G}$$ can be identified with a Fourier transform on $$G$$.
 
-Moreover, certain properties of a Fourier transform on a finite abelian group $$G$$ can be identified with properties of a Fourier transform on $$\mathcal{W}_{G}$$:
+Moreover, certain properties of a Fourier transform on a finite abelian group $$G$$ can be identified with properties of a duality mapping on $$\mathcal{W}_{G}$$:
 
-* For example, suppose that $$T : \mathcal{W}_{G} \to \mathcal{W}_{G}$$ is a Fourier transform on $$\mathcal{W}$$.
+* For example, suppose that $$T : \mathcal{W}_{G} \to \mathcal{W}_{G}$$ is a duality mapping on $$\mathcal{W}$$.
 
 	Let $$L^{2}(G)$$ denote the space of complex-valued functions on $${G}$$.
 	
@@ -84,14 +84,14 @@ Moreover, certain properties of a Fourier transform on a finite abelian group $$
 
 	Then $$T(M_{f \star g}) = T(M_{f}M_{g}) = T(M_{f}) \circ T(M_{g})$$ for all $$f,g \in L^{2}(G)$$ on $$G$$
 
-	with convolution $$f \star g$$, which is to ultimately say that a Fourier transform on a product of elements of $$W_{G}$$ can be identified with a Fourier transform of a convolution of complex-valued functions on $$G$$.
+	with convolution $$f \star g$$, which is to ultimately say that a duality mapping on a product of elements of $$W_{G}$$ can be identified with a Fourier transform of a convolution of complex-valued functions on $$G$$.
 
-Lastly, I would like to return to how the Fourier theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.
+Lastly, I would like to return to how the duality theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.
 
 The commutative coherent algebra $$\mathcal{W}$$ is said to be **metric** (relative to $$A$$) if $$\mathcal{W} = \operatorname{span} \{ I, A, A^{2}, \cdots \}$$ for some $$A \in \Gamma(\mathcal{W})$$;
 dually, $$\mathcal{W}$$ is said to be **cometric** (relative to $$E$$) if $$\mathcal{W} = \operatorname{span} \{ J, E, E^{\circ 2}, \cdots \}$$ for some $$E \in \Lambda(\mathcal{W})$$.
 
-Suppose $$\mathcal{W}$$ is self-dual with Fourier transform $$T : \mathcal{W} \to \mathcal{W}$$ on $${W}$$. 
+Suppose $$\mathcal{W}$$ is self-dual with duality mapping $$T : \mathcal{W} \to \mathcal{W}$$ on $${W}$$. 
 
 By properties of $$T$$, observe that:
 
@@ -104,7 +104,7 @@ So, a self-dual coherent algebra is metric if and only if it is cometric.
 It turns out that coherent algebras that are both metric and symmetric can be identified with the adjacency algebras of distance-regular graphs.
 
 Distance-regular graphs whose adjacency algebras are self-dual must then satisfy a number of additional properties and constraints that may be useful
-towards e.g. classifying them; I will continue to elaborate on this point in future posts. 
+towards e.g. classifying them. For example, it is ultimately apparent from my previous that the multiplicities of the eigenvalues of a self-dual distance-regular graph are the valencies of its distance-graphs. I will continue to elaborate on observations about self-dual distance-regular graphs that could be useful towards e.g. classifying them in future posts.
 
 
 

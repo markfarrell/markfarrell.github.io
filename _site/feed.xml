@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-15T08:55:39+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Fourier Transforms on Coherent Algebras</title><link href="/2017/12/18/fourier-transforms-on-coherent-algebras.html" rel="alternate" type="text/html" title="Fourier Transforms on Coherent Algebras" /><published>2017-12-18T00:00:00+00:00</published><updated>2017-12-18T00:00:00+00:00</updated><id>/2017/12/18/fourier-transforms-on-coherent-algebras</id><content type="html" xml:base="/2017/12/18/fourier-transforms-on-coherent-algebras.html">&lt;p&gt;I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian
-groups in a way that could be useful towards e.g. the classification if distance-regular graphs, continuing from where I left
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-01-15T11:20:52+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Fourier Transforms on Coherent Algebras</title><link href="/2017/12/18/fourier-transforms-on-coherent-algebras.html" rel="alternate" type="text/html" title="Fourier Transforms on Coherent Algebras" /><published>2017-12-18T00:00:00+00:00</published><updated>2017-12-18T00:00:00+00:00</updated><id>/2017/12/18/fourier-transforms-on-coherent-algebras</id><content type="html" xml:base="/2017/12/18/fourier-transforms-on-coherent-algebras.html">&lt;p&gt;I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian
+groups in a way that could be useful towards e.g. the classification of distance-regular graphs, continuing from where I left
 off in my previous post.&lt;/p&gt;
 
 &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is a commutative coherent algebra (of order &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and dimension &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;).&lt;/p&gt;
@@ -7,32 +7,32 @@ off in my previous post.&lt;/p&gt;
 &lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W})&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Lambda(\mathcal{W})&lt;/script&gt; denote the sets of Schur-primitive and primitive matrices
 in &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; respectively.&lt;/p&gt;
 
-&lt;p&gt;A &lt;strong&gt;Fourier transform&lt;/strong&gt; on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is a linear automorphism &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; such that:&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;duality mapping&lt;/strong&gt; on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is a linear automorphism &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; such that:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T(MN) = T(M) \circ T(N)&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;M, N \in \mathcal{W}&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T^{-1}(M) = \frac{1}{n} \overline{T(M)} \text{ for all } M \in \Gamma(\mathcal{W})&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;T(M \circ N) = \frac{1}{n} T(M) \ T(N)&lt;/script&gt; for all  &lt;script type=&quot;math/tex&quot;&gt;M, N \in \mathcal{W}&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I would propose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is self-dual if and only if there is a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;I would propose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is self-dual if and only if there is a duality mapping on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Suppose that there is a Fourier transform &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;{W}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;Suppose that there is a duality mapping &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;{W}&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\implies T(E) = T \left ( E^{2} \right ) = T \left ( E \right ) \circ T \left ( E \right ) \in \Gamma(\mathcal{W})&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;E \in \Lambda(\mathcal{W})&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\implies T \left ( \frac{1}{n}  A \right ) =  \frac{1}{n}  T \left ( A \circ A \right ) =  T \left ( \frac{1}{n}  A \right )^{2} \in \Lambda(\mathcal{W})&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;A \in \Gamma(\mathcal{W})&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;It follows that there are orderings &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}&lt;/script&gt; on the sets of Schur-primitive and primitive matrices in &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;T(E_j) = A_j&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;T^{-1}(A_j) = E_j&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;It follows that there are orderings &lt;script type=&quot;math/tex&quot;&gt;\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}&lt;/script&gt; on the sets of Schur-primitive and primitive matrices in &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;T(A_j) = n \overline{E_j}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
 
     &lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;P \in \operatorname{Mat}_{d \times d}(\mathbb{C})&lt;/script&gt; denote the character table of &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; relative to this ordering.&lt;/p&gt;
 
-    &lt;p&gt;Recall from my previous post that &lt;script type=&quot;math/tex&quot;&gt;E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\implies T(E_j) = \sum\limits_{k = 1}^{d} \overline{ \left ( \frac{1}{n} P_{j,k} \right ) }\ T \left (A_k \right ) = \overline{ \left ( \sum\limits_{k = 1}^{d} P_{j,k} \ E_k \right ) } = \overline{A_{j}} = A_{j} \text { for all } 1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
 
-    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\implies T^{-1}(A_j) = \frac{1}{n} \  \overline{T(A_j)} = \sum\limits_{k = 1}^{d} \left ( \frac{1}{n}  \overline{P_{j, k}} \right ) \ A_k = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k} = E_j&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;Now, recall from my previous post that &lt;script type=&quot;math/tex&quot;&gt;E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;.&lt;/p&gt;
 
     &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\implies P \overline{P} = n I&lt;/script&gt; and hence &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is self-dual.&lt;/p&gt;
   &lt;/li&gt;
@@ -43,13 +43,13 @@ in &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; respective
 relative to this ordering.&lt;/p&gt;
 
     &lt;p&gt;It is then apparent that the linear automorphism &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; defined as &lt;script type=&quot;math/tex&quot;&gt;T(E_j) := A_j&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;1 \leq j \leq d&lt;/script&gt;
-is a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
+is a duality mapping on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;So &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is indeed self-dual if and only if there is a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;So &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is indeed self-dual if and only if there is a duality mapping on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;I would like to elaborate now on how the Fourier theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.&lt;/p&gt;
+&lt;p&gt;I would like to elaborate now on how the duality theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.&lt;/p&gt;
 
 &lt;p&gt;For every finite group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, define the coherent algebra &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G} := \operatorname{span} \{ P_{g} : g \in G \} \subseteq \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt; where &lt;script type=&quot;math/tex&quot;&gt;P_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})&lt;/script&gt; is defined as &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
 \left ( P_{g} \right )_{x,y} := \begin{cases} 1 &amp; \text{if } xy^{-1} = g \\ 0 &amp; \text{otherwise} \end{cases} %]]&gt;&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;x, y \in G&lt;/script&gt;.&lt;/p&gt;
@@ -79,13 +79,13 @@ algebras &lt;script type=&quot;math/tex&quot;&gt;\mathcal{X}&lt;/script&gt; and 
 for the tensor product &lt;script type=&quot;math/tex&quot;&gt;\mathcal{X} \otimes \mathcal{Y}&lt;/script&gt; of commutative coherent algebras &lt;script type=&quot;math/tex&quot;&gt;\mathcal{X}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathcal{Y}&lt;/script&gt;
 with character tables &lt;script type=&quot;math/tex&quot;&gt;P_{\mathcal{X}}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;P_{\mathcal{Y}}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;So, for any finite abelian group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt; is self-dual, and a Fourier transform &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt; can be identified with a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;So, for any finite abelian group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt; is self-dual, and a duality mapping &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt; can be identified with a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Moreover, certain properties of a Fourier transform on a finite abelian group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; can be identified with properties of a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt;:&lt;/p&gt;
+&lt;p&gt;Moreover, certain properties of a Fourier transform on a finite abelian group &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; can be identified with properties of a duality mapping on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}_{G}&lt;/script&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;For example, suppose that &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W}_{G} \to \mathcal{W}_{G}&lt;/script&gt; is a Fourier transform on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;For example, suppose that &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W}_{G} \to \mathcal{W}_{G}&lt;/script&gt; is a duality mapping on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt;.&lt;/p&gt;
 
     &lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;L^{2}(G)&lt;/script&gt; denote the space of complex-valued functions on &lt;script type=&quot;math/tex&quot;&gt;{G}&lt;/script&gt;.&lt;/p&gt;
 
@@ -94,16 +94,16 @@ with character tables &lt;script type=&quot;math/tex&quot;&gt;P_{\mathcal{X}}&lt
 
     &lt;p&gt;Then &lt;script type=&quot;math/tex&quot;&gt;T(M_{f \star g}) = T(M_{f}M_{g}) = T(M_{f}) \circ T(M_{g})&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;f,g \in L^{2}(G)&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;&lt;/p&gt;
 
-    &lt;p&gt;with convolution &lt;script type=&quot;math/tex&quot;&gt;f \star g&lt;/script&gt;, which is to ultimately say that a Fourier transform on a product of elements of &lt;script type=&quot;math/tex&quot;&gt;W_{G}&lt;/script&gt; can be identified with a Fourier transform of a convolution of complex-valued functions on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;with convolution &lt;script type=&quot;math/tex&quot;&gt;f \star g&lt;/script&gt;, which is to ultimately say that a duality mapping on a product of elements of &lt;script type=&quot;math/tex&quot;&gt;W_{G}&lt;/script&gt; can be identified with a Fourier transform of a convolution of complex-valued functions on &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Lastly, I would like to return to how the Fourier theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
+&lt;p&gt;Lastly, I would like to return to how the duality theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
 
 &lt;p&gt;The commutative coherent algebra &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is said to be &lt;strong&gt;metric&lt;/strong&gt; (relative to &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;) if &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W} = \operatorname{span} \{ I, A, A^{2}, \cdots \}&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;A \in \Gamma(\mathcal{W})&lt;/script&gt;;
 dually, &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is said to be &lt;strong&gt;cometric&lt;/strong&gt; (relative to &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;) if &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W} = \operatorname{span} \{ J, E, E^{\circ 2}, \cdots \}&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;E \in \Lambda(\mathcal{W})&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Suppose &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is self-dual with Fourier transform &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;{W}&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Suppose &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is self-dual with duality mapping &lt;script type=&quot;math/tex&quot;&gt;T : \mathcal{W} \to \mathcal{W}&lt;/script&gt; on &lt;script type=&quot;math/tex&quot;&gt;{W}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;By properties of &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;, observe that:&lt;/p&gt;
 
@@ -118,7 +118,7 @@ dually, &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is sa
 &lt;p&gt;It turns out that coherent algebras that are both metric and symmetric can be identified with the adjacency algebras of distance-regular graphs.&lt;/p&gt;
 
 &lt;p&gt;Distance-regular graphs whose adjacency algebras are self-dual must then satisfy a number of additional properties and constraints that may be useful
-towards e.g. classifying them; I will continue to elaborate on this point in future posts.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification if distance-regular graphs, continuing from where I left off in my previous post.</summary></entry><entry><title type="html">Duality in Coherent Algebras</title><link href="/2017/12/11/duality-in-coherent-algebras.html" rel="alternate" type="text/html" title="Duality in Coherent Algebras" /><published>2017-12-11T00:00:00+00:00</published><updated>2017-12-11T00:00:00+00:00</updated><id>/2017/12/11/duality-in-coherent-algebras</id><content type="html" xml:base="/2017/12/11/duality-in-coherent-algebras.html">&lt;p&gt;I would like to introduce the character theory of (commutative) &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_algebra&quot;&gt;coherent algebras&lt;/a&gt;, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
+towards e.g. classifying them. For example, it is ultimately apparent from my previous that the multiplicities of the eigenvalues of a self-dual distance-regular graph are the valencies of its distance-graphs. I will continue to elaborate on observations about self-dual distance-regular graphs that could be useful towards e.g. classifying them in future posts.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs, continuing from where I left off in my previous post.</summary></entry><entry><title type="html">Duality in Coherent Algebras</title><link href="/2017/12/11/duality-in-coherent-algebras.html" rel="alternate" type="text/html" title="Duality in Coherent Algebras" /><published>2017-12-11T00:00:00+00:00</published><updated>2017-12-11T00:00:00+00:00</updated><id>/2017/12/11/duality-in-coherent-algebras</id><content type="html" xml:base="/2017/12/11/duality-in-coherent-algebras.html">&lt;p&gt;I would like to introduce the character theory of (commutative) &lt;a href=&quot;https://en.wikipedia.org/wiki/Coherent_algebra&quot;&gt;coherent algebras&lt;/a&gt;, with the goal of arriving at what it means for a coherent algebra to be self-dual and how the theory of duality of in coherent algebras generalizes the Fourier theory of finite abelian groups in a way that could be useful towards e.g. the classification of distance-regular graphs.&lt;/p&gt;
 
 &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{W}&lt;/script&gt; is a commutative coherent algebra (of order &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and dimension &lt;script type=&quot;math/tex&quot;&gt;d&lt;/script&gt;).&lt;/p&gt;
 

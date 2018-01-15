@@ -74,7 +74,7 @@
 
   <div class="post-content" itemprop="articleBody">
     <p>I would like to elaborate on how the theory of duality in coherent algebras generalizes the Fourier theory of finite abelian
-groups in a way that could be useful towards e.g. the classification if distance-regular graphs, continuing from where I left
+groups in a way that could be useful towards e.g. the classification of distance-regular graphs, continuing from where I left
 off in my previous post.</p>
 
 <p>Suppose that <script type="math/tex">\mathcal{W}</script> is a commutative coherent algebra (of order <script type="math/tex">n</script> and dimension <script type="math/tex">d</script>).</p>
@@ -82,32 +82,32 @@ off in my previous post.</p>
 <p>Let <script type="math/tex">\Gamma(\mathcal{W})</script> and <script type="math/tex">\Lambda(\mathcal{W})</script> denote the sets of Schur-primitive and primitive matrices
 in <script type="math/tex">\mathcal{W}</script> respectively.</p>
 
-<p>A <strong>Fourier transform</strong> on <script type="math/tex">\mathcal{W}</script> is a linear automorphism <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> such that:</p>
+<p>A <strong>duality mapping</strong> on <script type="math/tex">\mathcal{W}</script> is a linear automorphism <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> such that:</p>
 
 <ol>
   <li>
     <p><script type="math/tex">T(MN) = T(M) \circ T(N)</script> for all <script type="math/tex">M, N \in \mathcal{W}</script>.</p>
   </li>
   <li>
-    <p><script type="math/tex">T^{-1}(M) = \frac{1}{n} \overline{T(M)} \text{ for all } M \in \Gamma(\mathcal{W})</script>.</p>
+    <p><script type="math/tex">T(M \circ N) = \frac{1}{n} T(M) \ T(N)</script> for all  <script type="math/tex">M, N \in \mathcal{W}</script>.</p>
   </li>
 </ol>
 
-<p>I would propose that <script type="math/tex">\mathcal{W}</script> is self-dual if and only if there is a Fourier transform on <script type="math/tex">\mathcal{W}</script>.</p>
+<p>I would propose that <script type="math/tex">\mathcal{W}</script> is self-dual if and only if there is a duality mapping on <script type="math/tex">\mathcal{W}</script>.</p>
 
 <ol>
   <li>
-    <p>Suppose that there is a Fourier transform <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> on <script type="math/tex">{W}</script>.</p>
+    <p>Suppose that there is a duality mapping <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> on <script type="math/tex">{W}</script>.</p>
 
-    <p><script type="math/tex">\implies T(E) = T \left ( E^{2} \right ) = T \left ( E \right ) \circ T \left ( E \right ) \in \Gamma(\mathcal{W})</script> for all <script type="math/tex">E \in \Lambda(\mathcal{W})</script>.</p>
+    <p><script type="math/tex">\implies T \left ( \frac{1}{n}  A \right ) =  \frac{1}{n}  T \left ( A \circ A \right ) =  T \left ( \frac{1}{n}  A \right )^{2} \in \Lambda(\mathcal{W})</script> for all <script type="math/tex">A \in \Gamma(\mathcal{W})</script>.</p>
 
-    <p>It follows that there are orderings <script type="math/tex">\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}</script> and <script type="math/tex">\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}</script> on the sets of Schur-primitive and primitive matrices in <script type="math/tex">\mathcal{W}</script> such that <script type="math/tex">T(E_j) = A_j</script> and <script type="math/tex">T^{-1}(A_j) = E_j</script> for all <script type="math/tex">1 \leq j \leq d</script>.</p>
+    <p>It follows that there are orderings <script type="math/tex">\Gamma(\mathcal{W}) = \{ A_{j} : 1 \leq j \leq d \}</script> and <script type="math/tex">\Lambda(\mathcal{W}) := \{ E_{j} : 1 \leq j \leq d \}</script> on the sets of Schur-primitive and primitive matrices in <script type="math/tex">\mathcal{W}</script> such that <script type="math/tex">T(A_j) = n \overline{E_j}</script> for all <script type="math/tex">1 \leq j \leq d</script>.</p>
 
     <p>Let <script type="math/tex">P \in \operatorname{Mat}_{d \times d}(\mathbb{C})</script> denote the character table of <script type="math/tex">W</script> relative to this ordering.</p>
 
-    <p>Recall from my previous post that <script type="math/tex">E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}</script> for all <script type="math/tex">1 \leq j \leq d</script>.</p>
+    <p><script type="math/tex">\implies T(E_j) = \sum\limits_{k = 1}^{d} \overline{ \left ( \frac{1}{n} P_{j,k} \right ) }\ T \left (A_k \right ) = \overline{ \left ( \sum\limits_{k = 1}^{d} P_{j,k} \ E_k \right ) } = \overline{A_{j}} = A_{j} \text { for all } 1 \leq j \leq d</script>.</p>
 
-    <p><script type="math/tex">\implies T^{-1}(A_j) = \frac{1}{n} \  \overline{T(A_j)} = \sum\limits_{k = 1}^{d} \left ( \frac{1}{n}  \overline{P_{j, k}} \right ) \ A_k = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k} = E_j</script> for all <script type="math/tex">1 \leq j \leq d</script>.</p>
+    <p>Now, recall from my previous post that <script type="math/tex">E_{j} = \sum\limits_{k = 1}^{d} P_{j,k}^{-1} \ A_{k}</script> for all <script type="math/tex">1 \leq j \leq d</script>.</p>
 
     <p><script type="math/tex">\implies P \overline{P} = n I</script> and hence <script type="math/tex">\mathcal{W}</script> is self-dual.</p>
   </li>
@@ -118,13 +118,13 @@ in <script type="math/tex">\mathcal{W}</script> respectively.</p>
 relative to this ordering.</p>
 
     <p>It is then apparent that the linear automorphism <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> defined as <script type="math/tex">T(E_j) := A_j</script> for all <script type="math/tex">1 \leq j \leq d</script>
-is a Fourier transform on <script type="math/tex">\mathcal{W}</script>.</p>
+is a duality mapping on <script type="math/tex">\mathcal{W}</script>.</p>
   </li>
 </ol>
 
-<p>So <script type="math/tex">\mathcal{W}</script> is indeed self-dual if and only if there is a Fourier transform on <script type="math/tex">\mathcal{W}</script>.</p>
+<p>So <script type="math/tex">\mathcal{W}</script> is indeed self-dual if and only if there is a duality mapping on <script type="math/tex">\mathcal{W}</script>.</p>
 
-<p>I would like to elaborate now on how the Fourier theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.</p>
+<p>I would like to elaborate now on how the duality theory of commutative coherent algebras is related to the Fourier theory of finite abelian groups.</p>
 
 <p>For every finite group <script type="math/tex">G</script>, define the coherent algebra <script type="math/tex">\mathcal{W}_{G} := \operatorname{span} \{ P_{g} : g \in G \} \subseteq \operatorname{Mat}_{G \times G}(\mathbb{C})</script> where <script type="math/tex">P_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script> is defined as <script type="math/tex">% <![CDATA[
 \left ( P_{g} \right )_{x,y} := \begin{cases} 1 & \text{if } xy^{-1} = g \\ 0 & \text{otherwise} \end{cases} %]]></script> for all <script type="math/tex">x, y \in G</script>.</p>
@@ -154,13 +154,13 @@ algebras <script type="math/tex">\mathcal{X}</script> and <script type="math/tex
 for the tensor product <script type="math/tex">\mathcal{X} \otimes \mathcal{Y}</script> of commutative coherent algebras <script type="math/tex">\mathcal{X}</script> and <script type="math/tex">\mathcal{Y}</script>
 with character tables <script type="math/tex">P_{\mathcal{X}}</script> and <script type="math/tex">P_{\mathcal{Y}}</script>.</p>
 
-<p>So, for any finite abelian group <script type="math/tex">G</script>, <script type="math/tex">\mathcal{W}_{G}</script> is self-dual, and a Fourier transform <script type="math/tex">\mathcal{W}_{G}</script> can be identified with a Fourier transform on <script type="math/tex">G</script>.</p>
+<p>So, for any finite abelian group <script type="math/tex">G</script>, <script type="math/tex">\mathcal{W}_{G}</script> is self-dual, and a duality mapping <script type="math/tex">\mathcal{W}_{G}</script> can be identified with a Fourier transform on <script type="math/tex">G</script>.</p>
 
-<p>Moreover, certain properties of a Fourier transform on a finite abelian group <script type="math/tex">G</script> can be identified with properties of a Fourier transform on <script type="math/tex">\mathcal{W}_{G}</script>:</p>
+<p>Moreover, certain properties of a Fourier transform on a finite abelian group <script type="math/tex">G</script> can be identified with properties of a duality mapping on <script type="math/tex">\mathcal{W}_{G}</script>:</p>
 
 <ul>
   <li>
-    <p>For example, suppose that <script type="math/tex">T : \mathcal{W}_{G} \to \mathcal{W}_{G}</script> is a Fourier transform on <script type="math/tex">\mathcal{W}</script>.</p>
+    <p>For example, suppose that <script type="math/tex">T : \mathcal{W}_{G} \to \mathcal{W}_{G}</script> is a duality mapping on <script type="math/tex">\mathcal{W}</script>.</p>
 
     <p>Let <script type="math/tex">L^{2}(G)</script> denote the space of complex-valued functions on <script type="math/tex">{G}</script>.</p>
 
@@ -169,16 +169,16 @@ with character tables <script type="math/tex">P_{\mathcal{X}}</script> and <scri
 
     <p>Then <script type="math/tex">T(M_{f \star g}) = T(M_{f}M_{g}) = T(M_{f}) \circ T(M_{g})</script> for all <script type="math/tex">f,g \in L^{2}(G)</script> on <script type="math/tex">G</script></p>
 
-    <p>with convolution <script type="math/tex">f \star g</script>, which is to ultimately say that a Fourier transform on a product of elements of <script type="math/tex">W_{G}</script> can be identified with a Fourier transform of a convolution of complex-valued functions on <script type="math/tex">G</script>.</p>
+    <p>with convolution <script type="math/tex">f \star g</script>, which is to ultimately say that a duality mapping on a product of elements of <script type="math/tex">W_{G}</script> can be identified with a Fourier transform of a convolution of complex-valued functions on <script type="math/tex">G</script>.</p>
   </li>
 </ul>
 
-<p>Lastly, I would like to return to how the Fourier theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.</p>
+<p>Lastly, I would like to return to how the duality theory of commutative coherent algebras could be useful towards e.g. the classification of distance-regular graphs.</p>
 
 <p>The commutative coherent algebra <script type="math/tex">\mathcal{W}</script> is said to be <strong>metric</strong> (relative to <script type="math/tex">A</script>) if <script type="math/tex">\mathcal{W} = \operatorname{span} \{ I, A, A^{2}, \cdots \}</script> for some <script type="math/tex">A \in \Gamma(\mathcal{W})</script>;
 dually, <script type="math/tex">\mathcal{W}</script> is said to be <strong>cometric</strong> (relative to <script type="math/tex">E</script>) if <script type="math/tex">\mathcal{W} = \operatorname{span} \{ J, E, E^{\circ 2}, \cdots \}</script> for some <script type="math/tex">E \in \Lambda(\mathcal{W})</script>.</p>
 
-<p>Suppose <script type="math/tex">\mathcal{W}</script> is self-dual with Fourier transform <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> on <script type="math/tex">{W}</script>.</p>
+<p>Suppose <script type="math/tex">\mathcal{W}</script> is self-dual with duality mapping <script type="math/tex">T : \mathcal{W} \to \mathcal{W}</script> on <script type="math/tex">{W}</script>.</p>
 
 <p>By properties of <script type="math/tex">T</script>, observe that:</p>
 
@@ -193,7 +193,7 @@ dually, <script type="math/tex">\mathcal{W}</script> is said to be <strong>comet
 <p>It turns out that coherent algebras that are both metric and symmetric can be identified with the adjacency algebras of distance-regular graphs.</p>
 
 <p>Distance-regular graphs whose adjacency algebras are self-dual must then satisfy a number of additional properties and constraints that may be useful
-towards e.g. classifying them; I will continue to elaborate on this point in future posts.</p>
+towards e.g. classifying them. For example, it is ultimately apparent from my previous that the multiplicities of the eigenvalues of a self-dual distance-regular graph are the valencies of its distance-graphs. I will continue to elaborate on observations about self-dual distance-regular graphs that could be useful towards e.g. classifying them in future posts.</p>
 
 
   </div>
