@@ -14,25 +14,24 @@ Let $$\Gamma(\mathcal{W})$$ and $$\Lambda(\mathcal{W})$$ denote the set of Schur
 
 I would propose that $$\mathcal{W} := \operatorname{span} \left ( \Gamma(\mathcal{W}) \right ) = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )$$ .
 
-1. Let $$\Gamma(\mathcal{W})^{\circ} := \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}$$.
+1. Let $$\Gamma(\mathcal{W})^{\perp}$$ denote the orthogonal complement of $$\Gamma(\mathcal{W})$$ relative to the trace inner product $$\langle \cdot, \cdot \rangle$$ on $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$.
 	
-	Observe that $$\Gamma(\mathcal{W})^{\circ}$$ is a Schur-closed subspace of $$\mathcal{W}$$.
+	Observe that $$\langle M, N \rangle = \operatorname{sum} \left ( \overline{M} \circ N \right )$$
+	and hence $$ M \circ N = 0 $$ if and only if $$\langle M, N \rangle = 0$$ for all $$ M \in \mathcal{W} $$ and $$ N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )$$.
 
-	It follows that for all $$M \in \Gamma(\mathcal{W})^{\circ}$$ with a non-zero entry $$c \in \mathbb{C}$$, the matrix 
-	$$ N \circ N - N \in \Gamma(\mathcal{W})^{\circ}$$ where $$N := \frac{1}{c} M$$ has fewer non-zero entries than $$M$$.
+	$$ \implies \Gamma(\mathcal{W})^{\perp} = \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}$$
 
+	Now, observe then that $$\Gamma(\mathcal{W})$$ is Schur-closed.
 
-	This then means that the matrix in $$\Gamma(\mathcal{W})^{\circ}$$ with the least number of non-zero entries must be a $$01$$-matrix,
+	It follows that for all $$M \in \Gamma(\mathcal{W})^{\perp}$$ with a non-zero entry $$c \in \mathbb{C}$$, the matrix 
+	$$ N \circ N - N \in \Gamma(\mathcal{W})^{\perp}$$ where $$N := \frac{1}{c} M$$ has fewer non-zero entries than $$M$$.
+
+	This then means that the matrix in $$\Gamma(\mathcal{W})^{\perp}$$ with the least number of non-zero entries must be a $$01$$-matrix,
 	and moreover must either be Schur-primitive or the zero matrix.
 
-	But, there are no Schur-primitive matrices in $$\Gamma(\mathcal{W})^{\circ}$$.
+	But, there are no Schur-primitive matrices in $$\Gamma(\mathcal{W})^{\perp}$$.
 
-	$$ \implies \Gamma(\mathcal{W})^{\circ} = \{ 0 \}$$
-
-	Now, let $$\langle \cdot, \cdot \rangle$$ denote the trace inner product on $$\operatorname{Mat}_{n \times n}(\mathbb{C})$$.
-
-	Observe that $$\langle M, N \rangle = \operatorname{sum} \left ( \overline{M} \circ N \right )$$
-	and hence $$ M \circ N = 0 $$ if and only if $$\langle M, N \rangle = 0$$ for all $$ M \in \mathcal{W} $$ and $$ N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )$$; this is to say that $$ \Gamma(\mathcal{W})^{\circ} $$ is the orthogonal complement of $$\operatorname{span} \left ( \Gamma(\mathcal{W}) \right )$$ under $$\langle \cdot , \cdot \rangle $$.
+	$$ \implies \Gamma(\mathcal{W})^{\perp} = \{ 0 \}$$
 
 	It is then ultimately apparent that $$\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right ) $$.
 

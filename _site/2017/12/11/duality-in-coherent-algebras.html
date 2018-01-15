@@ -85,24 +85,24 @@
 
 <ol>
   <li>
-    <p>Let <script type="math/tex">\Gamma(\mathcal{W})^{\circ} := \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}</script>.</p>
-
-    <p>Observe that <script type="math/tex">\Gamma(\mathcal{W})^{\circ}</script> is a Schur-closed subspace of <script type="math/tex">\mathcal{W}</script>.</p>
-
-    <p>It follows that for all <script type="math/tex">M \in \Gamma(\mathcal{W})^{\circ}</script> with a non-zero entry <script type="math/tex">c \in \mathbb{C}</script>, the matrix 
- <script type="math/tex">N \circ N - N \in \Gamma(\mathcal{W})^{\circ}</script> where <script type="math/tex">N := \frac{1}{c} M</script> has fewer non-zero entries than <script type="math/tex">M</script>.</p>
-
-    <p>This then means that the matrix in <script type="math/tex">\Gamma(\mathcal{W})^{\circ}</script> with the least number of non-zero entries must be a <script type="math/tex">01</script>-matrix,
- and moreover must either be Schur-primitive or the zero matrix.</p>
-
-    <p>But, there are no Schur-primitive matrices in <script type="math/tex">\Gamma(\mathcal{W})^{\circ}</script>.</p>
-
-    <script type="math/tex; mode=display">\implies \Gamma(\mathcal{W})^{\circ} = \{ 0 \}</script>
-
-    <p>Now, let <script type="math/tex">\langle \cdot, \cdot \rangle</script> denote the trace inner product on <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
+    <p>Let <script type="math/tex">\Gamma(\mathcal{W})^{\perp}</script> denote the orthogonal complement of <script type="math/tex">\Gamma(\mathcal{W})</script> relative to the trace inner product <script type="math/tex">\langle \cdot, \cdot \rangle</script> on <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
 
     <p>Observe that <script type="math/tex">\langle M, N \rangle = \operatorname{sum} \left ( \overline{M} \circ N \right )</script>
- and hence <script type="math/tex">M \circ N = 0</script> if and only if <script type="math/tex">\langle M, N \rangle = 0</script> for all <script type="math/tex">M \in \mathcal{W}</script> and <script type="math/tex">N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )</script>; this is to say that <script type="math/tex">\Gamma(\mathcal{W})^{\circ}</script> is the orthogonal complement of <script type="math/tex">\operatorname{span} \left ( \Gamma(\mathcal{W}) \right )</script> under <script type="math/tex">\langle \cdot , \cdot \rangle</script>.</p>
+ and hence <script type="math/tex">M \circ N = 0</script> if and only if <script type="math/tex">\langle M, N \rangle = 0</script> for all <script type="math/tex">M \in \mathcal{W}</script> and <script type="math/tex">N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \Gamma(\mathcal{W})^{\perp} = \{ M \in \mathcal{W} : M \circ N = 0 \text{ for all } N \in \operatorname{span} \left ( \Gamma(\mathcal{W}) \right )\}</script>
+
+    <p>Now, observe then that <script type="math/tex">\Gamma(\mathcal{W})</script> is Schur-closed.</p>
+
+    <p>It follows that for all <script type="math/tex">M \in \Gamma(\mathcal{W})^{\perp}</script> with a non-zero entry <script type="math/tex">c \in \mathbb{C}</script>, the matrix 
+ <script type="math/tex">N \circ N - N \in \Gamma(\mathcal{W})^{\perp}</script> where <script type="math/tex">N := \frac{1}{c} M</script> has fewer non-zero entries than <script type="math/tex">M</script>.</p>
+
+    <p>This then means that the matrix in <script type="math/tex">\Gamma(\mathcal{W})^{\perp}</script> with the least number of non-zero entries must be a <script type="math/tex">01</script>-matrix,
+ and moreover must either be Schur-primitive or the zero matrix.</p>
+
+    <p>But, there are no Schur-primitive matrices in <script type="math/tex">\Gamma(\mathcal{W})^{\perp}</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \Gamma(\mathcal{W})^{\perp} = \{ 0 \}</script>
 
     <p>It is then ultimately apparent that <script type="math/tex">\mathcal{W} = \operatorname{span} \left ( \Lambda(\mathcal{W}) \right )</script>.</p>
   </li>
