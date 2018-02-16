@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "More Self-Dual Coherent Algebras"
-date:   2018-01-17
+date:   2018-02-16
 ---
 
 I would like to establish some more examples of families of self-dual coherent algebras, in addition to the 
@@ -115,14 +115,14 @@ I would like to construct a second example of a family of self-dual coherent alg
 
 	Finally, it can then be concluded here that the tensor product $$\mathcal{N}_{M} \otimes \mathcal{N}_{M^{T}}$$ of Nomura algebras $$\mathcal{N}_{M}$$ and $$\mathcal{N}_{M^{T}}$$ for the Type-II matrix $$M$$ is a self-dual coherent algebra.
 
-So, self-dual coherent algebras can indeed be constructed from Type-II matrices: complex Hadamard matrices are a first example of a family of Type-II matrices that comes to mind, which moreover can e.g. be constructed from character tables of finite abelian groups and graphs that admit uniform mixing (with respect to their continuous-time quantum walks relative to their adjacency matrices).
+So, self-dual coherent algebras can indeed be constructed from Type-II matrices; complex Hadamard matrices are a first example of a family of Type-II matrices that comes to mind, which moreover can e.g. be constructed from character tables of finite abelian groups and graphs that admit uniform mixing (with respect to their continuous-time quantum walks relative to their adjacency matrices).
 
 I would now lastly like to establish that the adjacency algebras of Hamming graphs are self-dual coherent algebras:
 
 * Suppose that $$G := H^{n}$$ is the $$n$$-th direct power of some finite cyclic group $$H$$ and $$n \in \mathbb{N}$$.
 
 	Let $$\mathcal{W}_{G}$$ denote the coherent algebra arising from $$G$$ as in my previous posts: 
-	i.e. $$\mathcal{W}_{G} := \operatorname{span} \{ A_{g} : g \in G \}$$ where $$A_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$ is a $$01$$-matrix relating pairs of elements of $$G$$ whose difference is $$g$$ for all $$g \in G$$.
+	i.e. $$\mathcal{W}_{G} := \operatorname{span} \{ A_{g} : g \in G \}$$ where $$A_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$ is a $$01$$-matrix relating pairs of elements of $$G$$ whose difference is $$g$$ (and hence also a permutation matrix representation the left-translation of the elements of $$G$$ by $$g$$) for all $$g \in G$$.
 
 	Additionally, let $$f_{G} : G \to \{ 0, \cdots, n \}$$ denote a Hamming weight function on $$G$$: i.e. a function mapping elements of $$G$$ to their
 	number of non-zero coordinates.
@@ -152,7 +152,7 @@ I would now lastly like to establish that the adjacency algebras of Hamming grap
 
 	Note too that $$P = \overline{P}$$, since $$\mathcal{X}_{G}$$ is the adjacency algebra of distance-regular graph and hence every Schur-primitive matrix in $$\mathcal{X}_{G}$$ is a Hermitian matrix (whose distinct eigenvalues are all real).
 
-	Lastly, for all $$0 \leq j \leq n$$, define $$E_{j} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$ as $$E_{j} := \frac{1}{\left\vert G \right\vert} \ F_{j}^{*} F_{j}$$ where $$F_{j} \in \operatorname{Mat}_{G_{j} \times G}(\mathbb{C})$$ is defined as $$\left ( F_{j} \right )_{x,y} := \overline{\chi_{x}(y)}$$ for all $$x \in G_{k}$$ and $$y \in G$$.
+	Lastly, for all $$0 \leq j \leq n$$, define $$E_{j} \in \operatorname{Mat}_{G \times G}(\mathbb{C})$$ as $$E_{j} := \frac{1}{\left\vert G \right\vert} \ F_{j}^{*} F_{j}$$ where $$F_{j} \in \operatorname{Mat}_{G_{j} \times G}(\mathbb{C})$$ is defined as $$\left ( F_{j} \right )_{x,y} := \overline{\chi_{x}(y)}$$ for all $$x \in G_{j}$$ and $$y \in G$$.
 
 	It then be observed that $$A_{j} = \sum\limits_{k = 0}^{n} P_{j,k} E_{k}$$ and that $$E_{j} = \sum\limits_{k = n} P_{j,k} A_{k}$$ for all $$ 0 \leq j \leq n $$.
 
@@ -162,7 +162,7 @@ I would now lastly like to establish that the adjacency algebras of Hamming grap
 	and that $$\mathcal{X}_{G}$$ is a self-dual coherent algebra.
 
 
-It turns out that the adjacency algebra of every Hamming graph can be identified with an instance of this kind of coherent algebra arising
+It turns out that, conversely, the adjacency algebra of every Hamming graph can be identified with an instance of this kind of coherent algebra arising
 from a finite cyclic group as well; hence the adjacency algebras of Hamming graphs are indeed self-dual.
 
 
