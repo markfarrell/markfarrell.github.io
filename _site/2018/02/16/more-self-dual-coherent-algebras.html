@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>More Self-Dual Coherent Algebras</title>
+  <meta name="description" content="I would like to establish some more examples of families of self-dual coherent algebras, in addition to the prototypical example of a family of self-dual coh...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="/2018/02/16/more-self-dual-coherent-algebras.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script src="https://use.fontawesome.com/8620140429.js"></script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">More Self-Dual Coherent Algebras</h1>
+    <p class="post-meta"><time datetime="2018-02-16T00:00:00+00:00" itemprop="datePublished">Feb 16, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I would like to establish some more examples of families of self-dual coherent algebras, in addition to the 
+prototypical example of a family of self-dual coherent algebras arising from finite abelian groups that I 
+established in my last post.</p>
+
+<p>Suppose that <script type="math/tex">\mathcal{W}</script> and <script type="math/tex">\mathcal{X}</script> are commutative coherent algebras of order <script type="math/tex">n</script>.</p>
+
+<p>A <strong>duality mapping</strong> from <script type="math/tex">\mathcal{W}</script> to <script type="math/tex">\mathcal{X}</script> is a linear isomorphism <script type="math/tex">T : \mathcal{W} \to \mathcal{X}</script> such that:</p>
+
+<ol>
+  <li>
+    <p><script type="math/tex">T(M N) = T(M) \circ T(N)</script> for all <script type="math/tex">M, N \in \mathcal{W}</script>.</p>
+  </li>
+  <li>
+    <p><script type="math/tex">T(M \circ N) = \frac{1}{n} \ T(M) \ T(N)</script> for all <script type="math/tex">M, N \in \mathcal{W}</script>.</p>
+  </li>
+</ol>
+
+<p>I would like to assume the fact that the tensor product of two commutative coherent algebras is self-dual if there is a duality mapping between them.</p>
+
+<p>Then as a first additional example of a family of self-dual coherent algebras:</p>
+
+<ul>
+  <li>
+    <p>Suppose that <script type="math/tex">G</script> is a self-complementary strongly-regular graph of order <script type="math/tex">n</script>.</p>
+
+    <p>Assume that <script type="math/tex">G</script> is connected and <script type="math/tex">k</script>-regular.</p>
+
+    <p>Then <script type="math/tex">G</script> has three distinct eigenvalues <script type="math/tex">\{k, \lambda, -1 - \lambda \}</script> for some <script type="math/tex">\lambda \in \mathbb{R}</script>, since it is strongly-regular and self-complementary.</p>
+
+    <p>Moreover:</p>
+
+    <script type="math/tex; mode=display">\mathbb{C}[A] := \operatorname{span} \{ I, A, A^{2}, \cdots \} = \operatorname{span} \left \{ I, A, P A P^{T} \right \} = \operatorname{span} \left \{ \frac{1}{n} J, E, P E P^{T} \right \}</script>
+
+    <p>for some permutation matrix <script type="math/tex">P \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> and orthogonal projection <script type="math/tex">E \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> such that <script type="math/tex">A = k \left (\frac{1}{n} J \right ) + \lambda E + (-1 - \lambda) P E P^{T}</script>, letting <script type="math/tex">A \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> denote the adjacency matrix of <script type="math/tex">G</script> and <script type="math/tex">J</script> denote the all-ones matrix in <script type="math/tex">\operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
+
+    <p>Now, let <script type="math/tex">T : \mathbb{C}[A] \to \mathbb{C}[A]</script> denote the linear automorphism on <script type="math/tex">\mathbb{C}[A]</script> such that <script type="math/tex">T(E) := A</script>, <script type="math/tex">T \left ( P E P^{T} \right ) := P A P^{T}</script>, and <script type="math/tex">T \left ( \frac{1}{n} J \right ) := I</script>.</p>
+
+    <script type="math/tex; mode=display">\implies T \left ( A + P A P^{T} \right )</script>
+
+    <script type="math/tex; mode=display">= \left ( 2k \right ) \ T \left ( \frac{1}{n} J \right ) - T(E) - T \left (P E P^{T} \right )</script>
+
+    <script type="math/tex; mode=display">= (2k)I - A - P A P^{T}</script>
+
+    <script type="math/tex; mode=display">= (n-1)I - A - P A P^{T}</script>
+
+    <p><strong>[</strong> again, since <script type="math/tex">G</script> is self-complementary <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">= nI - \left ( I + A + P A P^{T} \right )</script>
+
+    <script type="math/tex; mode=display">= nI - J</script>
+
+    <script type="math/tex; mode=display">\implies T \left ( A + P A P^{T} \right ) = \frac{1}{n} \left ( T \left ( A + P A P^{T} \right ) \right )^{2}</script>
+
+    <p>Observe now that <script type="math/tex">\mathbb{C}[A]</script> is a commutative coherent algebra and that <script type="math/tex">T \left ( P M P^{T} \right ) = P \ T(M) \ P^{T}</script> for all <script type="math/tex">M \in \mathbb{C}[A]</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \frac{1}{n} T(A) \in \left \{ E, P E P^{T} \right  \}</script>
+
+    <script type="math/tex; mode=display">\implies T \left ( M \circ N \right )  = \frac{1}{n} T(M) \ T(N) \text { for all } M, N \in \mathbb{C}[A]</script>
+
+    <p>It can then be concluded that <script type="math/tex">\mathcal{C}[A] \otimes \mathcal{C}[A]</script> is a self-dual coherent algebra, since <script type="math/tex">T(M N) = T(M) \circ T(N)</script>
+  for all <script type="math/tex">M,N \in \mathcal{C}[A]</script> by construction as well.</p>
+  </li>
+</ul>
+
+<p>So, self-dual coherent algebras can be constructed from e.g. self-complementary arc-transitive graphs in this way, for instance.</p>
+
+<p>Now, a complex square matrix <script type="math/tex">M</script> (of order <script type="math/tex">n</script>) is said to be <strong>Schur-invertible</strong> with <strong>Schur-inverse</strong> <script type="math/tex">M^{(-)}</script> if <script type="math/tex">M \circ M^{(-)} = J</script> for some (unique) matrix <script type="math/tex">M^{(-)} \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> and all-ones matrix <script type="math/tex">J \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script>.</p>
+
+<p>The <strong>Nomura algebra</strong> <script type="math/tex">\mathcal{N}_{M}</script>  (of order <script type="math/tex">n</script>) of a Schur-invertible matrix <script type="math/tex">M \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> is defined as <script type="math/tex">\mathcal{N}_{M} := \{ N \in \operatorname{Mat}_{n \times n}(\mathbb{C}) : N \left ( M e_{i} \circ M^{(-)} e_{j} \right ) \in \operatorname{span} \left \{ M e_{i} \circ M^{(-)} e_{j} \right \} \text{ for all } 1 \leq i,j \leq n \}</script>; the Nomura algebra of Schur-invertible matrix is a subspace of complex square matrices that is closed under ordinary matrix multiplication with identity.</p>
+
+<p>A Schur-invertible matrix <script type="math/tex">M</script> of order <script type="math/tex">n</script> is said to be <strong>Type-II</strong> if <script type="math/tex">M M^{(-)} = n I</script>.</p>
+
+<p>I would like to construct a second example of a family of self-dual coherent algebras from Nomura algebras of Type-II matrices:</p>
+
+<ol>
+  <li>
+    <p>Let <script type="math/tex">\Lambda_{M} : \mathcal{N}_{M} \to \operatorname{Mat}_{n \times n}(\mathbb{C})</script> denote the linear mapping such that <script type="math/tex">N \left ( M e_{i} \ \circ \ M e_{j} \right ) = \left ( \Lambda_{M} (N) \right )_{i,j} \ \left ( M e_{i} \ \circ \ M e_{j} \right )</script> for all <script type="math/tex">1 \leq i, j \leq n</script> and <script type="math/tex">N \in \mathcal{N}_{M}</script>, 
+ for any Schur-invertible matrix <script type="math/tex">M</script> (of order <script type="math/tex">n</script>).</p>
+  </li>
+  <li>
+    <p>Suppose that <script type="math/tex">M</script> is a Type-II matrix of order <script type="math/tex">n</script>.</p>
+
+    <p>Select any <script type="math/tex">N \in \mathcal{N}_{M}</script>.</p>
+
+    <p>Then for all <script type="math/tex">1 \leq i, j, k \leq n</script>:</p>
+
+    <script type="math/tex; mode=display">\implies e_{k}^{T} \left ( \Lambda_{M}(N) \left ( M^{T} e_{i} \circ M^{(-)T} e_{j} \right ) \right )</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{l = 1}^{n} \left ( \Lambda_{M}(N) \right )_{k, l} \ M_{i, l} \ M_{j,l}^{(-)}</script>
+
+    <script type="math/tex; mode=display">= \sum\limits_{l = 1}^{n} \left ( \sum\limits_{m = 1}^{m} \left ( N_{j,m} M_{m,k} M_{m,l}^{(-)} \right ) \left ( M_{j,k}^{(-)} M_{j, l} \right ) \right ) M_{i,l} M_{j,l}^{(-)}</script>
+
+    <script type="math/tex; mode=display">= M_{j,k}^{(-)} \left ( \sum\limits_{m = 1}^{n} \left ( N_{j,m} M_{m,k} \right )  \left ( \sum\limits_{l = 1}^{m} M_{i, l} M_{m, l}^{(-)} \right ) \right )</script>
+
+    <script type="math/tex; mode=display">= M_{j,k}^{(-)} \left ( N_{j, i} M_{i,k} \right ) \left ( n \right )</script>
+
+    <p><strong>[</strong> since <script type="math/tex">M</script> is Type-II <strong>]</strong></p>
+
+    <script type="math/tex; mode=display">= \left ( n N_{j, i} \right ) \left ( e_{k}^{T} \left ( M^{T} e_{i} \circ M^{(-){T}} e_{j} \right) \right )</script>
+
+    <p>.</p>
+
+    <script type="math/tex; mode=display">\implies \Lambda_{M}(N) \in \mathcal{N}_{M^{T}}</script>
+
+    <p><strong>[</strong> noting that <script type="math/tex">M^{T}</script> is also Type-II <strong>]</strong>.</p>
+
+    <p>By similar reasoning, it follows that <script type="math/tex">\Lambda_{M^{T}} \left ( \frac{1}{n} \ \Lambda_{M}(N) \right ) = N^{T} \in \mathcal{N}_{M}</script>.</p>
+
+    <p>It is then ultimately apparent that <script type="math/tex">\mathcal{N}_{M}</script> is closed under transposition in general.</p>
+
+    <p>Observe moreover that <script type="math/tex">\Lambda_{M} : \mathcal{N}_{M} \to \mathcal{N}_{M_{T}}</script> is in fact a linear isomorphism (with inverse <script type="math/tex">\left ( \Lambda_{M^{T}} \bullet \Lambda_{M} \right )^{2}</script>): hence it is ultimately apparent too that <script type="math/tex">\mathcal{N}_{M}</script> is closed under Schur-product (since <script type="math/tex">\mathcal{N}_{M^{T}}</script> is closed under ordinary matrix multiplication).</p>
+
+    <p>Since <script type="math/tex">M</script> is Type-II, it immediately follows that the all-ones matrix <script type="math/tex">J \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> is in <script type="math/tex">\mathcal{N}_{M}</script> as well.</p>
+
+    <p>Hence it can be established here that <script type="math/tex">\mathcal{N}_{M}</script> is a coherent algebra; indeed, <script type="math/tex">\mathcal{N}_{M}</script> is a commutative coherent algebra since 
+ <script type="math/tex">X Y = \Lambda_{M}^{-1} \left ( \Lambda_{M}(X) \circ \Lambda_{M}(Y) \right ) = \Lambda_{M}^{-1} \left ( \Lambda_{M}(Y) \circ \Lambda_{M}(X) \right ) = Y X</script> for all <script type="math/tex">X, Y \in \mathcal{N}_{M}</script>.</p>
+
+    <p>It can then be similarly seen that <script type="math/tex">\mathcal{N}_{M^{T}}</script> is a commutative coherent algebra as well.</p>
+
+    <p>It is then apparent that <script type="math/tex">\Lambda_{M} : \mathcal{N}_{M} \to \mathcal{N}_{M^{T}}</script> is a duality mapping between commutative coherent algebras <script type="math/tex">\mathcal{N}_{M}</script> and <script type="math/tex">\mathcal{N}_{M^T}</script>: since <script type="math/tex">\frac{1}{n} \left ( \Lambda_{M^{T}} \bullet \Lambda_{M} \right )</script> maps Schur-primitive matrices in <script type="math/tex">\mathcal{N}_{M}</script> to their Schur-primitive transpose in <script type="math/tex">\mathcal{N}_{M}</script>, it is necessary that <script type="math/tex">\frac{1}{n} \Lambda_{M}</script> maps Schur-primitive matrices in <script type="math/tex">\mathcal{N}_{M}</script> to primitive matrices in <script type="math/tex">\mathcal{N}_{M^{T}}</script> and moreover that <script type="math/tex">\Lambda_{M}(X \circ Y) = \frac{1}{n} \Lambda_{M}(X) \ \Lambda_{M}(Y)</script> for all <script type="math/tex">X, Y \in \mathcal{N}_{M}</script>.</p>
+
+    <p>Finally, it can then be concluded here that the tensor product <script type="math/tex">\mathcal{N}_{M} \otimes \mathcal{N}_{M^{T}}</script> of Nomura algebras <script type="math/tex">\mathcal{N}_{M}</script> and <script type="math/tex">\mathcal{N}_{M^{T}}</script> for the Type-II matrix <script type="math/tex">M</script> is a self-dual coherent algebra.</p>
+  </li>
+</ol>
+
+<p>So, self-dual coherent algebras can indeed be constructed from Type-II matrices; complex Hadamard matrices are a first example of a family of Type-II matrices that comes to mind, which moreover can e.g. be constructed from character tables of finite abelian groups and graphs that admit uniform mixing (with respect to their continuous-time quantum walks relative to their adjacency matrices).</p>
+
+<p>I would now lastly like to establish that the adjacency algebras of Hamming graphs are self-dual coherent algebras:</p>
+
+<ul>
+  <li>
+    <p>Suppose that <script type="math/tex">G := H^{n}</script> is the <script type="math/tex">n</script>-th direct power of some finite cyclic group <script type="math/tex">H</script> and <script type="math/tex">n \in \mathbb{N}</script>.</p>
+
+    <p>Let <script type="math/tex">\mathcal{W}_{G}</script> denote the coherent algebra arising from <script type="math/tex">G</script> as in my previous posts: 
+  i.e. <script type="math/tex">\mathcal{W}_{G} := \operatorname{span} \{ A_{g} : g \in G \}</script> where <script type="math/tex">A_{g} \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script> is a <script type="math/tex">01</script>-matrix relating pairs of elements of <script type="math/tex">G</script> whose difference is <script type="math/tex">g</script> (and hence also a permutation matrix representation the left-translation of the elements of <script type="math/tex">G</script> by <script type="math/tex">g</script>) for all <script type="math/tex">g \in G</script>.</p>
+
+    <p>Additionally, let <script type="math/tex">f_{G} : G \to \{ 0, \cdots, n \}</script> denote a Hamming weight function on <script type="math/tex">G</script>: i.e. a function mapping elements of <script type="math/tex">G</script> to their
+  number of non-zero coordinates.</p>
+
+    <p>Partition the elements of <script type="math/tex">G</script> according to their Hamming weight: define <script type="math/tex">G_{j} := \{ g \in G : f_{G}(g) = j \}</script> for all <script type="math/tex">0 \leq j \leq n</script>.</p>
+
+    <p>For all <script type="math/tex">0 \leq j \leq n</script>, let <script type="math/tex">A_{j} \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script> denote the <script type="math/tex">01</script>-matrix in <script type="math/tex">\in \operatorname{Mat}_{G \times G}(\mathbb{C})</script> relating pairs of elements of <script type="math/tex">G</script> whose difference has Hamming weight <script type="math/tex">j</script>:</p>
+
+    <p>i.e. <script type="math/tex">% <![CDATA[
+\left ( A_{j} \right )_{x,y} := \begin{cases} 1 & \text{ if } f_{G}(xy^{-1}) = j \\ 0 & \text{ otherwise} \end{cases} %]]></script> for all <script type="math/tex">x, y \in G</script>.</p>
+
+    <p>Define <script type="math/tex">\mathcal{X}_{G} := \operatorname{span} \{ A_{j} : 0 \leq j \leq n \} \subseteq \operatorname{Mat}_{G \times G}(\mathbb{C})</script>.</p>
+
+    <p>Note that <script type="math/tex">\mathcal{X}_{G} \subseteq \mathcal{W}_{G}</script>, since <script type="math/tex">G</script> is abelian and hence <script type="math/tex">f_{G}\left ( \left ( z x \right ) \left ( z y \right )^{-1} \right ) = f_{G} \left ( x y^{-1} \right )</script> for all <script type="math/tex">x,y,z \in G</script> since <script type="math/tex">G</script> is abelian.</p>
+
+    <p>It is then apparent that <script type="math/tex">\mathcal{X}_{G}</script> is a commutative coherent subalgebra of <script type="math/tex">\mathcal{W}_{G}</script>, observing that <script type="math/tex">\mathcal{X}_{G}</script> can be identified
+  with the adjacency algebra of a Hamming graph (which is a commutative coherent algebra, assuming the fact that Hamming graphs are distance-regular).</p>
+
+    <p>Now, recall too from a previous post that the set <script type="math/tex">\{ \chi_{g} : g \in G \}</script> of irreducible characters of <script type="math/tex">G</script> can be indexed in such a way
+  that <script type="math/tex">\chi_{x}(y) = \chi_{y}(x)</script> for all <script type="math/tex">x, y \in G</script> (and that <script type="math/tex">\mathcal{W}_{G}</script> is self-dual under the character table of <script type="math/tex">\mathcal{W}_{G}</script> relative to this way of indexing the irreducible characters of <script type="math/tex">G</script>).</p>
+
+    <p>Observe too then that <script type="math/tex">\sum\limits_{g \in G_{j}} \chi_{g}(h)</script> depends only on the Hamming weight of <script type="math/tex">h</script> for all <script type="math/tex">h \in G</script> and all <script type="math/tex">0 \leq j \leq n</script>,
+  which essentially follows from the the fact that <script type="math/tex">G</script> is a direct power of a finite cyclic group.</p>
+
+    <p>Define the matrix <script type="math/tex">P \in \operatorname{Mat}_{n \times n}(\mathbb{C})</script> as <script type="math/tex">P_{j,k} :=  \frac{1}{\left\vert G_{k} \right\vert}  \left ( \sum\limits_{(g, h) \in G_{j} \times G_{k}} \overline{\chi_{g}(h)} \right )</script> for all <script type="math/tex">0 \leq j, k \leq n</script>.</p>
+
+    <p>From previous posts, it then follows <script type="math/tex">P</script> is character table for <script type="math/tex">\mathcal{X}_{G}</script>.</p>
+
+    <p>Note too that <script type="math/tex">P = \overline{P}</script>, since <script type="math/tex">\mathcal{X}_{G}</script> is the adjacency algebra of distance-regular graph and hence every Schur-primitive matrix in <script type="math/tex">\mathcal{X}_{G}</script> is a Hermitian matrix (whose distinct eigenvalues are all real).</p>
+
+    <p>Lastly, for all <script type="math/tex">0 \leq j \leq n</script>, define <script type="math/tex">E_{j} \in \operatorname{Mat}_{G \times G}(\mathbb{C})</script> as <script type="math/tex">E_{j} := \frac{1}{\left\vert G \right\vert} \ F_{j}^{*} F_{j}</script> where <script type="math/tex">F_{j} \in \operatorname{Mat}_{G_{j} \times G}(\mathbb{C})</script> is defined as <script type="math/tex">\left ( F_{j} \right )_{x,y} := \overline{\chi_{x}(y)}</script> for all <script type="math/tex">x \in G_{j}</script> and <script type="math/tex">y \in G</script>.</p>
+
+    <p>It then be observed that <script type="math/tex">A_{j} = \sum\limits_{k = 0}^{n} P_{j,k} E_{k}</script> and that <script type="math/tex">E_{j} = \sum\limits_{k = n} P_{j,k} A_{k}</script> for all <script type="math/tex">0 \leq j \leq n</script>.</p>
+
+    <p>Moreover, it follows from the fact the irreducible characters of <script type="math/tex">G</script> form an orthonormal basis for the vector space <script type="math/tex">L^{2}(G)</script> of complex-valued functions on <script type="math/tex">G</script> that each <script type="math/tex">E_{j}</script> is idempotent for all <script type="math/tex">0 \leq j \leq n</script>.</p>
+
+    <p>Hence it can be concluded that <script type="math/tex">\{ E_{j} : 0 \leq j \leq n \} \subseteq \mathcal{X}_{G}</script> is the set of primitive matrices in <script type="math/tex">\mathcal{X}_{G}</script>
+  and that <script type="math/tex">\mathcal{X}_{G}</script> is a self-dual coherent algebra.</p>
+  </li>
+</ul>
+
+<p>It turns out that, conversely, the adjacency algebra of every Hamming graph can be identified with an instance of this kind of coherent algebra arising
+from a finite cyclic group as well; hence the adjacency algebras of Hamming graphs are indeed self-dual.</p>
+
+<p>So, indeed there are some arguably interesting families of self-dual coherent algebras that can be constructed aside from the prototypical example
+of a family of self-dual coherent algebras arising from finite abelian groups that I established in my previous post. I hope to continue to e.g. construct even more examples of self-dual coherent algebras in future posts towards e.g. completely classifying certain families of self-dual coherent algebras, such as certain families of distance-regular graphs whose adjacency algebras are self-dual.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+            
+            <li>
+              <a href="https://twitter.com/m4farrel">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://quora.com/Mark-Farrell-6">
+                <i class="fa fa-quora"></i> Quora
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://en.wikipedia.org/wiki/User:m4farrel">
+                <i class="fa fa-wikipedia-w"></i> Wikipedia
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100422401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  </body>
+
+</html>
