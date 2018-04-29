@@ -4,7 +4,7 @@ title:  "Classifying Self-Dual Strongly Regular Graphs"
 date:   2018-04-29
 ---
 
-I would like to completely classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
+I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
 is self-dual if and only if it falls into one of finitely many families of strongly-regular graphs.
 
 To this end, I would like to derive some feasability conditions that the parameters of a self-dual strongly regular graph must satisfy,
