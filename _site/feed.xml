@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-03-30T12:40:49+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Characterizing Self-Dual Strongly Regular Graphs</title><link href="/2018/03/30/characterizing-self-dual-strongly-regular-graphs.html" rel="alternate" type="text/html" title="Characterizing Self-Dual Strongly Regular Graphs" /><published>2018-03-30T00:00:00+00:00</published><updated>2018-03-30T00:00:00+00:00</updated><id>/2018/03/30/characterizing-self-dual-strongly-regular-graphs</id><content type="html" xml:base="/2018/03/30/characterizing-self-dual-strongly-regular-graphs.html">&lt;p&gt;I would like to characterize the self-dual strongly regular graphs in terms of their eigenvalues.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-04-29T11:25:18+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Classifying Self-Dual Strongly Regular Graphs</title><link href="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html" rel="alternate" type="text/html" title="Classifying Self-Dual Strongly Regular Graphs" /><published>2018-04-29T00:00:00+00:00</published><updated>2018-04-29T00:00:00+00:00</updated><id>/2018/04/29/classifying-self-dual-strongly-regular-graphs</id><content type="html" xml:base="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html">&lt;p&gt;I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
+is self-dual if and only if it falls into one of finitely many families of strongly-regular graphs.&lt;/p&gt;
+
+&lt;p&gt;To this end, I would like to derive some feasability conditions that the parameters of a self-dual strongly regular graph must satisfy,
+using the characterization of self-dual strongly regular graphs that I established in my previous post based on their eigenvalues.&lt;/p&gt;
+
+&lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a self-dual strongly regular graph with adjacency matrix &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\{k, \lambda, \mu \} \in \mathbb{R}&lt;/script&gt; denote the set of distinct eigenvalues of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; being self-dual with respect&lt;/p&gt;
+
+&lt;p&gt;to character table &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
+P := \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ k &amp; \lambda &amp; \mu \\ {n - 1 - k} &amp; {-1 -\lambda} &amp; {-1 - \mu } \end{pmatrix} %]]&gt;&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additionally, let &lt;script type=&quot;math/tex&quot;&gt;\left \{ \frac{1}{n} J, E_{\lambda}, E_{\mu} \right \}&lt;/script&gt; denote the set of primitive matrices in the adjacency algebra of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;A = k \left ( \frac{1}{n} J \right ) + \lambda E_{\lambda} + \mu E_{\mu}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies E_{\lambda} = \left ( \frac{1}{q(\lambda)} \right ) q(A) \text{ where } q(x) := (x - k) (x - \mu ) \in \mathbb{C}[x]&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; from previous post, since &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is a real symmetric matrix and hence a normal matrix &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies E_{\lambda} = \left ( \frac{\beta}{(\lambda - k)(\lambda - \mu)} \right ) \overline{A} + \left ( \frac{\alpha - k - \mu}{(\lambda - k)(\lambda - \mu)} \right ) A + \left ( \frac{k(1 + \mu)}{(\lambda - k)(\lambda - \mu)}\right ) I&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; with &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; an &lt;script type=&quot;math/tex&quot;&gt;\operatorname{SRG}(n, k, \alpha, \beta)&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{\mu}{n} \right ) \overline{A} + \left ( \frac{\lambda}{n} \right ) A + \left ( \frac{k}{n} \right ) I&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is self-dual &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (1 + \mu) = \frac{(\lambda -k)}{(\lambda - \mu)}&lt;/script&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \beta = \mu (\mu + 1)&lt;/script&gt;
+
+&lt;p&gt;Now, in my previous post I established that conference graphs are self-dual strongly regular graphs.&lt;/p&gt;
+
+&lt;p&gt;Assume that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is not a conference graph.&lt;/p&gt;
+
+&lt;p&gt;Recall the following fact about the spectrum of the self-dual strongly regular graph &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;: &lt;script type=&quot;math/tex&quot;&gt;\lambda, \mu \in \left \{ \frac{(\alpha - \beta) \pm \sqrt{n}}{2} \right \}&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;n = (\alpha - \beta)^{2} + 4(k - \beta)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;By properties of the dual character table of &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; established in my previous post, it would be necessariy that &lt;script type=&quot;math/tex&quot;&gt;k = \left ( \frac{n - 1}{2} \right )&lt;/script&gt; if &lt;script type=&quot;math/tex&quot;&gt;(\alpha - \beta) = -1&lt;/script&gt; and hence &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; would be a conference graph.&lt;/p&gt;
+
+&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is not a conference graph, it can then ultimately be deduced that &lt;script type=&quot;math/tex&quot;&gt;\sqrt{n}&lt;/script&gt; is rational and is hence moreover an integer, following from my previous point that &lt;script type=&quot;math/tex&quot;&gt;\beta = \mu (\mu + 1)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Observe that the multiplicities of &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mu&lt;/script&gt; are &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;n - 1 - k&lt;/script&gt;, since the dual character table of &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt;.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies k \in \left \{ \left ( \frac{(n-1)}{2} \right ) \pm \left ( \frac{2k + (n - 1)(\alpha - \beta)}{\sqrt{n}} \right ) \right \}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by properties of the multiplicities of eigenvalues of strongly regular graphs &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Observe too that &lt;script type=&quot;math/tex&quot;&gt;(-1 - \lambda) =  \left ( \frac{n - 1 - k}{k} \right ) \mu&lt;/script&gt; from the character-and-dual-character table &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Recall the fact that &lt;script type=&quot;math/tex&quot;&gt;(n - 1 - k)\beta = k(k - \alpha - 1)&lt;/script&gt; since &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is strongly regular.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;m := \sqrt{n} \in \mathbb{Z}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then either:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda = \left ( \frac{(\alpha - \beta) - m}{2} \right )&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mu = \left ( \frac{(\alpha - \beta) + m}{2} \right )&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (\alpha - \beta)&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{2k}{m - 1} \right ) - m&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{m}{2} \right ) - \left ( \frac{(m+2)}{(m + 1)(m-1)} \right ) k&lt;/script&gt;
+
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; following from my previous two observations &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+    &lt;p&gt;Now, let &lt;script type=&quot;math/tex&quot;&gt;\gamma := \left ( \frac{k}{m - 1} \right )&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \beta = \frac{1}{4} \left ( (\alpha - \beta)^{2} + 4k - m^{2} \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \gamma \left ( \gamma - 1 \right )&lt;/script&gt;
+
+    &lt;p&gt;with &lt;script type=&quot;math/tex&quot;&gt;\gamma = \frac {3m(m+1)}{2(3m + 4)} \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;p&gt;And, &lt;script type=&quot;math/tex&quot;&gt;(n - 1 - k)\beta = k(k - \alpha - 1)&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (m + 1 - \gamma)(\gamma - 1) = (m - 1)\gamma - \alpha - 1&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda = \left ( \frac{(\alpha - \beta) + m}{2} \right )&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mu = \left ( \frac{(\alpha - \beta) - m}{2} \right )&lt;/script&gt;.&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (\alpha - \beta)&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= m - \left ( \frac{2k}{m-1} \right )&lt;/script&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= k \left ( \frac{(m - 2)}{(m + 1)( m - 1)} \right ) - \left ( \frac{m}{2} \right )&lt;/script&gt;
+
+    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; again, following from my previous two observations &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
+
+    &lt;p&gt;From the right-hand side of this equation, it is then possible to similarly derive that&lt;/p&gt;
+
+    &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)&lt;/script&gt; 
+  and &lt;script type=&quot;math/tex&quot;&gt;\beta = \gamma(\gamma - 1)&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;\gamma = \frac {3m(m+1)}{2(2m + 3)} \in \mathbb{N}&lt;/script&gt; as well.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
+it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.&lt;/p&gt;
+
+&lt;p&gt;Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an &lt;script type=&quot;math/tex&quot;&gt;\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;\gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \}&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;m \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;With that being said, it may still be possible to further classify the latter kind of self-dual strongly graph in terms of e.g. other 
+familiar families of strongly regular graphs arising from various combinatorial constructions; I may return to this point in a future post.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph is self-dual if and only if it falls into one of finitely many families of strongly-regular graphs.</summary></entry><entry><title type="html">Characterizing Self-Dual Strongly Regular Graphs</title><link href="/2018/03/30/characterizing-self-dual-strongly-regular-graphs.html" rel="alternate" type="text/html" title="Characterizing Self-Dual Strongly Regular Graphs" /><published>2018-03-30T00:00:00+00:00</published><updated>2018-03-30T00:00:00+00:00</updated><id>/2018/03/30/characterizing-self-dual-strongly-regular-graphs</id><content type="html" xml:base="/2018/03/30/characterizing-self-dual-strongly-regular-graphs.html">&lt;p&gt;I would like to characterize the self-dual strongly regular graphs in terms of their eigenvalues.&lt;/p&gt;
 
 &lt;p&gt;The entries of the dual character table of a symmetric coherent algebra can be expressed in terms of the entries its character table:&lt;/p&gt;
 
@@ -634,7 +739,14 @@ towards e.g. classifying them. For example, it is ultimately apparent from my pr
 
 &lt;p&gt;It can then be concluded that &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is normal in this context.&lt;/p&gt;
 
-&lt;p&gt;It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, since &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; is arbitrary; it can also be observed that normal matrices admit spectral decompositions in general, as intended.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.</summary></entry><entry><title type="html">Invariant Subspaces and Characteristic Polynomials</title><link href="/2017/06/06/invariant-subspaces-and-characteristic-polynomials.html" rel="alternate" type="text/html" title="Invariant Subspaces and Characteristic Polynomials" /><published>2017-06-06T00:00:00+00:00</published><updated>2017-06-06T00:00:00+00:00</updated><id>/2017/06/06/invariant-subspaces-and-characteristic-polynomials</id><content type="html" xml:base="/2017/06/06/invariant-subspaces-and-characteristic-polynomials.html">&lt;p&gt;Finite-dimensional vector spaces admit cyclic decompositions, which are direct sum decompositions into invariant subspaces relative to linear operators acting on them. I would now like to use this fact to derive an expression for the characteristic polynomial of a linear operator acting on a finite-dimensional vector space from which it will be immediately apparent that it e.g. satisfies its own characteristic equation.&lt;/p&gt;
+&lt;p&gt;It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, as desired.&lt;/p&gt;
+
+&lt;p&gt;Note too now that a normal matrix &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; has a &lt;em&gt;unique&lt;/em&gt; set &lt;script type=&quot;math/tex&quot;&gt;\Sigma(A) := \{ E_{\lambda} : \lambda \in \sigma(A) \}&lt;/script&gt; of orthogonal projections onto each of
+its respective eigenspaces for its set &lt;script type=&quot;math/tex&quot;&gt;\sigma(A)&lt;/script&gt; of eigenvalues:&lt;/p&gt;
+
+&lt;p&gt;in fact &lt;script type=&quot;math/tex&quot;&gt;E_{\lambda} := \left ( \frac{1}{q_{\lambda}(\lambda)} \right ) q_{\lambda}(A)&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;q_{\lambda}(x) := \prod\limits_{ \mu \in \sigma(A) \\ \mu \neq \lambda } \left ( (x - \mu) \right )&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\lambda \in \sigma(A)&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;I will make use of these facts about normal matrices in future posts.&lt;/p&gt;</content><author><name></name></author><summary type="html">I would like to verify the core fact that a complex square matrix is normal if and only if it is unitarily diagonalizable; previously, I have assumed that normal matrices admit spectral decompositions and would now like to establish that this is indeed true in the process of achieving my primary goal for this post.</summary></entry><entry><title type="html">Invariant Subspaces and Characteristic Polynomials</title><link href="/2017/06/06/invariant-subspaces-and-characteristic-polynomials.html" rel="alternate" type="text/html" title="Invariant Subspaces and Characteristic Polynomials" /><published>2017-06-06T00:00:00+00:00</published><updated>2017-06-06T00:00:00+00:00</updated><id>/2017/06/06/invariant-subspaces-and-characteristic-polynomials</id><content type="html" xml:base="/2017/06/06/invariant-subspaces-and-characteristic-polynomials.html">&lt;p&gt;Finite-dimensional vector spaces admit cyclic decompositions, which are direct sum decompositions into invariant subspaces relative to linear operators acting on them. I would now like to use this fact to derive an expression for the characteristic polynomial of a linear operator acting on a finite-dimensional vector space from which it will be immediately apparent that it e.g. satisfies its own characteristic equation.&lt;/p&gt;
 
 &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;T : V \to V&lt;/script&gt; is a linear operator acting on a finite-dimensional vector space &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; over a field &lt;script type=&quot;math/tex&quot;&gt;\mathbb{F}&lt;/script&gt;.
 Additionally, suppose that the minimal polynomial of &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt; is given by &lt;script type=&quot;math/tex&quot;&gt;p(x) = \prod\limits_{q(x) \in S} \left ( q(x) \right )^{m_q}&lt;/script&gt;,&lt;/p&gt;
@@ -1069,174 +1181,4 @@ Additionally, define &lt;script type=&quot;math/tex&quot;&gt;S_{i,j}(u,v) := \{ 
 
 &lt;p&gt;The direct sum decomposition &lt;script type=&quot;math/tex&quot;&gt;V = \bigoplus\limits_{q(x) \in S} \operatorname{ker}\left ( q(T) \right )^{\operatorname{dim}(V)}&lt;/script&gt; is said to be the &lt;strong&gt;primary decomposition&lt;/strong&gt; of &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; relative to &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;. &lt;em&gt;It is useful to note that it also follows from &lt;strong&gt;1.&lt;/strong&gt;, &lt;strong&gt;2.&lt;/strong&gt; and &lt;strong&gt;3.&lt;/strong&gt; that for all &lt;script type=&quot;math/tex&quot;&gt;q(x) \in S&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;E_q&lt;/script&gt; is a projection onto the component part &lt;script type=&quot;math/tex&quot;&gt;\operatorname{ker} \left ( q(T) \right )^{\operatorname{dim}(V)}&lt;/script&gt; of the primary decomposition of &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; relative to &lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; is arbitrary, it follows that finite-dimensional vector spaces have primary decompositions relative to linear operators acting on them in general, and moreover that projections onto component parts of primary decompositions of finite-dimensional vector spaces can also be found in general using the method discussed in this post.&lt;/p&gt;</content><author><name></name></author><summary type="html">Suppose that is a linear operator acting on a finite-dimensional vector space over a field . Additionally, suppose that the minimal polynomial of is given by , where denotes the set of irreducible factors of , and denotes the multiplicity of as a factor of for all .</summary></entry><entry><title type="html">Counting Subspaces over Finite Fields</title><link href="/2017/02/20/counting-subspaces-over-finite-fields.html" rel="alternate" type="text/html" title="Counting Subspaces over Finite Fields" /><published>2017-02-20T00:00:00+00:00</published><updated>2017-02-20T00:00:00+00:00</updated><id>/2017/02/20/counting-subspaces-over-finite-fields</id><content type="html" xml:base="/2017/02/20/counting-subspaces-over-finite-fields.html">&lt;p&gt;I would like to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.&lt;/p&gt;
-
-&lt;p&gt;Fix a prime power &lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Define:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;{ \cdot \brack \cdot}_q : \mathbb{N}_{0} \times \mathbb{N}_{0} \to \mathbb{R}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-{n \brack k }_q := \begin{cases} \prod\limits_{j = 1}^{k} \frac{q^{n} - q^{j - 1}}{q^{k} - q^{j - 1}} &amp; \text{ if } 0 &lt; k \leq n \\ 1 &amp; \text { if } k = 0 \\ 0 &amp; \text{ otherwise } \end{cases} %]]&gt;&lt;/script&gt;
-
-    &lt;p&gt;&lt;em&gt;Note that &lt;script type=&quot;math/tex&quot;&gt;{n \brack k }_q&lt;/script&gt; gives the number of &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-dimensional subspaces of an &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-dimensional vector space over a finite field of order &lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;n,k \in \mathbb{N}&lt;/script&gt;.&lt;/em&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;[\cdot]_q ! : \mathbb{N}_{0} \to \mathbb{R}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-[n]_q ! := \begin{cases} \prod\limits_{j = 1}^{n} {n - (j - 1) \brack 1}_q &amp; \text{ if } n \in \mathbb{N} \\ 1 &amp; \text{ if } n = 0 \end{cases} %]]&gt;&lt;/script&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Then, in this context I would propose that:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;{ n \brack k }_{q} = \frac{ [n]_q ! }{ {[k]_q !} {[n-k]_q !}}&lt;/script&gt;
-
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;n, k \in \mathbb{N} \text{ such that } k \leq n&lt;/script&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;{ n \brack k }_{q} =  {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}  = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}&lt;/script&gt;
-
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-n, k \in \mathbb{N} \text{ such that } k &lt; n %]]&gt;&lt;/script&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;For all algebras &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; over &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;X, Y \in \mathcal{A}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;YX = qXY&lt;/script&gt;,&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;(X + Y)^{n} = \sum\limits_{k = 0}^{n} {n \brack k}_q X^k Y^{n-k}&lt;/script&gt;
-
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;n \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;{n \brack k}_q = \sum\limits_{j=0}^{m} q^{(m - j)(k - j)} { m \brack j }_q  { n - m \brack k - j }_q&lt;/script&gt;
-
-    &lt;p&gt;for all &lt;script type=&quot;math/tex&quot;&gt;n, k, m \in \mathbb{N}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;m \leq k \leq n&lt;/script&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;I would now like to verify that these propositions are true in this context. Then:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select arbitrary natural numbers &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;k \leq n&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies { n \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \prod\limits_{j = 1}^{k} \frac{q^{n} - q^{j - 1}}{q^{k} - q^{j - 1}}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \prod\limits_{j = 1}^{k} \frac{q^{n} - q^{j - 1}}{q^{k} - q^{j - 1}} \right ) \left ( \prod\limits_{j = k + 1}^{n} \frac{q^{n} - q^{j-1}}{q^{k} - q^{j - 1}} \right )&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{ \left( \prod\limits_{j = 1}^{n}  q^{n} - q^{j - 1} \right )}{\left ( \prod\limits_{j = 1}^{k} q^{k} - q^{j - 1} \right ) \left ( \prod\limits_{j = k + 1}^{n} q^{k} - q^{j - 1} \right ) }&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{ \left ( \prod_\limits{j = 1}^{n} q^{j - 1} \right ) \left( \prod\limits_{j = 1}^{n}  q^{n - (j - 1)} - 1 \right )}{\left ( \left ( \prod_\limits{j = 1}^{k} q^{j - 1} \right ) \left ( \prod\limits_{j = 1}^{k} q^{k - (j - 1)} - 1 \right ) \right ) \left ( \left ( \prod_\limits{j = k + 1}^{n} q^{j - 1} \right ) \left ( \prod\limits_{j = k + 1}^{n} q^{k - (j - 1)} - 1 \right ) \right ) }&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{ \left( \prod\limits_{j = 1}^{n}  q^{n - (j - 1)} - 1 \right )}{ \left ( \prod\limits_{j = 1}^{k} q^{k - (j - 1)} - 1 \right ) \left ( \prod\limits_{j = k + 1}^{n} q^{k - (j - 1)} - 1 \right ) }&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{ \left( \prod\limits_{j = 1}^{n}  \frac{q^{n - (j - 1)} - 1}{q-1} \right )}{ \left ( \prod\limits_{j = 1}^{k} \frac{q^{k - (j - 1)} - 1}{q-1} \right ) \left ( \prod\limits_{j = k + 1}^{n} \frac{q^{k - (j - 1)} - 1}{q-1} \right ) }&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \frac{ [n]_q ! }{ {[k]_q !} {[n-k]_q !}}&lt;/script&gt;
-
-    &lt;p&gt;and the general result then follows.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select arbitrary natural numbers &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-k &lt; n %]]&gt;&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies { n \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n} - 1}{q^{k} - 1} \right ) { n - 1 \brack k - 1 }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n} - q^{n-k} + q^{n-k} - 1}{q^{k} - 1} \right ) { n - 1 \brack k - 1 }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n-k}(q^{k} - 1) + (q^{n-k} - 1)}{q^{k} - 1} \right ) { n - 1 \brack k - 1 }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n -k} - 1}{q^{k} - 1} \right ) { n - 1 \brack k - 1 }_{q} + q^{n-k} \left ( \frac{q^{k} - 1}{q^{k} - 1} \right ) { n - 1 \brack k - 1 }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}&lt;/script&gt;
-
-    &lt;p&gt;and&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;{ n \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n} - 1}{q^{n-k} - 1} \right ) { n - 1 \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{n} - q^{k} + q^{k} - 1}{q^{n-k} - 1} \right ) { n - 1 \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{q^{k}(q^{n-k} - 1) + (q^{k} - 1)}{q^{n-k} - 1} \right ) { n - 1 \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= q^{k} { n - 1 \brack k }_{q} + \left ( \frac{q^{k} - 1}{q^{n-k} - 1} \right) { n - 1 \brack k }_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies  { n \brack k }_{q} =  {n - 1 \brack k }_{q} + q^{n-k} { n - 1 \brack k - 1 }_{q}  = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q}&lt;/script&gt;
-
-    &lt;p&gt;and the general result then follows.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Suppose that &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; is an algebra over &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;X,Y \in \mathcal{A}&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;YX = qXY&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;p&gt;Assume that &lt;script type=&quot;math/tex&quot;&gt;(X + Y)^k = \sum\limits_{j = 0}^{k} {k \brack j}_q X^j Y^{k-j}&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;k \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (X+Y)^{k+1}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left (\sum\limits_{j=0}^{k} {k \brack j}_q X^j Y^{k-j} \right ) (X + Y)&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{k} \left ( q^{k-j} {k \brack j}_q \right ) X^{(j+1)} Y^{k-j} + \sum\limits_{j=0}^{k} {k \brack j}_q X^j Y^{k-(j-1)}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{k} \left ( q^{k-(j-1)} {k \brack j-1}_q \right ) X^j Y^{k-(j-1)} + \sum\limits_{j=0}^{k} \left ( {k \brack j}_q \right ) X^j Y^{k-(j-1)}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{k} \left ( q^{k-(j-1)} {k \brack j-1}_q \right ) X^j Y^{k-(j-1)} + \sum\limits_{j=1}^{k} \left ( {k \brack j}_q \right ) X^j Y^{k-(j-1)} + Y^{k+1}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{k} \left ({k \brack j} +  q^{k-(j-1)} {k \brack j-1}_q \right ) X^j Y^{k-(j-1)} + Y^{k+1}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=1}^{k} {k+1 \brack j}_q X^j Y^{k-(j-1)} + Y^{k+1}&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by &lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{k} {k+1 \brack j}_q X^j Y^{(k+1) - j}&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (X + Y)^n = \sum\limits_{j = 0}^{n} {n \brack j}_q X^j Y^{n-j} \text{ for all } n \in \mathbb{N}&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since clearly &lt;script type=&quot;math/tex&quot;&gt;X + Y = {1 \brack 0 }_q X + {1 \brack 1}_q Y = \sum\limits_{j = 0}^{1} {1 \brack j}_q X^j Y^{1-j}&lt;/script&gt; as well &lt;strong&gt;]&lt;/strong&gt; .&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select arbitrary &lt;script type=&quot;math/tex&quot;&gt;n, k \in \mathbb{N}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;k \leq n&lt;/script&gt;, and assume that &lt;script type=&quot;math/tex&quot;&gt;{n \brack k}_q = \sum\limits_{j=0}^{r} q^{(r - j)(k - j)} { r \brack j }_q  { n - r \brack k - j }_q&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-r &lt; k %]]&gt;&lt;/script&gt;.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies {n \brack k}_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{r} \left ( q^{(r - j)(k - j)} { r \brack j }_q \right ) { n - r \brack k - j }_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{r} \left ( q^{(r - j)(k - j)} { r \brack j }_q \right ) \left ( q^{(k - j)} { n - (r+1) \brack k - j }_q + { n - (r + 1) \brack k - (j+1) }_q \right )&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by &lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{r} \left ( q^{((r+1) - j)(k - j)} { r \brack j }_q \right ) { n - (r+1) \brack k - j }_q + \sum\limits_{j=0}^{r} \left ( q^{(r - j)(k - j)} { r \brack j }_q \right ) { n - (r+1) \brack k - (j+1) }_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{r} \left ( q^{((r+1) - j)(k - j)} { r \brack j }_q \right ) { n - (r+1) \brack k - j }_q + \sum\limits_{j=1}^{r+1} \left ( q^{(r - (j - 1))(k - (j-1))} { r \brack (j - 1) }_q \right ) { n - (r+1) \brack k - j }_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= q^{(r+1)(k)} {n - (r+1) \brack k}_q + \sum\limits_{j=1}^{r} \left ( q^{((r+1) - j)(k - j)} { r \brack j }_q  + q^{(r - (j - 1))(k - (j-1))} { r \brack (j - 1) }_q\right ) { n - (r+1) \brack k - j }_q + { n - (r+1) \brack k - (r+1)}_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= q^{(r+1)(k)} {n - (r+1) \brack k}_q + \sum\limits_{j=1}^{r} \left ( q^{((r+1) - j)(k - j)} \left ( { r \brack j }_q  + q^{(r + 1) - j} { r \brack (j - 1) }_q\right ) \right) { n - (r+1) \brack k - j }_q + { n - (r+1) \brack k - (r+1)}_q&lt;/script&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= q^{(r+1)(k)} {n - (r+1) \brack k}_q + \sum\limits_{j=1}^{r} \left ( q^{((r+1) - j)(k - j)} { r + 1 \brack j }_q \right ) { n - (r+1) \brack k - j }_q + { n - (r+1) \brack k - (r+1)}_q&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; again by &lt;strong&gt;2.&lt;/strong&gt; &lt;strong&gt;]&lt;/strong&gt;&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \sum\limits_{j=0}^{r+1} q^{((r + 1) - j)(k - j)} { r + 1 \brack j }_q { n - (r + 1) \brack k - j }_q&lt;/script&gt;
-
-    &lt;p&gt;as well.&lt;/p&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies {n \brack k}_q = \sum\limits_{j=0}^{m} q^{(m - j)(k - j)} { m \brack j }_q  { n - m \brack k - j }_q \text { for all } m \leq k \leq n&lt;/script&gt;
-
-    &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; since, by &lt;strong&gt;2.&lt;/strong&gt;, it is also the case that &lt;script type=&quot;math/tex&quot;&gt;{n \brack k }_q = q^{k} { n - 1 \brack k }_{q} + {n - 1 \brack k - 1}_{q} = \sum\limits_{j=0}^{m} q^{(m - j)(k - j)} { m \brack j }_q  { n - m \brack k - j }_q&lt;/script&gt; when &lt;script type=&quot;math/tex&quot;&gt;m = 1&lt;/script&gt; &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
-
-    &lt;p&gt;The general result then follows, since &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; are arbitrary.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">I would like to verify some useful identities that hold about Gaussian binomial coefficients, which are namely used in the context of counting the number of subspaces of a certain dimension of a finite-dimensional vector space over a finite field.</summary></entry></feed>
+&lt;p&gt;Since &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; is arbitrary, it follows that finite-dimensional vector spaces have primary decompositions relative to linear operators acting on them in general, and moreover that projections onto component parts of primary decompositions of finite-dimensional vector spaces can also be found in general using the method discussed in this post.&lt;/p&gt;</content><author><name></name></author><summary type="html">Suppose that is a linear operator acting on a finite-dimensional vector space over a field . Additionally, suppose that the minimal polynomial of is given by , where denotes the set of irreducible factors of , and denotes the multiplicity of as a factor of for all .</summary></entry></feed>

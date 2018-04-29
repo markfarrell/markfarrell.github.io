@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Classifying Self-Dual Strongly Regular Graphs</title>
+  <meta name="description" content="I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph is self-dual if and only if it falls into one of...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html">
+  <link rel="alternate" type="application/rss+xml" title="Mark Farrell" href="/feed.xml">
+
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <script src="https://use.fontawesome.com/8620140429.js"></script>
+  
+  
+</head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Mark Farrell</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Classifying Self-Dual Strongly Regular Graphs</h1>
+    <p class="post-meta"><time datetime="2018-04-29T00:00:00+00:00" itemprop="datePublished">Apr 29, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
+is self-dual if and only if it falls into one of finitely many families of strongly-regular graphs.</p>
+
+<p>To this end, I would like to derive some feasability conditions that the parameters of a self-dual strongly regular graph must satisfy,
+using the characterization of self-dual strongly regular graphs that I established in my previous post based on their eigenvalues.</p>
+
+<p>Suppose that <script type="math/tex">G</script> is a self-dual strongly regular graph with adjacency matrix <script type="math/tex">A</script>.</p>
+
+<p>Let <script type="math/tex">\{k, \lambda, \mu \} \in \mathbb{R}</script> denote the set of distinct eigenvalues of <script type="math/tex">G</script>, with <script type="math/tex">G</script> being self-dual with respect</p>
+
+<p>to character table <script type="math/tex">% <![CDATA[
+P := \begin{pmatrix} 1 & 1 & 1 \\ k & \lambda & \mu \\ {n - 1 - k} & {-1 -\lambda} & {-1 - \mu } \end{pmatrix} %]]></script>.</p>
+
+<p>Additionally, let <script type="math/tex">\left \{ \frac{1}{n} J, E_{\lambda}, E_{\mu} \right \}</script> denote the set of primitive matrices in the adjacency algebra of <script type="math/tex">G</script>, with <script type="math/tex">A = k \left ( \frac{1}{n} J \right ) + \lambda E_{\lambda} + \mu E_{\mu}</script>.</p>
+
+<script type="math/tex; mode=display">\implies E_{\lambda} = \left ( \frac{1}{q(\lambda)} \right ) q(A) \text{ where } q(x) := (x - k) (x - \mu ) \in \mathbb{C}[x]</script>
+
+<p><strong>[</strong> from previous post, since <script type="math/tex">A</script> is a real symmetric matrix and hence a normal matrix <strong>]</strong>.</p>
+
+<script type="math/tex; mode=display">\implies E_{\lambda} = \left ( \frac{\beta}{(\lambda - k)(\lambda - \mu)} \right ) \overline{A} + \left ( \frac{\alpha - k - \mu}{(\lambda - k)(\lambda - \mu)} \right ) A + \left ( \frac{k(1 + \mu)}{(\lambda - k)(\lambda - \mu)}\right ) I</script>
+
+<p><strong>[</strong> with <script type="math/tex">G</script> an <script type="math/tex">\operatorname{SRG}(n, k, \alpha, \beta)</script> <strong>]</strong></p>
+
+<script type="math/tex; mode=display">= \left ( \frac{\mu}{n} \right ) \overline{A} + \left ( \frac{\lambda}{n} \right ) A + \left ( \frac{k}{n} \right ) I</script>
+
+<p><strong>[</strong> since <script type="math/tex">G</script> is self-dual <strong>]</strong>.</p>
+
+<script type="math/tex; mode=display">\implies (1 + \mu) = \frac{(\lambda -k)}{(\lambda - \mu)}</script>
+
+<script type="math/tex; mode=display">\implies \beta = \mu (\mu + 1)</script>
+
+<p>Now, in my previous post I established that conference graphs are self-dual strongly regular graphs.</p>
+
+<p>Assume that <script type="math/tex">G</script> is not a conference graph.</p>
+
+<p>Recall the following fact about the spectrum of the self-dual strongly regular graph <script type="math/tex">G</script>: <script type="math/tex">\lambda, \mu \in \left \{ \frac{(\alpha - \beta) \pm \sqrt{n}}{2} \right \}</script> with <script type="math/tex">n = (\alpha - \beta)^{2} + 4(k - \beta)</script>.</p>
+
+<p>By properties of the dual character table of <script type="math/tex">P</script> established in my previous post, it would be necessariy that <script type="math/tex">k = \left ( \frac{n - 1}{2} \right )</script> if <script type="math/tex">(\alpha - \beta) = -1</script> and hence <script type="math/tex">G</script> would be a conference graph.</p>
+
+<p>Since <script type="math/tex">G</script> is not a conference graph, it can then ultimately be deduced that <script type="math/tex">\sqrt{n}</script> is rational and is hence moreover an integer, following from my previous point that <script type="math/tex">\beta = \mu (\mu + 1)</script>.</p>
+
+<p>Observe that the multiplicities of <script type="math/tex">\lambda</script> and <script type="math/tex">\mu</script> are <script type="math/tex">k</script> and <script type="math/tex">n - 1 - k</script>, since the dual character table of <script type="math/tex">P</script> is <script type="math/tex">P</script>.</p>
+
+<script type="math/tex; mode=display">\implies k \in \left \{ \left ( \frac{(n-1)}{2} \right ) \pm \left ( \frac{2k + (n - 1)(\alpha - \beta)}{\sqrt{n}} \right ) \right \}</script>
+
+<p><strong>[</strong> by properties of the multiplicities of eigenvalues of strongly regular graphs <strong>]</strong>.</p>
+
+<p>Observe too that <script type="math/tex">(-1 - \lambda) =  \left ( \frac{n - 1 - k}{k} \right ) \mu</script> from the character-and-dual-character table <script type="math/tex">P</script> of <script type="math/tex">G</script>.</p>
+
+<p>Recall the fact that <script type="math/tex">(n - 1 - k)\beta = k(k - \alpha - 1)</script> since <script type="math/tex">G</script> is strongly regular.</p>
+
+<p>Let <script type="math/tex">m := \sqrt{n} \in \mathbb{Z}</script>.</p>
+
+<p>Then either:</p>
+
+<ul>
+  <li>
+    <p><script type="math/tex">\lambda = \left ( \frac{(\alpha - \beta) - m}{2} \right )</script> and <script type="math/tex">\mu = \left ( \frac{(\alpha - \beta) + m}{2} \right )</script>.</p>
+
+    <script type="math/tex; mode=display">\implies (\alpha - \beta)</script>
+
+    <script type="math/tex; mode=display">= \left ( \frac{2k}{m - 1} \right ) - m</script>
+
+    <script type="math/tex; mode=display">= \left ( \frac{m}{2} \right ) - \left ( \frac{(m+2)}{(m + 1)(m-1)} \right ) k</script>
+
+    <p><strong>[</strong> following from my previous two observations <strong>]</strong>.</p>
+
+    <p>Now, let <script type="math/tex">\gamma := \left ( \frac{k}{m - 1} \right )</script>.</p>
+
+    <script type="math/tex; mode=display">\implies \beta = \frac{1}{4} \left ( (\alpha - \beta)^{2} + 4k - m^{2} \right )</script>
+
+    <script type="math/tex; mode=display">= \gamma \left ( \gamma - 1 \right )</script>
+
+    <p>with <script type="math/tex">\gamma = \frac {3m(m+1)}{2(3m + 4)} \in \mathbb{N}</script>.</p>
+
+    <p>And, <script type="math/tex">(n - 1 - k)\beta = k(k - \alpha - 1)</script>.</p>
+
+    <script type="math/tex; mode=display">\implies (m + 1 - \gamma)(\gamma - 1) = (m - 1)\gamma - \alpha - 1</script>
+
+    <script type="math/tex; mode=display">\implies \alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)</script>
+  </li>
+  <li>
+    <p><script type="math/tex">\lambda = \left ( \frac{(\alpha - \beta) + m}{2} \right )</script> and <script type="math/tex">\mu = \left ( \frac{(\alpha - \beta) - m}{2} \right )</script>.</p>
+
+    <script type="math/tex; mode=display">\implies (\alpha - \beta)</script>
+
+    <script type="math/tex; mode=display">= m - \left ( \frac{2k}{m-1} \right )</script>
+
+    <script type="math/tex; mode=display">= k \left ( \frac{(m - 2)}{(m + 1)( m - 1)} \right ) - \left ( \frac{m}{2} \right )</script>
+
+    <p><strong>[</strong> again, following from my previous two observations <strong>]</strong>.</p>
+
+    <p>From the right-hand side of this equation, it is then possible to similarly derive that</p>
+
+    <p><script type="math/tex">\alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)</script> 
+  and <script type="math/tex">\beta = \gamma(\gamma - 1)</script> with <script type="math/tex">\gamma = \frac {3m(m+1)}{2(2m + 3)} \in \mathbb{N}</script> as well.</p>
+  </li>
+</ul>
+
+<p>After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
+it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.</p>
+
+<p>Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an <script type="math/tex">\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )</script> with <script type="math/tex">\gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \}</script> for some <script type="math/tex">m \in \mathbb{N}</script>.</p>
+
+<p>With that being said, it may still be possible to further classify the latter kind of self-dual strongly graph in terms of e.g. other 
+familiar families of strongly regular graphs arising from various combinatorial constructions; I may return to this point in a future post.</p>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Mark Farrell</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Mark Farrell
+            
+            </li>
+            
+            <li><a href="mailto:m4farrel@uwaterloo.ca">m4farrel@uwaterloo.ca</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+            
+            <li>
+              <a href="https://twitter.com/m4farrel">
+                <i class="fa fa-twitter"></i> Twitter
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://quora.com/Mark-Farrell-6">
+                <i class="fa fa-quora"></i> Quora
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a href="https://en.wikipedia.org/wiki/User:m4farrel">
+                <i class="fa fa-wikipedia-w"></i> Wikipedia
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100422401-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  </body>
+
+</html>

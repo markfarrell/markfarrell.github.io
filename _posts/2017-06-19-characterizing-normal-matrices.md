@@ -157,8 +157,15 @@ $$ \implies A A^{*} = U (D D^{*}) U^{*} = U (D^{*} D) U^{*} = A^{*} A $$
 
 It can then be concluded that $$A$$ is normal in this context.
 
+It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, as desired.
+
+Note too now that a normal matrix $$A$$ has a *unique* set $$\Sigma(A) := \{ E_{\lambda} : \lambda \in \sigma(A) \}$$ of orthogonal projections onto each of
+its respective eigenspaces for its set $$\sigma(A)$$ of eigenvalues:
+
+in fact $$ E_{\lambda} := \left ( \frac{1}{q_{\lambda}(\lambda)} \right ) q_{\lambda}(A) $$ with $$q_{\lambda}(x) := \prod\limits_{ \mu \in \sigma(A) \\ \mu \neq \lambda } \left ( (x - \mu) \right ) $$ for all $$\lambda \in \sigma(A)$$.
+
+I will make use of these facts about normal matrices in future posts.
 
 
-It now follows in general that a complex square matrix is normal if and only if it is unitarily diagonalizable, since $$A$$ is arbitrary; it can also be observed that normal matrices admit spectral decompositions in general, as intended.
 
  
