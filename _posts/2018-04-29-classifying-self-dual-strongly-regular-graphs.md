@@ -103,7 +103,9 @@ it can ultimately be observed now too that a strongly regular graph whose parame
 Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an $$\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )$$ with $$\gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \}$$ for some $$m \in \mathbb{N}$$.
 
 With that being said, it may still be possible to further classify the latter kind of self-dual strongly graph in terms of e.g. other 
-familiar families of strongly regular graphs arising from various combinatorial constructions; I may return to this point in a future post.
+familiar families of strongly regular graphs arising from various combinatorial constructions: Latin square graphs are a first example of a family of this latter kind of self-dual strongly graph that come to mind.
+
+*I may return to further refine this classification of the self-dual strongly regular graphs in future posts.*
 
 
 
