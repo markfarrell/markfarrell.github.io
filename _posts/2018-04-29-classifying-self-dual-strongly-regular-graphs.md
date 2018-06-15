@@ -100,12 +100,17 @@ Then either:
 After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
 it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.
 
-Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an $$\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )$$ with $$\gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \}$$ for some $$m \in \mathbb{N}$$.
+Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an $$\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )$$ for some $$m, \gamma \in \mathbb{N}$$ $$ \left ( \text{ with } \gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \} \right ) $$.
+
+In fact, this classification also tells us that the self-dual strongly regular graphs are the strongly-regular graphs whose eigenvalue 
+multiplicities are the valency of its distance-graphs: 
+recalling that the multiplicities of the eigenvalues of any self-dual distance-regular graph are the valencies of its distance-graphs,
+it is apparent that the converse is true here for the self-dual strongly-regular graphs as well.
 
 With that being said, it may still be possible to further classify the latter kind of self-dual strongly graph in terms of e.g. other 
 familiar families of strongly regular graphs arising from various combinatorial constructions: Latin square graphs are a first example of a family of this latter kind of self-dual strongly graph that come to mind.
 
-*I may return to further refine this classification of the self-dual strongly regular graphs in future posts.*
+*I may continue to further refine this classification of the self-dual strongly regular graphs in future posts.*
 
 
 
