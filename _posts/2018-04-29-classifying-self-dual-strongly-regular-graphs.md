@@ -46,10 +46,6 @@ Since $$G$$ is not a conference graph, it can then ultimately be deduced that $$
 
 Observe that the multiplicities of $$\lambda$$ and $$\mu$$ are $$k$$ and $$n - 1 - k$$, since the dual character table of $$P$$ is $$P$$.
 
-$$ \implies k \in \left \{ \left ( \frac{(n-1)}{2} \right ) \pm \left ( \frac{2k + (n - 1)(\alpha - \beta)}{\sqrt{n}} \right ) \right \}$$
-
-**[** by properties of the multiplicities of eigenvalues of strongly regular graphs **]**.
-
 Observe too that $$(-1 - \lambda) =  \left ( \frac{n - 1 - k}{k} \right ) \mu$$ from the character-and-dual-character table $$P$$ of $$G$$.
 
 Recall the fact that $$(n - 1 - k)\beta = k(k - \alpha - 1)$$ since $$G$$ is strongly regular.
@@ -64,8 +60,6 @@ Then either:
 
 	$$ = \left ( \frac{2k}{m - 1} \right ) - m$$
 
-	$$ = \left ( \frac{m}{2} \right ) - \left ( \frac{(m+2)}{(m + 1)(m-1)} \right ) k $$
-
 	 **[** following from my previous two observations **]**.
 
 	 Now, let $$\gamma := \left ( \frac{k}{m - 1} \right )$$.
@@ -74,7 +68,7 @@ Then either:
 
 	 $$ = \gamma \left ( \gamma - 1 \right ) $$
 
-	 with $$ \gamma = \frac {3m(m+1)}{2(3m + 4)} \in \mathbb{N}$$.
+	 with $$\gamma \in \mathbb{N}$$.
 
 	 And, $$(n - 1 - k)\beta = k(k - \alpha - 1)$$.
 
@@ -82,25 +76,25 @@ Then either:
 
 	 $$ \implies \alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) $$
 
+	 as well.
+
 * $$\lambda = \left ( \frac{(\alpha - \beta) + m}{2} \right )$$ and $$\mu = \left ( \frac{(\alpha - \beta) - m}{2} \right )$$.
 
 	$$ \implies (\alpha - \beta) $$
 
 	$$ = m - \left ( \frac{2k}{m-1} \right )$$
 
-	$$ = k \left ( \frac{(m - 2)}{(m + 1)( m - 1)} \right ) - \left ( \frac{m}{2} \right )$$
-
 	 **[** again, following from my previous two observations **]**.
 
 	From the right-hand side of this equation, it is then possible to similarly derive that 
 
 	$$\alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) $$ 
-	and $$ \beta = \gamma(\gamma - 1) $$ with $$ \gamma = \frac {3m(m+1)}{2(2m + 3)} \in \mathbb{N}$$ as well.
+	and $$ \beta = \gamma(\gamma - 1) $$ with $$ \gamma \in \mathbb{N}$$ as well.
 
 After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
 it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.
 
-Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an $$\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )$$ for some $$m, \gamma \in \mathbb{N}$$ $$ \left ( \text{ with } \gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \} \right ) $$.
+Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an $$\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )$$ for some $$m, \gamma \in \mathbb{N}$$.
 
 In fact, this classification also tells us that the self-dual strongly regular graphs are the strongly-regular graphs whose eigenvalue 
 multiplicities are the valencies of its distance-graphs: 

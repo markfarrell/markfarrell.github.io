@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-15T10:58:05+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Classifying Self-Dual Strongly Regular Graphs</title><link href="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html" rel="alternate" type="text/html" title="Classifying Self-Dual Strongly Regular Graphs" /><published>2018-04-29T00:00:00+00:00</published><updated>2018-04-29T00:00:00+00:00</updated><id>/2018/04/29/classifying-self-dual-strongly-regular-graphs</id><content type="html" xml:base="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html">&lt;p&gt;I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.3.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-07-18T12:28:16+00:00</updated><id>/</id><title type="html">Mark Farrell</title><entry><title type="html">Classifying Self-Dual Strongly Regular Graphs</title><link href="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html" rel="alternate" type="text/html" title="Classifying Self-Dual Strongly Regular Graphs" /><published>2018-04-29T00:00:00+00:00</published><updated>2018-04-29T00:00:00+00:00</updated><id>/2018/04/29/classifying-self-dual-strongly-regular-graphs</id><content type="html" xml:base="/2018/04/29/classifying-self-dual-strongly-regular-graphs.html">&lt;p&gt;I would like to classify the self-dual strongly regular graphs: i.e. determine that a strongly regular graph
 is self-dual if and only if it falls into one of finitely many families of strongly-regular graphs.&lt;/p&gt;
 
 &lt;p&gt;To this end, I would like to derive some feasability conditions that the parameters of a self-dual strongly regular graph must satisfy,
@@ -41,10 +41,6 @@ P := \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ k &amp; \lambda &amp; \mu \\ {n - 1 - 
 
 &lt;p&gt;Observe that the multiplicities of &lt;script type=&quot;math/tex&quot;&gt;\lambda&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mu&lt;/script&gt; are &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;n - 1 - k&lt;/script&gt;, since the dual character table of &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt;.&lt;/p&gt;
 
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies k \in \left \{ \left ( \frac{(n-1)}{2} \right ) \pm \left ( \frac{2k + (n - 1)(\alpha - \beta)}{\sqrt{n}} \right ) \right \}&lt;/script&gt;
-
-&lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; by properties of the multiplicities of eigenvalues of strongly regular graphs &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Observe too that &lt;script type=&quot;math/tex&quot;&gt;(-1 - \lambda) =  \left ( \frac{n - 1 - k}{k} \right ) \mu&lt;/script&gt; from the character-and-dual-character table &lt;script type=&quot;math/tex&quot;&gt;P&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;Recall the fact that &lt;script type=&quot;math/tex&quot;&gt;(n - 1 - k)\beta = k(k - \alpha - 1)&lt;/script&gt; since &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is strongly regular.&lt;/p&gt;
@@ -61,8 +57,6 @@ P := \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ k &amp; \lambda &amp; \mu \\ {n - 1 - 
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{2k}{m - 1} \right ) - m&lt;/script&gt;
 
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \left ( \frac{m}{2} \right ) - \left ( \frac{(m+2)}{(m + 1)(m-1)} \right ) k&lt;/script&gt;
-
     &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; following from my previous two observations &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
 
     &lt;p&gt;Now, let &lt;script type=&quot;math/tex&quot;&gt;\gamma := \left ( \frac{k}{m - 1} \right )&lt;/script&gt;.&lt;/p&gt;
@@ -71,13 +65,15 @@ P := \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ k &amp; \lambda &amp; \mu \\ {n - 1 - 
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt;= \gamma \left ( \gamma - 1 \right )&lt;/script&gt;
 
-    &lt;p&gt;with &lt;script type=&quot;math/tex&quot;&gt;\gamma = \frac {3m(m+1)}{2(3m + 4)} \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
+    &lt;p&gt;with &lt;script type=&quot;math/tex&quot;&gt;\gamma \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
 
     &lt;p&gt;And, &lt;script type=&quot;math/tex&quot;&gt;(n - 1 - k)\beta = k(k - \alpha - 1)&lt;/script&gt;.&lt;/p&gt;
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies (m + 1 - \gamma)(\gamma - 1) = (m - 1)\gamma - \alpha - 1&lt;/script&gt;
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt;\implies \alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)&lt;/script&gt;
+
+    &lt;p&gt;as well.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda = \left ( \frac{(\alpha - \beta) + m}{2} \right )&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mu = \left ( \frac{(\alpha - \beta) - m}{2} \right )&lt;/script&gt;.&lt;/p&gt;
@@ -86,21 +82,19 @@ P := \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ k &amp; \lambda &amp; \mu \\ {n - 1 - 
 
     &lt;script type=&quot;math/tex; mode=display&quot;&gt;= m - \left ( \frac{2k}{m-1} \right )&lt;/script&gt;
 
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;= k \left ( \frac{(m - 2)}{(m + 1)( m - 1)} \right ) - \left ( \frac{m}{2} \right )&lt;/script&gt;
-
     &lt;p&gt;&lt;strong&gt;[&lt;/strong&gt; again, following from my previous two observations &lt;strong&gt;]&lt;/strong&gt;.&lt;/p&gt;
 
     &lt;p&gt;From the right-hand side of this equation, it is then possible to similarly derive that&lt;/p&gt;
 
     &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)&lt;/script&gt; 
-  and &lt;script type=&quot;math/tex&quot;&gt;\beta = \gamma(\gamma - 1)&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;\gamma = \frac {3m(m+1)}{2(2m + 3)} \in \mathbb{N}&lt;/script&gt; as well.&lt;/p&gt;
+  and &lt;script type=&quot;math/tex&quot;&gt;\beta = \gamma(\gamma - 1)&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;\gamma \in \mathbb{N}&lt;/script&gt; as well.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
 it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.&lt;/p&gt;
 
-&lt;p&gt;Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an &lt;script type=&quot;math/tex&quot;&gt;\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;m, \gamma \in \mathbb{N}&lt;/script&gt; &lt;script type=&quot;math/tex&quot;&gt;\left ( \text{ with } \gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \} \right )&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an &lt;script type=&quot;math/tex&quot;&gt;\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )&lt;/script&gt; for some &lt;script type=&quot;math/tex&quot;&gt;m, \gamma \in \mathbb{N}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;In fact, this classification also tells us that the self-dual strongly regular graphs are the strongly-regular graphs whose eigenvalue 
 multiplicities are the valencies of its distance-graphs: 

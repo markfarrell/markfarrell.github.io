@@ -116,10 +116,6 @@ P := \begin{pmatrix} 1 & 1 & 1 \\ k & \lambda & \mu \\ {n - 1 - k} & {-1 -\lambd
 
 <p>Observe that the multiplicities of <script type="math/tex">\lambda</script> and <script type="math/tex">\mu</script> are <script type="math/tex">k</script> and <script type="math/tex">n - 1 - k</script>, since the dual character table of <script type="math/tex">P</script> is <script type="math/tex">P</script>.</p>
 
-<script type="math/tex; mode=display">\implies k \in \left \{ \left ( \frac{(n-1)}{2} \right ) \pm \left ( \frac{2k + (n - 1)(\alpha - \beta)}{\sqrt{n}} \right ) \right \}</script>
-
-<p><strong>[</strong> by properties of the multiplicities of eigenvalues of strongly regular graphs <strong>]</strong>.</p>
-
 <p>Observe too that <script type="math/tex">(-1 - \lambda) =  \left ( \frac{n - 1 - k}{k} \right ) \mu</script> from the character-and-dual-character table <script type="math/tex">P</script> of <script type="math/tex">G</script>.</p>
 
 <p>Recall the fact that <script type="math/tex">(n - 1 - k)\beta = k(k - \alpha - 1)</script> since <script type="math/tex">G</script> is strongly regular.</p>
@@ -136,8 +132,6 @@ P := \begin{pmatrix} 1 & 1 & 1 \\ k & \lambda & \mu \\ {n - 1 - k} & {-1 -\lambd
 
     <script type="math/tex; mode=display">= \left ( \frac{2k}{m - 1} \right ) - m</script>
 
-    <script type="math/tex; mode=display">= \left ( \frac{m}{2} \right ) - \left ( \frac{(m+2)}{(m + 1)(m-1)} \right ) k</script>
-
     <p><strong>[</strong> following from my previous two observations <strong>]</strong>.</p>
 
     <p>Now, let <script type="math/tex">\gamma := \left ( \frac{k}{m - 1} \right )</script>.</p>
@@ -146,13 +140,15 @@ P := \begin{pmatrix} 1 & 1 & 1 \\ k & \lambda & \mu \\ {n - 1 - k} & {-1 -\lambd
 
     <script type="math/tex; mode=display">= \gamma \left ( \gamma - 1 \right )</script>
 
-    <p>with <script type="math/tex">\gamma = \frac {3m(m+1)}{2(3m + 4)} \in \mathbb{N}</script>.</p>
+    <p>with <script type="math/tex">\gamma \in \mathbb{N}</script>.</p>
 
     <p>And, <script type="math/tex">(n - 1 - k)\beta = k(k - \alpha - 1)</script>.</p>
 
     <script type="math/tex; mode=display">\implies (m + 1 - \gamma)(\gamma - 1) = (m - 1)\gamma - \alpha - 1</script>
 
     <script type="math/tex; mode=display">\implies \alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)</script>
+
+    <p>as well.</p>
   </li>
   <li>
     <p><script type="math/tex">\lambda = \left ( \frac{(\alpha - \beta) + m}{2} \right )</script> and <script type="math/tex">\mu = \left ( \frac{(\alpha - \beta) - m}{2} \right )</script>.</p>
@@ -161,21 +157,19 @@ P := \begin{pmatrix} 1 & 1 & 1 \\ k & \lambda & \mu \\ {n - 1 - k} & {-1 -\lambd
 
     <script type="math/tex; mode=display">= m - \left ( \frac{2k}{m-1} \right )</script>
 
-    <script type="math/tex; mode=display">= k \left ( \frac{(m - 2)}{(m + 1)( m - 1)} \right ) - \left ( \frac{m}{2} \right )</script>
-
     <p><strong>[</strong> again, following from my previous two observations <strong>]</strong>.</p>
 
     <p>From the right-hand side of this equation, it is then possible to similarly derive that</p>
 
     <p><script type="math/tex">\alpha = \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2)</script> 
-  and <script type="math/tex">\beta = \gamma(\gamma - 1)</script> with <script type="math/tex">\gamma = \frac {3m(m+1)}{2(2m + 3)} \in \mathbb{N}</script> as well.</p>
+  and <script type="math/tex">\beta = \gamma(\gamma - 1)</script> with <script type="math/tex">\gamma \in \mathbb{N}</script> as well.</p>
   </li>
 </ul>
 
 <p>After deriving some feasibility conditions that the parameters of a self-dual strongly regular must satisfy, 
 it can ultimately be observed now too that a strongly regular graph whose parameters satisfy these constraints is self-dual as well.</p>
 
-<p>Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an <script type="math/tex">\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )</script> for some <script type="math/tex">m, \gamma \in \mathbb{N}</script> <script type="math/tex">\left ( \text{ with } \gamma \in \left \{  \left ( \frac {3m(m+1)}{2(3m + 4)} \right ), \left ( \frac {3m(m+1)}{2(2m + 3)} \right )\right  \} \right )</script>.</p>
+<p>Hence it can be concluded that a strongly regular graph is self-dual if and only if it is either a conference graph or an <script type="math/tex">\operatorname{SRG} \left ( m^{2}, \ (m - 1) \gamma, \ \left ( \gamma - 1 \right ) \left ( \gamma - 2 \right ) + (m - 2) , \gamma (\gamma - 1) \right )</script> for some <script type="math/tex">m, \gamma \in \mathbb{N}</script>.</p>
 
 <p>In fact, this classification also tells us that the self-dual strongly regular graphs are the strongly-regular graphs whose eigenvalue 
 multiplicities are the valencies of its distance-graphs: 
